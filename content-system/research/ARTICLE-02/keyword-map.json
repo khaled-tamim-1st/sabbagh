@@ -1,0 +1,22 @@
+{
+  "article_id": "ARTICLE-02",
+  "primary_keyword": "سعر متر السيجما الكويت",
+  "search_intent": "Commercial",
+  "target_serp_features": ["Featured Snippet (Direct Answer & Cost Breakdown)", "Comparison Table"],
+  "secondary_keywords": [
+    {"keyword": "تكلفة تشطيب واجهات سيجما", "intent": "Commercial", "context": "حساب التكلفة الإجمالية لواجهة الفيلا"},
+    {"keyword": "سيجما جوتن واجهات", "intent": "Commercial Investigation", "context": "مواصفات ماركة جوتن الخارجية"},
+    {"keyword": "اسعار مقاولي السيجما بالكويت", "intent": "Commercial", "context": "مقارنة عروض مقاولي المساح والواجهات"},
+    {"keyword": "مساح وسيجما المتر كم", "intent": "Transactional", "context": "حساب سعر المتر شامل المساح والسيجما"}
+  ],
+  "lsi_and_entities": [
+    "قسائم المطلاع وغرب عبدالله المبارك",
+    "سقالة حديدية",
+    "برايمر مائي خارجي",
+    "طبقة حماية توب كوت Top Coat",
+    "شبك مجلفن وزوايا ستانلس",
+    "سماكة الحبة 1 و 2 ملم",
+    "مقارنة السيجما والحجر الطبيعي",
+    "دينار كويتي للمتر المربع"
+  ]
+}

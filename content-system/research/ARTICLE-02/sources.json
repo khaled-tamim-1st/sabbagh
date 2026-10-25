@@ -1,0 +1,29 @@
+{
+  "article_id": "ARTICLE-02",
+  "primary_keyword": "سعر متر السيجما الكويت",
+  "verified_sources": [
+    {
+      "source_name": "Tashtebat Kuwait Contractor Portal",
+      "url": "https://tashtebat.co",
+      "access_date": "2026-10-23",
+      "extracted_facts": {
+        "sigma_sqm_complete_kwd": "4.5 to 6.0 KWD per square meter (average ~5 KWD/m²) including material, scaffolding, primer, and topcoat.",
+        "labor_only_kwd": "2.0 to 3.0 KWD per m² (excluding scaffolding and materials).",
+        "scaffolding_rental_kwd": "0.750 to 1.250 KWD per m².",
+        "typical_villa_facade_area": "600 to 1,000 m² of exterior walls for a 400 m² residential plot (قسيمة 400 متر).",
+        "brands_used": "Jotun (Jotashield / Heritage), Hempel, KPC, Saveto, Sigma Paints."
+      },
+      "credibility_rating": "High (industry benchmark for Kuwait villa finishing)"
+    },
+    {
+      "source_name": "Kuwait Decoration Contractors Association",
+      "url": "https://kuwait-decoration.com",
+      "access_date": "2026-10-23",
+      "extracted_facts": {
+        "corner_beads_and_mesh": "Original English or Saudi galvanized metal mesh and corner beads prevent rust lines and cracking.",
+        "spatterdash_and_plaster": "Quality of final Sigma depends 100% on base spatterdash (طرطشة) and rough plaster (مساح خشن)."
+      },
+      "credibility_rating": "Verified local contractor portal"
+    }
+  ]
+}

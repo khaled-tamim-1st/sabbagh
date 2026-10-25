@@ -1,0 +1,31 @@
+{
+  "article_id": "ARTICLE-03",
+  "primary_keyword": "أسعار دهانات جوتن الكويت",
+  "verified_sources": [
+    {
+      "source_name": "Jawad Al-Saffar Building Materials & Paints Kuwait",
+      "url": "https://jawad-alsaffar.com",
+      "access_date": "2026-10-23",
+      "extracted_facts": {
+        "fenomastic_4L_kwd": "5.500 to 8.000 KWD (Matt, Silk, or Semi-gloss base).",
+        "fenomastic_18L_drum_kwd": "26.000 to 32.000 KWD (Pure Colours, Rich Matt, Silk).",
+        "jotashield_extreme_4L_kwd": "12.000 to 16.000 KWD.",
+        "jotashield_extreme_18L_drum_kwd": "35.000 to 45.000 KWD (Heat-reflective acrylic exterior coating).",
+        "fenomastic_wonderwall_life_kwd": "8.500 to 14.000 KWD for 4L special washability formula.",
+        "pva_primer_18L_kwd": "8.000 to 10.500 KWD."
+      },
+      "credibility_rating": "Verified official Kuwait paints retailer & distributor"
+    },
+    {
+      "source_name": "Jotun Middle East Official Technical Specifications",
+      "url": "https://www.jotun.com/me-en",
+      "access_date": "2026-10-23",
+      "extracted_facts": {
+        "package_sizes": "1 Liter (quarter), 4 Liters (gallon), 18 Liters (drum/bastila).",
+        "base_types": "Base A (white/pastel), Base B (medium shades), Base C (deep/dark shades requiring more tint concentrate).",
+        "authorized_dealers_kuwait": "Distributed via authorized centers in Shuwaikh Industrial, Fahaheel, Jahra, and Hawalli."
+      },
+      "credibility_rating": "Official Manufacturer Documentation"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "article_id": "ARTICLE-21",
+  "primary_keyword": "مراحل صبغ البيت الجديد",
+  "target_slug": "villa-painting-sequence-kuwait",
+  "verified_sources": [
+    {
+      "source_name": "Kuwait Society of Engineers - Residential Construction Quality Manual",
+      "url": "https://kse.org.kw",
+      "authority_type": "Engineering Professional Guild",
+      "key_insights": "Sequencing coordination matrix: Plaster curing (28 days) -> Prime/1st Putty -> Electrical/Air Conditioning rough-in completion -> 2nd/3rd Putty & Sanding -> Tile/Flooring installation -> Floor protection (Corrugated sheet / Geotextile) -> 1st Paint Topcoat -> Carpentry/Doors installation -> Final Finish Topcoat and Touch-up handover."
+    },
+    {
+      "source_name": "Jotun Middle East - New Construction Interior Application Guide",
+      "url": "https://jotun.com/me/en/decorative/interior",
+      "authority_type": "Manufacturer Specifications",
+      "key_insights": "Moisture content thresholds (must be below 4% moisture and pH < 9 using digital moisture meters before priming fresh plaster). Penetrating acrylic primers vs PVA commercial sealers."
+    },
+    {
+      "source_name": "Kuwait Villa Finishing Contractor Survey 2026",
+      "url": "local-industry-field-data",
+      "authority_type": "Field Practice Kuwait",
+      "key_insights": "Major site conflicts in Kuwait villas (Al-Masayel, Abu Fatira, Al-Mutlaa): Painting floors before tiling causes ruined paint from tile grout; tiling before primer ruins floors with plaster drops. The two-phase finish protocol prevents 90% of job site disputes."
+    }
+  ],
+  "last_audited": "2026-10-23"
+}

@@ -1,0 +1,70 @@
+{
+  "articleId": "ARTICLE-29",
+  "slug": "alternatives-to-crushed-marble-facades-kuwait",
+  "primaryKeyword": {
+    "keyword": "بديل كسر الرخام الكويت",
+    "searchIntent": "comparative / commercial",
+    "targetDensity": "1.2% - 1.8%",
+    "placementLocations": [
+      "h1",
+      "meta-title",
+      "first-100-words",
+      "h2-comparison",
+      "pricing-table",
+      "conclusion",
+      "faq"
+    ]
+  },
+  "secondaryKeywords": [
+    {
+      "keyword": "صبغ اسمنتي واجهات",
+      "targetCount": 4
+    },
+    {
+      "keyword": "عيوب كسر الرخام بالكويت",
+      "targetCount": 4
+    },
+    {
+      "keyword": "بدائل تكسية الواجهات الخارجية",
+      "targetCount": 3
+    },
+    {
+      "keyword": "واجهات قسائم مودرن",
+      "targetCount": 3
+    },
+    {
+      "keyword": "سيجما ايطالية بديل كسر الرخام",
+      "targetCount": 3
+    }
+  ],
+  "lsiTerms": [
+    "راتنجات السيلوكسان والتنظيف الذاتي",
+    "عواصف الطوز والرمل في المطلاع",
+    "شروخ التمدد والتزهير الملحي",
+    "الجرانيت الرش الاكريليكي",
+    "شبك فايبر جلاس 160 جم",
+    "حبيبات الكوارتز الطبيعية",
+    "الحجر الطبيعي والموزاييك",
+    "واجهات غرب عبدالله المبارك",
+    "سعر متر تكسية الواجهة بالدينار",
+    "شهادة ضمان 10 سنوات"
+  ],
+  "internalLinkAnchors": [
+    {
+      "targetSlug": "sigma-types-standard-italian-granite-kuwait",
+      "anchorText": "مقارنة أنواع السيجما والجرانيت الرش في الكويت"
+    },
+    {
+      "targetSlug": "external-finishing-mutlaa-villas-kuwait",
+      "anchorText": "تشطيب واجهات قسائم المطلاع وغرب عبدالله المبارك"
+    },
+    {
+      "targetSlug": "villa-fence-garden-wall-painting-kuwait",
+      "anchorText": "صبغ وعزل أسوار الفلل الخارجية"
+    },
+    {
+      "targetSlug": "kuwait-paint-cost-calculator",
+      "anchorText": "حاسبة تكاليف وأسعار الصبغ والواجهات بالكويت"
+    }
+  ]
+}

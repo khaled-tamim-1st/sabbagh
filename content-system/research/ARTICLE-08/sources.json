@@ -1,0 +1,42 @@
+{
+  "article_id": "ARTICLE-08",
+  "slug": "best-exterior-paints-kuwait-heat",
+  "primary_keyword": "افضل صبغ خارجي في الكويت",
+  "verification_date": "2026-10-23",
+  "data_points": {
+    "kuwait_climate_stressors": [
+      {"stressor": "درجات الحرارة القصوى 50°C - 54°C في يوليو وأغسطس", "impact": "التمدد الحراري وانهيار الروابط البوليمرية للدهان وبهتان الألوان الغامقة"},
+      {"stressor": "الأشعة فوق البنفسجية الشديدة (High UV Index)", "impact": "تفكك جزيئات الصبغة (Chalking والتجيير) وتحول السطح لبودرة بيضاء"},
+      {"stressor": "العواصف الرملية والسافي (Dust Storms & Tooz)", "impact": "احتكاك جزيئات الكوارتز بالواجهة والتصاق الأتربة الدقيقة بالدهانات غير الطاردة للغبار"},
+      {"stressor": "الفوارق الحرارية الحادة بين النهار والليل", "impact": "ظهور الشروخ الشعرية (Hairline Cracks) في اللياسة والصبغ"}
+    ],
+    "top_performing_exterior_paint_lines_kuwait": [
+      {
+        "brand": "جوتن (Jotun)",
+        "product": "جوتاشيلد كولور إكستريم (Jotashield Colour Extreme) / جوتاشيلد كول شيلتر",
+        "tech": "أصباغ عاكسة للأشعة تحت الحمراء تخفض حرارة الجدار حتى 5-8 درجات مئوية، ومقاومة التصاق الأتربة (Low Dirt Pick-up)",
+        "warranty": "حتى 10 - 12 سنة ضد البهتان",
+        "price_per_drum_18l": "38 - 48 د.ك"
+      },
+      {
+        "brand": "كابارول (Caparol)",
+        "product": "ثيرموسان (ThermoSan NQG) وموريسكو (Muresko)",
+        "tech": "تقنية شبكة السيليكون النانوية (Nano-Quartz Grid) التي تطرد ذرات الغبار ذاتياً مع أول قطرات مطر أو غسيل بالماء",
+        "warranty": "10 سنوات حماية واجهات فائقة",
+        "price_per_drum_18l": "42 - 52 د.ك"
+      },
+      {
+        "brand": "همبل (Hempel)",
+        "product": "همبل كونكريت شيلد (Hempel Concrete Shield) وتوب كوت سيجما",
+        "tech": "صلابة ميكانيكية خارقة ومقاومة عالية للرياح الرملية وملمس حبيبي خشن يخفي عيوب المساح",
+        "warranty": "8 - 10 سنوات",
+        "price_per_drum_18l": "32 - 40 د.ك"
+      }
+    ],
+    "key_technical_metrics": {
+      "solar_reflectance_index_sri": "مؤشر الانعكاس الشمسي SRI > 80 للدرجات الفاتحة يوفر حتى 15% من استهلاك التكييف",
+      "dirt_pickup_resistance": "قدرة السطح غير المستقطب على منع التصاق غبار السافي",
+      "crack_bridging_ability": "المرونة المطاطية لتغطية الشروخ الشعرية حتى 1.5 - 2 ملم (Elastomeric Properties)"
+    }
+  }
+}

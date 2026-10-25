@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Ministry of Commerce and Industry - Consumer Protection Department (حماية المستهلك - وزارة التجارة والصناعة الكويتية)",
+    "url": "https://moci.gov.kw/",
+    "organization": "State of Kuwait Ministry of Commerce and Industry",
+    "relevance": "Regulations regarding commercial fraud (الغش التجاري), counterfeit packaging, fake branding in building materials, and consumer rights."
+  },
+  {
+    "title": "Kuwait Institute for Scientific Research (KISR) - Construction Materials Durability Guidelines",
+    "url": "https://www.kisr.edu.kw/",
+    "organization": "KISR",
+    "relevance": "Technical data on paint dilution ratios, adhesion failure due to excessive water or missing primers, and putty chalking."
+  },
+  {
+    "title": "Leading Paint Manufacturers Authentication Guides (Jotun, Berger, Caparol)",
+    "url": "https://www.jotun.com/me-en/protective/support/anti-counterfeiting",
+    "organization": "Jotun Middle East / Berger Paints",
+    "relevance": "Techniques for spotting counterfeit paint buckets: QR code validation, batch number stamps, sealed lid rings, and weight discrepancies."
+  },
+  {
+    "title": "Kuwait Society of Engineers (جمعية المهندسين الكويتية) Technical Inspection Manuals",
+    "url": "https://kse.org.kw/",
+    "organization": "Kuwait Society of Engineers",
+    "relevance": "On-site quality audit methods for interior/exterior coatings: cross-hatch adhesion testing, wet film thickness (WFT) gauges, and light beam defect detection."
+  }
+]

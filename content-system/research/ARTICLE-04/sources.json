@@ -1,0 +1,30 @@
+{
+  "article_id": "ARTICLE-04",
+  "primary_keyword": "سعر تركيب بديل الرخام الكويت",
+  "verified_sources": [
+    {
+      "source_name": "Shabana Stores & Shuwaikh Materials Market",
+      "url": "https://shabanastores.com",
+      "access_date": "2026-10-23",
+      "extracted_facts": {
+        "pvc_marble_sheet_dimensions": "1.22m x 2.80m (thickness 2.8mm to 3.8mm with UV protective coating).",
+        "sheet_raw_price_kwd": "6.000 to 12.000 KWD per sheet in Shuwaikh Industrial (up to 15 KWD for bookmatch / open-book patterns).",
+        "turnkey_installed_per_sqm_kwd": "10.000 to 18.000 KWD.",
+        "turnkey_installed_per_sheet_kwd": "18.000 to 28.000 KWD (including German silicone adhesive, cutting, and aluminum/steel trims)."
+      },
+      "credibility_rating": "High (verified Shuwaikh wholesale/retail catalog)"
+    },
+    {
+      "source_name": "Magic Kuwait Decoration Services Guide",
+      "url": "https://magickuwait.services",
+      "access_date": "2026-10-23",
+      "extracted_facts": {
+        "wpc_wood_panel_dimensions": "Width 12cm to 20cm, length 2.80m to 2.90m.",
+        "wpc_strip_raw_price_kwd": "2.500 to 4.500 KWD per strip.",
+        "wpc_installed_per_sqm_kwd": "12.000 to 22.000 KWD.",
+        "labor_only_installation_kwd": "4.000 to 7.000 KWD per m²."
+      },
+      "credibility_rating": "Verified Kuwait home finishes directory"
+    }
+  ]
+}

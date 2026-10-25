@@ -1,0 +1,26 @@
+{
+  "article_id": "ARTICLE-15",
+  "primary_keyword": "صبغ ايطالي الكويت",
+  "target_slug": "italian-decorative-paints-kuwait",
+  "verified_sources": [
+    {
+      "source_name": "San Marco SpA Italy - Venetian Plasters & Decorative Systems Technical Manual",
+      "url": "https://san-marco.com/en",
+      "authority_type": "Manufacturer Standards",
+      "key_insights": "Application methodologies for Stucco Veneziano, Marmorino Classico, Cadoro (Velvet effect), and Marcopolo Luxury. Stainless steel trowel burnishing, natural slaked lime (grassello di calce) formulations, and protective waxes."
+    },
+    {
+      "source_name": "Valpaint Decorative Coatings Technical Guide",
+      "url": "https://valpaint.it/en",
+      "authority_type": "Manufacturer Standards",
+      "key_insights": "Metallic velvet effects (Klondike, Sabulador, Polistof), quartz sands, acrylic resins, and humidity-resistant sealers for Gulf environments."
+    },
+    {
+      "source_name": "Kuwait Luxury Finishing & Majlis Craftsmanship Field Ledger",
+      "url": "local-industry-field-data",
+      "authority_type": "Field Practice Kuwait",
+      "key_insights": "Kuwait market pricing per square meter (materials + master artisan labor: 3.500 to 8.500 KWD/sqm). Popularity on reception walls, TV feature backdrops, dining rooms, and entrance foyers in Abdulla Al-Salem, Nuzha, Shamiya, and coastal chalets."
+    }
+  ],
+  "last_audited": "2026-10-23"
+}

@@ -1,0 +1,34 @@
+{
+  "article_id": "ARTICLE-10",
+  "slug": "chalet-painting-khiran-kuwait",
+  "primary_keyword": "صبغ شاليهات الكويت",
+  "verification_date": "2026-10-23",
+  "data_points": {
+    "coastal_geography_kuwait": [
+      {"zone": "مدينة صباح الأحمد البحرية (Khiran Sea City)", "exposure": "قنوات بحرية مائية محيطة بالقسائم، رطوبة نسبية تتجاوز 90% صيفاً، ملوحة عالية"},
+      {"zone": "شاليهات بنيدر والجليعة والضباعية", "exposure": "واجهات مباشرة على الخليج العربي، رذاذ أمواج محمل بكلوريد الصوديوم ورمل شاطئي"},
+      {"zone": "شاليهات الصبية والدوحة البحرية", "exposure": "رطوبة بحرية هادئة مع كبريتات عالية من مياه الطين والجون"}
+    ],
+    "marine_coating_technologies": [
+      {
+        "type": "الدهانات المطاطية المرنة (Elastomeric Wall Coatings)",
+        "tech": "أغشية أكريليك مطاطية تمتد بنسبة 300% لامتصاص تمدد الواجهة البحرية وتمنع نفاذ أيونات الكلوريد",
+        "brands": "Jotun Jotashield Tex Ultra / Caparol Permaflex"
+      },
+      {
+        "type": "سيلر السيليكون الشفاف الطارد للأملاح (Silane/Siloxane Water Repellent)",
+        "tech": "حاجز كيميائي غير مرئي يرش فوق الحجر أو السيجما يمنع امتصاص رذاذ البحر المالح ويجعل قطرات الماء تتدحرج (Beading Effect)"
+      },
+      {
+        "type": "طلاءات حماية الحديد والمعادن البحرية (Marine Anti-Corrosion Epoxy)",
+        "tech": "برايمر إيبوكسي زنك فوسفات (Zinc Phosphate Epoxy Primer) + توب كوت بولي يوريثان لحماية دربزينات الألمنيوم، درابزين المسابح، والمظلات البحرية"
+      }
+    ],
+    "pricing_benchmarks_chalets_kuwait": {
+      "chalet_exterior_sqm": "5.5 - 8.5 د.ك للمتر المربع شامل السقالة والعوازل الملحية والدهان المطاطي البحري",
+      "chalet_facade_sealant_siloxane": "1.5 - 2.5 د.ك للمتر المربع دهان سيلر حماية فوق الحجر أو السيجما",
+      "metal_railings_pergolas_coating": "8 - 14 د.ك للمتر الطولي صبغ إيبوكسي بحري للحديد والمظلات",
+      "chalet_routine_refresh_average": "1,200 - 2,800 د.ك لشاليه صف أول أو قسيمة بحرية كاملة بالخيران"
+    }
+  }
+}

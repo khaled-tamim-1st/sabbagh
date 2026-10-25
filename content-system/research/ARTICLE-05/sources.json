@@ -1,0 +1,27 @@
+{
+  "article_id": "ARTICLE-05",
+  "primary_keyword": "تكلفة معالجة رطوبة الجدران",
+  "verified_sources": [
+    {
+      "source_name": "Fayrouz Kuwait Water & Moisture Remediation Services",
+      "url": "https://fayrouz-kw.com",
+      "access_date": "2026-10-23",
+      "extracted_facts": {
+        "diagnostic_inspection_kwd": "Free with repair contract or 15 to 25 KWD for electronic acoustic/thermal leak detection.",
+        "localized_wall_repair_kwd": "30 to 60 KWD per wall (scraping damaged plaster, cementitious waterproof primer, anti-salt putty, and 2 topcoats).",
+        "rising_damp_or_bathroom_leak_kwd": "70 to 140 KWD per wall if plumbing pipe replacement or crystalline barrier injection is required.",
+        "cure_time": "Must allow wall to dry for 3 to 7 days before applying finish paint."
+      },
+      "credibility_rating": "Verified Kuwait specialized waterproofing firm"
+    },
+    {
+      "source_name": "Leak Detection Kuwait Technical Journal",
+      "url": "https://leakdetectionkw.com",
+      "access_date": "2026-10-23",
+      "extracted_facts": {
+        "common_causes_in_kuwait": "AC condensate drain overflows (نش درين التكييف), bathroom tile grouting failure, cracked exterior facade plaster, and high groundwater tables in South Surra and coastal districts."
+      },
+      "credibility_rating": "Technical engineering portal"
+    }
+  ]
+}

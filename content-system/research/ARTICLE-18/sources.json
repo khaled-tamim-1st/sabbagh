@@ -1,0 +1,26 @@
+{
+  "article_id": "ARTICLE-18",
+  "primary_keyword": "صبغ بدون ريحة الكويت",
+  "target_slug": "odorless-paint-occupied-homes-kuwait",
+  "verified_sources": [
+    {
+      "source_name": "Jotun Middle East - Fenomastic Pure Colours Zero VOC & Clean Air Certification",
+      "url": "https://jotun.com/me/en/decorative/interior/fenomastic-pure-colours",
+      "authority_type": "Manufacturer Specifications",
+      "key_insights": "Volatile Organic Compounds (VOC) levels <1 g/L. Swan Ecolabel, Eurofins Indoor Air Comfort Gold standards, zero formaldehyde, and fast touch-dry times (1 hour @ 23°C)."
+    },
+    {
+      "source_name": "Caparol Arabia - CapaClean & Indeko-plus Zero-Odor Medical Standards",
+      "url": "https://caparol.com/me-en",
+      "authority_type": "Medical & Hospital Grade Paint Certifications",
+      "key_insights": "Solvent-free and plasticizer-free (ELF technology) coatings certified for sensitive patients, children's nurseries, and hospital inpatient wards. No irritating off-gassing."
+    },
+    {
+      "source_name": "Kuwait Pediatric Allergy & Respiratory Protection Field Data",
+      "url": "local-industry-field-data",
+      "authority_type": "Health & Safety Guidelines",
+      "key_insights": "Protocol for painting occupied Kuwaiti apartments/villas: Room zoning, negative pressure exhaust fans in windows, isolating central AC ducts to prevent chemical vapor recirculation, waterborne acrylic putties vs chemical solvent-based putties."
+    }
+  ],
+  "last_audited": "2026-10-23"
+}

@@ -1,0 +1,94 @@
+{
+  "article_id": "ARTICLE-19",
+  "seo_title": "تشطيب قسائم المطلاع: سيجما واجهات ومساح وعوازل 2026",
+  "h1": "دليل تشطيب واجهات قسائم المطلاع وغرب عبدالله المبارك: السيجما والعوازل وفحص المقاول (دليل 2026)",
+  "meta_description": "دليل تشطيب واجهات قسائم المطلاع وغرب عبد الله المبارك 2026: مراحل المساح والسيجما، حماية المبنى من السافي والحرارة، تكلفة قسيمة 400م بالدينار، وعقود المقاولين.",
+  "slug": "mutlaa-villas-exterior-finishing-kuwait",
+  "primary_keyword": "تشطيب قسائم المطلاع",
+  "secondary_keywords": [
+    "سيجما واجهات المطلاع",
+    "اصباغ قسائم جديدة",
+    "مساح وسيجما غرب عبدالله المبارك",
+    "كوتينج خارجي للمدن الجديدة"
+  ],
+  "canonical_url": "https://sabbagh-kuwait.com/blog/mutlaa-villas-exterior-finishing-kuwait",
+  "suggested_images": [
+    {
+      "file_name": "al-mutlaa-villa-sigma-facade.webp",
+      "alt_text": "واجهة فيلا سكنية جديدة 400 متر في مدينة المطلاع مشطبة بسيجما كابارول ألمانية مقاومة لرياح السافي الصحراوية",
+      "placement": "في قسم التحديات المناخية لواجهات القسائم"
+    },
+    {
+      "file_name": "fiberglass-mesh-laser-plaster-mutlaa.webp",
+      "alt_text": "تركيب شبك الفايبر جلاس وأوتار الليزر لضبط مساح الواجهات الخارجية لقسيمة في غرب عبد الله المبارك",
+      "placement": "في قسم المراحل الهندسية الست لتشطيب واجهات القسائم"
+    }
+  ],
+  "internal_links": [
+    {"url": "/services-guide", "anchor": "دليل خدمات الصبغ والديكور في الكويت"},
+    {"url": "/request-quote", "anchor": "طلب عرض سعر ومعاينة صبغ الجدران"},
+    {"url": "/blog/sigma-exterior-cost-kuwait", "anchor": "سعر متر السيجما في الكويت بالدينار"},
+    {"url": "/blog/best-exterior-paints-kuwait-heat", "anchor": "أفضل صبغ خارجي في الكويت للحرارة والشمس"},
+    {"url": "/blog/basement-dampness-treatment-kuwait", "anchor": "علاج رطوبة السرداب في الكويت"}
+  ],
+  "schema_markup": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://sabbagh-kuwait.com/blog/mutlaa-villas-exterior-finishing-kuwait#article",
+        "headline": "دليل تشطيب واجهات قسائم المطلاع وغرب عبدالله المبارك: السيجما والعوازل وفحص المقاول (دليل 2026)",
+        "description": "دليل هندسي متخصص لملاك القسائم السكنية الجديدة في مدينة المطلاع وغرب عبد الله المبارك يوضح خطوات المساح والسيجما والعوازل وفحص المقاول والتكاليف بالدينار.",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "صباغ الكويت - فريق التدقيق الهندسي وتشطيب القسائم"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "صباغ الكويت",
+          "url": "https://sabbagh-kuwait.com"
+        },
+        "mainEntityOfPage": "https://sabbagh-kuwait.com/blog/mutlaa-villas-exterior-finishing-kuwait"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://sabbagh-kuwait.com/blog/mutlaa-villas-exterior-finishing-kuwait#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "ما هو الفرق بين سيجما الواجهات والصبغ الخارجي العادي؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "الصبغ الخارجي العادي هو طبقة دهان سائلة رقيقة تحمي اللون فقط وتتآكل بفعل السافي، بينما السيجما هي تكسية أكريليكية سميكة بسماكة 1.5 إلى 3 مم مدعمة برمال الكوارتز تعمل كدرع صلب مقاوم للصدمات والرياح العاتية والشروخ."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "كم متراً مربعاً تحتاج واجهة قسيمة 400 متر (3 أدوار وسرداب)؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "تبلغ مساحة واجهات القسيمة الصافية بمساحة 400 متر مربع حوالي 900 إلى 1,150 متراً مربعاً، وتتفاوت بحسب مساحة النوافذ والفتحات وارتفاع تصوينة السطح."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "هل ينفع تركيب الحجر الطبيعي مع السيجما في نفس الواجهة؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "نعم، وهذا هو التصميم العصري الأكثر طلباً في المطلاع؛ حيث يُركب الحجر الطبيعي أو بديل الرخام على المداخل والشبابيك (حوالي 25% من المساحة) وتشطب باقي المساحات الكبيرة بالسيجما الناعمة لتوفير آلاف الدنانير."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "متى تبدأ مرحلة المساح والسيجما بعد انتهاء الهيكل الأسود؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "يتم البدء في المساح الخارجي بعد انتهاء تمديدات الكهرباء والصحي ومواسير التكييف الخارجية بالكامل والتأكد من خلو الجدران من أي شروخ إنشائية وعلاجها."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

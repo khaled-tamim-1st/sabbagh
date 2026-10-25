@@ -1,0 +1,123 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@sabbagh-kuwait.com",
+      "passwordHash": "066b95da2956758d114061d31fc1d5ca:4e9f2c0e6007114df4cfe772da60ac24745dbd8a2ce35565f6581e79f3380a7ab7152bcaaf97378f36e5f1cc8fabb3a3fd2415abadf3e770edc9795958956bfa",
+      "role": "admin",
+      "name": "مدير منصة صباغ الكويت",
+      "phone": "96590001122",
+      "isActive": true,
+      "createdAt": "2026-10-24T08:05:26.056Z",
+      "updatedAt": "2026-10-24T08:05:26.064Z"
+    },
+    {
+      "id": 2,
+      "email": "kh603333@gmail.com",
+      "passwordHash": "6125b8820b3e5356560e01050851eb95:25d004c7dfdc7fbacc3bee93d08c39b6f06a01c6a0cb49eb36bd16d4b7a03f80cbe3f0878d1529a24ef187f4d245cc6d3736bda6b84a5a5d10e3559b4aabfcf9",
+      "role": "painter",
+      "name": "خالد تميم",
+      "phone": "01554637673",
+      "isActive": true,
+      "createdAt": "2026-10-24T08:08:15.248Z",
+      "updatedAt": "2026-10-24T08:08:15.248Z"
+    }
+  ],
+  "painters": [
+    {
+      "id": 1,
+      "userId": 2,
+      "name": "خالد تميم",
+      "slug": "خالد-تميم",
+      "avatarUrl": "https://res.cloudinary.com/lgbve8cd/image/upload/v1792829294/sabbagh/avatars/piw5pk9gp5rwatbzlx2s.webp",
+      "avatarPublicId": "sabbagh/avatars/piw5pk9gp5rwatbzlx2s",
+      "initials": "خت",
+      "region": "حولي",
+      "rating": "5.0",
+      "reviews": 0,
+      "years": 1,
+      "startingAt": "18 د.ك",
+      "services": [
+        "دهان داخلي",
+        "معجون وتنعيم أسقف",
+        "ورق جدران",
+        "ديكورات وبديل رخام",
+        "ترميم وعلاج رطوبة",
+        "أصباغ إيطالية وسيلك",
+        "دهان خارجي"
+      ],
+      "description": "صباغ محترف بخبرة في الدهانات الداخلية والخارجية والتشطيب.",
+      "tone": "ochre",
+      "phone": "01554637673",
+      "whatsapp": "01559646676",
+      "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+      "bio": "صباغ محترف بخبرة في الدهانات الداخلية والخارجية والتشطيب.",
+      "governorates": [
+        "حولي",
+        "العاصمة",
+        "الفروانية",
+        "الأحمدي",
+        "الجهراء",
+        "مبارك الكبير"
+      ],
+      "warrantyYears": 3,
+      "crewSize": 1,
+      "paintBrands": [
+        "جوتن"
+      ],
+      "completedProjects": 10,
+      "portfolioProjects": [
+        {
+          "id": "proj-1792830925992-d91d17cf",
+          "painterId": 1,
+          "title": "تغيير ملابس",
+          "category": "دهان داخلي ومعجون",
+          "description": "",
+          "displayMode": "before_after",
+          "galleryImages": [],
+          "beforeImage": {
+            "id": "before-1792830885250",
+            "url": "https://res.cloudinary.com/lgbve8cd/image/upload/v1792830924/sabbagh/portfolio/buh6la7kbpcovsspkgzq.webp",
+            "publicId": "sabbagh/portfolio/buh6la7kbpcovsspkgzq",
+            "caption": "صورة قبل بدء العمل"
+          },
+          "afterImage": {
+            "id": "after-1792830889866",
+            "url": "https://res.cloudinary.com/lgbve8cd/image/upload/v1792830925/sabbagh/portfolio/e3vthyu4hw7kc4dxraui.webp",
+            "publicId": "sabbagh/portfolio/e3vthyu4hw7kc4dxraui",
+            "caption": "صورة بعد التشطيب النهائي"
+          },
+          "beforeDetails": "",
+          "afterDetails": "",
+          "materialsUsed": "معجون سيلر أصلي، دهان جوتن فينوماستيك مطفي",
+          "area": "السالمية - محافظة حولي",
+          "createdAt": "2026-10-24T08:35:25.992Z",
+          "updatedAt": "2026-10-24T08:35:25.992Z"
+        }
+      ],
+      "isAvailableToday": true,
+      "responseTime": "خلال 15 دقيقة",
+      "coverageAreaIds": [],
+      "primaryGovernorates": [
+        "حولي",
+        "العاصمة",
+        "الفروانية",
+        "الأحمدي",
+        "الجهراء",
+        "مبارك الكبير"
+      ],
+      "isVerified": true,
+      "status": "approved",
+      "accountType": "individual",
+      "companyName": null,
+      "managerName": null,
+      "commercialLicense": null,
+      "sampleWorkImages": [],
+      "createdAt": "2026-10-24T08:08:15.314Z",
+      "updatedAt": "2026-10-24T08:35:25.992Z"
+    }
+  ],
+  "quotes": [],
+  "reviews": [],
+  "inquiries": []
+}

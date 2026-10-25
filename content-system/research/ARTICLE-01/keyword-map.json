@@ -1,0 +1,23 @@
+{
+  "article_id": "ARTICLE-01",
+  "primary_keyword": "سعر صبغ الغرفة بالكويت",
+  "search_intent": "Commercial",
+  "target_serp_features": ["Featured Snippet (Direct Answer & Pricing Table)", "People Also Ask / FAQ"],
+  "secondary_keywords": [
+    {"keyword": "تكلفة صبغ شقة بالكويت", "intent": "Commercial", "context": "مقارنة تكلفة الشقق الكاملة 2 إلى 3 غرف"},
+    {"keyword": "أسعار الصباغين بالكويت", "intent": "Commercial Investigation", "context": "طرق محاسبة الفنيين والشركات"},
+    {"keyword": "صبغ غرفة نوم كم يكلف", "intent": "Transactional", "context": "حساب تكلفة الغرفة الواحدة"},
+    {"keyword": "سعر يد الصباغ باليومية", "intent": "Informational", "context": "مقارنة اليومية مقابل المقطوعية"}
+  ],
+  "lsi_and_entities": [
+    "جوتن فينوماستيك",
+    "معجون الجدران",
+    "برايمر مائي",
+    "دينار كويتي KWD",
+    "صنفرة الحائط",
+    "حماية الأرضيات والنايلون",
+    "صبغ ربع لمعة ومطفي",
+    "شقق للإيجار في حولي والسالمية",
+    "فلل وقسائم السكن الخاص"
+  ]
+}

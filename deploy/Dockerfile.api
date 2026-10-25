@@ -1,0 +1,78 @@
+# ==============================================================================
+# Kuwait Painters Platform - Production API Server Dockerfile
+# Base: Node 24 Alpine (Lightweight, Secure, Fast)
+# Architecture: Multi-stage build with non-root runtime user & healthcheck
+# Memory safety: Optimized for 2GB RAM EC2 hosts with cgroup memory limits
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Stage 1: Build stage
+# ------------------------------------------------------------------------------
+FROM node:24-alpine AS builder
+
+WORKDIR /app
+
+# Install native compilation dependencies required by optional native addons
+RUN apk add --no-cache libc6-compat python3 make g++ git
+
+# Enable pnpm package manager
+RUN corepack enable && corepack prepare pnpm@10.11.1 --activate
+
+# Copy monorepo configuration and lockfile
+COPY package.json pnpm-workspace.yaml pnpm-lock.yaml tsconfig.base.json tsconfig.json ./
+
+# Copy internal libraries and api-server source
+COPY lib/ ./lib/
+COPY artifacts/api-server/ ./artifacts/api-server/
+
+# Install workspace dependencies allowing esbuild
+RUN pnpm config set onlyBuiltDependencies esbuild && \
+    (pnpm install --frozen-lockfile || pnpm install --no-frozen-lockfile)
+
+# Build the api-server using esbuild pipeline
+RUN pnpm --filter @workspace/api-server run build
+
+# Deploy isolated production dependencies (excluding devDependencies)
+RUN pnpm --filter @workspace/api-server --legacy --prod deploy /app/prod-deploy
+
+# ------------------------------------------------------------------------------
+# Stage 2: Production runtime stage
+# ------------------------------------------------------------------------------
+FROM node:24-alpine AS runner
+
+# Install curl for container healthchecks and tzdata for Kuwait timezone
+RUN apk add --no-cache curl tzdata \
+    && cp /usr/share/zoneinfo/Asia/Kuwait /etc/localtime \
+    && echo "Asia/Kuwait" > /etc/timezone
+
+WORKDIR /app
+
+# Production environment variables:
+# NODE_OPTIONS restricts V8 heap to 384MB to prevent triggering host OOM killer
+ENV NODE_ENV=production \
+    PORT=5000 \
+    TZ=Asia/Kuwait \
+    NODE_OPTIONS="--max-old-space-size=384"
+
+# Create app directory with proper ownership
+RUN chown -R node:node /app
+
+# Copy production node_modules from builder
+COPY --chown=node:node --from=builder /app/prod-deploy/node_modules /app/node_modules
+
+# Copy compiled bundles and package definition
+COPY --chown=node:node --from=builder /app/artifacts/api-server/dist /app/dist
+COPY --chown=node:node --from=builder /app/artifacts/api-server/package.json /app/package.json
+
+# Switch to unprivileged non-root user for security hardening
+USER node
+
+# Expose internal API port
+EXPOSE 5000
+
+# Container healthcheck: pings the /api/healthz endpoint
+HEALTHCHECK --interval=20s --timeout=5s --start-period=15s --retries=3 \
+  CMD curl -f http://127.0.0.1:5000/api/healthz || exit 1
+
+# Launch compiled application with source maps enabled for production debugging
+CMD ["node", "--enable-source-maps", "dist/index.mjs"]

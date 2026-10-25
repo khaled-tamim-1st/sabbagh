@@ -1,0 +1,34 @@
+{
+  "article_id": "ARTICLE-11",
+  "slug": "bathroom-kitchen-paint-kuwait",
+  "primary_keyword": {
+    "keyword": "صبغ حمامات ومطابخ الكويت",
+    "target_density": "1.3% - 1.8%",
+    "intent": "Informational / Problem-solving",
+    "placements": ["H1", "first_100_words", "two_H2s", "meta_title", "meta_description", "FAQ", "conclusion"]
+  },
+  "secondary_keywords": [
+    {"keyword": "دهان مقاوم للعفن", "intent": "Feature search"},
+    {"keyword": "صبغ ضد الرطوبة", "intent": "Problem-solving"},
+    {"keyword": "صبغ سقف الحمام", "intent": "How-to / commercial"},
+    {"keyword": "اصباغ قابلة للغسيل الشديد", "intent": "Commercial"}
+  ],
+  "lsi_semantic_entities": [
+    "فينوماستيك هايجين المقاوم للبكتيريا",
+    "معالجة العفن الأسود في سقف الحمام",
+    "دهان سقف المطبخ ضد الزيوت",
+    "صبغ ربع لمعة قابل للمسح",
+    "برايمر عازل للبقع والرطوبة",
+    "شفاط الحمام وتهوية البخار",
+    "تقشير صبغ سقف الحمام وسقوطه",
+    "دهانات كابارول فانجيستوب"
+  ],
+  "cannibalization_safeguards": {
+    "prohibited_primary_takeovers": [
+      "تكلفة معالجة رطوبة الجدران (ARTICLE-05)",
+      "علاج رطوبة السرداب الكويت (ARTICLE-07)",
+      "الفرق بين المطفي والربع لمعة (ARTICLE-13)"
+    ],
+    "scope_boundary": "مخصص حصرياً للمناطق الرطبة (الحمامات والمطابخ والأسقف) ومقاومة البخار والعفن والدهون والغسيل الشديد."
+  }
+}

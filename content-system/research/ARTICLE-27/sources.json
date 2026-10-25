@@ -1,0 +1,26 @@
+[
+  {
+    "title": "ASTM D5150 - Standard Test Method for Hiding Power of Architectural Paints in the Field",
+    "url": "https://www.astm.org/d5150-92r17.html",
+    "organization": "ASTM International",
+    "relevance": "Field protocols for checking paint opacity, color consistency, and background bleed-through under artificial and natural light."
+  },
+  {
+    "title": "Master Painters Institute (MPI) - Maintenance Repainting and Acceptance Standards",
+    "url": "https://paintinfo.com/",
+    "organization": "Master Painters Institute",
+    "relevance": "Standardized visual inspection distances (1.5 to 2 meters under normal diffused lighting), acceptable surface defect thresholds, and gloss uniformity."
+  },
+  {
+    "title": "Kuwait Society of Engineers (KSE) - Interior Finishing Handover Checklists",
+    "url": "https://kse.org.kw/",
+    "organization": "Kuwait Society of Engineers",
+    "relevance": "Formal handover checklist for residential villas in Kuwait: gypsum joints, skirting caulking, door frame transitions, and final payment release criteria."
+  },
+  {
+    "title": "Kuwait Ministry of Public Works (MPW) - General Specifications for Building Works: Section 12 (Painting)",
+    "url": "https://www.mpw.gov.kw/",
+    "organization": "Ministry of Public Works Kuwait",
+    "relevance": "Governmental acceptance standards for primer thickness, surface waviness tolerances, and edge sharpness around electrical fittings and fixtures."
+  }
+]

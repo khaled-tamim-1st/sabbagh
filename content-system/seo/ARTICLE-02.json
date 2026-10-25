@@ -1,0 +1,87 @@
+{
+  "article_id": "ARTICLE-02",
+  "seo_title": "سعر متر السيجما الكويت: تكلفة واجهات الفلل والقسائم 2026",
+  "h1": "سعر متر السيجما في الكويت: تكلفة المواد والمصنعية لواجهات الفلل والقسائم 2026",
+  "meta_description": "كم سعر متر السيجما في الكويت؟ دليل أسعار واجهات الفلل 2026: تكلفة المتر الشامل من 4.5 إلى 6 د.ك مع السقالة والمواد وحسبة واجهة قسيمة 400 متر كاملة.",
+  "slug": "sigma-exterior-cost-kuwait",
+  "primary_keyword": "سعر متر السيجما الكويت",
+  "secondary_keywords": [
+    "تكلفة تشطيب واجهات سيجما",
+    "سيجما جوتن واجهات",
+    "اسعار مقاولي السيجما بالكويت",
+    "مساح وسيجما المتر كم"
+  ],
+  "canonical_url": "https://sabbagh-kuwait.com/blog/sigma-exterior-cost-kuwait",
+  "suggested_images": [
+    {
+      "file_name": "sigma-facade-cost-kuwait-villa.webp",
+      "alt_text": "واجهة فيلا مودرن في المطلاع تم تشطيبها بالسيجما الأصلية باللون البيج الفاتح",
+      "placement": "بعد جدول الأسعار"
+    },
+    {
+      "file_name": "sigma-application-process-scaffolding.webp",
+      "alt_text": "فريق عمل يقوم بفرد معجون السيجما على السقالة في واجهة قسيمة كويتية جديدة",
+      "placement": "قبل مراحل التطبيق الهندسية"
+    }
+  ],
+  "internal_links": [
+    {"url": "/services-guide", "anchor": "خدمات تكسية وتشطيب واجهات السيجما بالكويت"},
+    {"url": "/request-quote", "anchor": "طلب مقايسة واجهة قسيمة أو فيلا عبر منصتنا"},
+    {"url": "/blog/jotun-paint-prices-kuwait", "anchor": "أسعار أصباغ جوتاشيلد للواجهات الخارجية"},
+    {"url": "/blog/al-mutlaa-villas-exterior-finishing", "anchor": "دليل تشطيب واجهات قسائم المطلاع بالسيجما والعوازل"},
+    {"url": "/blog/sigma-types-comparison-kuwait", "anchor": "مقارنة شاملة بين السيجما العادية والإيطالية والجرانيت للواجهات"},
+    {"url": "/blog/room-painting-cost-kuwait", "anchor": "أسعار الصباغين وأعمال التشطيب في الكويت"}
+  ],
+  "schema_markup": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://sabbagh-kuwait.com/blog/sigma-exterior-cost-kuwait#article",
+        "headline": "سعر متر السيجما في الكويت: تكلفة المواد والمصنعية لواجهات الفلل والقسائم 2026",
+        "description": "دليل شامل لتكلفة واجهات السيجما الخارجية في الكويت بالدينار الكويتي ومقارنة المواد والسقالة وحسبة قسيمة 400 متر.",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "صباغ الكويت - قسم هندسة الواجهات"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "صباغ الكويت",
+          "url": "https://sabbagh-kuwait.com"
+        },
+        "mainEntityOfPage": "https://sabbagh-kuwait.com/blog/sigma-exterior-cost-kuwait"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://sabbagh-kuwait.com/blog/sigma-exterior-cost-kuwait#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "كم سعر متر السيجما الشامل في الكويت؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "يتراوح سعر متر السيجما الشامل في الكويت بين 4.5 إلى 6 دنانير كويتية للمتر المربع، ويشمل المواد الأصلية (جوتن أو همبل)، والسقالة الحديدية، والشبك، والبرايمر، وطبقة الحماية الشفافة، والمصنعية."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "كم تكلفة واجهة قسيمة 400 متر كاملة سيجما؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "تبلغ تكلفة تشطيب واجهات قسيمة 400 متر (3 أدوار وسرداب بمساحة صافية حوالي 750 م²) ما بين 3,500 إلى 4,500 دينار كويتي، مقارنة بأكثر من 12,000 دينار للحجر الطبيعي."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "هل تتحمل السيجما غبار وحرارة صيف الكويت؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "نعم، تدوم السيجما الأصلية من 10 إلى 15 سنة وتتحمل درجات حرارة تتجاوز 55 مئوية شريطة تطبيق طبقة حماية خارجية شفافة (Top Coat) تمنع التصاق الغبار وتسهل غسيل الواجهة بالماء."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

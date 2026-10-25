@@ -1,0 +1,34 @@
+{
+  "article_id": "ARTICLE-06",
+  "slug": "wood-door-painting-kuwait",
+  "primary_keyword": {
+    "keyword": "صبغ ابواب خشب الكويت",
+    "target_density": "1.2% - 1.8%",
+    "intent": "Commercial",
+    "placements": ["H1", "first_100_words", "at_least_two_H2s", "meta_title", "meta_description", "FAQ", "conclusion"]
+  },
+  "secondary_keywords": [
+    {"keyword": "تكلفة صبغ باب ناري", "intent": "Commercial"},
+    {"keyword": "سعر صبغ الباب الخشب", "intent": "Commercial investigation"},
+    {"keyword": "صبغ دوكو للأبواب الكويت", "intent": "Commercial"},
+    {"keyword": "تجديد ابواب الغرف الخشبية", "intent": "How-to / commercial"}
+  ],
+  "lsi_semantic_entities": [
+    "صبغ ناري بولي يوريثان",
+    "صبغ زيتي نصف لمعة",
+    "دهان استر ولاكر خشب",
+    "سنفرة وتأسيس المعجون الناري",
+    "صبغ مجرور الباب والبرواز",
+    "منجرة الشويخ الصناعية",
+    "حماية الأبواب من رطوبة الحمام",
+    "تغيير لون الأبواب من بني إلى أوف وايت"
+  ],
+  "cannibalization_safeguards": {
+    "prohibited_primary_takeovers": [
+      "سعر صبغ الغرفة بالكويت (ARTICLE-01)",
+      "صبغ الأبواب الحديدية والمظلات (ARTICLE-24)",
+      "صبغ فوق الصبغ الزيتي للجدران (ARTICLE-12)"
+    ],
+    "scope_boundary": "مخصص حصرياً لصبغ وتجديد الأبواب الخشبية الداخلية والخارجية والبراويز والإطارات (Carpentry & Wood Coating)."
+  }
+}

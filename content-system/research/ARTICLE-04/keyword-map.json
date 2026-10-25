@@ -1,0 +1,21 @@
+{
+  "article_id": "ARTICLE-04",
+  "primary_keyword": "سعر تركيب بديل الرخام الكويت",
+  "search_intent": "Commercial",
+  "target_serp_features": ["Featured Snippet (Direct Answer & Pricing Table)", "Image Carousels"],
+  "secondary_keywords": [
+    {"keyword": "تكلفة بديل الخشب", "intent": "Commercial", "context": "حساب سعر المتر الطولي واللوح لشرائح الخشب"},
+    {"keyword": "سعر لوح بديل الرخام الشويخ", "intent": "Commercial Investigation", "context": "أسعار الألواح الخام في محلات الشويخ"},
+    {"keyword": "اسعار تكسيات الجدران الكويت", "intent": "Commercial", "context": "مقارنة تكاليف ديكورات الحوائط"},
+    {"keyword": "تركيب بديل الخشب مع الصبغ", "intent": "Informational/design", "context": "طريقة دمج الديكور مع صبغ الغرف"}
+  ],
+  "lsi_and_entities": [
+    "لوح بديل الرخام 122 في 280 سم",
+    "شرائح بديل الخشب WPC",
+    "سيليكون ألماني بولي يوريثان",
+    "شرائح استيل ذهبي وفضي",
+    "جدار التلفزيون والشاشة",
+    "الشويخ الصناعية",
+    "إضاءة ليد مخفية بروفايل"
+  ]
+}

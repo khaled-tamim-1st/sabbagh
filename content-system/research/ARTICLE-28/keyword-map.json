@@ -1,0 +1,70 @@
+{
+  "articleId": "ARTICLE-28",
+  "slug": "repainting-rental-apartment-handover-kuwait",
+  "primaryKeyword": {
+    "keyword": "صبغ شقة ايجار الكويت",
+    "searchIntent": "transactional / problem-solving",
+    "targetDensity": "1.2% - 1.8%",
+    "placementLocations": [
+      "h1",
+      "meta-title",
+      "first-100-words",
+      "h2-steps",
+      "pricing-table",
+      "conclusion",
+      "faq"
+    ]
+  },
+  "secondaryKeywords": [
+    {
+      "keyword": "تجديد صبغ البيت قبل التسليم",
+      "targetCount": 4
+    },
+    {
+      "keyword": "صبغ اقتصادي للشقق المؤجرة",
+      "targetCount": 4
+    },
+    {
+      "keyword": "شروط صبغ شقة الايجار",
+      "targetCount": 3
+    },
+    {
+      "keyword": "استرداد تامين الشقة صبغ",
+      "targetCount": 3
+    },
+    {
+      "keyword": "سد ثقوب المسامير قبل تسليم الشقة",
+      "targetCount": 3
+    }
+  ],
+  "lsiTerms": [
+    "مبلغ التامين عند المالك",
+    "حارس العمارة ومكتب العقار",
+    "شقق السالمية وحولي والفروانية",
+    "ثقوب براغي التلفزيون والفيشر",
+    "صبغ مطفي ابيض اوف وايت",
+    "قانون الايجارات الكويتي 35",
+    "تسليم المفاتيح والمخالصة",
+    "دهان ناشيونال وبرجر اقتصادي",
+    "شخابيط الاطفال واللاصق دبل فيس",
+    "تكلفة صبغ الشقة بالدينار"
+  ],
+  "internalLinkAnchors": [
+    {
+      "targetSlug": "kuwait-paint-cost-calculator",
+      "anchorText": "حاسبة تكاليف وأسعار الصبغ في الكويت"
+    },
+    {
+      "targetSlug": "how-to-choose-skilled-affordable-painter-kuwait",
+      "anchorText": "معايير اختيار صباغ شاطر ورخيص في الكويت"
+    },
+    {
+      "targetSlug": "how-to-inspect-completed-paintwork-kuwait",
+      "anchorText": "طريقة استلام وفحص أعمال الصبغ من الفني"
+    },
+    {
+      "targetSlug": "detecting-painter-scams-kuwait",
+      "anchorText": "طرق كشف غش الصباغين وتجنب الخداع"
+    }
+  ]
+}

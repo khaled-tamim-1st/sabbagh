@@ -1,0 +1,70 @@
+{
+  "articleId": "ARTICLE-24",
+  "slug": "metal-car-shade-iron-painting-kuwait",
+  "primaryKeyword": {
+    "keyword": "صبغ مظلات كيربي وحديد",
+    "searchIntent": "commercial / problem-solving",
+    "targetDensity": "1.2% - 1.7%",
+    "placementLocations": [
+      "h1",
+      "meta-title",
+      "first-100-words",
+      "h2-steps",
+      "pricing-table",
+      "conclusion",
+      "faq"
+    ]
+  },
+  "secondaryKeywords": [
+    {
+      "keyword": "دهان ابواب حديد خارجية الكويت",
+      "targetCount": 4
+    },
+    {
+      "keyword": "صبغ مانع للصدأ",
+      "targetCount": 4
+    },
+    {
+      "keyword": "صبغ ايبوكسي للحديد الخارجي",
+      "targetCount": 3
+    },
+    {
+      "keyword": "دهان مظلة سيارة كويتي",
+      "targetCount": 3
+    },
+    {
+      "keyword": "صبغ ابواب ليزر",
+      "targetCount": 3
+    }
+  ],
+  "lsiTerms": [
+    "مظلات كابولي",
+    "حديد كيربي مجلفن",
+    "صاروخ الجلخ وصنفرة الصدأ",
+    "برايمر غني بالزنك Zinc Rich",
+    "دهان بولي يوريثان أليفاتي",
+    "مياه الصليبي المالحة",
+    "رطوبة الكوس والساحل",
+    "بوابات ليزر CNC",
+    "حديد مشغول",
+    "عازل صلب مضاد للتآكل"
+  ],
+  "internalLinkAnchors": [
+    {
+      "targetSlug": "villa-fence-garden-wall-painting-kuwait",
+      "anchorText": "صبغ سور البيت الخارجي وأسوار الحدائق"
+    },
+    {
+      "targetSlug": "villa-painting-sequence-kuwait",
+      "anchorText": "مراحل صبغ وتشطيب البيت الجديد"
+    },
+    {
+      "targetSlug": "kuwait-paint-cost-calculator",
+      "anchorText": "حاسبة تكاليف وأسعار الصبغ في الكويت"
+    },
+    {
+      "targetSlug": "roof-waterproofing-jetaroof-kuwait",
+      "anchorText": "عوازل الأسطح السائلة ضد خرير الأمطار"
+    }
+  ]
+}

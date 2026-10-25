@@ -1,0 +1,26 @@
+{
+  "article_id": "ARTICLE-19",
+  "primary_keyword": "تشطيب قسائم المطلاع",
+  "target_slug": "mutlaa-villas-exterior-finishing-kuwait",
+  "verified_sources": [
+    {
+      "source_name": "Public Authority for Housing Welfare (PAHW) - Al-Mutlaa Building Code & Regulations",
+      "url": "https://pahw.gov.kw",
+      "authority_type": "Governmental Regulatory Standards",
+      "key_insights": "400m² standard plot parameters in Al-Mutlaa (N1 to N12) and West Abdullah Al-Mubarak. Facade height allowances (up to 3 floors + basement), mandatory thermal insulation (MEW conservation code)."
+    },
+    {
+      "source_name": "Kuwait Building Materials & Cement Products Co. (KPC) - Heavy Sigma Standards",
+      "url": "https://kpc-kuwait.com",
+      "authority_type": "Technical Facade Specifications",
+      "key_insights": "Modified acrylic/silicone resin Sigma with graded quartz aggregates (1.5mm - 2.5mm). Wind pressure and extreme sandstorm abrasion resistance for open desert peripheral residential cities."
+    },
+    {
+      "source_name": "Al-Mutlaa & West Abdullah Al-Mubarak Contractors Guild Ledger 2026",
+      "url": "local-industry-field-data",
+      "authority_type": "Field Practice & Pricing Kuwait",
+      "key_insights": "Turnkey plastering + external insulation (EPS/Rockwool) + fiberglass mesh + basecoat + Sigma finishing pricing in new cities (4.800 to 7.200 KWD/sqm). Payment milestone scheduling, defect liabilities, and avoiding fly-by-night subcontractors."
+    }
+  ],
+  "last_audited": "2026-10-23"
+}

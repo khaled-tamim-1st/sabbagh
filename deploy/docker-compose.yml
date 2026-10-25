@@ -1,0 +1,132 @@
+# ==============================================================================
+# Kuwait Painters Platform - Production Docker Compose (AWS EC2 Shared Host)
+# Designed for coexistence with live containers (caddy_proxy, yahduth_app, etc.)
+#
+# Key Features:
+#   - Zero port conflicts: Host ports 80, 443, 3000, 5000 are untouched.
+#   - API bound to loopback only on port 5050 (127.0.0.1:5050:5000).
+#   - Attached to external 'web_network' for Caddy direct container-to-container proxying.
+#   - Strict memory limits (Postgres: 384MB, API: 512MB) preventing host OOM.
+#   - Non-root execution, persistent volumes, and healthchecks for all services.
+# ==============================================================================
+
+services:
+  # ----------------------------------------------------------------------------
+  # 1. PostgreSQL Database Service
+  # ----------------------------------------------------------------------------
+  postgres:
+    image: postgres:16-alpine
+    container_name: kuwait-painters-postgres
+    restart: unless-stopped
+    env_file:
+      - path: backend.env
+        required: false
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-kuwait_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-kuwait_secret_pass}
+      POSTGRES_DB: ${POSTGRES_DB:-kuwait_painters}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    command: >
+      postgres
+      -c shared_buffers=64MB
+      -c work_mem=4MB
+      -c maintenance_work_mem=16MB
+      -c max_connections=40
+      -c effective_cache_size=128MB
+    volumes:
+      - kuwait_painters_postgres_data:/var/lib/postgresql/data
+      - ./init-db:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-kuwait_admin} -d ${POSTGRES_DB:-kuwait_painters}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - kuwait_internal_net
+    # Memory and CPU guardrails to prevent OOM crashes on 2GB RAM host
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: '0.50'
+        reservations:
+          memory: 96M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "15m"
+        max-file: "3"
+    # Port 5432 is strictly internal. No host port published to ensure zero security exposure.
+
+  # ----------------------------------------------------------------------------
+  # 2. Node.js API Server Service
+  # ----------------------------------------------------------------------------
+  api-server:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.api
+    container_name: kuwait-painters-api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    env_file:
+      - path: backend.env
+        required: false
+    environment:
+      NODE_ENV: production
+      PORT: 5000
+      DATA_DIR: /app/.data
+      POSTGRES_USER: ${POSTGRES_USER:-kuwait_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-kuwait_secret_pass}
+      POSTGRES_DB: ${POSTGRES_DB:-kuwait_painters}
+      DATABASE_URL: ${DATABASE_URL:-postgresql://${POSTGRES_USER:-kuwait_admin}:${POSTGRES_PASSWORD:-kuwait_secret_pass}@postgres:5432/${POSTGRES_DB:-kuwait_painters}?sslmode=disable}
+      CORS_ORIGIN: ${CORS_ORIGIN:-https://sabbagh-kuwait.pages.dev,https://kuwaitpainters.com}
+      JWT_SECRET: ${JWT_SECRET:-kuwait_painters_jwt_secret_production_key_change_me}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+    volumes:
+      # Data Persistence for JSON Database (Preserving admin & verified painter records)
+      - ../.data:/app/.data
+    ports:
+      # Safe loopback port: only accessible locally on host, avoids 5000/3000/80/443
+      - "127.0.0.1:5050:5000"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://127.0.0.1:5000/api/healthz || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    networks:
+      - kuwait_internal_net
+      - web_network
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.75'
+        reservations:
+          memory: 128M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "15m"
+        max-file: "3"
+
+# ------------------------------------------------------------------------------
+# Networks & Persistent Volumes
+# ------------------------------------------------------------------------------
+networks:
+  # Internal network for private communication between API and PostgreSQL
+  kuwait_internal_net:
+    driver: bridge
+    name: kuwait_internal_net
+
+  # External bridge network shared with caddy_proxy for zero-port-conflict SSL routing
+  web_network:
+    external: true
+
+volumes:
+  kuwait_painters_postgres_data:
+    driver: local
+    name: kuwait_painters_postgres_data

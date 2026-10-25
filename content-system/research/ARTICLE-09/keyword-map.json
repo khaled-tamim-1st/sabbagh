@@ -1,0 +1,34 @@
+{
+  "article_id": "ARTICLE-09",
+  "slug": "paint-blistering-causes-kuwait",
+  "primary_keyword": {
+    "keyword": "انتفاخ دهان الطوفة",
+    "target_density": "1.3% - 1.8%",
+    "intent": "Problem-solving / Informational",
+    "placements": ["H1", "first_100_words", "two_H2s", "meta_title", "meta_description", "FAQ", "conclusion"]
+  },
+  "secondary_keywords": [
+    {"keyword": "تساقط معجون الجدران", "intent": "Problem-solving"},
+    {"keyword": "عيوب الصبغ وتقشره", "intent": "Informational"},
+    {"keyword": "تطبيل معجون الحائط", "intent": "Diagnostic search"},
+    {"keyword": "علاج تبقيع الجدران", "intent": "Troubleshooting"}
+  ],
+  "lsi_semantic_entities": [
+    "فقاعات رطوبة التكييف",
+    "سيلر برايمر اختراق مائي",
+    "اختبار تطبيل المعجون بالصوت",
+    "تقشير البوية كشريحة جلدية",
+    "تسريب بايب دراين المكيف",
+    "معجون جوتن فينوماستيك الداخلي",
+    "علاج الشروخ والتكلس في الطوفة",
+    "معالجة عيوب الصبغ بعد التسليم"
+  ],
+  "cannibalization_safeguards": {
+    "prohibited_primary_takeovers": [
+      "تكلفة معالجة رطوبة الجدران (ARTICLE-05)",
+      "علاج رطوبة السرداب الكويت (ARTICLE-07)",
+      "صبغ فوق الصبغ الزيتي (ARTICLE-12)"
+    ],
+    "scope_boundary": "مخصص لتشخيص عيوب انتفاخ وتقشر البوية وتطبيل المعجون وأخطاء التأسيس الفنية وطرق الإصلاح السليم."
+  }
+}

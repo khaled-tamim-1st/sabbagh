@@ -1,0 +1,390 @@
+{
+  "system_version": "1.0.0",
+  "project_domain": "https://sabbagh-kuwait.com",
+  "primary_hub_pages": {
+    "home": "/",
+    "services_guide": "/services-guide",
+    "request_quote": "/request-quote",
+    "areas_directory": "/areas",
+    "painters_directory": "/painters"
+  },
+  "linking_rules": [
+    "Every article must link to /services-guide with contextual anchor text.",
+    "Every commercial or transactional article must link to /request-quote with an actionable CTA anchor.",
+    "Every article must link to at least 2 sibling articles within its topic cluster.",
+    "Cross-cluster links are permitted only when strictly contextually relevant (e.g. Article 01 pricing links to Article 13 sheen comparison).",
+    "Anchors must be natural phrases in Arabic, never raw URLs or generic 'click here'."
+  ],
+  "link_graph": {
+    "ARTICLE-01": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "دليل أصباغ الجدران والأسقف الداخلية", "context": "مقارنة أنواع ومواصفات الدهانات"},
+        {"url": "/request-quote", "anchor_ar": "طلب معاينة وعرض سعر لصبغ الغرفة أو الشقة", "context": "حساب التكلفة الدقيقة للغرف"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-03", "anchor_ar": "أسعار دهانات جوتن في الكويت بالتفصيل", "context": "حساب تكلفة المواد الأصلية بشكل منفصل"},
+        {"ARTICLE_id": "ARTICLE-05", "anchor_ar": "تكلفة معالجة رطوبة الجدران قبل الصبغ", "context": "إذا كانت الجدران تعاني من رطوبة مسبقة"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-13", "anchor_ar": "الفرق بين الصبغ المطفي والربع لمعة في الصالات", "context": "اختيار درجة اللمعان المناسبة للغرفة"},
+        {"article_id": "ARTICLE-26", "anchor_ar": "كيف تختار صباغ شاطر ورخيص في الكويت", "context": "نصائح الاتفاق مع الفني"}
+      ]
+    },
+    "ARTICLE-02": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "خدمات تكسية وتشطيب واجهات السيجما بالكويت", "context": "تفاصيل ومواصفات السيجما"},
+        {"url": "/request-quote", "anchor_ar": "طلب مقايسة واجهة قسيمة أو فيلا", "context": "حساب أمتار الواجهة والسقالة"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-03", "anchor_ar": "أسعار أصباغ جوتاشيلد للواجهات", "context": "تكلفة دهان الحماية النهائي"},
+        {"article_id": "ARTICLE-01", "anchor_ar": "أسعار الصباغين وأعمال التشطيب", "context": "مقارنة ميزانيات التشطيب"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-19", "anchor_ar": "دليل تشطيب واجهات قسائم المطلاع بالسيجما", "context": "لأصحاب القسائم في المدن الجديدة"},
+        {"article_id": "ARTICLE-20", "anchor_ar": "مقارنة بين السيجما العادية والسيجما الإيطالية والجرانيت", "context": "المفاضلة بين جودة الخامات"}
+      ]
+    },
+    "ARTICLE-03": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "ماركات الأصباغ المعتمدة في الكويت", "context": "استعراض منتجات جوتن وكابارول"},
+        {"url": "/request-quote", "anchor_ar": "طلب صباغ معتمد لتطبيق دهانات جوتن الأصلية", "context": "ضمان جودة التطبيق"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-01", "anchor_ar": "تكلفة صبغ الغرفة مع المواد الأصلية", "context": "تأثير سعر السطل على التكلفة الإجمالية"},
+        {"article_id": "ARTICLE-02", "anchor_ar": "سعر متر السيجما ومواد الحماية الخارجية", "context": "لواجهات المباني"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-14", "anchor_ar": "أحدث كتالوج ألوان جوتن لبيوت الكويت", "context": "اختيار الألوان والأكواد"},
+        {"article_id": "ARTICLE-25", "anchor_ar": "كيف تتأكد من أن سطل جوتن أصلي وغير مغشوش", "context": "حيل غش الصباغين"}
+      ]
+    },
+    "ARTICLE-04": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "دليل تركيب بديل الخشب وبديل الرخام", "context": "مواصفات تكسيات الجدران"},
+        {"url": "/request-quote", "anchor_ar": "طلب فني تركيب بديل رخام وخشب في الكويت", "context": "حساب عدد الألواح والتركيب"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-01", "anchor_ar": "سعر صبغ الغرف والصالات", "context": "تنسيق الصبغ مع جدار الديكور"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-15", "anchor_ar": "الصبغ الإيطالي وتأثيرات الرخام الطبيعي", "context": "بدائل الديكور الفاخر"},
+        {"article_id": "ARTICLE-16", "anchor_ar": "تركيب براويز الفوم مع الصبغ", "context": "تنسيق ديكورات الجدران الحديثة"}
+      ]
+    },
+    "ARTICLE-05": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "خدمات معالجة الرطوبة والنش المائي بالجدران", "context": "العزل والمعالجة الكيميائية"},
+        {"url": "/request-quote", "anchor_ar": "طلب فحص ومعاينة رطوبة الجدران", "context": "تشخيص مصدر التسريب"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-01", "anchor_ar": "تكلفة صبغ الغرفة بعد المعالجة", "context": "إعادة التشطيب النهائي"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-07", "anchor_ar": "علاج رطوبة السرداب وتملح الجدران بالكويت", "context": "للرطوبة الأرضية العميقة"},
+        {"article_id": "ARTICLE-09", "anchor_ar": "أسباب انتفاخ دهان الطوفة وسقوط المعجون", "context": "تشخيص أسباب تلف الدهان"}
+      ]
+    },
+    "ARTICLE-06": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "خدمات صبغ وتجديد الأبواب الخشبية", "context": "أصباغ الناري واللاكر"},
+        {"url": "/request-quote", "anchor_ar": "طلب صباغ أبواب خشب في الكويت", "context": "حساب عدد الأبواب والمصنعية"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-01", "anchor_ar": "تكلفة صبغ الشقق والغرف", "context": "تجديد البيت بالكامل"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-24", "anchor_ar": "صبغ الأبواب الحديدية والمظلات الخارجية", "context": "للأبواب المعدنية"}
+      ]
+    },
+    "ARTICLE-07": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "عزل السراديب ومعالجة المياه الجوفية", "context": "الحلول الإنشائية"},
+        {"url": "/request-quote", "anchor_ar": "طلب كشف هندسي على رطوبة السرداب", "context": "تحديد نسبة الرطوبة"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-09", "anchor_ar": "أسباب انتفاخ الدهان وسقوط المعجون", "context": "علامات تلف طبقات الدهان"},
+        {"article_id": "ARTICLE-11", "anchor_ar": "أصباغ مقاومة للرطوبة والعفن", "context": "المناطق الرطبة"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-05", "anchor_ar": "تكلفة معالجة رطوبة الجدران في الكويت", "context": "الميزانية المتوقعة"}
+      ]
+    },
+    "ARTICLE-08": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "أصباغ الواجهات الخارجية المقاومة للحرارة", "context": "مواصفات جوتاشيلد وكابارول"},
+        {"url": "/request-quote", "anchor_ar": "طلب معاينة صبغ واجهة فيلا في الكويت", "context": "تقدير الكميات المطلوبة"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-10", "anchor_ar": "صبغ شاليهات الكويت ومقاومة الملوحة", "context": "البيئات الساحلية القاسية"},
+        {"article_id": "ARTICLE-09", "anchor_ar": "أسباب تقشر الأصباغ الخارجية", "context": "أثر الحرارة والسنفرة"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-02", "anchor_ar": "سعر متر السيجما في الكويت", "context": "تكاليف الواجهات"},
+        {"article_id": "ARTICLE-20", "anchor_ar": "الفرق بين أنواع السيجما والجرانيت للواجهات", "context": "مقارنة المواد"}
+      ]
+    },
+    "ARTICLE-09": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "ترميم وتصليح الجدران المتضررة", "context": "كشط ومعالجة المعجون"},
+        {"url": "/request-quote", "anchor_ar": "طلب فني صيانة ومعالجة طوفة متقشرة", "context": "معاينة منزلية"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-07", "anchor_ar": "علاج رطوبة السرداب والخرير", "context": "مصادر الرطوبة"},
+        {"article_id": "ARTICLE-12", "anchor_ar": "طريقة الصبغ فوق الصبغ القديم بدون تقشير", "context": "التأسيس السليم"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-05", "anchor_ar": "حسبة تكلفة علاج رطوبة الحوائط", "context": "التكلفة المتوقعة"}
+      ]
+    },
+    "ARTICLE-10": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "أصباغ وعوازل الشاليهات والمناطق الساحلية", "context": "دهانات مقاومة للكلوريد والملح"},
+        {"url": "/areas/ahmadi", "anchor_ar": "صباغين في محافظة الأحمدي والخيران", "context": "فنيون متواجدون في المنطقة"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-08", "anchor_ar": "أفضل صبغ خارجي مقاوم للشمس", "context": "لحماية جدران الشاليه"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-24", "anchor_ar": "حماية حديد ومظلات الشاليهات من الصدأ", "context": "أصباغ المعادن"}
+      ]
+    },
+    "ARTICLE-11": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "أصباغ المطابخ والحمامات المضادة للبكتيريا", "context": "مواصفات الأصباغ الصحية"},
+        {"url": "/request-quote", "anchor_ar": "طلب صبغ سقف الحمام أو المطبخ", "context": "معالجة فورية للعفن"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-09", "anchor_ar": "علاج انتفاخ الدهان وبقع الرطوبة", "context": "أثر البخار المستمر"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-18", "anchor_ar": "دهانات بدون رائحة سريعة الجفاف للمنازل المسكونة", "context": "للبيوت المأهولة"}
+      ]
+    },
+    "ARTICLE-12": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "خدمات تأسيس الجدران وسحب المعجون", "context": "مراحل الصبغ الصحيحة"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-09", "anchor_ar": "تفادي تقشر وسقوط المعجون", "context": "أهمية البرايمر الرابط"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-13", "anchor_ar": "اختيار الدهان المائي الجديد (مطفي أم ربع لمعة)", "context": "التشطيب بعد التحويل"}
+      ]
+    },
+    "ARTICLE-13": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "دليل درجات لمعان الأصباغ الداخلية", "context": "مقارنة المطفي والربع لمعة"},
+        {"url": "/request-quote", "anchor_ar": "طلب استشارة اختيار نوع ولمعان الصبغ", "context": "معاينة ألوان مجانية"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-14", "anchor_ar": "أشهر ألوان جوتن لبيوت الكويت 2026", "context": "تطبيق الدرجة مع اللمعان الصح"},
+        {"article_id": "ARTICLE-18", "anchor_ar": "أصباغ بدون رائحة قابلة للغسيل", "context": "لغرف الأطفال والمعيشة"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-01", "anchor_ar": "سعر صبغ الغرفة حسب نوع الدهان", "context": "فروقات التكلفة"},
+        {"article_id": "ARTICLE-30", "anchor_ar": "كيف تؤثر إضاءة اللمبات على لمعان الصبغ", "context": "تنسيق الإضاءة"}
+      ]
+    },
+    "ARTICLE-14": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "أصباغ جوتن فينوماستيك الداخلية", "context": "تنسيق ألوان الكتالوج"},
+        {"url": "/request-quote", "anchor_ar": "طلب فني صبغ لتطبيق عينات ألوان جوتن على الطبيعة", "context": "اختبار اللون قبل الصبغ"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-13", "anchor_ar": "الفرق بين المطفي والربع لمعة لألوان البيج والأوف وايت", "context": "انعكاس اللون على الجدار"},
+        {"article_id": "ARTICLE-15", "anchor_ar": "دمج ألوان الدهان مع الصبغ الإيطالي الفاخر", "context": "لجدار الشاشة والمجالس"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-03", "anchor_ar": "أسعار سطل وبستيل جوتن في الكويت", "context": "تكلفة شراء الألوان"},
+        {"article_id": "ARTICLE-30", "anchor_ar": "اختيار الإضاءة المناسبة للون بريز (Breeze) وبير (Bare)", "context": "تفادي اصفرار اللون"}
+      ]
+    },
+    "ARTICLE-15": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "خدمات الصبغ الإيطالي والفلفت والستوكو", "context": "الدهانات الديكورية الفاخرة"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-16", "anchor_ar": "تنسيق براويز الفوم مع الصبغ الديكوري", "context": "فخامة مجالس الاستقبال"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-04", "anchor_ar": "مقارنة الصبغ الإيطالي ببديل الرخام", "context": "لتشطيب جدار التلفزيون"}
+      ]
+    },
+    "ARTICLE-16": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "تركيب وتصميم براويز الفوم والبانوهات", "context": "تصاميم نيوكلاسيك"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-14", "anchor_ar": "أفضل ألوان صبغ داخل براويز الفوم", "context": "درجات الأوف وايت الهادئة"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-01", "anchor_ar": "تكلفة صبغ الصالات مع الديكور", "context": "حساب الميزانية"}
+      ]
+    },
+    "ARTICLE-17": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "خدمات ورق الجدران والفينيل الكوري", "context": "توريد وتركيب"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-13", "anchor_ar": "مقارنة الصبغ الحريري مع ورق الجدران", "context": "سهولة التنظيف والتحمل"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-05", "anchor_ar": "أثر رطوبة الجدران على صمغ ورق الحائط", "context": "تحذيرات هامة"}
+      ]
+    },
+    "ARTICLE-18": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "دهانات صديقة للبيئة بدون رائحة", "context": "تقنية فينوماستيك بيور كولورز"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-13", "anchor_ar": "أفضل دهانات ربع لمعة صحية لغرف الأطفال", "context": "مقاومة البقع"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-28", "anchor_ar": "صبغ الشقق المؤجرة بسرعة قبل التسليم", "context": "الجفاف الفوري"}
+      ]
+    },
+    "ARTICLE-19": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "مقاولات تشطيب واجهات قسائم السكن الخاص", "context": "مساح وسيجما معتمد"},
+        {"url": "/areas/jahra", "anchor_ar": "صباغين ومقاولي واجهات في محافظة الجهراء والمطلاع", "context": "خدمة قسائم المطلاع"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-20", "anchor_ar": "مقارنة بين السيجما الإيطالية والسيجما العادية للواجهة", "context": "اختيار المادة الصح"},
+        {"article_id": "ARTICLE-21", "anchor_ar": "الترتيب الصحيح لمراحل صبغ البيت الجديد", "context": "تنسيق مراحل البناء"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-02", "anchor_ar": "سعر متر السيجما في الكويت ومقايسة القسيمة", "context": "حساب التكلفة الإجمالية"}
+      ]
+    },
+    "ARTICLE-20": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "أنواع السيجما والجرانيت الخارجي للفلل", "context": "المواصفات والضمان"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-19", "anchor_ar": "تشطيب واجهات الفلل بالمدن الجديدة", "context": "مقاومة عوامل الطقس"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-29", "anchor_ar": "بدائل كسر الرخام للواجهات الخارجية", "context": "تكسيات اقتصادية حديثة"}
+      ]
+    },
+    "ARTICLE-21": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "إدارة مراحل تشطيب وأصباغ الفلل من الصفر", "context": "التأسيس الهندسي"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-19", "anchor_ar": "مراحل تشطيب واجهات القسائم الجديدة", "context": "التشطيب الخارجي"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-27", "anchor_ar": "كيف تستلم أعمال الصبغ وتفحص الجدران", "context": "معايير الاستلام النهائي"}
+      ]
+    },
+    "ARTICLE-22": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "صبغ وعزل الأسوار الخارجية والحدائق", "context": "دهانات مقاومة للماء والتربة"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-24", "anchor_ar": "صبغ مظلات وأبواب السور الحديدية", "context": "حماية الحديد من التآكل"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-05", "anchor_ar": "معالجة تملح أسفل الحوائط والأسوار", "context": "حل مشكلة الأملاح"}
+      ]
+    },
+    "ARTICLE-23": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "عوازل الأسطح السائلة وجيتاروف الكويت", "context": "عزل مائي وحراري للأسطح"},
+        {"url": "/request-quote", "anchor_ar": "طلب فحص وعزل السطح قبل الشتاء", "context": "كشف الخرير واختبار الغمر"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-21", "anchor_ar": "متى يتم عزل السطح في مراحل بناء البيت الجديد", "context": "الجدول الزمني"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-07", "anchor_ar": "عزل خرير مياه الأمطار والسراديب", "context": "أنظمة العزل المائي"}
+      ]
+    },
+    "ARTICLE-24": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "صبغ ودهان الحديد والمظلات الخارجية", "context": "أنظمة الإيبوكسي واليوريثان"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-22", "anchor_ar": "تجديد صبغ السور والأبواب الخارجية", "context": "التشطيب الخارجي الكامل"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-10", "anchor_ar": "حماية حديد شاليهات البحر من التآكل الملحي", "context": "البيئة البحرية"}
+      ]
+    },
+    "ARTICLE-25": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "معايير جودة الأصباغ وضمان الشغل", "context": "الاعتمادات الرسمية"},
+        {"url": "/request-quote", "anchor_ar": "طلب معاينة صباغ موثوق ومفحوص من المنصة", "context": "ضمان المواد الأصلية"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-26", "anchor_ar": "معايير اختيار صباغ شاطر ورخيص في الكويت", "context": "تجنب الاتفاقات الوهمية"},
+        {"article_id": "ARTICLE-27", "anchor_ar": "چك لست فحص واستلام الشغل من الصباغ", "context": "الفحص الميداني"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-03", "anchor_ar": "أسعار وأرقام وكلاء جوتن الرسميين بالكويت", "context": "شراء المواد بنفسك"}
+      ]
+    },
+    "ARTICLE-26": {
+      "target_service_links": [
+        {"url": "/painters", "anchor_ar": "دليل صباغين الكويت الموثوقين مع التقييمات", "context": "البحث عن صباغ في منطقتك"},
+        {"url": "/request-quote", "anchor_ar": "اطلب عرض سعر صبغ من أفضل 3 صباغين", "context": "مقارنة عروض الأسعار"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-25", "anchor_ar": "حيل غش الصباغين وكيف تكشفها", "context": "شروط العقد الشفوي والمكتوب"},
+        {"article_id": "ARTICLE-27", "anchor_ar": "خطوات فحص واستلام الصبغ خطوة بخطوة", "context": "قبل سداد الدفعة الأخيرة"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-01", "anchor_ar": "متوسط تكلفة صبغ الغرف والشقق في الكويت", "context": "لمعرفة السعر العادل"}
+      ]
+    },
+    "ARTICLE-27": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "معايير التشطيب الفندقي للجدران", "context": "مستوى النعومة والاستواء"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-25", "anchor_ar": "كشف عيوب المعجون وتخفيف الصبغ", "context": "تحديد سبب التموجات"},
+        {"article_id": "ARTICLE-26", "anchor_ar": "بنود عقد صباغة المنازل بالكويت", "context": "الالتزام بالشروط"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-21", "anchor_ar": "استلام مراحل الصبغ في القسيمة الجديدة", "context": "المشاريع الكبيرة"}
+      ]
+    },
+    "ARTICLE-28": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "خدمات صبغ الشقق السريعة والاقتصادية", "context": "تسليم الشقق المؤجرة"},
+        {"url": "/request-quote", "anchor_ar": "طلب صبغ شقة سريع خلال 24-48 ساعة", "context": "جاهزية التسليم للمؤجر"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-26", "anchor_ar": "صباغ رخيص وشاطر للشقق في حولي والفروانية", "context": "إنجاز سريع بتكلفة مضبوطة"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-01", "anchor_ar": "كم تكلفة صبغ شقة إيجار في الكويت", "context": "حساب التكلفة الاقتصادية"},
+        {"article_id": "ARTICLE-18", "anchor_ar": "صبغ سريع الجفاف وبدون رائحة", "context": "لتسريع موعد المعاينة"}
+      ]
+    },
+    "ARTICLE-29": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "تكسيات الواجهات الحديثة وبدائل الرخام الخارجي", "context": "أنظمة التكسية المرنة"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-20", "anchor_ar": "مقارنة السيجما والجرانيت للواجهات", "context": "مقارنة الأوزان والتكاليف"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-02", "anchor_ar": "سعر متر السيجما كبديل اقتصادي للحجر", "context": "المقارنة المالية"}
+      ]
+    },
+    "ARTICLE-30": {
+      "target_service_links": [
+        {"url": "/services-guide", "anchor_ar": "نصائح خبراء الديكور وتنسيق الألوان والإضاءة", "context": "اختيار ألوان الصبغ"}
+      ],
+      "sibling_article_links": [
+        {"article_id": "ARTICLE-14", "anchor_ar": "درجات ألوان جوتن وكود لون بريز وماكياتو", "context": "تجربة اللون تحت الإضاءة"},
+        {"article_id": "ARTICLE-13", "anchor_ar": "تأثير الإضاءة على الصبغ المطفي مقابل ربع اللمعة", "context": "انعكاسات السبوت لايت"}
+      ],
+      "cross_cluster_links": [
+        {"article_id": "ARTICLE-16", "anchor_ar": "توزيع الإضاءة المخفية مع براويز الفوم", "context": "إبراز الظلال الديكورية"}
+      ]
+    }
+  }
+}

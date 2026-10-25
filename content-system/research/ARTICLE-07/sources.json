@@ -1,0 +1,26 @@
+{
+  "article_id": "ARTICLE-07",
+  "slug": "basement-dampness-treatment-kuwait",
+  "primary_keyword": "علاج رطوبة السرداب الكويت",
+  "verification_date": "2026-10-23",
+  "data_points": {
+    "kuwait_basement_challenges": [
+      {"factor": "منسوب المياه الجوفية المرتفع (High Water Table)", "areas": "جنوب السرة (حطين، السلام، الشهداء)، مشرف، الفروانية، صباح الأحمد السكنية"},
+      {"factor": "الضغط الهيدروستاتيكي السلبي (Negative Hydrostatic Pressure)", "impact": "دفع المياه من خارج الخرسانة إلى داخل جدران وأرضيات السرداب"},
+      {"factor": "تبلور الأملاح (Efflorescence)", "impact": "خروج أملاح الكالسيوم والكبريتات من الطابوق والخرسانة وتفتيت المساح والصبغ كالبودرة الطباشيرية"},
+      {"factor": "جورة السرداب (Sump Pit & Submersible Pumps)", "impact": "تعطل مضخات الغاطس أو فيضان الجورة مسبباً ركود مائي تحت بلاط السرداب"}
+    ],
+    "engineering_remediation_systems": [
+      {"system": "العزل البلوري بالحقن (Crystalline Waterproofing Injections)", "mechanism": "حقن مواد سيليكات بوليمرية تتفاعل مع رطوبة الخرسانة وتشكل بلورات صلبة غير قابلة للذوبان تغلق المسامات الشعرية حتى عمق 15 سم"},
+      {"system": "المونة الأسمنتية البوليمرية العازلة (2-Component Polymer-Modified Cementitious Slurry)", "brands": "سيكا توب سيل 107 (SikaTop Seal-107) أو باسف ماستر سيل (MasterSeal 588)"},
+      {"system": "عزل السرداب الإيجابي مقابل السلبي", "notes": "الإيجابي من الخارج وقت البناء، السلبي من الداخل بعد السكن عند حدوث مشاكل الرشح"}
+    ],
+    "pricing_benchmarks_kuwait": {
+      "injection_grouting_point": "15 - 25 د.ك لنقطة الحقن الواحدة (Packer injection)",
+      "negative_cementitious_coating_sqm": "4.5 - 7.5 د.ك للمتر المربع شامل الكشط حتى الخرسانة وطبقتين عازل",
+      "sump_pit_waterproofing_overhaul": "60 - 120 د.ك لعزل جورة المصعد أو جورة الصرف وتغيير العوامة",
+      "basement_room_full_remediation": "180 - 350 د.ك لغرفة سرداب متوسطة (4×5 م) شاملة الكشط والحقن والصبغ المضاد للرطوبة",
+      "anti_mold_breathable_paint": "2.0 - 3.5 د.ك للمتر المربع مصنعية ومواد صبغ تنفسي (Silicate/Silicone Paint)"
+    }
+  }
+}

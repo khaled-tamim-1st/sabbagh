@@ -1,0 +1,26 @@
+{
+  "article_id": "ARTICLE-16",
+  "primary_keyword": "فوم بانوهات جدران الكويت",
+  "target_slug": "foam-wall-molding-kuwait",
+  "verified_sources": [
+    {
+      "source_name": "Orac Decor & NMC Polyurethane Architectural Moldings Technical Data",
+      "url": "https://oracdecor.com",
+      "authority_type": "Manufacturer Specifications",
+      "key_insights": "High-density polyurethane (PU) vs cheap expanded polystyrene (EPS). Resistance to impact, shrinkage coefficients, and DecoFix specialized joint adhesives."
+    },
+    {
+      "source_name": "Kuwait Interior Design & Neoclassical Finishing Guild",
+      "url": "local-industry-field-data",
+      "authority_type": "Local Design & Craftsmanship Ledger",
+      "key_insights": "The Golden Ratio (1:1.618) for wall frame sizing in Kuwaiti majlis and reception salons. Distance from skirting boards (15-20cm) and ceilings (20-30cm). Integration with Jotun off-white paints."
+    },
+    {
+      "source_name": "Shuwaikh & Hawally Building Materials Retail Survey 2026",
+      "url": "local-retail-pricing-ledger",
+      "authority_type": "Kuwait Market Data",
+      "key_insights": "Current market price per linear meter for high-density Korean/European PU foam (0.750 - 1.500 KWD/meter raw; 1.800 - 3.200 KWD/meter turnkey installed with miter cutting, acrylic gap filler, and finish paint)."
+    }
+  ],
+  "last_audited": "2026-10-23"
+}

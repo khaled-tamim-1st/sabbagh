@@ -1,0 +1,69 @@
+{
+  "articleId": "ARTICLE-23",
+  "slug": "roof-waterproofing-jetaroof-kuwait",
+  "primaryKeyword": {
+    "keyword": "عازل جيتاروف الكويت",
+    "searchIntent": "commercial / transactional",
+    "targetDensity": "1.2% - 1.8%",
+    "placementLocations": [
+      "h1",
+      "meta-title",
+      "first-100-words",
+      "h2-application-steps",
+      "conclusion",
+      "faq"
+    ]
+  },
+  "secondaryKeywords": [
+    {
+      "keyword": "صبغ اسطح ضد المطر",
+      "targetCount": 4
+    },
+    {
+      "keyword": "عازل مائي للسطح",
+      "targetCount": 4
+    },
+    {
+      "keyword": "طريقة دهان الجيتاروف مع الشبك",
+      "targetCount": 3
+    },
+    {
+      "keyword": "عزل اسطح كويتي",
+      "targetCount": 3
+    },
+    {
+      "keyword": "سعر متر الجيتاروف الكويت",
+      "targetCount": 3
+    }
+  ],
+  "lsiTerms": [
+    "شبك فايبر جلاس",
+    "رقبة الزجاجة",
+    "اختبار الغمر بالماء",
+    "خرير السطح",
+    "أمطار السرايات",
+    "صبة الميول",
+    "مرازيم السطح",
+    "بولي يوريثان مطاطي",
+    "سماكة المايكرون",
+    "انعكاس الحرارة SRI"
+  ],
+  "internalLinkAnchors": [
+    {
+      "targetSlug": "external-facade-acrylic-coating-kuwait",
+      "anchorText": "دهانات واجهات الفلل الخارجية"
+    },
+    {
+      "targetSlug": "villa-fence-garden-wall-painting-kuwait",
+      "anchorText": "عزل وصبغ سور البيت الخارجي"
+    },
+    {
+      "targetSlug": "thermal-insulation-reflective-paints-kuwait",
+      "anchorText": "دهانات العزل الحراري العاكسة للشمس"
+    },
+    {
+      "targetSlug": "kuwait-paint-cost-calculator",
+      "anchorText": "حاسبة تكاليف وأسعار الصبغ في الكويت"
+    }
+  ]
+}

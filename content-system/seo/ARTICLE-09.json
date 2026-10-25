@@ -1,0 +1,86 @@
+{
+  "article_id": "ARTICLE-09",
+  "seo_title": "انتفاخ دهان الطوفة بالكويت: اسباب تساقط المعجون والصبغ 2026",
+  "h1": "أسباب انتفاخ دهان الطوفة وسقوط المعجون في البيوت الكويتية وطرق العلاج الجذري (دليل 2026)",
+  "meta_description": "لماذا ينتفخ دهان الطوفة ويسقط المعجون في بيوت الكويت؟ دليل تشخيص رطوبة التكييف وغياب البرايمر، اختبار تطبيل المعجون، وخطوات العلاج الجذري والأسعار بالدينار.",
+  "slug": "paint-blistering-causes-kuwait",
+  "primary_keyword": "انتفاخ دهان الطوفة",
+  "secondary_keywords": [
+    "تساقط معجون الجدران",
+    "عيوب الصبغ وتقشره",
+    "تطبيل معجون الحائط",
+    "علاج تبقيع الجدران"
+  ],
+  "canonical_url": "https://sabbagh-kuwait.com/blog/paint-blistering-causes-kuwait",
+  "suggested_images": [
+    {
+      "file_name": "paint-blistering-ac-leak-kuwait.webp",
+      "alt_text": "انتفاخ دهان الطوفة وظهور فقاعات رطوبة مائية ناتجة عن تسريب دراين التكييف السنترال في الكويت",
+      "placement": "تحت جدول التشخيص مباشرة"
+    },
+    {
+      "file_name": "wall-putty-delamination-repair.webp",
+      "alt_text": "طريقة كشط وتأسيس المعجون الإكريليكي والبرايمر السيلر لعلاج تقشر صبغ الجدار في الكويت",
+      "placement": "في قسم خطوات العلاج الجذري"
+    }
+  ],
+  "internal_links": [
+    {"url": "/services-guide", "anchor": "ترميم وتصليح الجدران المتضررة"},
+    {"url": "/request-quote", "anchor": "طلب فني صيانة ومعالجة طوفة متقشرة"},
+    {"url": "/blog/damp-wall-treatment-cost-kuwait", "anchor": "دليل تكلفة معالجة رطوبة الجدران والنش في الكويت 2026"},
+    {"url": "/blog/basement-dampness-treatment-kuwait", "anchor": "علاج رطوبة السرداب وتملح الجدران بالكويت"},
+    {"url": "/blog/room-painting-cost-kuwait", "anchor": "دليل سعر صبغ الغرفة في الكويت بالدينار الكويتي"}
+  ],
+  "schema_markup": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://sabbagh-kuwait.com/blog/paint-blistering-causes-kuwait#article",
+        "headline": "أسباب انتفاخ دهان الطوفة وسقوط المعجون في البيوت الكويتية وطرق العلاج الجذري (دليل 2026)",
+        "description": "دليل تشخيصي شامل لأسباب انتفاخ دهانات الجدران وتساقط المعجون وتطبيل الحوائط في الكويت وطرق العلاج الهندسي وتكاليف الإصلاح.",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "صباغ الكويت - فريق الفحص والتشخيص الفني"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "صباغ الكويت",
+          "url": "https://sabbagh-kuwait.com"
+        },
+        "mainEntityOfPage": "https://sabbagh-kuwait.com/blog/paint-blistering-causes-kuwait"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://sabbagh-kuwait.com/blog/paint-blistering-causes-kuwait#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "ما هو سبب انتفاخ دهان الطوفة في بيوت الكويت؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "السبب الأكثر شيوعاً هو تسرب خفي من بايب دراين التكييف السنترال داخل الحائط، أو إهمال الصباغ لتطبيق طبقة البرايمر السيلر فوق المساح الجاف، أو الصبغ فوق لياسة رطبة قبل اكتمال جفاف 28 يوماً."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ماذا يعني تطبيل معجون الجدار؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "يعني انفصال طبقة المعجون عن خرسانة الحائط ووجود جيب هوائي فارغ بينهما، مما يصدر صوتاً أجوف مجوفاً كالصندوق عند النقر عليه، وهو مؤشر على ضرورة كشط الحائط بالكامل."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "كم تكلفة إصلاح بقعة دهان منتفخة في الكويت؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "تتراوح تكلفة إصلاح البقعة الواحدة بين 15 إلى 25 د.ك شاملة الكشط والبرايمر السيلر والمعجون المرن والصبغ النهائي، بينما تتراوح تكلفة تجديد الجدار الكامل بين 35 إلى 60 د.ك."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

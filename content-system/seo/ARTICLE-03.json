@@ -1,0 +1,87 @@
+{
+  "article_id": "ARTICLE-03",
+  "seo_title": "أسعار دهانات جوتن الكويت: سعر درام فينوماستيك وجوتاشيلد 2026",
+  "h1": "أسعار دهانات جوتن في الكويت 2026: قائمة أسعار درام وجالون فينوماستيك وجوتاشيلد",
+  "meta_description": "قائمة أسعار دهانات جوتن في الكويت 2026: سعر جالون ودرام فينوماستيك (26-32 د.ك) وجوتاشيلد للواجهات، وحساب كمية السطول ومراكز الشويخ المعتمدة.",
+  "slug": "jotun-paint-prices-kuwait",
+  "primary_keyword": "أسعار دهانات جوتن الكويت",
+  "secondary_keywords": [
+    "سعر بستيل جوتن",
+    "سعر فينوماستيك الكويت",
+    "اسعار جوتاشيلد خارجي",
+    "سعر جالون جوتن بالكويت"
+  ],
+  "canonical_url": "https://sabbagh-kuwait.com/blog/jotun-paint-prices-kuwait",
+  "suggested_images": [
+    {
+      "file_name": "jotun-fenomastic-paint-drum-kuwait.webp",
+      "alt_text": "براميل وجالونات أصباغ جوتن فينوماستيك وجوتاشيلد الأصلية في معرض الشويخ بالكويت",
+      "placement": "تحت جدول الأسعار الداخلية"
+    },
+    {
+      "file_name": "jotun-multicolor-tinting-machine-kuwait.webp",
+      "alt_text": "ماكينة تلوين دهانات جوتن بالكمبيوتر في الكويت لخلط قواعد Base A و Base C",
+      "placement": "قبل شرح اختلاف السعر حسب درجة اللون"
+    }
+  ],
+  "internal_links": [
+    {"url": "/services-guide", "anchor": "دليل ماركات الأصباغ المعتمدة في الكويت"},
+    {"url": "/request-quote", "anchor": "طلب صباغ معتمد لتطبيق دهانات جوتن الأصلية عبر منصتنا"},
+    {"url": "/blog/room-painting-cost-kuwait", "anchor": "تكلفة صبغ الغرفة مع المواد الأصلية بالتفصيل"},
+    {"url": "/blog/sigma-exterior-cost-kuwait", "anchor": "سعر متر السيجما في الكويت ومقايسة واجهة الفيلا"},
+    {"url": "/blog/jotun-paint-colors-kuwait", "anchor": "أحدث كتالوج ألوان جوتن لبيوت الكويت لعام 2026"},
+    {"url": "/blog/painter-deception-detection-kuwait", "anchor": "كيف تكشف غش الصباغين وحيل خلط البوية بالكويت"}
+  ],
+  "schema_markup": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://sabbagh-kuwait.com/blog/jotun-paint-prices-kuwait#article",
+        "headline": "أسعار دهانات جوتن في الكويت 2026: قائمة أسعار درام وجالون فينوماستيك وجوتاشيلد",
+        "description": "دليل أسعار عبوات دهانات جوتن في الكويت بمختلف الأحجام والدرجات الداخلية والخارجية وخريطة الموزعين المعتمدين.",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "صباغ الكويت - قسم أبحاث مواد البناء"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "صباغ الكويت",
+          "url": "https://sabbagh-kuwait.com"
+        },
+        "mainEntityOfPage": "https://sabbagh-kuwait.com/blog/jotun-paint-prices-kuwait"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://sabbagh-kuwait.com/blog/jotun-paint-prices-kuwait#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "كم سعر درام صبغ جوتن فينوماستيك في الكويت؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "يتراوح سعر درام أو بستيل جوتن فينوماستيك الكبير (18 لتر) بين 26 إلى 32 دينار كويتي حسب درجة اللمعان (مطفي، ربع لمعة، أو نصف لمعة)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "كم سعر جالون جوتاشيلد الخارجي للواجهات؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "يتراوح سعر جالون جوتاشيلد سعة 4 لتر بين 10 إلى 15 دينار كويتي، بينما يتراوح سعر الدرام الكبير 18 لتر بين 34 إلى 45 دينار كويتي حسب نوع الحماية ومقاومة الحرارة."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "لماذا يختلف سعر سطل جوتن باختلاف اللون؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "يختلف السعر بسبب قاعدة التلوين؛ فالألوان الفاتحة تستخدم Base A القياسية الأقل سعراً، بينما تستخدم الألوان الداكنة والمركزة Base C التي تتطلب ضخ كميات كبيرة من الصبغات الكيميائية مما يرفع سعر العبوة من 2 إلى 5 دنانير."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

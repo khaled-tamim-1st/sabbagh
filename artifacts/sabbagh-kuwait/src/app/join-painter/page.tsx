@@ -1,0 +1,16 @@
+import React from 'react';
+import type { Metadata } from 'next';
+import JoinPainterPage from '@/views/join-painter';
+
+export const metadata: Metadata = {
+  title: 'انضم كصباغ معتمد في الكويت | منصة صباغ الكويت',
+  description:
+    'سجل ورشتك أو خدماتك كصباغ معتمد في الكويت: استقبل طلبات المعاينات المباشرة في منطقتك، اعرض سابقة أعمالك، وتواصل مع العملاء عبر واتساب والاتصال الهاتفي مباشرة.',
+  alternates: {
+    canonical: 'https://sabbagh-kuwait.com/join-painter',
+  },
+};
+
+export default function JoinPainterRoute() {
+  return <JoinPainterPage />;
+}

@@ -53,3 +53,17 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Sensitive & Environment Files
+*.env
+*.env.*
+*.env.local
+deploy/*.env
+deploy/backend.env
+deploy/.env
+deploy-bundle.tar.gz
+*.pem
+deploy/ssl/*.pem
+!*.env.example
+!*.example
+

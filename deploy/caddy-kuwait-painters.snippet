@@ -1,0 +1,17 @@
+# ==============================================================================
+# Kuwait Painters Platform - Caddyfile Block
+# Append this block to ~/reverse-proxy/Caddyfile on the host
+# ==============================================================================
+
+# API Domain (Automatic SSL via Let's Encrypt / ZeroSSL managed by Caddy)
+api.kuwaitpainters.com {
+    encode zstd gzip
+
+    # Reverse proxy directly to the kuwait-painters-api container on web_network
+    reverse_proxy kuwait-painters-api:5000 {
+        header_up Host {host}
+        header_up X-Real-IP {remote_host}
+        header_up X-Forwarded-For {remote_host}
+        header_up X-Forwarded-Proto {scheme}
+    }
+}

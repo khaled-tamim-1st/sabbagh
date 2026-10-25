@@ -1,0 +1,40 @@
+{
+  "article_id": "ARTICLE-01",
+  "primary_keyword": "سعر صبغ الغرفة بالكويت",
+  "verified_sources": [
+    {
+      "source_name": "Best Painter Kuwait (Market Contractor Survey)",
+      "url": "https://best-painter-kuwait.com",
+      "access_date": "2026-10-23",
+      "extracted_facts": {
+        "room_price_range_kwd": "25 to 50 KWD for standard 4x4m or 4x5m room including basic materials and labor.",
+        "promotional_or_labor_only_kwd": "15 to 20 KWD for quick refresh or labor-only without deep putty prep.",
+        "luxury_or_full_prep_kwd": "45 to 60+ KWD for Jotun Fenomastic with 2-3 coats of putty and machine sanding.",
+        "apartment_1br_studio_kwd": "80 to 150 KWD.",
+        "apartment_2_to_3br_kwd": "150 to 300 KWD.",
+        "duplex_or_large_villa_floor_kwd": "350+ KWD."
+      },
+      "credibility_rating": "High (consistent with local contractor field rates across Hawalli, Farwaniya, and Capital)"
+    },
+    {
+      "source_name": "Jawad Al-Saffar (Kuwait Building Materials & Paints)",
+      "url": "https://jawad-alsaffar.com",
+      "access_date": "2026-10-23",
+      "extracted_facts": {
+        "jotun_fenomastic_4L_kwd": "5.000 to 8.000 KWD depending on sheen and base.",
+        "jotun_fenomastic_18L_drum_kwd": "26.000 to 32.000 KWD.",
+        "primer_drum_18L_kwd": "8.000 to 10.000 KWD."
+      },
+      "credibility_rating": "Verified Kuwait Retailer"
+    },
+    {
+      "source_name": "Decorat KW Field Guide",
+      "url": "https://decoratkw.com",
+      "access_date": "2026-10-23",
+      "extracted_facts": {
+        "factors_influencing_cost": "Wall preparation, existing cracks, furniture covering/masking tape, ceiling height, and number of coats."
+      },
+      "credibility_rating": "Established Kuwait Directory"
+    }
+  ]
+}

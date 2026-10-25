@@ -1,0 +1,86 @@
+{
+  "article_id": "ARTICLE-07",
+  "seo_title": "علاج رطوبة السرداب الكويت: حلول تملح الجدران وعزل السراديب 2026",
+  "h1": "علاج رطوبة السرداب وتملح الجدران في الكويت: حلول هندسية جذرية تمنع تقشير الصبغ (دليل 2026)",
+  "meta_description": "كيف تعالج رطوبة السرداب وتملح الجدران بالكويت؟ دليل العزل البلوري السلبي وحقن الشروخ، تكلفة المتر بالدينار، وعلاج فيضان جورة السرداب وتقشر الدهان.",
+  "slug": "basement-dampness-treatment-kuwait",
+  "primary_keyword": "علاج رطوبة السرداب الكويت",
+  "secondary_keywords": [
+    "تقشير دهان السرداب",
+    "عزل سراديب الكويت",
+    "عزل جورة السرداب",
+    "أملاح طوفة السرداب"
+  ],
+  "canonical_url": "https://sabbagh-kuwait.com/blog/basement-dampness-treatment-kuwait",
+  "suggested_images": [
+    {
+      "file_name": "basement-crystalline-waterproofing-kuwait.webp",
+      "alt_text": "تطبيق العزل البلوري الأسمنتي السلبي على جدار خرساني في سرداب فيلا بالكويت لمنع تسرب المياه الجوفية",
+      "placement": "تحت جدول الأسعار مباشرة"
+    },
+    {
+      "file_name": "basement-salt-efflorescence-repair.webp",
+      "alt_text": "معالجة أملاح التزهير والبودرة البيضاء المتساقطة من حائط سرداب في جنوب السرة بالكويت",
+      "placement": "في قسم ظاهرة التزهير الملحي"
+    }
+  ],
+  "internal_links": [
+    {"url": "/services-guide", "anchor": "عزل السراديب ومعالجة المياه الجوفية"},
+    {"url": "/request-quote", "anchor": "طلب كشف هندسي على رطوبة السرداب"},
+    {"url": "/blog/damp-wall-treatment-cost-kuwait", "anchor": "تكلفة معالجة رطوبة الجدران في الكويت بالتفصيل"},
+    {"url": "/blog/paint-blistering-causes-kuwait", "anchor": "أسباب انتفاخ دهان الطوفة وسقوط المعجون وطرق علاجه"},
+    {"url": "/blog/room-painting-cost-kuwait", "anchor": "دليل سعر صبغ الغرفة في الكويت"}
+  ],
+  "schema_markup": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://sabbagh-kuwait.com/blog/basement-dampness-treatment-kuwait#article",
+        "headline": "علاج رطوبة السرداب وتملح الجدران في الكويت: حلول هندسية جذرية تمنع تقشير الصبغ (دليل 2026)",
+        "description": "دليل هندسي متكامل لتشخيص وعلاج رطوبة وتملح السراديب في الكويت بالدينار الكويتي بتقنيات العزل البلوري السلبي وحقن الشروخ الإنشائية.",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "صباغ الكويت - فريق التدقيق الهندسي والعوازل"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "صباغ الكويت",
+          "url": "https://sabbagh-kuwait.com"
+        },
+        "mainEntityOfPage": "https://sabbagh-kuwait.com/blog/basement-dampness-treatment-kuwait"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://sabbagh-kuwait.com/blog/basement-dampness-treatment-kuwait#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "هل يمكن عزل السرداب من الداخل دون الحفر في الحوش؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "نعم، باستخدام العزل الأسمنتي البلوري السلبي وحقن الشروخ بالبولي يوريثان بضغط عالي، يمكن إيقاف ارتشاح المياه وتملح الجدران من الداخل بكفاءة 100% دون تكسير خارجي."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "كم تكلفة عزل جدران السرداب في الكويت؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "تتراوح تكلفة العزل البلوري السلبي بين 4.5 إلى 7.5 د.ك للمتر المربع شامل الكشط والطبقات العازلة، بينما تتراوح تكلفة حقن الشروخ الحية بين 15 إلى 25 د.ك للنقطة الواحدة."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ما هو أفضل صبغ لجدران السرداب بعد العزل؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "أفضل خيار هو دهان السيليكات المائي التنفسي المضاد للبكتيريا، لأنه يسمح بخروج بخار الحائط الطبيعي دون احتباس أو انتفاخ لطبقة الصبغ."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

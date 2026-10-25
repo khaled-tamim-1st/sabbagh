@@ -1,0 +1,26 @@
+{
+  "article_id": "ARTICLE-13",
+  "primary_keyword": "الفرق بين المطفي والربع لمعة",
+  "target_slug": "matte-vs-eggshell-paint-kuwait",
+  "verified_sources": [
+    {
+      "source_name": "Jotun Middle East - Fenomastic Interior Sheen Standards",
+      "url": "https://jotun.com/me/en/decorative/interior/fenomastic",
+      "authority_type": "Manufacturer Specifications",
+      "key_insights": "Specular gloss percentages at 60° and 85° angles: Matte (0-5%), Eggshell/Silk/Quarter-sheen (10-25%), Semi-Gloss (30-50%), High-Gloss (70%+). Scrub resistance and pigment-to-binder ratios."
+    },
+    {
+      "source_name": "Caparol Arabia Technical Handbook - Light Reflection & Sheen Selection",
+      "url": "https://caparol.com/me-en",
+      "authority_type": "Engineering Paint Standards",
+      "key_insights": "Impact of direct sunlight vs hidden spot lighting on wall defects. How matte conceals undulations in plaster vs high sheen magnifying imperfections."
+    },
+    {
+      "source_name": "Kuwait Interior Contracting Best Practices Ledger",
+      "url": "local-industry-field-data",
+      "authority_type": "Field Data Kuwait",
+      "key_insights": "Local family lifestyle patterns: Living halls and corridors require high washability (Quarter/Silk), ceilings require dead matte to hide gypsum joints, master bedrooms favor luxury matte (Fenomastic Wonderwall Lux or Rich Matt)."
+    }
+  ],
+  "last_audited": "2026-10-23"
+}

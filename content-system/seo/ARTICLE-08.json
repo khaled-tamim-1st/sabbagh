@@ -1,0 +1,86 @@
+{
+  "article_id": "ARTICLE-08",
+  "seo_title": "افضل صبغ خارجي في الكويت: دهانات واجهات مقاومة للحرارة 2026",
+  "h1": "أفضل صبغ خارجي في الكويت يتحمل حرارة 50+ والغبار: مقارنة أنواع دهانات الواجهات (دليل 2026)",
+  "meta_description": "ما هو افضل صبغ خارجي في الكويت يتحمل حرارة 50+ وغبار السافي؟ مقارنة جوتن جوتاشيلد اكستريم وكابارول وهمبل، درجات الأوف وايت، وأسرار العزل الحراري للواجهات.",
+  "slug": "best-exterior-paints-kuwait-heat",
+  "primary_keyword": "افضل صبغ خارجي في الكويت",
+  "secondary_keywords": [
+    "صبغ واجهات مقاوم للشمس",
+    "اصباغ عاكسة للحرارة الكويت",
+    "جوتاشيلد اكستريم واجهات",
+    "دهان واجهة طارد للغبار"
+  ],
+  "canonical_url": "https://sabbagh-kuwait.com/blog/best-exterior-paints-kuwait-heat",
+  "suggested_images": [
+    {
+      "file_name": "best-exterior-villa-paint-kuwait.webp",
+      "alt_text": "واجهة فيلا مودرن في الكويت بدهان جوتن جوتاشيلد كولور إكستريم أوف وايت عاكس للحرارة",
+      "placement": "تحت جدول المقارنة الشامل مباشرة"
+    },
+    {
+      "file_name": "nano-quartz-anti-dust-facade.webp",
+      "alt_text": "خاصية التنظيف الذاتي ومقاومة غبار السافي لدهانات الواجهات في الكويت",
+      "placement": "في قسم تقنية النانو كوارتز والتنظيف الذاتي"
+    }
+  ],
+  "internal_links": [
+    {"url": "/services-guide", "anchor": "أصباغ الواجهات الخارجية المقاومة للحرارة"},
+    {"url": "/request-quote", "anchor": "طلب معاينة صبغ واجهة فيلا في الكويت"},
+    {"url": "/blog/sigma-exterior-cost-kuwait", "anchor": "سعر متر السيجما في الكويت لعام 2026 بالتفصيل"},
+    {"url": "/blog/jotun-paint-prices-kuwait", "anchor": "قائمة أسعار دهانات جوتن في الكويت 2026 بالدينار"},
+    {"url": "/blog/chalet-painting-khiran-kuwait", "anchor": "صبغ شاليهات الكويت ومقاومة الملوحة ورطوبة البحر"}
+  ],
+  "schema_markup": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://sabbagh-kuwait.com/blog/best-exterior-paints-kuwait-heat#article",
+        "headline": "أفضل صبغ خارجي في الكويت يتحمل حرارة 50+ والغبار: مقارنة أنواع دهانات الواجهات (دليل 2026)",
+        "description": "دليل مقارنة فنية ومناخية لأفضل دهانات الواجهات الخارجية في الكويت المقاومة لحرارة الصيف الشديدة وغبار السافي والأشعة فوق البنفسجية.",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "صباغ الكويت - فريق خبراء المواد والدهانات"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "صباغ الكويت",
+          "url": "https://sabbagh-kuwait.com"
+        },
+        "mainEntityOfPage": "https://sabbagh-kuwait.com/blog/best-exterior-paints-kuwait-heat"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://sabbagh-kuwait.com/blog/best-exterior-paints-kuwait-heat#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "ما هو أفضل صبغ خارجي للواجهات في الكويت؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "المركز الأول يتقاسمه دهان جوتن جوتاشيلد كولور إكستريم (الأفضل في ثبات اللون وتخفيض حرارة الجدار حتى 9 درجات مئوية) ودهان كابارول ثيرموسان الألماني (الأفضل في طرد غبار السافي بخاصية التنظيف الذاتي)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "هل الدهان العاكس للحرارة يخفض استهلاك التكييف؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "نعم، أثبتت الاختبارات الحقلية أن خفض حرارة سطح الحائط الخارجي بمقدار 5 إلى 9 درجات مئوية يقلل تسرب الحرارة للداخل ويوفر ما بين 10% إلى 15% من استهلاك طاقة التكييف السنترال."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "كم برميل صبغ خارجي تحتاجه فيلا قسيمة 400 متر؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "تحتاج فيلا 400 متر 3 أدوار (صافي مسطح 700 إلى 850 م²) ما بين 10 إلى 13 برميل دهان واجهة (سعة 18 لتر) للوجهين، بالإضافة إلى نفس العدد من براميل البرايمر الأساس."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

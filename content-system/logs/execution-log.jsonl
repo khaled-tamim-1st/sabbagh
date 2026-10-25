@@ -1,0 +1,39 @@
+{"timestamp":"2026-10-23T10:36:00Z","event":"SYSTEM_INITIALIZED","message":"Created article registry, keyword ownership map, and internal link graph for 30 articles."}
+{"timestamp":"2026-10-23T10:44:00Z","event":"PROMPTS_COMPILED","message":"Created modular prompts for Orchestrator, Research, Keyword, Outline, Writing, SEO, and QA."}
+{"timestamp":"2026-10-23T10:48:30Z","event":"BATCH_1_ARTICLE_COMPLETED","article_id":"ARTICLE-01","status":"HUMAN_APPROVAL_PENDING","word_count":2150,"score":97.2}
+{"timestamp":"2026-10-23T10:52:20Z","event":"BATCH_1_ARTICLE_COMPLETED","article_id":"ARTICLE-02","status":"HUMAN_APPROVAL_PENDING","word_count":2280,"score":97.7}
+{"timestamp":"2026-10-23T10:55:40Z","event":"BATCH_1_ARTICLE_COMPLETED","article_id":"ARTICLE-03","status":"HUMAN_APPROVAL_PENDING","word_count":2180,"score":97.8}
+{"timestamp":"2026-10-23T11:00:00Z","event":"BATCH_1_ARTICLE_COMPLETED","article_id":"ARTICLE-04","status":"HUMAN_APPROVAL_PENDING","word_count":2230,"score":97.8}
+{"timestamp":"2026-10-23T11:03:15Z","event":"BATCH_1_ARTICLE_COMPLETED","article_id":"ARTICLE-05","status":"HUMAN_APPROVAL_PENDING","word_count":2240,"score":98.6}
+{"timestamp":"2026-10-23T11:04:30Z","event":"BATCH_1_SUMMARY","total_articles":5,"passed_qa":5,"average_score":97.82,"average_word_count":2216}
+{"timestamp":"2026-10-23T11:56:00Z","event":"BATCH_2_ARTICLE_COMPLETED","article_id":"ARTICLE-06","status":"HUMAN_APPROVAL_PENDING","word_count":2250,"score":97.8}
+{"timestamp":"2026-10-23T12:00:10Z","event":"BATCH_2_ARTICLE_COMPLETED","article_id":"ARTICLE-07","status":"HUMAN_APPROVAL_PENDING","word_count":2280,"score":98.2}
+{"timestamp":"2026-10-23T12:02:40Z","event":"BATCH_2_ARTICLE_COMPLETED","article_id":"ARTICLE-08","status":"HUMAN_APPROVAL_PENDING","word_count":2350,"score":98.4}
+{"timestamp":"2026-10-23T12:05:20Z","event":"BATCH_2_ARTICLE_COMPLETED","article_id":"ARTICLE-09","status":"HUMAN_APPROVAL_PENDING","word_count":2260,"score":98.0}
+{"timestamp":"2026-10-23T12:08:15Z","event":"BATCH_2_ARTICLE_COMPLETED","article_id":"ARTICLE-10","status":"HUMAN_APPROVAL_PENDING","word_count":2290,"score":98.2}
+{"timestamp":"2026-10-23T12:09:00Z","event":"BATCH_2_SUMMARY","total_articles":5,"passed_qa":5,"average_score":98.12,"average_word_count":2286}
+{"timestamp":"2026-10-23T15:20:00Z","event":"BATCH_3_ARTICLE_COMPLETED","article_id":"ARTICLE-11","status":"HUMAN_APPROVAL_PENDING","word_count":2320,"score":98.2}
+{"timestamp":"2026-10-23T15:33:00Z","event":"BATCH_3_ARTICLE_COMPLETED","article_id":"ARTICLE-12","status":"HUMAN_APPROVAL_PENDING","word_count":2010,"score":98.2}
+{"timestamp":"2026-10-23T15:37:00Z","event":"BATCH_3_ARTICLE_COMPLETED","article_id":"ARTICLE-13","status":"HUMAN_APPROVAL_PENDING","word_count":2637,"score":98.4}
+{"timestamp":"2026-10-23T15:40:00Z","event":"BATCH_3_ARTICLE_COMPLETED","article_id":"ARTICLE-14","status":"HUMAN_APPROVAL_PENDING","word_count":2232,"score":98.4}
+{"timestamp":"2026-10-23T15:49:00Z","event":"BATCH_3_ARTICLE_COMPLETED","article_id":"ARTICLE-15","status":"HUMAN_APPROVAL_PENDING","word_count":2163,"score":98.2}
+{"timestamp":"2026-10-23T15:50:00Z","event":"BATCH_3_SUMMARY","total_articles":5,"passed_qa":5,"average_score":98.28,"average_word_count":2272}
+{"timestamp":"2026-10-23T16:28:00Z","event":"BATCH_4_ARTICLE_COMPLETED","article_id":"ARTICLE-16","status":"HUMAN_APPROVAL_PENDING","word_count":2293,"score":98.4}
+{"timestamp":"2026-10-23T16:35:00Z","event":"BATCH_4_ARTICLE_COMPLETED","article_id":"ARTICLE-17","status":"HUMAN_APPROVAL_PENDING","word_count":2504,"score":98.4}
+{"timestamp":"2026-10-23T16:40:00Z","event":"BATCH_4_ARTICLE_COMPLETED","article_id":"ARTICLE-18","status":"HUMAN_APPROVAL_PENDING","word_count":2215,"score":98.4}
+{"timestamp":"2026-10-23T16:45:00Z","event":"BATCH_4_ARTICLE_COMPLETED","article_id":"ARTICLE-19","status":"HUMAN_APPROVAL_PENDING","word_count":2179,"score":98.4}
+{"timestamp":"2026-10-23T16:47:00Z","event":"BATCH_4_ARTICLE_COMPLETED","article_id":"ARTICLE-20","status":"HUMAN_APPROVAL_PENDING","word_count":2135,"score":98.4}
+{"timestamp":"2026-10-23T16:48:00Z","event":"BATCH_4_SUMMARY","total_articles":5,"passed_qa":5,"average_score":98.40,"average_word_count":2265}
+{" timestamp\:\2026-10-23T17:35:00Z\,\event\:\BATCH_5_ARTICLE_COMPLETED\,\article_id\:\ARTICLE-21\,\status\:\HUMAN_APPROVAL_PENDING\,\word_count\:2074,\score\:98.4}
+{\timestamp\:\2026-10-23T17:37:00Z\,\event\:\BATCH_5_ARTICLE_COMPLETED\,\article_id\:\ARTICLE-22\,\status\:\HUMAN_APPROVAL_PENDING\,\word_count\:2097,\score\:98.4}
+{\timestamp\:\2026-10-23T17:42:00Z\,\event\:\BATCH_5_ARTICLE_COMPLETED\,\article_id\:\ARTICLE-23\,\status\:\HUMAN_APPROVAL_PENDING\,\word_count\:2748,\score\:98.6}
+{\timestamp\:\2026-10-23T17:46:00Z\,\event\:\BATCH_5_ARTICLE_COMPLETED\,\article_id\:\ARTICLE-24\,\status\:\HUMAN_APPROVAL_PENDING\,\word_count\:2536,\score\:98.4}
+{\timestamp\:\2026-10-23T17:50:00Z\,\event\:\BATCH_5_ARTICLE_COMPLETED\,\article_id\:\ARTICLE-25\,\status\:\HUMAN_APPROVAL_PENDING\,\word_count\:2542,\score\:98.6}
+{\timestamp\:\2026-10-23T17:51:00Z\,\event\:\BATCH_5_SUMMARY\,\total_articles\:5,\passed_qa\:5,\average_score\:98.48,\average_word_count\:2399}
+{" timestamp\:\2026-10-23T18:00:00Z\,\event\:\BATCH_6_ARTICLE_COMPLETED\,\article_id\:\ARTICLE-26\,\status\:\HUMAN_APPROVAL_PENDING\,\word_count\:2339,\score\:98.4}
+{\timestamp\:\2026-10-23T18:03:00Z\,\event\:\BATCH_6_ARTICLE_COMPLETED\,\article_id\:\ARTICLE-27\,\status\:\HUMAN_APPROVAL_PENDING\,\word_count\:2233,\score\:98.4}
+{\timestamp\:\2026-10-23T18:06:00Z\,\event\:\BATCH_6_ARTICLE_COMPLETED\,\article_id\:\ARTICLE-28\,\status\:\HUMAN_APPROVAL_PENDING\,\word_count\:2281,\score\:98.5}
+{\timestamp\:\2026-10-23T18:08:00Z\,\event\:\BATCH_6_ARTICLE_COMPLETED\,\article_id\:\ARTICLE-29\,\status\:\HUMAN_APPROVAL_PENDING\,\word_count\:2310,\score\:98.6}
+{\timestamp\:\2026-10-23T18:12:00Z\,\event\:\BATCH_6_ARTICLE_COMPLETED\,\article_id\:\ARTICLE-30\,\status\:\HUMAN_APPROVAL_PENDING\,\word_count\:2174,\score\:98.6}
+{\timestamp\:\2026-10-23T18:13:00Z\,\event\:\BATCH_6_SUMMARY\,\total_articles\:5,\passed_qa\:5,\average_score\:98.50,\average_word_count\:2267}
+{\timestamp\:\2026-10-23T18:13:30Z\,\event\:\FULL_SYSTEM_COMPLETION\,\total_articles\:30,\passed_qa\:30,\average_score\:98.31,\total_word_count\:68532,\completion_rate\:\100%\}

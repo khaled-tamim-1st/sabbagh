@@ -1,0 +1,70 @@
+{
+  "articleId": "ARTICLE-25",
+  "slug": "detecting-painter-scams-kuwait",
+  "primaryKeyword": {
+    "keyword": "غش الصباغين",
+    "searchIntent": "informational / investigative",
+    "targetDensity": "1.2% - 1.8%",
+    "placementLocations": [
+      "h1",
+      "meta-title",
+      "first-100-words",
+      "h2-scams-list",
+      "h2-testing-methods",
+      "conclusion",
+      "faq"
+    ]
+  },
+  "secondaryKeywords": [
+    {
+      "keyword": "كيف اعرف الصبغ الاصلي",
+      "targetCount": 4
+    },
+    {
+      "keyword": "عيوب شغل الصباغ",
+      "targetCount": 4
+    },
+    {
+      "keyword": "تخفيف الصبغ بالماء بكثرة",
+      "targetCount": 3
+    },
+    {
+      "keyword": "كشف الاصباغ المقلدة بالكويت",
+      "targetCount": 3
+    },
+    {
+      "keyword": "فحص استلام دهانات الجدران",
+      "targetCount": 3
+    }
+  ],
+  "lsiTerms": [
+    "باركود براميل جوتن",
+    "حماية المستهلك الكويتية 135",
+    "اختبار الكشاف المائل",
+    "معجون بودرة متكلس",
+    "إلغاء وجه البرايمر",
+    "ريحة البوية الفاسدة",
+    "تجيير الصبغ Chalking",
+    "شريط الأمان لغطاء السطل",
+    "شوارع الشويخ الصناعية",
+    "عقد صبغ وتشطيب قانوني"
+  ],
+  "internalLinkAnchors": [
+    {
+      "targetSlug": "kuwait-paint-cost-calculator",
+      "anchorText": "حاسبة تكاليف وأسعار الصبغ في الكويت"
+    },
+    {
+      "targetSlug": "villa-painting-sequence-kuwait",
+      "anchorText": "مراحل صبغ وتشطيب البيت الجديد خطوة بخطوة"
+    },
+    {
+      "targetSlug": "internal-wall-putty-preparation-kuwait",
+      "anchorText": "تأسيس المعجون الداخلي وسنفرة الجدران"
+    },
+    {
+      "targetSlug": "villa-fence-garden-wall-painting-kuwait",
+      "anchorText": "دهان أسوار الفلل الخارجية"
+    }
+  ]
+}

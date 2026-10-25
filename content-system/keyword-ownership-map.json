@@ -1,0 +1,224 @@
+{
+  "system_version": "1.0.0",
+  "total_tracked_keywords": 30,
+  "market": "Kuwait (kw)",
+  "language": "ar",
+  "cannibalization_rules": [
+    "Every article owns strictly ONE primary keyword target.",
+    "Secondary keywords must not overlap as primary targets of other articles.",
+    "Cross-linking between articles must use descriptive anchor text, not verbatim primary keywords of the target unless linking contextually.",
+    "If two articles share similar concepts (e.g. ARTICLE-01 Room Cost vs ARTICLE-05 Damp Repair Cost), ARTICLE-01 focuses exclusively on standard renovation/refresh, while ARTICLE-05 focuses on structural water diagnosis and chemical remediation."
+  ],
+  "keyword_ownership": {
+    "ARTICLE-01": {
+      "primary_keyword": "سعر صبغ الغرفة بالكويت",
+      "cluster_id": "cluster-1",
+      "search_intent": "Commercial",
+      "secondary_entities": ["تكلفة صبغ شقة", "أسعار الصباغين بالكويت", "صبغ غرفة نوم كم يكلف", "سعر يد الصباغ باليومية"],
+      "conflict_avoidance": "Confines to normal surface painting without structural waterproofing (differentiated from ARTICLE-05)."
+    },
+    "ARTICLE-02": {
+      "primary_keyword": "سعر متر السيجما الكويت",
+      "cluster_id": "cluster-1",
+      "search_intent": "Commercial",
+      "secondary_entities": ["تكلفة تشطيب واجهات سيجما", "سيجما جوتن واجهات", "اسعار مقاولي السيجما بالكويت", "مساح وسيجما المتر كم"],
+      "conflict_avoidance": "Focuses on cost breakdown per m² of Sigma, scaffolding, and worked villa cost (differentiated from ARTICLE-19 and ARTICLE-20)."
+    },
+    "ARTICLE-03": {
+      "primary_keyword": "أسعار دهانات جوتن الكويت",
+      "cluster_id": "cluster-1",
+      "search_intent": "Commercial investigation",
+      "secondary_entities": ["سعر بستيل جوتن", "سعر فينوماستيك الكويت", "اسعار جوتاشيلد خارجي", "سعر جالون جوتن بالكويت"],
+      "conflict_avoidance": "Focuses on material retail/wholesale package prices in Kuwait (differentiated from ARTICLE-14 which covers color trends/codes)."
+    },
+    "ARTICLE-04": {
+      "primary_keyword": "سعر تركيب بديل الرخام الكويت",
+      "cluster_id": "cluster-1",
+      "search_intent": "Commercial",
+      "secondary_entities": ["تكلفة بديل الخشب", "سعر لوح بديل الرخام الشويخ", "اسعار تكسيات الجدران الكويت", "تركيب بديل الخشب مع الصبغ"],
+      "conflict_avoidance": "Focuses on panel pricing, installation adhesives, and wall preparation (differentiated from ARTICLE-15 Italian stucco)."
+    },
+    "ARTICLE-05": {
+      "primary_keyword": "تكلفة معالجة رطوبة الجدران",
+      "cluster_id": "cluster-1",
+      "search_intent": "Problem-solving",
+      "secondary_entities": ["سعر صبغ رطوبة الكويت", "علاج الطوفة الرطبة", "تكلفة عزل جدار رطب", "اسعار معجون معالجة الرطوبة"],
+      "conflict_avoidance": "Focuses on financial and scope cost of diagnosing and repairing damp walls (differentiated from ARTICLE-07 basement and ARTICLE-09 blistering)."
+    },
+    "ARTICLE-06": {
+      "primary_keyword": "صبغ ابواب خشب الكويت",
+      "cluster_id": "cluster-1",
+      "search_intent": "Commercial",
+      "secondary_entities": ["تكلفة صبغ باب ناري", "سعر صبغ الباب الخشب", "صبغ دوكو للأبواب الكويت", "تجديد ابواب الغرف الخشبية"],
+      "conflict_avoidance": "Dedicated solely to internal and external wooden doors (differentiated from ARTICLE-24 metal car shades)."
+    },
+    "ARTICLE-07": {
+      "primary_keyword": "علاج رطوبة السرداب الكويت",
+      "cluster_id": "cluster-2",
+      "search_intent": "Informational/problem-solving",
+      "secondary_entities": ["تقشير دهان السرداب", "عزل سراديب الكويت", "عزل جورة السرداب", "أملاح طوفة السرداب"],
+      "conflict_avoidance": "Focuses on basement engineering, negative crystalline waterproofing, sump pits, and groundwater."
+    },
+    "ARTICLE-08": {
+      "primary_keyword": "افضل صبغ خارجي في الكويت",
+      "cluster_id": "cluster-2",
+      "search_intent": "Comparative",
+      "secondary_entities": ["صبغ واجهات مقاوم للشمس", "اصباغ عاكسة للحرارة الكويت", "جوتاشيلد اكستريم واجهات", "دهان واجهة طارد للغبار"],
+      "conflict_avoidance": "Focuses on technical performance under 50°C+ heat and UV (differentiated from ARTICLE-02 pricing)."
+    },
+    "ARTICLE-09": {
+      "primary_keyword": "انتفاخ دهان الطوفة",
+      "cluster_id": "cluster-2",
+      "search_intent": "Problem-solving",
+      "secondary_entities": ["تساقط معجون الجدران", "عيوب الصبغ وتقشره", "تطبيل معجون الحائط", "علاج تبقيع الجدران"],
+      "conflict_avoidance": "Diagnostic focus on why paint blisters and putty delaminates due to application errors and pipe moisture."
+    },
+    "ARTICLE-10": {
+      "primary_keyword": "صبغ شاليهات الكويت",
+      "cluster_id": "cluster-2",
+      "search_intent": "Niche commercial",
+      "secondary_entities": ["اصباغ مقاومة للملوحة", "دهان شاليه الخيران", "صبغ ضد رطوبة البحر", "حماية حديد الشاليه من الصدأ"],
+      "conflict_avoidance": "Geographically focused on coastal marine environments in Khiran, Bnaider, and Julaia."
+    },
+    "ARTICLE-11": {
+      "primary_keyword": "صبغ حمامات ومطابخ الكويت",
+      "cluster_id": "cluster-2",
+      "search_intent": "Informational/problem-solving",
+      "secondary_entities": ["دهان مقاوم للعفن", "صبغ ضد الرطوبة", "صبغ سقف الحمام", "اصباغ قابلة للغسيل الشديد"],
+      "conflict_avoidance": "Focuses strictly on wet areas inside residential villas and apartments."
+    },
+    "ARTICLE-12": {
+      "primary_keyword": "صبغ فوق الصبغ الزيتي",
+      "cluster_id": "cluster-2",
+      "search_intent": "How-to",
+      "secondary_entities": ["تأسيس الطوفة القديمة", "تحويل الصبغ من زيتي إلى مائي", "برايمر رابط للزيتي", "معالجة المعجون المشقق"],
+      "conflict_avoidance": "Focuses on the mechanical and chemical adhesion transition from old oil paints to modern water-based paints."
+    },
+    "ARTICLE-13": {
+      "primary_keyword": "الفرق بين المطفي والربع لمعة",
+      "cluster_id": "cluster-3",
+      "search_intent": "Comparison",
+      "secondary_entities": ["افضل صبغ للغرف في الكويت", "صبغ نص لمعة للصالات", "صبغ مطفي جوتن فينوماستيك", "مقارنة لمعان الدهانات"],
+      "conflict_avoidance": "Focuses on sheen finishes (Matt, Silk/Quarter-sheen, Semi-gloss) and room selection."
+    },
+    "ARTICLE-14": {
+      "primary_keyword": "الوان صبغ جوتن الكويت",
+      "cluster_id": "cluster-3",
+      "search_intent": "Inspiration/commercial investigation",
+      "secondary_entities": ["كتالوج درجات جوتن", "كود لون بريز", "لون جوتن بير Bare", "كتالوج جوتن الكويت الجديد"],
+      "conflict_avoidance": "Focuses on trending interior color shades and exact color codes (Breeze, Bare, Macchiato)."
+    },
+    "ARTICLE-15": {
+      "primary_keyword": "صبغ ايطالي الكويت",
+      "cluster_id": "cluster-3",
+      "search_intent": "Commercial/inspirational",
+      "secondary_entities": ["صبغ فلفت ومخملي", "دهانات رخامية ديكور", "ستوكو انتيكو الكويت", "صبغ تعتيق وترخيم الصالات"],
+      "conflict_avoidance": "Focuses on luxury Italian decorative techniques (Velvet, Stucco Antico, Marmorino)."
+    },
+    "ARTICLE-16": {
+      "primary_keyword": "فوم بانوهات جدران الكويت",
+      "cluster_id": "cluster-3",
+      "search_intent": "Informational/design",
+      "secondary_entities": ["تركيب براويز الفوم مع الصبغ", "اطارات جدران مودرن", "فوم الصالات والممرات", "سعر متر براويز الفوم"],
+      "conflict_avoidance": "Focuses on architectural wall moldings, proportioning, and integrating moldings with paint."
+    },
+    "ARTICLE-17": {
+      "primary_keyword": "ورق جدران الكويت مقارنة بالصبغ",
+      "cluster_id": "cluster-3",
+      "search_intent": "Comparison",
+      "secondary_entities": ["أيهما أفضل ورق الحائط أم الصبغ", "عيوب ورق الجدران في الكويت", "سعر رول ورق الجدران مع التركيب", "ورق جدران فينيل كوري"],
+      "conflict_avoidance": "Head-to-head comparison between wallpaper and paint under Kuwait's environmental conditions."
+    },
+    "ARTICLE-18": {
+      "primary_keyword": "صبغ بدون ريحة الكويت",
+      "cluster_id": "cluster-3",
+      "search_intent": "Problem-solving",
+      "secondary_entities": ["دهانات صديقة للبيئة", "صبغ سريع الجفاف", "فينوماستيك بيور كولورز بدون رائحة", "صبغ آمن لغرف الأطفال والربو"],
+      "conflict_avoidance": "Focuses on low-VOC, odorless paints for occupied residences and allergy-sensitive households."
+    },
+    "ARTICLE-19": {
+      "primary_keyword": "تشطيب قسائم المطلاع",
+      "cluster_id": "cluster-4",
+      "search_intent": "Local commercial",
+      "secondary_entities": ["سيجما واجهات المطلاع", "اصباغ قسائم جديدة", "مساح وسيجما غرب عبدالله المبارك", "كوتنج خارجي للمدن الجديدة"],
+      "conflict_avoidance": "Geographic focus on new residential cities in Jahra and Farwaniya."
+    },
+    "ARTICLE-20": {
+      "primary_keyword": "الفرق بين انواع السيجما",
+      "cluster_id": "cluster-4",
+      "search_intent": "Comparison",
+      "secondary_entities": ["سيجما ايطالي واجهات", "جرانيت خارجي للفلل", "عيوب السيجما العادية", "افضل انواع السيجما للواجهات بالكويت"],
+      "conflict_avoidance": "Material comparison between standard acrylic Sigma, Italian elastomeric Sigma, and granite-look finishes."
+    },
+    "ARTICLE-21": {
+      "primary_keyword": "مراحل صبغ البيت الجديد",
+      "cluster_id": "cluster-4",
+      "search_intent": "Informational",
+      "secondary_entities": ["متى ابدأ صبغ القسيمة", "ترتيب مراحل التشطيب والصبغ", "تأسيس معجون البيت الجديد", "حماية الارضيات اثناء الصبغ"],
+      "conflict_avoidance": "Chronological project management sequence from plastering to final handover."
+    },
+    "ARTICLE-22": {
+      "primary_keyword": "صبغ سور البيت الخارجي",
+      "cluster_id": "cluster-4",
+      "search_intent": "Problem-solving/commercial",
+      "secondary_entities": ["دهان اسوار الفلل الكويت", "علاج تقشير سور الحديقة", "صبغ اكريليك خارجي للاسوار", "عازل مياه رشاشات الحديقة"],
+      "conflict_avoidance": "Focuses on boundary walls and landscape garden fences exposed to irrigation water and ground salts."
+    },
+    "ARTICLE-23": {
+      "primary_keyword": "عازل جيتاروف الكويت",
+      "cluster_id": "cluster-4",
+      "search_intent": "Informational/commercial",
+      "secondary_entities": ["صبغ اسطح ضد المطر", "عازل مائي للسطح", "طريقة دهان الجيتاروف مع الشبك", "عزل اسطح كويتي"],
+      "conflict_avoidance": "Focuses on elastomeric liquid acrylic roof waterproofing and flood testing before the rainy season."
+    },
+    "ARTICLE-24": {
+      "primary_keyword": "صبغ مظلات كيربي وحديد",
+      "cluster_id": "cluster-4",
+      "search_intent": "Commercial/problem-solving",
+      "secondary_entities": ["دهان ابواب حديد خارجية الكويت", "صبغ مانع للصدأ", "صبغ ايبوكسي للحديد الخارجي", "دهان مظلة سيارة كويتي"],
+      "conflict_avoidance": "Focuses on exterior metal protection, rust conversion, epoxy zinc primers, and polyurethane topcoats."
+    },
+    "ARTICLE-25": {
+      "primary_keyword": "غش الصباغين",
+      "cluster_id": "cluster-5",
+      "search_intent": "Informational",
+      "secondary_entities": ["كيف اعرف الصبغ الاصلي", "عيوب شغل الصباغ", "تخفيف الصبغ بالماء بكثرة", "كشف الاصباغ المقلدة بالكويت"],
+      "conflict_avoidance": "Consumer investigation exposing diluting tricks, counterfeit packaging, and putty shortcuts."
+    },
+    "ARTICLE-26": {
+      "primary_keyword": "صباغ شاطر ورخيص",
+      "cluster_id": "cluster-5",
+      "search_intent": "Local commercial",
+      "secondary_entities": ["صباغ ممتاز بالكويت", "رقم صباغ مجرب وثقة", "معايير اختيار صباغ منازل", "اسعار الصباغين الشطار"],
+      "conflict_avoidance": "Contractor selection criteria, quotation evaluation, and balancing fair price with workmanship."
+    },
+    "ARTICLE-27": {
+      "primary_keyword": "استلام اعمال الصبغ",
+      "cluster_id": "cluster-5",
+      "search_intent": "How-to",
+      "secondary_entities": ["فحص الطوفة بعد الصبغ", "تشييك عيوب الدهانات", "شروط استلام شغل الدهان", "كشف تموجات الحائط بالإضاءة"],
+      "conflict_avoidance": "Detailed technical handover checklist and oblique lighting inspection method before final payment."
+    },
+    "ARTICLE-28": {
+      "primary_keyword": "صبغ شقة ايجار الكويت",
+      "cluster_id": "cluster-5",
+      "search_intent": "Transactional",
+      "secondary_entities": ["تجديد صبغ البيت قبل التسليم", "صبغ اقتصادي للشقق المؤجرة", "شروط صبغ شقة الايجار", "استرداد تامين الشقة صبغ"],
+      "conflict_avoidance": "Fast turnaround economical repainting for tenants vacating rented apartments to recover their deposit."
+    },
+    "ARTICLE-29": {
+      "primary_keyword": "بديل كسر الرخام الكويت",
+      "cluster_id": "cluster-5",
+      "search_intent": "Comparative",
+      "secondary_entities": ["صبغ اسمنتي واجهات", "عيوب كسر الرخام بالكويت", "بدائل تكسية الواجهات الخارجية", "واجهات قسائم مودرن"],
+      "conflict_avoidance": "Comparison of textured acrylic and cementitious alternatives to heavy crushed marble exterior cladding."
+    },
+    "ARTICLE-30": {
+      "primary_keyword": "تأثير الاضاءة على لون الصبغ",
+      "cluster_id": "cluster-5",
+      "search_intent": "Informational/design",
+      "secondary_entities": ["وورم لايت ولا ابيض مع الصبغ", "درجة كلفن المناسبة للدهانات", "تغير لون صبغ الجدار بالإضاءة", "اضاءة 3000K ام 4000K للصالة"],
+      "conflict_avoidance": "Color temperature science (Kelvin 3000K vs 4000K vs 6500K) and interaction with neutral and undertone pigments."
+    }
+  }
+}

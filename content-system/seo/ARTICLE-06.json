@@ -1,0 +1,86 @@
+{
+  "article_id": "ARTICLE-06",
+  "seo_title": "صبغ ابواب خشب الكويت: تكلفة وسعر صبغ الأبواب ناري وزيتي 2026",
+  "h1": "صبغ أبواب خشب في الكويت: تكلفة وطريقة صبغ الأبواب ناري ولاكر وزيتي (دليل شامل 2026)",
+  "meta_description": "كم سعر صبغ باب الخشب بالكويت؟ دليل أسعار الصباغين 2026: تكلفة الباب من 12 إلى 25 د.ك ناري وزيتي، طريقة تحويل الأبواب البني إلى أوف وايت، وعلاج رطوبة أبواب الحمام.",
+  "slug": "wood-door-painting-kuwait",
+  "primary_keyword": "صبغ ابواب خشب الكويت",
+  "secondary_keywords": [
+    "تكلفة صبغ باب ناري",
+    "سعر صبغ الباب الخشب",
+    "صبغ دوكو للأبواب الكويت",
+    "تجديد ابواب الغرف الخشبية"
+  ],
+  "canonical_url": "https://sabbagh-kuwait.com/blog/wood-door-painting-kuwait",
+  "suggested_images": [
+    {
+      "file_name": "wood-door-spray-painting-kuwait.webp",
+      "alt_text": "فني محترف يقوم برش باب خشب صبغ ناري دوكو أوف وايت بواسطة مسدس هواء في الكويت",
+      "placement": "تحت جدول الأسعار مباشرة"
+    },
+    {
+      "file_name": "bathroom-door-moisture-treatment.webp",
+      "alt_text": "طريقة معالجة وعزل أسفل باب الحمام الخشبي من الرطوبة والنش في الكويت",
+      "placement": "في قسم علاج أبواب الحمامات والمطابخ"
+    }
+  ],
+  "internal_links": [
+    {"url": "/services-guide", "anchor": "خدمات صبغ وتجديد الأبواب الخشبية"},
+    {"url": "/request-quote", "anchor": "طلب صباغ أبواب خشب في الكويت"},
+    {"url": "/blog/room-painting-cost-kuwait", "anchor": "دليل سعر صبغ الغرفة والشقة في الكويت بالدينار"},
+    {"url": "/blog/damp-wall-treatment-cost-kuwait", "anchor": "تكلفة معالجة رطوبة الجدران والنش في الكويت 2026"},
+    {"url": "/blog/pvc-marble-wood-installation-cost-kuwait", "anchor": "سعر تركيب بديل الرخام وبديل الخشب للجدران"}
+  ],
+  "schema_markup": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://sabbagh-kuwait.com/blog/wood-door-painting-kuwait#article",
+        "headline": "صبغ أبواب خشب في الكويت: تكلفة وطريقة صبغ الأبواب ناري ولاكر وزيتي (دليل شامل 2026)",
+        "description": "دليل شامل لأسعار وطرق صبغ وتجديد الأبواب الخشبية في الكويت بالدينار الكويتي ومقارنة الصبغ الناري الدوكو بالصبغ الزيتي واللاكر.",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "صباغ الكويت - فريق استشارات الديكور والتكسيات"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "صباغ الكويت",
+          "url": "https://sabbagh-kuwait.com"
+        },
+        "mainEntityOfPage": "https://sabbagh-kuwait.com/blog/wood-door-painting-kuwait"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://sabbagh-kuwait.com/blog/wood-door-painting-kuwait#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "كم سعر صبغ باب الخشب في الكويت؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "يتراوح سعر صبغ باب الخشب الداخلي بين 12 إلى 16 د.ك للصبغ الزيتي العادي، وبين 18 إلى 28 د.ك للصبغ الناري الدوكو بالرش الهوائي مع السنفرة والبرايمر، بينما يتراوح سعر باب المدخل الرئيسي الخارجي بين 45 إلى 85 د.ك."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "هل الأفضل صبغ الأبواب بالبيت أم بالمنجرة في الشويخ؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "إذا كان البيت مأهولاً ومفروشاً، يُفضل فك درف الأبواب ورشها في ورشة الصباغ بكابينة معزولة لمنع تطاير رذاذ الصبغ، أما في البيوت قيد التشطيب فيمكن الرش في الموقع لتوفير تكلفة النقل."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "كم يستغرق جفاف صبغ الباب الناري؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "يجف الصبغ الناري للمس اليد خلال 30 إلى 45 دقيقة، ويمكن تركيب الباب بعد 6 إلى 8 ساعات، ويصل إلى أقصى صلابة ومقاومة للخدش بعد 48 ساعة."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

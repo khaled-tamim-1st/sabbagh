@@ -1,0 +1,86 @@
+{
+  "article_id": "ARTICLE-05",
+  "seo_title": "تكلفة معالجة رطوبة الجدران في الكويت: دليل الأسعار والحل الجذري 2026",
+  "h1": "تكلفة معالجة رطوبة الجدران وإعادة صبغها في الكويت: دليل تشخيص المشكلة والحل الجذري 2026",
+  "meta_description": "كم تكلفة معالجة رطوبة الجدران في الكويت؟ دليل أسعار علاج الطوفة الرطبة (30-60 د.ك للجدار)، وكشف تسريب التكييف والحمام والخطوات الهندسية لمنع تقشير الصبغ.",
+  "slug": "damp-wall-treatment-cost-kuwait",
+  "primary_keyword": "تكلفة معالجة رطوبة الجدران",
+  "secondary_keywords": [
+    "سعر صبغ رطوبة الكويت",
+    "علاج الطوفة الرطبة",
+    "تكلفة عزل جدار رطب",
+    "اسعار معجون معالجة الرطوبة"
+  ],
+  "canonical_url": "https://sabbagh-kuwait.com/blog/damp-wall-treatment-cost-kuwait",
+  "suggested_images": [
+    {
+      "file_name": "damp-wall-repair-process-kuwait.webp",
+      "alt_text": "فني عزل يقوم بكشط معجون متضرر من الرطوبة وتطبيق معجون إسمنتي عازل في الكويت",
+      "placement": "تحت جدول التكلفة حسب مستوى الضرر"
+    },
+    {
+      "file_name": "wall-efflorescence-salt-kuwait-home.webp",
+      "alt_text": "آثار تملح وانتفاخ دهان الطوفة في جدار غرفة نوم ملاصق لحمام في الكويت",
+      "placement": "قبل قسم تشخيص الأسباب الأربعة"
+    }
+  ],
+  "internal_links": [
+    {"url": "/services-guide", "anchor": "خدمات معالجة الرطوبة والنش المائي بالجدران في الكويت"},
+    {"url": "/request-quote", "anchor": "طلب فحص ومعاينة رطوبة الجدران عبر منصة صباغ الكويت"},
+    {"url": "/blog/basement-dampness-treatment-kuwait", "anchor": "علاج رطوبة السرداب وتملح الجدران في الكويت"},
+    {"url": "/blog/paint-blistering-causes-kuwait", "anchor": "أسباب انتفاخ دهان الطوفة وسقوط المعجون وطرق العلاج"},
+    {"url": "/blog/room-painting-cost-kuwait", "anchor": "سعر صبغ الغرفة بالكويت للتشطيب النهائي"}
+  ],
+  "schema_markup": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://sabbagh-kuwait.com/blog/damp-wall-treatment-cost-kuwait#article",
+        "headline": "تكلفة معالجة رطوبة الجدران وإعادة صبغها في الكويت: دليل تشخيص المشكلة والحل الجذري 2026",
+        "description": "دليل هندسي وتكلفة تفصيلية بالدينار الكويتي لمعالجة رطوبة الجدران وإصلاح تسريبات التكييف والحمامات وإعادة الصبغ مع الضمان.",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "صباغ الكويت - قسم العزل والمعالجات الإنشائية"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "صباغ الكويت",
+          "url": "https://sabbagh-kuwait.com"
+        },
+        "mainEntityOfPage": "https://sabbagh-kuwait.com/blog/damp-wall-treatment-cost-kuwait"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://sabbagh-kuwait.com/blog/damp-wall-treatment-cost-kuwait#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "كم تكلفة معالجة طوفة رطبة وإعادة صبغها في الكويت؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "تتراوح تكلفة معالجة الجدار الرطب الواحد بين 30 إلى 60 دينار كويتي شاملة كشط المساح التالف، العازل المائي المضاد للأملاح، المعجون الإسمنتي، والصبغ النهائي بوجهين دهان أصلي."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "كم يوماً يحتاج الجدار الرطب ليجف قبل وضع الصبغ؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "يحتاج الجدار بعد كشطه إلى مدة تتراوح بين 3 إلى 7 أيام في بيئة مكيفة ومجففة للتأكد من جفاف عمق البلوك الإسمنتي تماماً قبل سحب المعجون الجديد."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "هل يمكن الصبغ مباشرة فوق رطوبة الطوفة؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "لا يمكن نهائياً الصبغ فوق رطوبة نشطة؛ لأن الرطوبة المحتبسة ستعاود تفتيت الدهان الجديد والانتفاخ خلال 4 إلى 8 أسابيع ما لم يتم وقف مصدر تسريب الماء وتطبيق عازل بلوري أولاً."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

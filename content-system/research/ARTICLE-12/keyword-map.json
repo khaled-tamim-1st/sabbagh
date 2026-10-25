@@ -1,0 +1,34 @@
+{
+  "article_id": "ARTICLE-12",
+  "slug": "painting-over-oil-paint-kuwait",
+  "primary_keyword": {
+    "keyword": "صبغ فوق الصبغ الزيتي",
+    "target_density": "1.3% - 1.8%",
+    "intent": "How-to / Problem-solving",
+    "placements": ["H1", "first_100_words", "two_H2s", "meta_title", "meta_description", "FAQ", "conclusion"]
+  },
+  "secondary_keywords": [
+    {"keyword": "تأسيس الطوفة القديمة", "intent": "How-to"},
+    {"keyword": "تحويل الصبغ من زيتي إلى مائي", "intent": "Procedural search"},
+    {"keyword": "برايمر رابط للزيتي", "intent": "Product search"},
+    {"keyword": "معالجة المعجون المشقق", "intent": "Troubleshooting"}
+  ],
+  "lsi_semantic_entities": [
+    "كسر لمعة الصبغ بالسنفرة",
+    "اختبار الأسيتون لكشف الصبغ الزيتي",
+    "برايمر هافتجروند كابارول",
+    "فينوماستيك مائي فوق الزيتي",
+    "تقشير البوية كشريحة بلاستيكية",
+    "تجديد بيوت الكويت القديمة",
+    "معجون شروخ فيبر جلاس",
+    "غسيل الجدران من دهون البخور"
+  ],
+  "cannibalization_safeguards": {
+    "prohibited_primary_takeovers": [
+      "انتفاخ دهان الطوفة (ARTICLE-09)",
+      "سعر صبغ الغرفة بالكويت (ARTICLE-01)",
+      "صبغ ابواب خشب الكويت (ARTICLE-06)"
+    ],
+    "scope_boundary": "مخصص حصرياً لخطوات وتحويل وتأسيس الدهان المائي الحديث فوق طبقات الدهان الزيتي القديمة ومعالجة المعجون المشقق."
+  }
+}

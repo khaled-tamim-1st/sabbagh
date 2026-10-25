@@ -1,0 +1,21 @@
+{
+  "article_id": "ARTICLE-05",
+  "primary_keyword": "تكلفة معالجة رطوبة الجدران",
+  "search_intent": "Problem-solving",
+  "target_serp_features": ["Diagnostic Steps & Checklist", "Featured Snippet (Cost Range)"],
+  "secondary_keywords": [
+    {"keyword": "سعر صبغ رطوبة الكويت", "intent": "Commercial", "context": "تكلفة دهان الجدار بمواد عازلة"},
+    {"keyword": "علاج الطوفة الرطبة", "intent": "Problem-solving", "context": "خطوات علاج تملح وانتفاخ الحائط"},
+    {"keyword": "تكلفة عزل جدار رطب", "intent": "Commercial", "context": "حساب تكلفة العوازل المائية للجدار"},
+    {"keyword": "اسعار معجون معالجة الرطوبة", "intent": "Commercial Investigation", "context": "تكلفة معجون ومواد العزل"}
+  ],
+  "lsi_and_entities": [
+    "نش بايبات التكييف والدرين",
+    "تسريب مياه الحمامات",
+    "عازل بلوري إسمنتي",
+    "برايمر زيتي عازل للرطوبة والأملاح",
+    "تزهير الملح على الطوفة",
+    "كشف خرير بدون تكسير بالكويت",
+    "دينار كويتي KWD"
+  ]
+}

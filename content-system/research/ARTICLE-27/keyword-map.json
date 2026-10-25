@@ -1,0 +1,70 @@
+{
+  "articleId": "ARTICLE-27",
+  "slug": "how-to-inspect-completed-paintwork-kuwait",
+  "primaryKeyword": {
+    "keyword": "استلام اعمال الصبغ",
+    "searchIntent": "how-to / transactional",
+    "targetDensity": "1.2% - 1.8%",
+    "placementLocations": [
+      "h1",
+      "meta-title",
+      "first-100-words",
+      "h2-checklist",
+      "h2-punch-list",
+      "conclusion",
+      "faq"
+    ]
+  },
+  "secondaryKeywords": [
+    {
+      "keyword": "فحص الطوفة بعد الصبغ",
+      "targetCount": 4
+    },
+    {
+      "keyword": "تشييك عيوب الدهانات",
+      "targetCount": 4
+    },
+    {
+      "keyword": "شروط استلام شغل الدهان",
+      "targetCount": 3
+    },
+    {
+      "keyword": "كشف تموجات الحائط بالإضاءة",
+      "targetCount": 3
+    },
+    {
+      "keyword": "استلام دهان الجبس بورد",
+      "targetCount": 3
+    }
+  ],
+  "lsiTerms": [
+    "قائمة الملاحظات Punch List",
+    "فحص كشاف الليد المائل",
+    "خط التقاء السقف مع الجدار",
+    "تلطيش اللمعة Flashing",
+    "ملمس قشرة البرتقال",
+    "نعلات الرخام وبراويز الابواب",
+    "الدفعة الاخيرة المحجوزة 20%",
+    "الشريط اللاصق الازرق",
+    "شوارع الشويخ والمواد الاصلية",
+    "محضر تسليم واستلام رسمي"
+  ],
+  "internalLinkAnchors": [
+    {
+      "targetSlug": "detecting-painter-scams-kuwait",
+      "anchorText": "علامات وحيل كشف غش الصباغين"
+    },
+    {
+      "targetSlug": "how-to-choose-skilled-affordable-painter-kuwait",
+      "anchorText": "معايير اختيار صباغ شاطر ورخيص في الكويت"
+    },
+    {
+      "targetSlug": "internal-wall-putty-preparation-kuwait",
+      "anchorText": "طريقة سنفرة ومعالجة المعجون الداخلي"
+    },
+    {
+      "targetSlug": "kuwait-paint-cost-calculator",
+      "anchorText": "حاسبة تكاليف وميزانية الصبغ في الكويت"
+    }
+  ]
+}

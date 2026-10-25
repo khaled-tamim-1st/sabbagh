@@ -4,13 +4,18 @@ import * as schema from "./schema";
 
 const { Pool } = pg;
 
-if (!process.env.DATABASE_URL) {
-  throw new Error(
-    "DATABASE_URL must be set. Did you forget to provision a database?",
-  );
+export let pool: pg.Pool | null = null;
+export let db: ReturnType<typeof drizzle> | null = null;
+
+if (process.env.DATABASE_URL) {
+  try {
+    pool = new Pool({ connectionString: process.env.DATABASE_URL });
+    db = drizzle(pool, { schema });
+  } catch (err) {
+    console.warn("Could not connect to PostgreSQL with DATABASE_URL, fallback storage active.", err);
+  }
 }
 
-export const pool = new Pool({ connectionString: process.env.DATABASE_URL });
-export const db = drizzle(pool, { schema });
-
 export * from "./schema";
+export * from "./seed-data";
+export * from "./storage";

@@ -1,0 +1,87 @@
+{
+  "article_id": "ARTICLE-01",
+  "seo_title": "سعر صبغ الغرفة بالكويت: تكلفة صبغ شقة ودليل الأسعار 2026",
+  "h1": "كم تكلفة صبغ الغرفة والشقة في الكويت؟ (دليل أسعار الصباغين وحساب التكلفة لعام 2026)",
+  "meta_description": "كم سعر صبغ الغرفة بالكويت؟ دليل أسعار الصباغين 2026: تكلفة الغرفة من 20 إلى 45 د.ك والشقة من 160 د.ك. مقارنة المصنعية مع المواد وحسبة 3 غرف وصالة.",
+  "slug": "room-painting-cost-kuwait",
+  "primary_keyword": "سعر صبغ الغرفة بالكويت",
+  "secondary_keywords": [
+    "تكلفة صبغ شقة بالكويت",
+    "أسعار الصباغين بالكويت",
+    "صبغ غرفة نوم كم يكلف",
+    "سعر يد الصباغ باليومية"
+  ],
+  "canonical_url": "https://sabbagh-kuwait.com/blog/room-painting-cost-kuwait",
+  "suggested_images": [
+    {
+      "file_name": "room-painting-cost-kuwait-breakdown.webp",
+      "alt_text": "صباغ محترف يقوم بدهان غرفة نوم في الكويت مع تغطية الأرضيات بالنايلون لحمايتها",
+      "placement": "تحت جدول الأسعار مباشرة"
+    },
+    {
+      "file_name": "apartment-painting-process-kuwait.webp",
+      "alt_text": "شقة في الكويت أثناء مراحل الصبغ وسحب المعجون الداخلي بدهان جوتن فينوماستيك",
+      "placement": "قبل المثال التطبيقي لحسبة الشقة"
+    }
+  ],
+  "internal_links": [
+    {"url": "/services-guide", "anchor": "دليل أصباغ الجدران والأسقف الداخلية"},
+    {"url": "/request-quote", "anchor": "طلب معاينة وعرض سعر لصبغ الغرفة أو الشقة"},
+    {"url": "/blog/jotun-paint-prices-kuwait", "anchor": "أسعار دهانات جوتن في الكويت بالتفصيل"},
+    {"url": "/blog/damp-wall-treatment-cost-kuwait", "anchor": "تكلفة معالجة رطوبة الجدران قبل الصبغ"},
+    {"url": "/blog/matte-vs-eggshell-paint-kuwait", "anchor": "الفرق بين الصبغ المطفي والربع لمعة في الصالات وغرف النوم"},
+    {"url": "/blog/choose-skilled-affordable-painter-kuwait", "anchor": "كيف تختار صباغ شاطر ورخيص في الكويت"}
+  ],
+  "schema_markup": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://sabbagh-kuwait.com/blog/room-painting-cost-kuwait#article",
+        "headline": "كم تكلفة صبغ الغرفة والشقة في الكويت؟ (دليل أسعار الصباغين وحساب التكلفة لعام 2026)",
+        "description": "دليل شامل وميداني لأسعار صبغ الغرف والشقق في الكويت بالدينار الكويتي ومقارنة تكلفة المصنعية مع المواد الأصلية.",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "صباغ الكويت - فريق التدقيق الهندسي"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "صباغ الكويت",
+          "url": "https://sabbagh-kuwait.com"
+        },
+        "mainEntityOfPage": "https://sabbagh-kuwait.com/blog/room-painting-cost-kuwait"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://sabbagh-kuwait.com/blog/room-painting-cost-kuwait#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "كم سعر صبغ الغرفة الواحدة في الكويت؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "يتراوح سعر صبغ الغرفة العادية (4×4 أو 4×5 م) بين 20 إلى 30 دينار كويتي للتشطيب البسيط، وبين 35 إلى 45 دينار كويتي عند استخدام دهانات أصلية مثل جوتن فينوماستيك شاملة المعجون والأساس وحماية الأرضيات."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "كم تكلفة صبغ شقة 3 غرف وصالة بالكويت؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "تتراوح تكلفة صبغ شقة كاملة مكونة من 3 غرف وصالة وممر بين 160 إلى 280 دينار كويتي شاملة مواد جوتن الأصلية والعمالة والتنظيف، وتستغرق من 3 إلى 5 أيام عمل."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "هل الأفضل شراء الصبغ بنفسي أم تركه للصباغ؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "شراء الصبغ بنفسك من وكلاء جوتن في الشويخ يضمن لك أصالة المادة وتاريخ الصلاحية، أو يمكنك اشتراط فتح علب الصبغ الأصلية المغلقة أمامك داخل المنزل من قبل الفني."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

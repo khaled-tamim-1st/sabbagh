@@ -1,0 +1,1414 @@
+﻿{
+    "system_version":  "1.0.0",
+    "project_name":  "Kuwait-Painters SEO Content Generation System",
+    "target_market":  "Kuwait",
+    "currency":  "KWD",
+    "total_articles":  30,
+    "clusters":  [
+                     {
+                         "id":  "cluster-1",
+                         "name_ar":  "ط£ط³ط¹ط§ط± ط§ظ„طµط¨ط؛ ظˆطھظƒط§ظ„ظٹظپ ط§ظ„طھط´ط·ظٹط¨ ظپظٹ ط§ظ„ظƒظˆظٹطھ",
+                         "name_en":  "Painting Prices and Finishing Costs in Kuwait",
+                         "articles":  [
+                                          "ARTICLE-01",
+                                          "ARTICLE-02",
+                                          "ARTICLE-03",
+                                          "ARTICLE-04",
+                                          "ARTICLE-05",
+                                          "ARTICLE-06"
+                                      ]
+                     },
+                     {
+                         "id":  "cluster-2",
+                         "name_ar":  "ظ…ظ†ط§ط® ط§ظ„ظƒظˆظٹطھ ظˆط§ظ„ط±ط·ظˆط¨ط© ظˆط¹ظٹظˆط¨ ط§ظ„ط¯ظ‡ط§ظ†",
+                         "name_en":  "Kuwait Climate, Moisture, and Paint Failure",
+                         "articles":  [
+                                          "ARTICLE-07",
+                                          "ARTICLE-08",
+                                          "ARTICLE-09",
+                                          "ARTICLE-10",
+                                          "ARTICLE-11",
+                                          "ARTICLE-12"
+                                      ]
+                     },
+                     {
+                         "id":  "cluster-3",
+                         "name_ar":  "ط£طµط¨ط§ط؛ ط§ظ„ط¯ظٹظƒظˆط± ط§ظ„ط¯ط§ط®ظ„ظٹ ظˆط§ظ„طھط´ط·ظٹط¨ط§طھ ط§ظ„ظپط§ط®ط±ط©",
+                         "name_en":  "Interior Paint and Decorative Finishes",
+                         "articles":  [
+                                          "ARTICLE-13",
+                                          "ARTICLE-14",
+                                          "ARTICLE-15",
+                                          "ARTICLE-16",
+                                          "ARTICLE-17",
+                                          "ARTICLE-18"
+                                      ]
+                     },
+                     {
+                         "id":  "cluster-4",
+                         "name_ar":  "طھط´ط·ظٹط¨ ط§ظ„ظپظ„ظ„ ظˆط§ظ„ظˆط§ط¬ظ‡ط§طھ ظˆظ…ط´ط§ط±ظٹط¹ ط§ظ„ظ‚ط³ط§ط¦ظ… ط§ظ„ط¬ط¯ظٹط¯ط©",
+                         "name_en":  "Villas, Exterior Finishes, and New Developments",
+                         "articles":  [
+                                          "ARTICLE-19",
+                                          "ARTICLE-20",
+                                          "ARTICLE-21",
+                                          "ARTICLE-22",
+                                          "ARTICLE-23",
+                                          "ARTICLE-24"
+                                      ]
+                     },
+                     {
+                         "id":  "cluster-5",
+                         "name_ar":  "ط­ظ…ط§ظٹط© ط§ظ„ظ…ط³طھظ‡ظ„ظƒ ظˆط§ط®طھظٹط§ط± ط§ظ„طµط¨ط§ط؛ ظˆط¶ظ…ط§ظ† ط§ظ„ط¬ظˆط¯ط©",
+                         "name_en":  "Consumer Protection, Contractor Selection, and Trust",
+                         "articles":  [
+                                          "ARTICLE-25",
+                                          "ARTICLE-26",
+                                          "ARTICLE-27",
+                                          "ARTICLE-28",
+                                          "ARTICLE-29",
+                                          "ARTICLE-30"
+                                      ]
+                     }
+                 ],
+    "articles":  {
+                     "ARTICLE-01":  {
+                                        "article_id":  "ARTICLE-01",
+                                        "cluster_id":  "cluster-1",
+                                        "batch_id":  "batch-1",
+                                        "approved_topic":  "Cost of painting a room or apartment in Kuwait",
+                                        "working_title":  "ظƒظ… طھظƒظ„ظپط© طµط¨ط؛ ط§ظ„ط؛ط±ظپط© ظˆط§ظ„ط´ظ‚ط© ظپظٹ ط§ظ„ظƒظˆظٹطھطں (ط¯ظ„ظٹظ„ ط£ط³ط¹ط§ط± ط§ظ„طµط¨ط§ط؛ظٹظ† ظˆط­ط³ط§ط¨ ط§ظ„طھظƒظ„ظپط© ظ„ط¹ط§ظ… 2026)",
+                                        "primary_keyword":  "ط³ط¹ط± طµط¨ط؛ ط§ظ„ط؛ط±ظپط© ط¨ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "طھظƒظ„ظپط© طµط¨ط؛ ط´ظ‚ط© ط¨ط§ظ„ظƒظˆظٹطھ",
+                                                                   "ط£ط³ط¹ط§ط± ط§ظ„طµط¨ط§ط؛ظٹظ† ط¨ط§ظ„ظƒظˆظٹطھ",
+                                                                   "طµط¨ط؛ ط؛ط±ظپط© ظ†ظˆظ… ظƒظ… ظٹظƒظ„ظپ",
+                                                                   "ط³ط¹ط± ظٹط¯ ط§ظ„طµط¨ط§ط؛ ط¨ط§ظ„ظٹظˆظ…ظٹط©"
+                                                               ],
+                                        "search_intent":  "Commercial",
+                                        "audience":  "ط£طµط­ط§ط¨ ط§ظ„ط´ظ‚ظ‚ ظˆط§ظ„ظ…ظ†ط§ط²ظ„ ظˆط§ظ„ظ…ط³طھط£ط¬ط±ظٹظ† ظپظٹ ط§ظ„ظƒظˆظٹطھ ط§ظ„ط±ط§ط؛ط¨ظٹظ† ظپظٹ طھط¬ط¯ظٹط¯ ط§ظ„طµط¨ط؛ ط¨ظ…ظٹط²ط§ظ†ظٹط© ظ…ط­ط¯ط¯ط©",
+                                        "risk_level":  "medium",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-01/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-01/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-01/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-01.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-01.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-01-report.md",
+                                        "sources":  [
+                                                        "https://best-painter-kuwait.com",
+                                                        "https://jawad-alsaffar.com",
+                                                        "https://decoratkw.com"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/jotun-paint-prices-kuwait",
+                                                               "/blog/damp-wall-treatment-cost-kuwait",
+                                                               "/blog/matte-vs-eggshell-paint-kuwait",
+                                                               "/blog/choose-skilled-affordable-painter-kuwait"
+                                                           ],
+                                        "word_count":  2150,
+                                        "quality_scores":  {
+                                                               "overall_score":  97.2,
+                                                               "factual_accuracy":  98.0,
+                                                               "research_quality":  95.0,
+                                                               "search_intent":  98.0,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  1,
+                                        "last_updated":  "2026-10-23T11:03:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-02":  {
+                                        "article_id":  "ARTICLE-02",
+                                        "cluster_id":  "cluster-1",
+                                        "batch_id":  "batch-1",
+                                        "approved_topic":  "Sigma exterior coating prices in Kuwait",
+                                        "working_title":  "ط³ط¹ط± ظ…طھط± ط§ظ„ط³ظٹط¬ظ…ط§ ظپظٹ ط§ظ„ظƒظˆظٹطھ: طھظƒظ„ظپط© ط§ظ„ظ…ظˆط§ط¯ ظˆط§ظ„ظ…طµظ†ط¹ظٹط© ظ„ظˆط§ط¬ظ‡ط§طھ ط§ظ„ظپظ„ظ„ ظˆط§ظ„ظ‚ط³ط§ط¦ظ… 2026",
+                                        "primary_keyword":  "ط³ط¹ط± ظ…طھط± ط§ظ„ط³ظٹط¬ظ…ط§ ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "طھظƒظ„ظپط© طھط´ط·ظٹط¨ ظˆط§ط¬ظ‡ط§طھ ط³ظٹط¬ظ…ط§",
+                                                                   "ط³ظٹط¬ظ…ط§ ط¬ظˆطھظ† ظˆط§ط¬ظ‡ط§طھ",
+                                                                   "ط§ط³ط¹ط§ط± ظ…ظ‚ط§ظˆظ„ظٹ ط§ظ„ط³ظٹط¬ظ…ط§ ط¨ط§ظ„ظƒظˆظٹطھ",
+                                                                   "ظ…ط³ط§ط­ ظˆط³ظٹط¬ظ…ط§ ط§ظ„ظ…طھط± ظƒظ…"
+                                                               ],
+                                        "search_intent":  "Commercial",
+                                        "audience":  "ط£طµط­ط§ط¨ ط§ظ„ظپظ„ظ„ ظˆط§ظ„ظ‚ط³ط§ط¦ظ… ط§ظ„ط¬ط¯ظٹط¯ط© ظپظٹ ط§ظ„ظƒظˆظٹطھ (ط§ظ„ظ…ط·ظ„ط§ط¹طŒ ط؛ط±ط¨ ط¹ط¨ط¯ ط§ظ„ظ„ظ‡ ط§ظ„ظ…ط¨ط§ط±ظƒطŒ ط®ظٹط·ط§ظ†) ظˆط§ظ„ظ…ظ‚ط¨ظ„ظٹظ† ط¹ظ„ظ‰ طھط´ط·ظٹط¨ ط§ظ„ظˆط§ط¬ظ‡ط§طھ",
+                                        "risk_level":  "medium",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-02/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-02/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-02/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-02.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-02.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-02-report.md",
+                                        "sources":  [
+                                                        "https://tashtebat.co",
+                                                        "https://kuwait-decoration.com"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/jotun-paint-prices-kuwait",
+                                                               "/blog/al-mutlaa-villas-exterior-finishing",
+                                                               "/blog/sigma-types-comparison-kuwait",
+                                                               "/blog/room-painting-cost-kuwait"
+                                                           ],
+                                        "word_count":  2280,
+                                        "quality_scores":  {
+                                                               "overall_score":  97.7,
+                                                               "factual_accuracy":  98.0,
+                                                               "research_quality":  96.0,
+                                                               "search_intent":  98.0,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  1,
+                                        "last_updated":  "2026-10-23T11:03:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-03":  {
+                                        "article_id":  "ARTICLE-03",
+                                        "cluster_id":  "cluster-1",
+                                        "batch_id":  "batch-1",
+                                        "approved_topic":  "Jotun paint prices in Kuwait",
+                                        "working_title":  "ط£ط³ط¹ط§ط± ط¯ظ‡ط§ظ†ط§طھ ط¬ظˆطھظ† ظپظٹ ط§ظ„ظƒظˆظٹطھ 2026: ظ‚ط§ط¦ظ…ط© ط£ط³ط¹ط§ط± ط¯ط±ط§ظ… ظˆط¬ط§ظ„ظˆظ† ظپظٹظ†ظˆظ…ط§ط³طھظٹظƒ ظˆط¬ظˆطھط§ط´ظٹظ„ط¯",
+                                        "primary_keyword":  "ط£ط³ط¹ط§ط± ط¯ظ‡ط§ظ†ط§طھ ط¬ظˆطھظ† ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "ط³ط¹ط± ط¨ط³طھظٹظ„ ط¬ظˆطھظ†",
+                                                                   "ط³ط¹ط± ظپظٹظ†ظˆظ…ط§ط³طھظٹظƒ ط§ظ„ظƒظˆظٹطھ",
+                                                                   "ط§ط³ط¹ط§ط± ط¬ظˆطھط§ط´ظٹظ„ط¯ ط®ط§ط±ط¬ظٹ",
+                                                                   "ط³ط¹ط± ط¬ط§ظ„ظˆظ† ط¬ظˆطھظ† ط¨ط§ظ„ظƒظˆظٹطھ"
+                                                               ],
+                                        "search_intent":  "Commercial investigation",
+                                        "audience":  "ط§ظ„ط¹ظ…ظ„ط§ط، ظˆط£طµط­ط§ط¨ ط§ظ„ظ…ظ†ط§ط²ظ„ ط§ظ„ط±ط§ط؛ط¨ظٹظ† ظپظٹ ط´ط±ط§ط، ظ…ظˆط§ط¯ ط£طµظ„ظٹط© ظˆط¶ط¨ط· ظ…ظٹط²ط§ظ†ظٹط© ط§ظ„ط¯ظ‡ط§ظ†ط§طھ ط¨ط£ظ†ظپط³ظ‡ظ… ظ…ظ† ط§ظ„ظ…ظˆط±ط¯ظٹظ†",
+                                        "risk_level":  "medium",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-03/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-03/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-03/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-03.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-03.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-03-report.md",
+                                        "sources":  [
+                                                        "https://jawad-alsaffar.com",
+                                                        "https://www.jotun.com/me-en"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/room-painting-cost-kuwait",
+                                                               "/blog/sigma-exterior-cost-kuwait",
+                                                               "/blog/jotun-paint-colors-kuwait",
+                                                               "/blog/painter-deception-detection-kuwait"
+                                                           ],
+                                        "word_count":  2180,
+                                        "quality_scores":  {
+                                                               "overall_score":  97.8,
+                                                               "factual_accuracy":  98.0,
+                                                               "research_quality":  97.0,
+                                                               "search_intent":  98.0,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  1,
+                                        "last_updated":  "2026-10-23T11:03:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-04":  {
+                                        "article_id":  "ARTICLE-04",
+                                        "cluster_id":  "cluster-1",
+                                        "batch_id":  "batch-1",
+                                        "approved_topic":  "Wood and marble-look alternative panels in Kuwait",
+                                        "working_title":  "ط³ط¹ط± طھط±ظƒظٹط¨ ط¨ط¯ظٹظ„ ط§ظ„ط±ط®ط§ظ… ظˆط¨ط¯ظٹظ„ ط§ظ„ط®ط´ط¨ ظپظٹ ط§ظ„ظƒظˆظٹطھ: طھظƒظ„ظپط© ط§ظ„ط£ظ„ظˆط§ط­ ظˆط§ظ„ظ…طµظ†ط¹ظٹط© 2026",
+                                        "primary_keyword":  "ط³ط¹ط± طھط±ظƒظٹط¨ ط¨ط¯ظٹظ„ ط§ظ„ط±ط®ط§ظ… ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "طھظƒظ„ظپط© ط¨ط¯ظٹظ„ ط§ظ„ط®ط´ط¨",
+                                                                   "ط³ط¹ط± ظ„ظˆط­ ط¨ط¯ظٹظ„ ط§ظ„ط±ط®ط§ظ… ط§ظ„ط´ظˆظٹط®",
+                                                                   "ط§ط³ط¹ط§ط± طھظƒط³ظٹط§طھ ط§ظ„ط¬ط¯ط±ط§ظ† ط§ظ„ظƒظˆظٹطھ",
+                                                                   "طھط±ظƒظٹط¨ ط¨ط¯ظٹظ„ ط§ظ„ط®ط´ط¨ ظ…ط¹ ط§ظ„طµط¨ط؛"
+                                                               ],
+                                        "search_intent":  "Commercial",
+                                        "audience":  "ط£طµط­ط§ط¨ ط§ظ„طµط§ظ„ط§طھ ظˆط؛ط±ظپ ط§ظ„ظ†ظˆظ… ظˆظ…ط¯ط§ط®ظ„ ط§ظ„ط´ظ‚ظ‚ ط§ظ„ط¨ط§ط­ط«ظٹظ† ط¹ظ† ط¯ظٹظƒظˆط±ط§طھ ط¹طµط±ظٹط© ط¨ط¯ظٹظ„ط© ظ„ظ„ط±ط®ط§ظ… ظˆط§ظ„ط®ط´ط¨ ط§ظ„ط·ط¨ظٹط¹ظٹ",
+                                        "risk_level":  "low",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-04/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-04/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-04/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-04.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-04.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-04-report.md",
+                                        "sources":  [
+                                                        "https://shabanastores.com",
+                                                        "https://magickuwait.services"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/room-painting-cost-kuwait",
+                                                               "/blog/italian-decorative-paints-kuwait",
+                                                               "/blog/foam-wall-molding-kuwait"
+                                                           ],
+                                        "word_count":  2230,
+                                        "quality_scores":  {
+                                                               "overall_score":  97.8,
+                                                               "factual_accuracy":  98.0,
+                                                               "research_quality":  96.0,
+                                                               "search_intent":  98.0,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  1,
+                                        "last_updated":  "2026-10-23T11:03:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-05":  {
+                                        "article_id":  "ARTICLE-05",
+                                        "cluster_id":  "cluster-1",
+                                        "batch_id":  "batch-1",
+                                        "approved_topic":  "Cost of treating damp walls and repainting them in Kuwait",
+                                        "working_title":  "طھظƒظ„ظپط© ظ…ط¹ط§ظ„ط¬ط© ط±ط·ظˆط¨ط© ط§ظ„ط¬ط¯ط±ط§ظ† ظˆط¥ط¹ط§ط¯ط© طµط¨ط؛ظ‡ط§ ظپظٹ ط§ظ„ظƒظˆظٹطھ: ط¯ظ„ظٹظ„ طھط´ط®ظٹطµ ط§ظ„ظ…ط´ظƒظ„ط© ظˆط§ظ„ط­ظ„ ط§ظ„ط¬ط°ط±ظٹ 2026",
+                                        "primary_keyword":  "طھظƒظ„ظپط© ظ…ط¹ط§ظ„ط¬ط© ط±ط·ظˆط¨ط© ط§ظ„ط¬ط¯ط±ط§ظ†",
+                                        "secondary_keywords":  [
+                                                                   "ط³ط¹ط± طµط¨ط؛ ط±ط·ظˆط¨ط© ط§ظ„ظƒظˆظٹطھ",
+                                                                   "ط¹ظ„ط§ط¬ ط§ظ„ط·ظˆظپط© ط§ظ„ط±ط·ط¨ط©",
+                                                                   "طھظƒظ„ظپط© ط¹ط²ظ„ ط¬ط¯ط§ط± ط±ط·ط¨",
+                                                                   "ط§ط³ط¹ط§ط± ظ…ط¹ط¬ظˆظ† ظ…ط¹ط§ظ„ط¬ط© ط§ظ„ط±ط·ظˆط¨ط©"
+                                                               ],
+                                        "search_intent":  "Problem-solving",
+                                        "audience":  "ط§ظ„ظ…ظˆط§ط·ظ†ظˆظ† ظˆط§ظ„ظ…ظ‚ظٹظ…ظˆظ† ط§ظ„ط°ظٹظ† ظٹط¹ط§ظ†ظˆظ† ظ…ظ† طھظ‚ط´ط± ط§ظ„ط¯ظ‡ط§ظ† ظˆط§ظ†طھظپط§ط® ط§ظ„ط¨ظˆظٹط© ط¨ط³ط¨ط¨ ط§ظ„ط±ط·ظˆط¨ط© ظˆط§ظ„ظ†ط´ ط§ظ„ظ…ط§ط¦ظٹ ظپظٹ ط¬ط¯ط±ط§ظ† ط§ظ„ظ…ظ†ط§ط²ظ„",
+                                        "risk_level":  "high",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-05/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-05/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-05/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-05.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-05.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-05-report.md",
+                                        "sources":  [
+                                                        "https://fayrouz-kw.com",
+                                                        "https://leakdetectionkw.com"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/basement-dampness-treatment-kuwait",
+                                                               "/blog/paint-blistering-causes-kuwait",
+                                                               "/blog/room-painting-cost-kuwait"
+                                                           ],
+                                        "word_count":  2240,
+                                        "quality_scores":  {
+                                                               "overall_score":  98.6,
+                                                               "factual_accuracy":  99.0,
+                                                               "research_quality":  97.0,
+                                                               "search_intent":  99.0,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  1,
+                                        "last_updated":  "2026-10-23T11:03:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-06":  {
+                                        "article_id":  "ARTICLE-06",
+                                        "cluster_id":  "cluster-1",
+                                        "batch_id":  "batch-2",
+                                        "approved_topic":  "Painting wooden doors in Kuwait",
+                                        "working_title":  "طµط¨ط؛ ط£ط¨ظˆط§ط¨ ط®ط´ط¨ ظپظٹ ط§ظ„ظƒظˆظٹطھ: طھظƒظ„ظپط© ظˆط·ط±ظٹظ‚ط© طµط¨ط؛ ط§ظ„ط£ط¨ظˆط§ط¨ ظ†ط§ط±ظٹ ظˆظ„ط§ظƒط± ظˆط²ظٹطھظٹ (ط¯ظ„ظٹظ„ ط´ط§ظ…ظ„ 2026)",
+                                        "primary_keyword":  "طµط¨ط؛ ط§ط¨ظˆط§ط¨ ط®ط´ط¨ ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "طھظƒظ„ظپط© طµط¨ط؛ ط¨ط§ط¨ ظ†ط§ط±ظٹ",
+                                                                   "ط³ط¹ط± طµط¨ط؛ ط§ظ„ط¨ط§ط¨ ط§ظ„ط®ط´ط¨",
+                                                                   "طµط¨ط؛ ط¯ظˆظƒظˆ ظ„ظ„ط£ط¨ظˆط§ط¨ ط§ظ„ظƒظˆظٹطھ",
+                                                                   "طھط¬ط¯ظٹط¯ ط§ط¨ظˆط§ط¨ ط§ظ„ط؛ط±ظپ ط§ظ„ط®ط´ط¨ظٹط©"
+                                                               ],
+                                        "search_intent":  "Commercial",
+                                        "audience":  "ط£طµط­ط§ط¨ ط§ظ„ظ…ظ†ط§ط²ظ„ ط§ظ„ط±ط§ط؛ط¨ظٹظ† ظپظٹ طھط¬ط¯ظٹط¯ ط£ظ„ظˆط§ظ† ط£ط¨ظˆط§ط¨ ط§ظ„ط؛ط±ظپ ظˆط§ظ„ظ…ط¯ط§ط®ظ„ ط¨ط¯ظˆظ† طھظƒظ„ظپط© ط§ط³طھط¨ط¯ط§ظ„ ط§ظ„ط£ط¨ظˆط§ط¨ ط¨ط§ظ„ظƒط§ظ…ظ„",
+                                        "risk_level":  "medium",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-06/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-06/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-06/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-06.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-06.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-06-report.md",
+                                        "sources":  [
+                                                        "https://tashtebat.co",
+                                                        "ظ…ظ†ط§ط¬ط± ط§ظ„ط´ظˆظٹط® ط§ظ„طµظ†ط§ط¹ظٹط©"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/room-painting-cost-kuwait",
+                                                               "/blog/damp-wall-treatment-cost-kuwait",
+                                                               "/blog/pvc-marble-wood-installation-cost-kuwait"
+                                                           ],
+                                        "word_count":  2250,
+                                        "quality_scores":  {
+                                                               "overall_score":  97.8,
+                                                               "factual_accuracy":  98.0,
+                                                               "research_quality":  97.0,
+                                                               "search_intent":  98.0,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  1,
+                                        "last_updated":  "2026-10-23T12:00:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-07":  {
+                                        "article_id":  "ARTICLE-07",
+                                        "cluster_id":  "cluster-2",
+                                        "batch_id":  "batch-2",
+                                        "approved_topic":  "Basement dampness and salt deposits",
+                                        "working_title":  "ط¹ظ„ط§ط¬ ط±ط·ظˆط¨ط© ط§ظ„ط³ط±ط¯ط§ط¨ ظˆطھظ…ظ„ط­ ط§ظ„ط¬ط¯ط±ط§ظ† ظپظٹ ط§ظ„ظƒظˆظٹطھ: ط­ظ„ظˆظ„ ظ‡ظ†ط¯ط³ظٹط© ط¬ط°ط±ظٹط© طھظ…ظ†ط¹ طھظ‚ط´ظٹط± ط§ظ„طµط¨ط؛ (ط¯ظ„ظٹظ„ 2026)",
+                                        "primary_keyword":  "ط¹ظ„ط§ط¬ ط±ط·ظˆط¨ط© ط§ظ„ط³ط±ط¯ط§ط¨ ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "طھظ‚ط´ظٹط± ط¯ظ‡ط§ظ† ط§ظ„ط³ط±ط¯ط§ط¨",
+                                                                   "ط¹ط²ظ„ ط³ط±ط§ط¯ظٹط¨ ط§ظ„ظƒظˆظٹطھ",
+                                                                   "ط¹ط²ظ„ ط¬ظˆط±ط© ط§ظ„ط³ط±ط¯ط§ط¨",
+                                                                   "ط£ظ…ظ„ط§ط­ ط·ظˆظپط© ط§ظ„ط³ط±ط¯ط§ط¨"
+                                                               ],
+                                        "search_intent":  "Informational/problem-solving",
+                                        "audience":  "ظ…ظ„ط§ظƒ ط§ظ„ظپظ„ظ„ ط§ظ„طھظٹ طھط­طھظˆظٹ ط¹ظ„ظ‰ ط³ط±ط§ط¯ظٹط¨ ظˆظ…ط³ط§ظƒظ† ظ…ظ†ط®ظپط¶ط© طھط¹ط§ظ†ظٹ ظ…ظ† ط§ظ„ط±ط´ط­ ط§ظ„ظ…ط§ط¦ظٹ ظˆط§ظ„ظ…ظٹط§ظ‡ ط§ظ„ط¬ظˆظپظٹط©",
+                                        "risk_level":  "high",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-07/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-07/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-07/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-07.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-07.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-07-report.md",
+                                        "sources":  [
+                                                        "https://fayrouz-kw.com",
+                                                        "ط´ط±ظƒط© ط³ظٹظƒط§ ظ„ظ„ظ…ظˆط§ط¯ ط§ظ„ط®ط±ط³ط§ظ†ظٹط© ظˆط§ظ„ط¹ط²ظ„"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/damp-wall-treatment-cost-kuwait",
+                                                               "/blog/paint-blistering-causes-kuwait",
+                                                               "/blog/room-painting-cost-kuwait"
+                                                           ],
+                                        "word_count":  2280,
+                                        "quality_scores":  {
+                                                               "overall_score":  98.2,
+                                                               "factual_accuracy":  99.0,
+                                                               "research_quality":  98.0,
+                                                               "search_intent":  98.0,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  1,
+                                        "last_updated":  "2026-10-23T12:00:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-08":  {
+                                        "article_id":  "ARTICLE-08",
+                                        "cluster_id":  "cluster-2",
+                                        "batch_id":  "batch-2",
+                                        "approved_topic":  "Best exterior paints for intense Kuwait heat and dust",
+                                        "working_title":  "ط£ظپط¶ظ„ طµط¨ط؛ ط®ط§ط±ط¬ظٹ ظپظٹ ط§ظ„ظƒظˆظٹطھ ظٹطھط­ظ…ظ„ ط­ط±ط§ط±ط© 50+ ظˆط§ظ„ط؛ط¨ط§ط±: ظ…ظ‚ط§ط±ظ†ط© ط£ظ†ظˆط§ط¹ ط¯ظ‡ط§ظ†ط§طھ ط§ظ„ظˆط§ط¬ظ‡ط§طھ (ط¯ظ„ظٹظ„ 2026)",
+                                        "primary_keyword":  "ط§ظپط¶ظ„ طµط¨ط؛ ط®ط§ط±ط¬ظٹ ظپظٹ ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "طµط¨ط؛ ظˆط§ط¬ظ‡ط§طھ ظ…ظ‚ط§ظˆظ… ظ„ظ„ط´ظ…ط³",
+                                                                   "ط§طµط¨ط§ط؛ ط¹ط§ظƒط³ط© ظ„ظ„ط­ط±ط§ط±ط© ط§ظ„ظƒظˆظٹطھ",
+                                                                   "ط¬ظˆطھط§ط´ظٹظ„ط¯ ط§ظƒط³طھط±ظٹظ… ظˆط§ط¬ظ‡ط§طھ",
+                                                                   "ط¯ظ‡ط§ظ† ظˆط§ط¬ظ‡ط© ط·ط§ط±ط¯ ظ„ظ„ط؛ط¨ط§ط±"
+                                                               ],
+                                        "search_intent":  "Comparative",
+                                        "audience":  "ظ…ظ„ط§ظƒ ط§ظ„ظپظ„ظ„ ظˆط§ظ„ط¹ظ…ط§ط±ط§طھ ط§ظ„ط¨ط§ط­ط«ظٹظ† ط¹ظ† ط­ظ…ط§ظٹط© ط§ظ„ظˆط§ط¬ظ‡ط§طھ ظ…ظ† ط§ظ„طھظƒظ„ط³ ظˆط§ظ„ط¨ظ‡طھط§ظ† ط§ظ„ط­ط±ط§ط±ظٹ ط§ظ„طµظٹظپظٹ",
+                                        "risk_level":  "medium",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-08/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-08/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-08/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-08.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-08.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-08-report.md",
+                                        "sources":  [
+                                                        "https://jotun.com/me",
+                                                        "https://caparol.com"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/sigma-exterior-cost-kuwait",
+                                                               "/blog/jotun-paint-prices-kuwait",
+                                                               "/blog/chalet-painting-khiran-kuwait"
+                                                           ],
+                                        "word_count":  2350,
+                                        "quality_scores":  {
+                                                               "overall_score":  98.4,
+                                                               "factual_accuracy":  99.0,
+                                                               "research_quality":  98.0,
+                                                               "search_intent":  98.0,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  1,
+                                        "last_updated":  "2026-10-23T12:00:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-09":  {
+                                        "article_id":  "ARTICLE-09",
+                                        "cluster_id":  "cluster-2",
+                                        "batch_id":  "batch-2",
+                                        "approved_topic":  "Causes of blistering paint and peeling wall putty",
+                                        "working_title":  "ط£ط³ط¨ط§ط¨ ط§ظ†طھظپط§ط® ط¯ظ‡ط§ظ† ط§ظ„ط·ظˆظپط© ظˆط³ظ‚ظˆط· ط§ظ„ظ…ط¹ط¬ظˆظ† ظپظٹ ط§ظ„ط¨ظٹظˆطھ ط§ظ„ظƒظˆظٹطھظٹط© ظˆط·ط±ظ‚ ط§ظ„ط¹ظ„ط§ط¬ ط§ظ„ط¬ط°ط±ظٹ (ط¯ظ„ظٹظ„ 2026)",
+                                        "primary_keyword":  "ط§ظ†طھظپط§ط® ط¯ظ‡ط§ظ† ط§ظ„ط·ظˆظپط©",
+                                        "secondary_keywords":  [
+                                                                   "طھط³ط§ظ‚ط· ظ…ط¹ط¬ظˆظ† ط§ظ„ط¬ط¯ط±ط§ظ†",
+                                                                   "ط¹ظٹظˆط¨ ط§ظ„طµط¨ط؛ ظˆطھظ‚ط´ط±ظ‡",
+                                                                   "طھط·ط¨ظٹظ„ ظ…ط¹ط¬ظˆظ† ط§ظ„ط­ط§ط¦ط·",
+                                                                   "ط¹ظ„ط§ط¬ طھط¨ظ‚ظٹط¹ ط§ظ„ط¬ط¯ط±ط§ظ†"
+                                                               ],
+                                        "search_intent":  "Problem-solving",
+                                        "audience":  "ط§ظ„ط¹ط§ط¦ظ„ط§طھ ط§ظ„طھظٹ طھظˆط§ط¬ظ‡ طھظ„ظپط§ظ‹ ظ…ظپط§ط¬ط¦ط§ظ‹ ظˆطھط´ظˆظ‡ط§طھ ظپظٹ ط¬ط¯ط±ط§ظ† ط§ظ„ط؛ط±ظپ ظˆط§ظ„طµط§ظ„ط§طھ ط¨ط¹ط¯ ظپطھط±ط© ظ‚طµظٹط±ط© ظ…ظ† ط§ظ„طµط¨ط؛",
+                                        "risk_level":  "medium",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-09/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-09/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-09/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-09.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-09.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-09-report.md",
+                                        "sources":  [
+                                                        "https://tashtebat.co",
+                                                        "ظ…ط¹ط§ظٹظٹط± ظپط­طµ ط§ظ„ط¹ظٹظˆط¨ ط§ظ„ط¥ظ†ط´ط§ط¦ظٹط©"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/damp-wall-treatment-cost-kuwait",
+                                                               "/blog/basement-dampness-treatment-kuwait",
+                                                               "/blog/room-painting-cost-kuwait"
+                                                           ],
+                                        "word_count":  2260,
+                                        "quality_scores":  {
+                                                               "overall_score":  98.0,
+                                                               "factual_accuracy":  98.0,
+                                                               "research_quality":  98.0,
+                                                               "search_intent":  98.0,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  1,
+                                        "last_updated":  "2026-10-23T12:00:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-10":  {
+                                        "article_id":  "ARTICLE-10",
+                                        "cluster_id":  "cluster-2",
+                                        "batch_id":  "batch-2",
+                                        "approved_topic":  "Painting and protecting chalets in Khiran and Bnaider",
+                                        "working_title":  "طµط¨ط؛ ط´ط§ظ„ظٹظ‡ط§طھ ط§ظ„ظƒظˆظٹطھ: ظƒظٹظپ طھط­ظ…ظٹ ظˆط§ط¬ظ‡ط§طھ ط´ط§ظ„ظٹظ‡ط§طھ ط§ظ„ط®ظٹط±ط§ظ† ظˆط¨ظ†ظٹط¯ط± ظ…ظ† ط±ط·ظˆط¨ط© ط§ظ„ط¨ط­ط± ظˆط§ظ„ظ…ظ„ظˆط­ط©طں (ط¯ظ„ظٹظ„ 2026)",
+                                        "primary_keyword":  "طµط¨ط؛ ط´ط§ظ„ظٹظ‡ط§طھ ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "ط§طµط¨ط§ط؛ ظ…ظ‚ط§ظˆظ…ط© ظ„ظ„ظ…ظ„ظˆط­ط©",
+                                                                   "ط¯ظ‡ط§ظ† ط´ط§ظ„ظٹظ‡ ط§ظ„ط®ظٹط±ط§ظ†",
+                                                                   "طµط¨ط؛ ط¶ط¯ ط±ط·ظˆط¨ط© ط§ظ„ط¨ط­ط±",
+                                                                   "ط­ظ…ط§ظٹط© ط­ط¯ظٹط¯ ط§ظ„ط´ط§ظ„ظٹظ‡ ظ…ظ† ط§ظ„طµط¯ط£"
+                                                               ],
+                                        "search_intent":  "Niche commercial",
+                                        "audience":  "ظ…ظ„ط§ظƒ ظˆظ…ط³طھط«ظ…ط±ظˆ ط§ظ„ط´ط§ظ„ظٹظ‡ط§طھ ط§ظ„ط¨ط­ط±ظٹط© ظپظٹ ظ…ط¯ظٹظ†ط© طµط¨ط§ط­ ط§ظ„ط£ط­ظ…ط¯ ط§ظ„ط¨ط­ط±ظٹط©طŒ ط§ظ„ط®ظٹط±ط§ظ†طŒ ط¨ظ†ظٹط¯ط±طŒ ط§ظ„ط¬ظ„ظٹط¹ط©",
+                                        "risk_level":  "medium",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-10/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-10/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-10/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-10.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-10.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-10-report.md",
+                                        "sources":  [
+                                                        "https://al-khiran.com",
+                                                        "ط´ط±ظƒط© ط¯ظ‡ط§ظ†ط§طھ ط¨ط­ط±ظٹط© ظ…ط¹طھظ…ط¯ط©"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/areas/ahmadi",
+                                                               "/blog/best-exterior-paints-kuwait-heat",
+                                                               "/blog/wood-door-painting-kuwait",
+                                                               "/request-quote"
+                                                           ],
+                                        "word_count":  2290,
+                                        "quality_scores":  {
+                                                               "overall_score":  98.2,
+                                                               "factual_accuracy":  98.0,
+                                                               "research_quality":  98.0,
+                                                               "search_intent":  99.0,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  1,
+                                        "last_updated":  "2026-10-23T12:00:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-11":  {
+                                        "article_id":  "ARTICLE-11",
+                                        "cluster_id":  "cluster-2",
+                                        "batch_id":  "batch-3",
+                                        "approved_topic":  "Paint for bathrooms and kitchens exposed to humidity",
+                                        "working_title":  "ط£ظپط¶ظ„ طµط¨ط؛ ظ„ط­ظ…ط§ظ…ط§طھ ظˆظ…ط·ط§ط¨ط® ط§ظ„ظƒظˆظٹطھ: ط¯ظ‡ط§ظ†ط§طھ ظ…ظ‚ط§ظˆظ…ط© ظ„ظ„ط¨ط®ط§ط± ظˆط§ظ„ط¹ظپظ† ظˆط§ظ„ط¯ظ‡ظˆظ†",
+                                        "primary_keyword":  "طµط¨ط؛ ط­ظ…ط§ظ…ط§طھ ظˆظ…ط·ط§ط¨ط® ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "ط¯ظ‡ط§ظ† ظ…ظ‚ط§ظˆظ… ظ„ظ„ط¹ظپظ†",
+                                                                   "طµط¨ط؛ ط¶ط¯ ط§ظ„ط±ط·ظˆط¨ط©",
+                                                                   "طµط¨ط؛ ط³ظ‚ظپ ط§ظ„ط­ظ…ط§ظ…",
+                                                                   "ط§طµط¨ط§ط؛ ظ‚ط§ط¨ظ„ط© ظ„ظ„ط؛ط³ظٹظ„ ط§ظ„ط´ط¯ظٹط¯"
+                                                               ],
+                                        "search_intent":  "Informational/problem-solving",
+                                        "audience":  "ط±ط¨ط§طھ ط§ظ„ط¨ظٹظˆطھ ظˆط£طµط­ط§ط¨ ط§ظ„ظ…ظ†ط§ط²ظ„ ط§ظ„ط±ط§ط؛ط¨ظٹظ† ظپظٹ ط­ظ…ط§ظٹط© ط£ط³ظ‚ظپ ظˆط¬ط¯ط±ط§ظ† ط§ظ„ظ…ط·ط§ط¨ط® ظˆط§ظ„ط­ظ…ط§ظ…ط§طھ ظ…ظ† ط§ظ„ط³ظˆط§ط¯ ظˆط§ظ„طھط³ط§ظ‚ط·",
+                                        "risk_level":  "medium",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-11/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-11/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-11/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-11.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-11.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-11-report.md",
+                                        "sources":  [
+                                                        "https://jotun.com/me",
+                                                        "https://caparol.com"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/room-painting-cost-kuwait",
+                                                               "/blog/paint-blistering-causes-kuwait",
+                                                               "/blog/matte-vs-eggshell-paint-kuwait"
+                                                           ],
+                                        "word_count":  2320,
+                                        "quality_scores":  {
+                                                               "factual_accuracy":  98,
+                                                               "research_quality":  98,
+                                                               "qa_status":  "PASSED",
+                                                               "overall_score":  98.2,
+                                                               "search_intent":  98
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T10:36:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-12":  {
+                                        "article_id":  "ARTICLE-12",
+                                        "cluster_id":  "cluster-2",
+                                        "batch_id":  "batch-3",
+                                        "approved_topic":  "Repainting old oil-painted walls or cracked putty",
+                                        "working_title":  "ط·ط±ظٹظ‚ط© ط§ظ„طµط¨ط؛ ظپظˆظ‚ ط§ظ„طµط¨ط؛ ط§ظ„ط²ظٹطھظٹ ط§ظ„ظ‚ط¯ظٹظ… ط¨ط¯ظˆظ† طھظ‚ط´ظٹط±: ط§ظ„ط®ط·ظˆط§طھ ط§ظ„طµط­ظٹط­ط© ظˆط§ظ„ط¨ط±ط§ظٹظ…ط± ط§ظ„ط±ط§ط¨ط·",
+                                        "primary_keyword":  "طµط¨ط؛ ظپظˆظ‚ ط§ظ„طµط¨ط؛ ط§ظ„ط²ظٹطھظٹ",
+                                        "secondary_keywords":  [
+                                                                   "طھط£ط³ظٹط³ ط§ظ„ط·ظˆظپط© ط§ظ„ظ‚ط¯ظٹظ…ط©",
+                                                                   "طھط­ظˆظٹظ„ ط§ظ„طµط¨ط؛ ظ…ظ† ط²ظٹطھظٹ ط¥ظ„ظ‰ ظ…ط§ط¦ظٹ",
+                                                                   "ط¨ط±ط§ظٹظ…ط± ط±ط§ط¨ط· ظ„ظ„ط²ظٹطھظٹ",
+                                                                   "ظ…ط¹ط§ظ„ط¬ط© ط§ظ„ظ…ط¹ط¬ظˆظ† ط§ظ„ظ…ط´ظ‚ظ‚"
+                                                               ],
+                                        "search_intent":  "How-to",
+                                        "audience":  "ط£طµط­ط§ط¨ ط§ظ„ط¨ظٹظˆطھ ط§ظ„ظ‚ط¯ظٹظ…ط© ظˆط§ظ„ظپظ„ظ„ ط§ظ„ط±ط§ط؛ط¨ظٹظ† ظپظٹ طھط¬ط¯ظٹط¯ ط§ظ„ط¯ظ‡ط§ظ†ط§طھ ط§ظ„ط²ظٹطھظٹط© ط§ظ„ظ„ط§ظ…ط¹ط© ط¥ظ„ظ‰ ط¯ظ‡ط§ظ†ط§طھ ظ…ط§ط¦ظٹط© ط­ط¯ظٹط«ط© ظ…ط·ظپظٹط©",
+                                        "risk_level":  "low",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-12/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-12/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-12/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-12.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-12.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-12-report.md",
+                                        "sources":  [
+                                                        "https://caparol.com",
+                                                        "https://jotun.com"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/paint-blistering-causes-kuwait",
+                                                               "/blog/room-painting-cost-kuwait",
+                                                               "/blog/matte-vs-eggshell-paint-kuwait"
+                                                           ],
+                                        "word_count":  2010,
+                                        "quality_scores":  {
+                                                               "factual_accuracy":  98,
+                                                               "research_quality":  98,
+                                                               "qa_status":  "PASSED",
+                                                               "overall_score":  98.2,
+                                                               "search_intent":  98
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T10:36:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-13":  {
+                                        "article_id":  "ARTICLE-13",
+                                        "cluster_id":  "cluster-3",
+                                        "batch_id":  "batch-3",
+                                        "approved_topic":  "Matte, quarter-sheen, and semi-gloss paint comparison",
+                                        "working_title":  "ط§ظ„ظپط±ظ‚ ط¨ظٹظ† ط§ظ„طµط¨ط؛ ط§ظ„ظ…ط·ظپظٹ ظˆط§ظ„ط±ط¨ط¹ ظ„ظ…ط¹ط© ظˆط§ظ„ظ†طµ ظ„ظ…ط¹ط© ط¨ط§ظ„ظƒظˆظٹطھ: ط£ظٹظ‡ظ… ط§ظ„ط£ظ†ط³ط¨ ظ„ط؛ط±ظپطھظƒ ظˆطµط§ظ„طھظƒطں",
+                                        "primary_keyword":  "ط§ظ„ظپط±ظ‚ ط¨ظٹظ† ط§ظ„ظ…ط·ظپظٹ ظˆط§ظ„ط±ط¨ط¹ ظ„ظ…ط¹ط©",
+                                        "secondary_keywords":  [
+                                                                   "ط§ظپط¶ظ„ طµط¨ط؛ ظ„ظ„ط؛ط±ظپ ظپظٹ ط§ظ„ظƒظˆظٹطھ",
+                                                                   "طµط¨ط؛ ظ†طµ ظ„ظ…ط¹ط© ظ„ظ„طµط§ظ„ط§طھ",
+                                                                   "طµط¨ط؛ ظ…ط·ظپظٹ ط¬ظˆطھظ† ظپظٹظ†ظˆظ…ط§ط³طھظٹظƒ",
+                                                                   "ظ…ظ‚ط§ط±ظ†ط© ظ„ظ…ط¹ط§ظ† ط§ظ„ط¯ظ‡ط§ظ†ط§طھ"
+                                                               ],
+                                        "search_intent":  "Comparison",
+                                        "audience":  "ط§ظ„ط¹ط§ط¦ظ„ط§طھ ط§ظ„طھظٹ طھط¬ظ‡ط² ط¨ظٹطھظ‡ط§ ظˆطھط­طھط§ط± ظپظٹ ط§ط®طھظٹط§ط± ط¯ط±ط¬ط© ط§ظ„ظ„ظ…ط¹ط§ظ† ط§ظ„ظ…ظ†ط§ط³ط¨ط© ظ„ظ…ط³ط­ ط§ظ„ط¬ط¯ط±ط§ظ† ظˆظ…ط¸ظ‡ط± ط§ظ„ط¥ط¶ط§ط،ط©",
+                                        "risk_level":  "low",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-13/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-13/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-13/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-13.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-13.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-13-report.md",
+                                        "sources":  [
+                                                        "https://jotun.com/me",
+                                                        "https://caparol.com"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/bathroom-kitchen-paint-kuwait",
+                                                               "/blog/painting-over-oil-paint-kuwait",
+                                                               "/blog/room-painting-cost-kuwait"
+                                                           ],
+                                        "word_count":  2637,
+                                        "quality_scores":  {
+                                                               "factual_accuracy":  98,
+                                                               "research_quality":  98,
+                                                               "qa_status":  "PASSED",
+                                                               "overall_score":  98.4,
+                                                               "search_intent":  99
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T10:36:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-14":  {
+                                        "article_id":  "ARTICLE-14",
+                                        "cluster_id":  "cluster-3",
+                                        "batch_id":  "batch-3",
+                                        "approved_topic":  "Popular Jotun paint colors for Kuwaiti homes in 2026",
+                                        "working_title":  "ط£ط­ط¯ط« ط£ظ„ظˆط§ظ† طµط¨ط؛ ط¬ظˆطھظ† ظپظٹ ط¨ظٹظˆطھ ط§ظ„ظƒظˆظٹطھ ظ„ط¹ط§ظ… 2026: ط¯ط±ط¬ط§طھ ط§ظ„ط£ظˆظپ ظˆط§ظٹطھ ظˆط§ظ„ط¨ظٹط¬ ط§ظ„ط£ظƒط«ط± ط·ظ„ط¨ط§ظ‹ ط¨ط§ظ„ط£ظƒظˆط§ط¯",
+                                        "primary_keyword":  "ط§ظ„ظˆط§ظ† طµط¨ط؛ ط¬ظˆطھظ† ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "ظƒطھط§ظ„ظˆط¬ ط¯ط±ط¬ط§طھ ط¬ظˆطھظ†",
+                                                                   "ظƒظˆط¯ ظ„ظˆظ† ط¨ط±ظٹط²",
+                                                                   "ظ„ظˆظ† ط¬ظˆطھظ† ط¨ظٹط± Bare",
+                                                                   "ظƒطھط§ظ„ظˆط¬ ط¬ظˆطھظ† ط§ظ„ظƒظˆظٹطھ ط§ظ„ط¬ط¯ظٹط¯"
+                                                               ],
+                                        "search_intent":  "Inspiration/commercial investigation",
+                                        "audience":  "ط¹ط´ط§ظ‚ ط§ظ„ط¯ظٹظƒظˆط± ط§ظ„ط­ط¯ظٹط« ظˆط£طµط­ط§ط¨ ط§ظ„ط¨ظٹظˆطھ ط§ظ„ط¨ط§ط­ط«ظٹظ† ط¹ظ† ط£ط±ظ‚ظ‰ ط¯ط±ط¬ط§طھ ط§ظ„ط£ظ„ظˆط§ظ† ط§ظ„ظ‡ط§ط¯ط¦ط© ظˆط§ظ„ظپط®ظ…ط© ظ„طµط§ظ„ط§طھظ‡ظ… ظˆط؛ط±ظپظ‡ظ…",
+                                        "risk_level":  "low",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-14/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-14/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-14/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-14.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-14.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-14-report.md",
+                                        "sources":  [
+                                                        "https://jotun.com/me",
+                                                        "https://jotun.com"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/matte-vs-eggshell-paint-kuwait",
+                                                               "/blog/paint-blistering-causes-kuwait",
+                                                               "/blog/painting-over-oil-paint-kuwait"
+                                                           ],
+                                        "word_count":  2232,
+                                        "quality_scores":  {
+                                                               "factual_accuracy":  98,
+                                                               "research_quality":  98,
+                                                               "qa_status":  "PASSED",
+                                                               "overall_score":  98.4,
+                                                               "search_intent":  99
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T10:36:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-15":  {
+                                        "article_id":  "ARTICLE-15",
+                                        "cluster_id":  "cluster-3",
+                                        "batch_id":  "batch-3",
+                                        "approved_topic":  "Italian decorative paints and luxury wall finishes",
+                                        "working_title":  "ط§ظ„طµط¨ط؛ ط§ظ„ط¥ظٹط·ط§ظ„ظٹ ظپظٹ ط§ظ„ظƒظˆظٹطھ: ط£ظ†ظˆط§ط¹ظ‡طŒ ظ…ظٹط²ط§طھظ‡طŒ ظˆظƒظٹظپ طھط­طµظ„ ط¹ظ„ظ‰ ط¬ط¯ط§ط± ظپط®ظ… ط¨طھط£ط«ظٹط± ط§ظ„ظ…ط®ظ…ظ„ ظˆط§ظ„ط±ط®ط§ظ…طں",
+                                        "primary_keyword":  "طµط¨ط؛ ط§ظٹط·ط§ظ„ظٹ ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "طµط¨ط؛ ظپظ„ظپطھ ظˆظ…ط®ظ…ظ„ظٹ",
+                                                                   "ط¯ظ‡ط§ظ†ط§طھ ط±ط®ط§ظ…ظٹط© ط¯ظٹظƒظˆط±",
+                                                                   "ط³طھظˆظƒظˆ ط§ظ†طھظٹظƒظˆ ط§ظ„ظƒظˆظٹطھ",
+                                                                   "طµط¨ط؛ طھط¹طھظٹظ‚ ظˆطھط±ط®ظٹظ… ط§ظ„طµط§ظ„ط§طھ"
+                                                               ],
+                                        "search_intent":  "Commercial/inspirational",
+                                        "audience":  "ط£طµط­ط§ط¨ ط§ظ„ظپظ„ظ„ ط§ظ„ظپط®ظ…ط© ظˆظ…ط¬ط§ظ„ط³ ط§ظ„ط¶ظٹظˆظپ ظˆط¬ط¯ط±ط§ظ† ط§ظ„طھظ„ظپط²ظٹظˆظ† ط§ظ„ط¨ط§ط­ط«ظٹظ† ط¹ظ† طھط´ط·ظٹط¨ ط¯ظٹظƒظˆط±ظٹ ظپط§ط®ط±",
+                                        "risk_level":  "medium",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-15/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-15/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-15/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-15.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-15.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-15-report.md",
+                                        "sources":  [
+                                                        "https://san-marco.com",
+                                                        "https://valpaint.it"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/jotun-paint-colors-kuwait-2026",
+                                                               "/blog/matte-vs-eggshell-paint-kuwait",
+                                                               "/blog/painting-over-oil-paint-kuwait"
+                                                           ],
+                                        "word_count":  2163,
+                                        "quality_scores":  {
+                                                               "factual_accuracy":  98,
+                                                               "research_quality":  98,
+                                                               "qa_status":  "PASSED",
+                                                               "overall_score":  98.2,
+                                                               "search_intent":  98
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T10:36:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-16":  {
+                                        "article_id":  "ARTICLE-16",
+                                        "cluster_id":  "cluster-3",
+                                        "batch_id":  "batch-4",
+                                        "approved_topic":  "Combining wall molding, foam panels, and paint in Kuwaiti homes",
+                                        "working_title":  "طھظ†ط³ظٹظ‚ ظپظˆظ… ظˆط¨ط§ظ†ظˆظ‡ط§طھ ط§ظ„ط¬ط¯ط±ط§ظ† ظ…ط¹ ط§ظ„طµط¨ط؛ ظپظٹ ط§ظ„ظ…ط¬ط§ظ„ط³ ظˆط§ظ„طµط§ظ„ط§طھ ط§ظ„ظƒظˆظٹطھظٹط©: ط§ظ„ط£ط¨ط¹ط§ط¯ ظˆط§ظ„طھطµط§ظ…ظٹظ… ط§ظ„طµط­",
+                                        "primary_keyword":  "ظپظˆظ… ط¨ط§ظ†ظˆظ‡ط§طھ ط¬ط¯ط±ط§ظ† ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "طھط±ظƒظٹط¨ ط¨ط±ط§ظˆظٹط² ط§ظ„ظپظˆظ… ظ…ط¹ ط§ظ„طµط¨ط؛",
+                                                                   "ط§ط·ط§ط±ط§طھ ط¬ط¯ط±ط§ظ† ظ…ظˆط¯ط±ظ†",
+                                                                   "ظپظˆظ… ط§ظ„طµط§ظ„ط§طھ ظˆط§ظ„ظ…ظ…ط±ط§طھ",
+                                                                   "ط³ط¹ط± ظ…طھط± ط¨ط±ط§ظˆظٹط² ط§ظ„ظپظˆظ…"
+                                                               ],
+                                        "search_intent":  "Informational/design",
+                                        "audience":  "ط§ظ„ظ…ظ‡طھظ…ظˆظ† ط¨ط§ظ„ط¯ظٹظƒظˆط± ط§ظ„ظƒظ„ط§ط³ظٹظƒظٹ ظˆط§ظ„ظ†ظٹظˆظƒظ„ط§ط³ظٹظƒظٹ ظ„ظ…ط¬ط§ظ„ط³ ط§ظ„ط§ط³طھظ‚ط¨ط§ظ„ ظˆظ…ظ…ط±ط§طھ ط§ظ„ظپظ„ظ„ ظˆط§ظ„ط´ظ‚ظ‚",
+                                        "risk_level":  "low",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-16/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-16/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-16/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-16.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-16.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-16-report.md",
+                                        "sources":  [
+                                                        "https://oracdecor.com",
+                                                        "local-industry-field-data"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/jotun-paint-colors-kuwait-2026",
+                                                               "/blog/matte-vs-eggshell-paint-kuwait",
+                                                               "/blog/room-painting-cost-kuwait"
+                                                           ],
+                                        "word_count":  2293,
+                                        "quality_scores":  {
+                                                               "factual_accuracy":  98,
+                                                               "research_quality":  98,
+                                                               "qa_status":  "PASSED",
+                                                               "overall_score":  98.4,
+                                                               "search_intent":  99
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T10:36:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-17":  {
+                                        "article_id":  "ARTICLE-17",
+                                        "cluster_id":  "cluster-3",
+                                        "batch_id":  "batch-4",
+                                        "approved_topic":  "Wallpaper versus paint in Kuwait",
+                                        "working_title":  "ظˆط±ظ‚ ط¬ط¯ط±ط§ظ† ط£ظ… طµط¨ط؛طں ظ…ظ‚ط§ط±ظ†ط© ط´ط§ظ…ظ„ط© ظ„طھط­ظ…ظ„ ط§ظ„ط­ط±ط§ط±ط© ظˆط§ظ„ط±ط·ظˆط¨ط© ظˆط§ظ„طھظƒظ„ظپط© ظپظٹ ط¨ظٹظˆطھ ط§ظ„ظƒظˆظٹطھ",
+                                        "primary_keyword":  "ظˆط±ظ‚ ط¬ط¯ط±ط§ظ† ط§ظ„ظƒظˆظٹطھ ظ…ظ‚ط§ط±ظ†ط© ط¨ط§ظ„طµط¨ط؛",
+                                        "secondary_keywords":  [
+                                                                   "ط£ظٹظ‡ظ…ط§ ط£ظپط¶ظ„ ظˆط±ظ‚ ط§ظ„ط­ط§ط¦ط· ط£ظ… ط§ظ„طµط¨ط؛",
+                                                                   "ط¹ظٹظˆط¨ ظˆط±ظ‚ ط§ظ„ط¬ط¯ط±ط§ظ† ظپظٹ ط§ظ„ظƒظˆظٹطھ",
+                                                                   "ط³ط¹ط± ط±ظˆظ„ ظˆط±ظ‚ ط§ظ„ط¬ط¯ط±ط§ظ† ظ…ط¹ ط§ظ„طھط±ظƒظٹط¨",
+                                                                   "ظˆط±ظ‚ ط¬ط¯ط±ط§ظ† ظپظٹظ†ظٹظ„ ظƒظˆط±ظٹ"
+                                                               ],
+                                        "search_intent":  "Comparison",
+                                        "audience":  "ط§ظ„ظ…ط­طھط§ط±ظˆظ† ط¨ظٹظ† ط¹ظ…ظ„ ظˆط±ظ‚ ط¬ط¯ط±ط§ظ† ط¯ظٹظƒظˆط±ظٹ ط£ظˆ ط§ظ„ط§ظƒطھظپط§ط، ط¨ط§ظ„ط¯ظ‡ط§ظ†ط§طھ ط§ظ„ظ…ظˆط¯ط±ظ† ظ„ط؛ط±ظپ ط§ظ„ظ†ظˆظ… ظˆط§ظ„ظ…ط¬ط§ظ„ط³",
+                                        "risk_level":  "low",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-17/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-17/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-17/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-17.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-17.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-17-report.md",
+                                        "sources":  [
+                                                        "https://igiwallcoverings.org",
+                                                        "local-industry-field-data"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/foam-wall-molding-kuwait",
+                                                               "/blog/paint-blistering-causes-kuwait",
+                                                               "/blog/room-painting-cost-kuwait",
+                                                               "/blog/italian-decorative-paints-kuwait"
+                                                           ],
+                                        "word_count":  2504,
+                                        "quality_scores":  {
+                                                               "factual_accuracy":  98,
+                                                               "research_quality":  98,
+                                                               "qa_status":  "PASSED",
+                                                               "overall_score":  98.4,
+                                                               "search_intent":  99
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T10:36:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-18":  {
+                                        "article_id":  "ARTICLE-18",
+                                        "cluster_id":  "cluster-3",
+                                        "batch_id":  "batch-4",
+                                        "approved_topic":  "Low-odor and low-VOC paint for occupied homes",
+                                        "working_title":  "طµط¨ط؛ ط¨ط¯ظˆظ† ط±ط§ط¦ط­ط© ط¨ط§ظ„ظƒظˆظٹطھ: ظƒظٹظپ طھطµط¨ط؛ ط¨ظٹطھظƒ ظˆط£ظ†طھ ط³ط§ظƒظ† ظپظٹظ‡ ط¨ط£ظ…ط§ظ† ظˆط¨ط¯ظˆظ† ط­ط³ط§ط³ظٹط©طں",
+                                        "primary_keyword":  "طµط¨ط؛ ط¨ط¯ظˆظ† ط±ظٹط­ط© ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "ط¯ظ‡ط§ظ†ط§طھ طµط¯ظٹظ‚ط© ظ„ظ„ط¨ظٹط¦ط©",
+                                                                   "طµط¨ط؛ ط³ط±ظٹط¹ ط§ظ„ط¬ظپط§ظپ",
+                                                                   "ظپظٹظ†ظˆظ…ط§ط³طھظٹظƒ ط¨ظٹظˆط± ظƒظˆظ„ظˆط±ط² ط¨ط¯ظˆظ† ط±ط§ط¦ط­ط©",
+                                                                   "طµط¨ط؛ ط¢ظ…ظ† ظ„ط؛ط±ظپ ط§ظ„ط£ط·ظپط§ظ„ ظˆط§ظ„ط±ط¨ظˆ"
+                                                               ],
+                                        "search_intent":  "Problem-solving",
+                                        "audience":  "ط§ظ„ط¹ط§ط¦ظ„ط§طھ ط§ظ„طھظٹ طھظ‚ظٹظ… ط¯ط§ط®ظ„ ط§ظ„ظ…ظ†ط²ظ„ ظˆطھط±ط؛ط¨ ظپظٹ طµط¨ط؛ ط§ظ„ط؛ط±ظپ ط¯ظˆظ† ط§ظ„ط­ط§ط¬ط© ظ„ظ„ط§ظ†طھظ‚ط§ظ„ ط£ظˆ ط§ظ„ط¥ط¶ط±ط§ط± ط¨ظ…ط±ط¶ظ‰ ط§ظ„ط­ط³ط§ط³ظٹط©",
+                                        "risk_level":  "medium",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-18/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-18/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-18/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-18.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-18.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-18-report.md",
+                                        "sources":  [
+                                                        "https://jotun.com/me",
+                                                        "https://caparol.com/me-en"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/room-painting-cost-kuwait",
+                                                               "/blog/wood-door-painting-kuwait",
+                                                               "/blog/matte-vs-eggshell-paint-kuwait",
+                                                               "/blog/jotun-paint-colors-kuwait-2026",
+                                                               "/blog/painting-over-oil-paint-kuwait"
+                                                           ],
+                                        "word_count":  2215,
+                                        "quality_scores":  {
+                                                               "factual_accuracy":  98,
+                                                               "research_quality":  98,
+                                                               "qa_status":  "PASSED",
+                                                               "overall_score":  98.4,
+                                                               "search_intent":  99
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T10:36:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-19":  {
+                                        "article_id":  "ARTICLE-19",
+                                        "cluster_id":  "cluster-4",
+                                        "batch_id":  "batch-4",
+                                        "approved_topic":  "Exterior finishing for villas in Al-Mutlaa and West Abdullah Al-Mubarak",
+                                        "working_title":  "ط¯ظ„ظٹظ„ طھط´ط·ظٹط¨ ظˆط§ط¬ظ‡ط§طھ ظ‚ط³ط§ط¦ظ… ط§ظ„ظ…ط·ظ„ط§ط¹ ظˆط؛ط±ط¨ ط¹ط¨ط¯ط§ظ„ظ„ظ‡ ط§ظ„ظ…ط¨ط§ط±ظƒ: ط§ظ„ط³ظٹط¬ظ…ط§ ظˆط§ظ„ط¹ظˆط§ط²ظ„ ظˆظپط­طµ ط§ظ„ظ…ظ‚ط§ظˆظ„",
+                                        "primary_keyword":  "طھط´ط·ظٹط¨ ظ‚ط³ط§ط¦ظ… ط§ظ„ظ…ط·ظ„ط§ط¹",
+                                        "secondary_keywords":  [
+                                                                   "ط³ظٹط¬ظ…ط§ ظˆط§ط¬ظ‡ط§طھ ط§ظ„ظ…ط·ظ„ط§ط¹",
+                                                                   "ط§طµط¨ط§ط؛ ظ‚ط³ط§ط¦ظ… ط¬ط¯ظٹط¯ط©",
+                                                                   "ظ…ط³ط§ط­ ظˆط³ظٹط¬ظ…ط§ ط؛ط±ط¨ ط¹ط¨ط¯ط§ظ„ظ„ظ‡ ط§ظ„ظ…ط¨ط§ط±ظƒ",
+                                                                   "ظƒظˆطھظ†ط¬ ط®ط§ط±ط¬ظٹ ظ„ظ„ظ…ط¯ظ† ط§ظ„ط¬ط¯ظٹط¯ط©"
+                                                               ],
+                                        "search_intent":  "Local commercial",
+                                        "audience":  "ط§ظ„ظ…ظˆط§ط·ظ†ظˆظ† ط£طµط­ط§ط¨ ط§ظ„ظ‚ط³ط§ط¦ظ… ط§ظ„ط³ظƒظ†ظٹط© ط§ظ„ط¬ط¯ظٹط¯ط© ظپظٹ ط§ظ„ظ…ط¯ظ† ط§ظ„ط­ط¯ظٹط«ط© ط¨ظ…ط­ط§ظپط¸ط© ط§ظ„ط¬ظ‡ط±ط§ط، ظˆط§ظ„ظپط±ظˆط§ظ†ظٹط©",
+                                        "risk_level":  "medium",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-19/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-19/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-19/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-19.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-19.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-19-report.md",
+                                        "sources":  [
+                                                        "https://pahw.gov.kw",
+                                                        "https://kpc-kuwait.com"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/sigma-exterior-cost-kuwait",
+                                                               "/blog/best-exterior-paints-kuwait-heat",
+                                                               "/blog/basement-dampness-treatment-kuwait"
+                                                           ],
+                                        "word_count":  2179,
+                                        "quality_scores":  {
+                                                               "factual_accuracy":  98,
+                                                               "research_quality":  98,
+                                                               "qa_status":  "PASSED",
+                                                               "overall_score":  98.4,
+                                                               "search_intent":  99
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T10:36:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-20":  {
+                                        "article_id":  "ARTICLE-20",
+                                        "cluster_id":  "cluster-4",
+                                        "batch_id":  "batch-4",
+                                        "approved_topic":  "Standard Sigma versus Italian Sigma versus granite-look exterior finishes",
+                                        "working_title":  "ط§ظ„ظپط±ظ‚ ط¨ظٹظ† ط§ظ„ط³ظٹط¬ظ…ط§ ط§ظ„ط¹ط§ط¯ظٹط© ظˆط§ظ„ط³ظٹط¬ظ…ط§ ط§ظ„ط¥ظٹط·ط§ظ„ظٹط© ظˆط§ظ„ط¬ط±ط§ظ†ظٹطھ ظ„ظ„ظˆط§ط¬ظ‡ط§طھ ظپظٹ ط§ظ„ظƒظˆظٹطھ: ظ…ظ‚ط§ط±ظ†ط© ط´ط§ظ…ظ„ط©",
+                                        "primary_keyword":  "ط§ظ„ظپط±ظ‚ ط¨ظٹظ† ط§ظ†ظˆط§ط¹ ط§ظ„ط³ظٹط¬ظ…ط§",
+                                        "secondary_keywords":  [
+                                                                   "ط³ظٹط¬ظ…ط§ ط§ظٹط·ط§ظ„ظٹ ظˆط§ط¬ظ‡ط§طھ",
+                                                                   "ط¬ط±ط§ظ†ظٹطھ ط®ط§ط±ط¬ظٹ ظ„ظ„ظپظ„ظ„",
+                                                                   "ط¹ظٹظˆط¨ ط§ظ„ط³ظٹط¬ظ…ط§ ط§ظ„ط¹ط§ط¯ظٹط©",
+                                                                   "ط§ظپط¶ظ„ ط§ظ†ظˆط§ط¹ ط§ظ„ط³ظٹط¬ظ…ط§ ظ„ظ„ظˆط§ط¬ظ‡ط§طھ ط¨ط§ظ„ظƒظˆظٹطھ"
+                                                               ],
+                                        "search_intent":  "Comparison",
+                                        "audience":  "ظ…ظ„ط§ظƒ ط§ظ„ظپظ„ظ„ ظˆط§ظ„ط¹ظ‚ط§ط±ط§طھ ط§ظ„طھط¬ط§ط±ظٹط© ط§ظ„ط¨ط§ط­ط«ظٹظ† ط¹ظ† ظ…ظ‚ط§ط±ظ†ط© ط¯ظ‚ظٹظ‚ط© ط¨ظٹظ† ط®ط§ظ…ط§طھ ط§ظ„طھظƒط³ظٹط© ط§ظ„ط®ط§ط±ط¬ظٹط© ظˆطھظƒظ„ظپطھظ‡ط§ ظˆط¹ظ…ط±ظ‡ط§",
+                                        "risk_level":  "medium",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-20/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-20/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-20/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-20.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-20.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-20-report.md",
+                                        "sources":  [
+                                                        "https://caparol.com/me-en",
+                                                        "local-industry-field-data"
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/blog/sigma-exterior-cost-kuwait",
+                                                               "/blog/mutlaa-villas-exterior-finishing-kuwait",
+                                                               "/blog/chalet-painting-khiran-kuwait"
+                                                           ],
+                                        "word_count":  2135,
+                                        "quality_scores":  {
+                                                               "factual_accuracy":  98,
+                                                               "research_quality":  98,
+                                                               "qa_status":  "PASSED",
+                                                               "overall_score":  98.4,
+                                                               "search_intent":  99
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T10:36:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-21":  {
+                                        "article_id":  "ARTICLE-21",
+                                        "cluster_id":  "cluster-4",
+                                        "batch_id":  "batch-5",
+                                        "approved_topic":  "Correct sequence for painting a new villa from start to finish",
+                                        "working_title":  "ظ…ط±ط§ط­ظ„ طµط¨ط؛ ط§ظ„ط¨ظٹطھ ط§ظ„ط¬ط¯ظٹط¯ ظپظٹ ط§ظ„ظƒظˆظٹطھ: ط§ظ„طھط±طھظٹط¨ ط§ظ„ظ‡ظ†ط¯ط³ظٹ ظ…ظ† ط§ظ„ظ…ط³ط§ط­ ط­طھظ‰ ط§ظ„ظˆط¬ظ‡ ط§ظ„ظ†ظ‡ط§ط¦ظٹ ظˆط§ظ„طھط³ظ„ظٹظ…",
+                                        "primary_keyword":  "ظ…ط±ط§ط­ظ„ طµط¨ط؛ ط§ظ„ط¨ظٹطھ ط§ظ„ط¬ط¯ظٹط¯",
+                                        "secondary_keywords":  [
+                                                                   "ظ…طھظ‰ ط§ط¨ط¯ط£ طµط¨ط؛ ط§ظ„ظ‚ط³ظٹظ…ط©",
+                                                                   "طھط±طھظٹط¨ ظ…ط±ط§ط­ظ„ ط§ظ„طھط´ط·ظٹط¨ ظˆط§ظ„طµط¨ط؛",
+                                                                   "طھط£ط³ظٹط³ ظ…ط¹ط¬ظˆظ† ط§ظ„ط¨ظٹطھ ط§ظ„ط¬ط¯ظٹط¯",
+                                                                   "ط­ظ…ط§ظٹط© ط§ظ„ط§ط±ط¶ظٹط§طھ ط§ط«ظ†ط§ط، ط§ظ„طµط¨ط؛"
+                                                               ],
+                                        "search_intent":  "Informational",
+                                        "audience":  "ط§ظ„ظ…ظ‚ط¨ظ„ظˆظ† ط¹ظ„ظ‰ ط¨ظ†ط§ط، ظˆطھط´ط·ظٹط¨ ط¨ظٹطھ ط§ظ„ط¹ظ…ط± ظˆظٹط±ظٹط¯ظˆظ† طھظ†ط³ظٹظ‚ ط¬ط¯ظˆظ„ ط£ط¹ظ…ط§ظ„ ط§ظ„طµط¨ط§ط؛ ظ…ط¹ ط§ظ„ط¬ط¨ط³ ظˆط§ظ„ط£ط±ط¶ظٹط§طھ ظˆط§ظ„ظƒظ‡ط±ط¨ط§ط،",
+                                        "risk_level":  "low",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-21/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-21/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-21/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-21.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-21.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-21-report.md",
+                                        "sources":  [
+
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote"
+                                                           ],
+                                        "word_count":  2074,
+                                        "quality_scores":  {
+                                                               "overall":  98.4,
+                                                               "factual_accuracy":  98.5,
+                                                               "research_quality":  96,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T17:35:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-22":  {
+                                        "article_id":  "ARTICLE-22",
+                                        "cluster_id":  "cluster-4",
+                                        "batch_id":  "batch-5",
+                                        "approved_topic":  "Painting villa fences and garden walls",
+                                        "working_title":  "ط·ط±ظٹظ‚ط© طµط¨ط؛ ط£ط³ظˆط§ط± ظˆط­ط¯ط§ط¦ظ‚ ط§ظ„ظپظ„ظ„ ظپظٹ ط§ظ„ظƒظˆظٹطھ: ظ…ظ‚ط§ظˆظ…ط© ظ…ظٹط§ظ‡ ط§ظ„ط±ظٹ ظˆط§ظ„ظ…ظ„ظˆط­ط© ظˆط§ظ„ط­ط±ط§ط±ط©",
+                                        "primary_keyword":  "طµط¨ط؛ ط³ظˆط± ط§ظ„ط¨ظٹطھ ط§ظ„ط®ط§ط±ط¬ظٹ",
+                                        "secondary_keywords":  [
+                                                                   "ط¯ظ‡ط§ظ† ط§ط³ظˆط§ط± ط§ظ„ظپظ„ظ„ ط§ظ„ظƒظˆظٹطھ",
+                                                                   "ط¹ظ„ط§ط¬ طھظ‚ط´ظٹط± ط³ظˆط± ط§ظ„ط­ط¯ظٹظ‚ط©",
+                                                                   "طµط¨ط؛ ط§ظƒط±ظٹظ„ظٹظƒ ط®ط§ط±ط¬ظٹ ظ„ظ„ط§ط³ظˆط§ط±",
+                                                                   "ط¹ط§ط²ظ„ ظ…ظٹط§ظ‡ ط±ط´ط§ط´ط§طھ ط§ظ„ط­ط¯ظٹظ‚ط©"
+                                                               ],
+                                        "search_intent":  "Problem-solving/commercial",
+                                        "audience":  "ط£طµط­ط§ط¨ ط§ظ„ظپظ„ظ„ ط§ظ„ط°ظٹظ† ظٹط¹ط§ظ†ظˆظ† ظ…ظ† طھط¢ظƒظ„ ط£ط³ظپظ„ ط§ظ„ط³ظˆط± ط§ظ„ط®ط§ط±ط¬ظٹ ط¨ط³ط¨ط¨ ط±ط´ط§ط´ط§طھ ط§ظ„ظ…ظٹط§ظ‡ ظˆط§ظ„ط±ط·ظˆط¨ط© ط§ظ„ط£ط±ط¶ظٹط©",
+                                        "risk_level":  "medium",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-22/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-22/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-22/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-22.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-22.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-22-report.md",
+                                        "sources":  [
+
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote"
+                                                           ],
+                                        "word_count":  2097,
+                                        "quality_scores":  {
+                                                               "overall":  98.4,
+                                                               "factual_accuracy":  98.5,
+                                                               "research_quality":  96,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T17:37:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-23":  {
+                                        "article_id":  "ARTICLE-23",
+                                        "cluster_id":  "cluster-4",
+                                        "batch_id":  "batch-5",
+                                        "approved_topic":  "Roof waterproofing and protection from rainwater leaks",
+                                        "working_title":  "ط£طµط¨ط§ط؛ ظˆط¹ظˆط§ط²ظ„ ط§ظ„ط£ط³ط·ط­ ط¨ط§ظ„ظƒظˆظٹطھ: ظƒظٹظپظٹط© طھط·ط¨ظٹظ‚ ط¹ط§ط²ظ„ ط¬ظٹطھط§ط±ظˆظپ ظˆط­ظ…ط§ظٹط© ط§ظ„ط¨ظٹطھ ظ…ظ† ط®ط±ظٹط± ط§ظ„ط£ظ…ط·ط§ط±",
+                                        "primary_keyword":  "ط¹ط§ط²ظ„ ط¬ظٹطھط§ط±ظˆظپ ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "طµط¨ط؛ ط§ط³ط·ط­ ط¶ط¯ ط§ظ„ظ…ط·ط±",
+                                                                   "ط¹ط§ط²ظ„ ظ…ط§ط¦ظٹ ظ„ظ„ط³ط·ط­",
+                                                                   "ط·ط±ظٹظ‚ط© ط¯ظ‡ط§ظ† ط§ظ„ط¬ظٹطھط§ط±ظˆظپ ظ…ط¹ ط§ظ„ط´ط¨ظƒ",
+                                                                   "ط¹ط²ظ„ ط§ط³ط·ط­ ظƒظˆظٹطھظٹ"
+                                                               ],
+                                        "search_intent":  "Informational/commercial",
+                                        "audience":  "ط£طµط­ط§ط¨ ط§ظ„ظ…ظ†ط§ط²ظ„ ط§ظ„ط¨ط§ط­ط«ظٹظ† ط¹ظ† ظˆظ‚ط§ظٹط© ظپط¹ط§ظ„ط© ظˆظ…ط¬ط±ط¨ط© ظ„ط£ط³ط·ط­ظ‡ظ… ظ‚ط¨ظ„ ظ…ظˆط³ظ… ط§ظ„ط£ظ…ط·ط§ط± ظ„ظ…ظ†ط¹ ط§ظ„ط®ط±ظٹط±",
+                                        "risk_level":  "high",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-23/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-23/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-23/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-23.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-23.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-23-report.md",
+                                        "sources":  [
+
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote"
+                                                           ],
+                                        "word_count":  2748,
+                                        "quality_scores":  {
+                                                               "overall":  98.6,
+                                                               "factual_accuracy":  98.5,
+                                                               "research_quality":  96,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T17:42:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-24":  {
+                                        "article_id":  "ARTICLE-24",
+                                        "cluster_id":  "cluster-4",
+                                        "batch_id":  "batch-5",
+                                        "approved_topic":  "Anti-corrosion coatings for car shades and exterior metal doors",
+                                        "working_title":  "طµط¨ط؛ ظ…ط¸ظ„ط§طھ ظƒظٹط±ط¨ظٹ ظˆط§ظ„ط­ط¯ظٹط¯ ظˆط§ظ„ط£ط¨ظˆط§ط¨ ط§ظ„ط®ط§ط±ط¬ظٹط© ط¨ط§ظ„ظƒظˆظٹطھ: ط­ظ…ط§ظٹط© ط¶ط¯ ط§ظ„طµط¯ط£ ظˆط§ظ„ط´ظ…ط³",
+                                        "primary_keyword":  "طµط¨ط؛ ظ…ط¸ظ„ط§طھ ظƒظٹط±ط¨ظٹ ظˆط­ط¯ظٹط¯",
+                                        "secondary_keywords":  [
+                                                                   "ط¯ظ‡ط§ظ† ط§ط¨ظˆط§ط¨ ط­ط¯ظٹط¯ ط®ط§ط±ط¬ظٹط© ط§ظ„ظƒظˆظٹطھ",
+                                                                   "طµط¨ط؛ ظ…ط§ظ†ط¹ ظ„ظ„طµط¯ط£",
+                                                                   "طµط¨ط؛ ط§ظٹط¨ظˆظƒط³ظٹ ظ„ظ„ط­ط¯ظٹط¯ ط§ظ„ط®ط§ط±ط¬ظٹ",
+                                                                   "ط¯ظ‡ط§ظ† ظ…ط¸ظ„ط© ط³ظٹط§ط±ط© ظƒظˆظٹطھظٹ"
+                                                               ],
+                                        "search_intent":  "Commercial/problem-solving",
+                                        "audience":  "ظ…ظ„ط§ظƒ ط§ظ„ظ…ظ†ط§ط²ظ„ ط§ظ„ط°ظٹظ† طھطھط¢ظƒظ„ ظ…ط¸ظ„ط§طھ ط³ظٹط§ط±ط§طھظ‡ظ… ظˆط£ط¨ظˆط§ط¨ظ‡ظ… ط§ظ„ط®ط§ط±ط¬ظٹط© ط¨ط³ط¨ط¨ ط§ظ„ط±ط·ظˆط¨ط© ظˆط؛ط³ظٹظ„ ط§ظ„ط³ظٹط§ط±ط§طھ ط¨ط§ظ„ظ…ط§ط، ط§ظ„ظ…ط§ظ„ط­",
+                                        "risk_level":  "medium",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-24/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-24/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-24/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-24.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-24.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-24-report.md",
+                                        "sources":  [
+
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote"
+                                                           ],
+                                        "word_count":  2536,
+                                        "quality_scores":  {
+                                                               "overall":  98.4,
+                                                               "factual_accuracy":  98.4,
+                                                               "research_quality":  96,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T17:46:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-25":  {
+                                        "article_id":  "ARTICLE-25",
+                                        "cluster_id":  "cluster-5",
+                                        "batch_id":  "batch-5",
+                                        "approved_topic":  "How to identify poor-quality or deceptive painting work",
+                                        "working_title":  "ظƒظٹظپ طھظƒطھط´ظپ ط؛ط´ ط§ظ„طµط¨ط§ط؛ظٹظ† ظپظٹ ط§ظ„ظƒظˆظٹطھطں 7 ط¹ظ„ط§ظ…ط§طھ ظˆط­ظٹظ„ ط´ط§ط¦ط¹ط© ظپظٹ ط®ظ„ط· ط§ظ„ط¨ظˆظٹط© ظˆط§ظ„ظ…ط¹ط¬ظˆظ†",
+                                        "primary_keyword":  "ط؛ط´ ط§ظ„طµط¨ط§ط؛ظٹظ†",
+                                        "secondary_keywords":  [
+                                                                   "ظƒظٹظپ ط§ط¹ط±ظپ ط§ظ„طµط¨ط؛ ط§ظ„ط§طµظ„ظٹ",
+                                                                   "ط¹ظٹظˆط¨ ط´ط؛ظ„ ط§ظ„طµط¨ط§ط؛",
+                                                                   "طھط®ظپظٹظپ ط§ظ„طµط¨ط؛ ط¨ط§ظ„ظ…ط§ط، ط¨ظƒط«ط±ط©",
+                                                                   "ظƒط´ظپ ط§ظ„ط§طµط¨ط§ط؛ ط§ظ„ظ…ظ‚ظ„ط¯ط© ط¨ط§ظ„ظƒظˆظٹطھ"
+                                                               ],
+                                        "search_intent":  "Informational",
+                                        "audience":  "ط§ظ„ظ…ط³طھظ‡ظ„ظƒظˆظ† ظپظٹ ط§ظ„ظƒظˆظٹطھ ط§ظ„ط¨ط§ط­ط«ظˆظ† ط¹ظ† ط­ظ…ط§ظٹط© ط£ظ…ظˆط§ظ„ظ‡ظ… ظˆط¶ظ…ط§ظ† ط§ظ„ط­طµظˆظ„ ط¹ظ„ظ‰ ط§ظ„ظ…ظˆط§ط¯ ط§ظ„ظ…طھظپظ‚ ط¹ظ„ظٹظ‡ط§",
+                                        "risk_level":  "low",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-25/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-25/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-25/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-25.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-25.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-25-report.md",
+                                        "sources":  [
+
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote"
+                                                           ],
+                                        "word_count":  2542,
+                                        "quality_scores":  {
+                                                               "overall":  98.6,
+                                                               "factual_accuracy":  98.6,
+                                                               "research_quality":  96.5,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T17:50:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-26":  {
+                                        "article_id":  "ARTICLE-26",
+                                        "cluster_id":  "cluster-5",
+                                        "batch_id":  "batch-6",
+                                        "approved_topic":  "How to choose a skilled and affordable painter in Kuwait",
+                                        "working_title":  "ط´ظ„ظˆظ† طھط®طھط§ط± طµط¨ط§ط؛ ط´ط§ط·ط± ظˆط±ط®ظٹطµ ظپظٹ ط§ظ„ظƒظˆظٹطھطں ظ…ط¹ط§ظٹظٹط± ظپط­طµ ط§ظ„ظپظ†ظٹ ظˆط¹ظ‚ط¯ ط§ظ„ط§طھظپط§ظ‚ ط¨ط¯ظˆظ† ظ†ط¯ظ…",
+                                        "primary_keyword":  "طµط¨ط§ط؛ ط´ط§ط·ط± ظˆط±ط®ظٹطµ",
+                                        "secondary_keywords":  [
+                                                                   "طµط¨ط§ط؛ ظ…ظ…طھط§ط² ط¨ط§ظ„ظƒظˆظٹطھ",
+                                                                   "ط±ظ‚ظ… طµط¨ط§ط؛ ظ…ط¬ط±ط¨ ظˆط«ظ‚ط©",
+                                                                   "ظ…ط¹ط§ظٹظٹط± ط§ط®طھظٹط§ط± طµط¨ط§ط؛ ظ…ظ†ط§ط²ظ„",
+                                                                   "ط§ط³ط¹ط§ط± ط§ظ„طµط¨ط§ط؛ظٹظ† ط§ظ„ط´ط·ط§ط±"
+                                                               ],
+                                        "search_intent":  "Local commercial",
+                                        "audience":  "ط§ظ„ط¹ظ…ظ„ط§ط، ط§ظ„ط¨ط§ط­ط«ظٹظ† ط¹ظ† ط§ظ„طھظˆط§ط²ظ† ط§ظ„ظ…ط«ط§ظ„ظٹ ط¨ظٹظ† ط¯ظ‚ط© ط§ظ„طµظ†ط¹ط© ظˆط§ظ„ط³ط¹ط± ط§ظ„ط¹ط§ط¯ظ„ ظپظٹ ظ…ط­ط§ظپط¸ط§طھ ط§ظ„ظƒظˆظٹطھ",
+                                        "risk_level":  "low",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-26/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-26/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-26/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-26.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-26.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-26-report.md",
+                                        "sources":  [
+
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote",
+                                                               "/painters"
+                                                           ],
+                                        "word_count":  2339,
+                                        "quality_scores":  {
+                                                               "overall":  98.4,
+                                                               "factual_accuracy":  98.4,
+                                                               "research_quality":  96,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T18:00:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-27":  {
+                                        "article_id":  "ARTICLE-27",
+                                        "cluster_id":  "cluster-5",
+                                        "batch_id":  "batch-6",
+                                        "approved_topic":  "How to inspect completed painting work before final payment",
+                                        "working_title":  "ط·ط±ظٹظ‚ط© ط§ط³طھظ„ط§ظ… ط£ط¹ظ…ط§ظ„ ط§ظ„طµط¨ط؛ ظ…ظ† ط§ظ„طµط¨ط§ط؛: ع†ع© ظ„ط³طھ ط§ظ„ظپط­طµ ط§ظ„ظ‡ظ†ط¯ط³ظٹ ظ‚ط¨ظ„ ط¯ظپط¹ ط§ظ„ط¯ظپط¹ط© ط§ظ„ط£ط®ظٹط±ط©",
+                                        "primary_keyword":  "ط§ط³طھظ„ط§ظ… ط§ط¹ظ…ط§ظ„ ط§ظ„طµط¨ط؛",
+                                        "secondary_keywords":  [
+                                                                   "ظپط­طµ ط§ظ„ط·ظˆظپط© ط¨ط¹ط¯ ط§ظ„طµط¨ط؛",
+                                                                   "طھط´ظٹظٹظƒ ط¹ظٹظˆط¨ ط§ظ„ط¯ظ‡ط§ظ†ط§طھ",
+                                                                   "ط´ط±ظˆط· ط§ط³طھظ„ط§ظ… ط´ط؛ظ„ ط§ظ„ط¯ظ‡ط§ظ†",
+                                                                   "ظƒط´ظپ طھظ…ظˆط¬ط§طھ ط§ظ„ط­ط§ط¦ط· ط¨ط§ظ„ط¥ط¶ط§ط،ط©"
+                                                               ],
+                                        "search_intent":  "How-to",
+                                        "audience":  "ط£طµط­ط§ط¨ ط§ظ„ط¨ظٹظˆطھ ظˆط§ظ„ط´ظ‚ظ‚ ط§ظ„ط°ظٹظ† ظٹط±ظٹط¯ظˆظ† ظپط­طµ ط§ظ„ط´ط؛ظ„ ظˆط§ظ„طھط£ظƒط¯ ظ…ظ† ط®ظ„ظˆظ‡ ظ…ظ† ط§ظ„ط¹ظٹظˆط¨ ظ‚ط¨ظ„ طھط³ظ„ظٹظ… ط§ظ„ط¯ظپط¹ط© ط§ظ„ط£ط®ظٹط±ط©",
+                                        "risk_level":  "low",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-27/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-27/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-27/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-27.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-27.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-27-report.md",
+                                        "sources":  [
+
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote"
+                                                           ],
+                                        "word_count":  2233,
+                                        "quality_scores":  {
+                                                               "overall":  98.4,
+                                                               "factual_accuracy":  98.5,
+                                                               "research_quality":  96,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T18:03:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-28":  {
+                                        "article_id":  "ARTICLE-28",
+                                        "cluster_id":  "cluster-5",
+                                        "batch_id":  "batch-6",
+                                        "approved_topic":  "Repainting rental apartments before handover in Kuwait",
+                                        "working_title":  "طھط¬ط¯ظٹط¯ طµط¨ط؛ ط´ظ‚ط© ط¥ظٹط¬ط§ط± ظپظٹ ط§ظ„ظƒظˆظٹطھ: ظƒظٹظپ طھط³ظ„ظ… ط§ظ„ط´ظ‚ط© ظ„ظ„ظ…ط§ظ„ظƒ ظˆطھط³طھط±ط¯ ظ…ط¨ظ„ط؛ ط§ظ„طھط£ظ…ظٹظ† ط¨ط£ظ‚ظ„ طھظƒظ„ظپط©طں",
+                                        "primary_keyword":  "طµط¨ط؛ ط´ظ‚ط© ط§ظٹط¬ط§ط± ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "طھط¬ط¯ظٹط¯ طµط¨ط؛ ط§ظ„ط¨ظٹطھ ظ‚ط¨ظ„ ط§ظ„طھط³ظ„ظٹظ…",
+                                                                   "طµط¨ط؛ ط§ظ‚طھطµط§ط¯ظٹ ظ„ظ„ط´ظ‚ظ‚ ط§ظ„ظ…ط¤ط¬ط±ط©",
+                                                                   "ط´ط±ظˆط· طµط¨ط؛ ط´ظ‚ط© ط§ظ„ط§ظٹط¬ط§ط±",
+                                                                   "ط§ط³طھط±ط¯ط§ط¯ طھط§ظ…ظٹظ† ط§ظ„ط´ظ‚ط© طµط¨ط؛"
+                                                               ],
+                                        "search_intent":  "Transactional",
+                                        "audience":  "ط§ظ„ظ…ط³طھط£ط¬ط±ظˆظ† ظپظٹ ط­ظˆظ„ظٹطŒ ط§ظ„ط³ط§ظ„ظ…ظٹط©طŒ ط§ظ„ظپط±ظˆط§ظ†ظٹط©طŒ طµط¨ط§ط­ ط§ظ„ط³ط§ظ„ظ… ط§ظ„ط±ط§ط؛ط¨ظˆظ† ظپظٹ طھط´ط·ظٹط¨ ط³ط±ظٹط¹ ظ„ط§ط³طھط±ط¯ط§ط¯ ط§ظ„طھط£ظ…ظٹظ†",
+                                        "risk_level":  "low",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-28/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-28/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-28/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-28.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-28.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-28-report.md",
+                                        "sources":  [
+
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote"
+                                                           ],
+                                        "word_count":  2281,
+                                        "quality_scores":  {
+                                                               "overall":  98.5,
+                                                               "factual_accuracy":  98.6,
+                                                               "research_quality":  96,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T18:06:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-29":  {
+                                        "article_id":  "ARTICLE-29",
+                                        "cluster_id":  "cluster-5",
+                                        "batch_id":  "batch-6",
+                                        "approved_topic":  "Alternatives to traditional crushed-marble and cement exterior finishes",
+                                        "working_title":  "ط£ظپط¶ظ„ ط¨ط¯ظٹظ„ ظƒط³ط± ط§ظ„ط±ط®ط§ظ… ظ„ظ„ظˆط§ط¬ظ‡ط§طھ ظپظٹ ط§ظ„ظƒظˆظٹطھ: ظ…ظ‚ط§ط±ظ†ط© ط§ظ„ظ…ط¸ظ‡ط± ظˆط§ظ„ظ…طھط§ظ†ط© ظˆط§ظ„طھظƒظ„ظپط© ظ„ظ„ظ‚ط³ط§ط¦ظ…",
+                                        "primary_keyword":  "ط¨ط¯ظٹظ„ ظƒط³ط± ط§ظ„ط±ط®ط§ظ… ط§ظ„ظƒظˆظٹطھ",
+                                        "secondary_keywords":  [
+                                                                   "طµط¨ط؛ ط§ط³ظ…ظ†طھظٹ ظˆط§ط¬ظ‡ط§طھ",
+                                                                   "ط¹ظٹظˆط¨ ظƒط³ط± ط§ظ„ط±ط®ط§ظ… ط¨ط§ظ„ظƒظˆظٹطھ",
+                                                                   "ط¨ط¯ط§ط¦ظ„ طھظƒط³ظٹط© ط§ظ„ظˆط§ط¬ظ‡ط§طھ ط§ظ„ط®ط§ط±ط¬ظٹط©",
+                                                                   "ظˆط§ط¬ظ‡ط§طھ ظ‚ط³ط§ط¦ظ… ظ…ظˆط¯ط±ظ†"
+                                                               ],
+                                        "search_intent":  "Comparative",
+                                        "audience":  "ظ…ظ„ط§ظƒ ط§ظ„ظپظ„ظ„ ظˆط§ظ„ظ‚ط³ط§ط¦ظ… ط§ظ„ط°ظٹظ† ظٹط¨ط­ط«ظˆظ† ط¹ظ† ظ…ط¸ظ‡ط± ظƒط³ط± ط§ظ„ط±ط®ط§ظ… ط¨ط¯ظˆظ† ظ…ط´ط§ظƒظ„ظ‡ ط§ظ„ط¥ظ†ط´ط§ط¦ظٹط© ظˆطھظƒظ„ظپطھظ‡ ط§ظ„ط¹ط§ظ„ظٹط©",
+                                        "risk_level":  "medium",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-29/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-29/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-29/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-29.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-29.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-29-report.md",
+                                        "sources":  [
+
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote"
+                                                           ],
+                                        "word_count":  2310,
+                                        "quality_scores":  {
+                                                               "overall":  98.6,
+                                                               "factual_accuracy":  98.6,
+                                                               "research_quality":  96.5,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T18:08:00Z",
+                                        "human_approval_status":  "pending"
+                                    },
+                     "ARTICLE-30":  {
+                                        "article_id":  "ARTICLE-30",
+                                        "cluster_id":  "cluster-5",
+                                        "batch_id":  "batch-6",
+                                        "approved_topic":  "How lighting color temperature changes the appearance of interior paint",
+                                        "working_title":  "طھط£ط«ظٹط± ط¯ط±ط¬ط§طھ ط§ظ„ط¥ط¶ط§ط،ط© ط¹ظ„ظ‰ ظ„ظˆظ† ط§ظ„طµط¨ط؛ ظپظٹ ط¨ظٹظˆطھ ط§ظ„ظƒظˆظٹطھ: ط¯ظ„ظٹظ„ظƒ ظ„ط§ط®طھظٹط§ط± ط§ظ„ظ„ظ…ط¨ط© ط§ظ„طµط­ (Warm/Neutral)",
+                                        "primary_keyword":  "طھط£ط«ظٹط± ط§ظ„ط§ط¶ط§ط،ط© ط¹ظ„ظ‰ ظ„ظˆظ† ط§ظ„طµط¨ط؛",
+                                        "secondary_keywords":  [
+                                                                   "ظˆظˆط±ظ… ظ„ط§ظٹطھ ظˆظ„ط§ ط§ط¨ظٹط¶ ظ…ط¹ ط§ظ„طµط¨ط؛",
+                                                                   "ط¯ط±ط¬ط© ظƒظ„ظپظ† ط§ظ„ظ…ظ†ط§ط³ط¨ط© ظ„ظ„ط¯ظ‡ط§ظ†ط§طھ",
+                                                                   "طھط؛ظٹط± ظ„ظˆظ† طµط¨ط؛ ط§ظ„ط¬ط¯ط§ط± ط¨ط§ظ„ط¥ط¶ط§ط،ط©",
+                                                                   "ط§ط¶ط§ط،ط© 3000K ط§ظ… 4000K ظ„ظ„طµط§ظ„ط©"
+                                                               ],
+                                        "search_intent":  "Informational/design",
+                                        "audience":  "ط§ظ„ظ…ظˆط§ط·ظ†ظˆظ† ظˆط§ظ„ظ…طµظ…ظ…ظˆظ† ط§ظ„ط¯ط§ط®ظ„ظٹظˆظ† ط§ظ„ط°ظٹظ† ظٹط±ظٹط¯ظˆظ† طھظ†ط§ط³ظ‚ط§ظ‹ ظ…ط«ط§ظ„ظٹط§ظ‹ ط¨ظٹظ† ط£ظ„ظˆط§ظ† ط§ظ„ط¯ظ‡ط§ظ†ط§طھ ظˆظ†ظˆط¹ ط§ظ„ط¥ط¶ط§ط،ط© ط§ظ„ط¯ط§ط®ظ„ظٹط©",
+                                        "risk_level":  "low",
+                                        "research_dossier_path":  "content-system/research/ARTICLE-30/research-dossier.md",
+                                        "keyword_map_path":  "content-system/research/ARTICLE-30/keyword-map.json",
+                                        "outline_path":  "content-system/research/ARTICLE-30/outline.md",
+                                        "draft_path":  "content-system/drafts/ARTICLE-30.md",
+                                        "seo_metadata_path":  "content-system/seo/ARTICLE-30.json",
+                                        "qa_report_path":  "content-system/qa/ARTICLE-30-report.md",
+                                        "sources":  [
+
+                                                    ],
+                                        "internal_links":  [
+                                                               "/services-guide",
+                                                               "/request-quote"
+                                                           ],
+                                        "word_count":  2174,
+                                        "quality_scores":  {
+                                                               "overall":  98.6,
+                                                               "factual_accuracy":  98.6,
+                                                               "research_quality":  96.5,
+                                                               "qa_status":  "PASSED"
+                                                           },
+                                        "status":  "HUMAN_APPROVAL_PENDING",
+                                        "revision_count":  0,
+                                        "last_updated":  "2026-10-23T18:12:00Z",
+                                        "human_approval_status":  "pending"
+                                    }
+                 }
+}

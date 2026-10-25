@@ -1,0 +1,86 @@
+{
+  "article_id": "ARTICLE-10",
+  "seo_title": "صبغ شاليهات الكويت: دهانات مقاومة للملوحة بالخيران وبنيدر 2026",
+  "h1": "صبغ شاليهات الكويت: كيف تحمي واجهات شاليهات الخيران وبنيدر من رطوبة البحر والملوحة؟ (دليل 2026)",
+  "meta_description": "دليل صبغ شاليهات الكويت في الخيران وبنيدر: أصباغ الواجهات المطاطية المقاومة للملوحة، حماية حديد الدرابزين والمظلات من الصدأ، وسيلر الحجر والأسعار بالدينار.",
+  "slug": "chalet-painting-khiran-kuwait",
+  "primary_keyword": "صبغ شاليهات الكويت",
+  "secondary_keywords": [
+    "اصباغ مقاومة للملوحة",
+    "دهان شاليه الخيران",
+    "صبغ ضد رطوبة البحر",
+    "حماية حديد الشاليه من الصدأ"
+  ],
+  "canonical_url": "https://sabbagh-kuwait.com/blog/chalet-painting-khiran-kuwait",
+  "suggested_images": [
+    {
+      "file_name": "khiran-chalet-marine-painting.webp",
+      "alt_text": "واجهة شاليه بحري في مدينة صباح الأحمد البحرية بالخيران مدهونة بدهان مطاطي مقاوم للملوحة",
+      "placement": "تحت جدول الأسعار مباشرة"
+    },
+    {
+      "file_name": "marine-epoxy-railing-protection.webp",
+      "alt_text": "طريقة صبغ وحماية درابزين حديد الشاليه بإيبوكسي الزنك فوسفات في بنيدر بالكويت",
+      "placement": "في قسم حماية وتجديد حديد ومظلات الشاليهات"
+    }
+  ],
+  "internal_links": [
+    {"url": "/services-guide", "anchor": "أصباغ وعوازل الشاليهات والمناطق الساحلية"},
+    {"url": "/areas/ahmadi", "anchor": "صباغين في محافظة الأحمدي والخيران"},
+    {"url": "/blog/best-exterior-paints-kuwait-heat", "anchor": "أفضل صبغ خارجي في الكويت يتحمل الحرارة والغبار"},
+    {"url": "/blog/wood-door-painting-kuwait", "anchor": "دليل صبغ أبواب الخشب في الكويت 2026"},
+    {"url": "/request-quote", "anchor": "طلب معاينة ميدانية وعرض سعر لشاليهك في الخيران وبنيدر"}
+  ],
+  "schema_markup": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://sabbagh-kuwait.com/blog/chalet-painting-khiran-kuwait#article",
+        "headline": "صبغ شاليهات الكويت: كيف تحمي واجهات شاليهات الخيران وبنيدر من رطوبة البحر والملوحة؟ (دليل 2026)",
+        "description": "دليل هندسي وفني شامل لصبغ وتجديد وعزل واجهات الشاليهات البحرية في الخيران وبنيدر والجليعة بالكويت ومقاومة رذاذ الملح والصدأ.",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "صباغ الكويت - فريق العوازل والمشاريع الساحلية"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "صباغ الكويت",
+          "url": "https://sabbagh-kuwait.com"
+        },
+        "mainEntityOfPage": "https://sabbagh-kuwait.com/blog/chalet-painting-khiran-kuwait"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://sabbagh-kuwait.com/blog/chalet-painting-khiran-kuwait#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "ما هو أفضل دهان لواجهات شاليهات الخيران وبنيدر؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "الدهانات الأكريليكية المطاطية (Elastomeric Coatings) مثل جوتن جوتاشيلد تكس ألترا وكابارول بيرمافلكس، لأنها تمتد بنسبة 300% وتمنع نفاذ أيونات كلوريد البحر ورذاذ الأمواج."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "كم تكلفة صبغ وتجديد الشاليه في الكويت؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "تتراوح تكلفة صبغ الواجهات البحرية بين 5.5 إلى 8.5 د.ك للمتر المربع شاملة السقالات والعوازل، بينما يتراوح تجديد شاليه صف أول كامل بالخيران بين 1,200 إلى 2,800 د.ك."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ما هو أفضل وقت في السنة لصبغ الشاليه؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "الفترة المثالية هي بين شهري أكتوبر ومارس، حيث تكون الرطوبة النسبية منخفضة ودرجات الحرارة معتدلة مما يتيح للدهانات والعوازل البحرية الجفاف والالتصاق الكيميائي التام."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

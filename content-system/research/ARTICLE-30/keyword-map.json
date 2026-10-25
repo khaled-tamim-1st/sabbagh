@@ -1,0 +1,70 @@
+{
+  "articleId": "ARTICLE-30",
+  "slug": "interior-paint-lighting-temperature-kuwait",
+  "primaryKeyword": {
+    "keyword": "تأثير الاضاءة على لون الصبغ",
+    "searchIntent": "informational / design guide",
+    "targetDensity": "1.2% - 1.8%",
+    "placementLocations": [
+      "h1",
+      "meta-title",
+      "first-100-words",
+      "h2-kelvin-scale",
+      "h2-rooms-guide",
+      "conclusion",
+      "faq"
+    ]
+  },
+  "secondaryKeywords": [
+    {
+      "keyword": "وورم لايت ولا ابيض مع الصبغ",
+      "targetCount": 4
+    },
+    {
+      "keyword": "درجة كلفن المناسبة للدهانات",
+      "targetCount": 4
+    },
+    {
+      "keyword": "تغير لون صبغ الجدار بالإضاءة",
+      "targetCount": 3
+    },
+    {
+      "keyword": "اضاءة 3000K ام 4000K للصالـة",
+      "targetCount": 3
+    },
+    {
+      "keyword": "مؤشر تجسيد الالوان CRI للدهانات",
+      "targetCount": 3
+    }
+  ],
+  "lsiTerms": [
+    "ظاهرة الميتاميريزم Metamerism",
+    "سبوت لايت مانع للتوهج Anti-glare",
+    "صبغ جوتن بير 1391 وبريز 0552",
+    "الإنارة المخفية الكوف لايت",
+    "المسار المغناطيسي Magnetic Track",
+    "كلفن وورم لايت 3000K",
+    "كلفن شمسي طبيعي 4000K",
+    "شوارع حولي والشويخ للإنارة",
+    "عينة كرتون الصبغ 0.9 لتر",
+    "رخام الترافرتين والخشب الطبيعي"
+  ],
+  "internalLinkAnchors": [
+    {
+      "targetSlug": "jotun-popular-interior-colors-kuwait-2026",
+      "anchorText": "أشهر ألوان جوتن للفلل والمنازل في الكويت"
+    },
+    {
+      "targetSlug": "matte-vs-quarter-vs-semi-gloss-paint-kuwait",
+      "anchorText": "الفرق بين الصبغ المطفي والربع لمعة والنصف لمعة"
+    },
+    {
+      "targetSlug": "how-to-choose-skilled-affordable-painter-kuwait",
+      "anchorText": "معايير اختيار صباغ شاطر ومحترف بالكويت"
+    },
+    {
+      "targetSlug": "kuwait-paint-cost-calculator",
+      "anchorText": "حاسبة تكاليف وأسعار الصبغ والتشطيب"
+    }
+  ]
+}

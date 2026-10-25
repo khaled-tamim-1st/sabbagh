@@ -1,0 +1,70 @@
+{
+  "articleId": "ARTICLE-26",
+  "slug": "how-to-choose-skilled-affordable-painter-kuwait",
+  "primaryKeyword": {
+    "keyword": "صباغ شاطر ورخيص",
+    "searchIntent": "local commercial / informational",
+    "targetDensity": "1.2% - 1.7%",
+    "placementLocations": [
+      "h1",
+      "meta-title",
+      "first-100-words",
+      "h2-criteria",
+      "pricing-table",
+      "conclusion",
+      "faq"
+    ]
+  },
+  "secondaryKeywords": [
+    {
+      "keyword": "صباغ ممتاز بالكويت",
+      "targetCount": 4
+    },
+    {
+      "keyword": "رقم صباغ مجرب وثقة",
+      "targetCount": 3
+    },
+    {
+      "keyword": "معايير اختيار صباغ منازل",
+      "targetCount": 3
+    },
+    {
+      "keyword": "اسعار الصباغين الشطار",
+      "targetCount": 3
+    },
+    {
+      "keyword": "عقد اتفاق صباغ بالكويت",
+      "targetCount": 3
+    }
+  ],
+  "lsiTerms": [
+    "حماية نعلات الرخام والارضيات",
+    "ماكينة صنفرة بشفاط غبار",
+    "فحص كشاف الليد المائل",
+    "صبغ جوتن فينوماستيك",
+    "دفعة اخيرة مؤجلة",
+    "شوارع الشويخ الصناعية",
+    "يومية الصباغ بالكويت",
+    "شقق الايجار وقسائم المطلاع",
+    "معجون اكريليك جاهز",
+    "رقم البطاقة المدنية والسجل"
+  ],
+  "internalLinkAnchors": [
+    {
+      "targetSlug": "kuwait-paint-cost-calculator",
+      "anchorText": "حاسبة تكاليف وأسعار الصبغ في الكويت"
+    },
+    {
+      "targetSlug": "detecting-painter-scams-kuwait",
+      "anchorText": "طرق كشف غش الصباغين وحيل خلط الدهان"
+    },
+    {
+      "targetSlug": "villa-painting-sequence-kuwait",
+      "anchorText": "ترتيب مراحل صبغ وتشطيب البيت الجديد"
+    },
+    {
+      "targetSlug": "internal-wall-putty-preparation-kuwait",
+      "anchorText": "تأسيس المعجون الداخلي وسنفرة الجدران"
+    }
+  ]
+}

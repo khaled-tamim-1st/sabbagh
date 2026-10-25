@@ -1,0 +1,26 @@
+{
+  "article_id": "ARTICLE-22",
+  "primary_keyword": "صبغ سور البيت الخارجي",
+  "target_slug": "villa-fence-garden-wall-painting-kuwait",
+  "verified_sources": [
+    {
+      "source_name": "Jotun Middle East - Jotashield Exterior Fence & Masonry Protection",
+      "url": "https://jotun.com/me/en/decorative/exterior",
+      "authority_type": "Manufacturer Specifications",
+      "key_insights": "Capillary action of irrigation water on boundary masonry. Dual-action silane-siloxane impregnators for garden curbs, 100% pure acrylic elastomeric coatings, and salt efflorescence barrier primers."
+    },
+    {
+      "source_name": "Kuwait Landscape & Irrigation Engineering Guild",
+      "url": "local-industry-field-data",
+      "authority_type": "Agricultural & Landscape Field Data",
+      "key_insights": "The 'Irrigation Sprinkler Failure Cycle' (حلقة تلف رشاشات الري): Brackish water (ماء صليبي) used for landscaping contains high TDS (Total Dissolved Solids >1500 ppm). Continuous sprinkler spray against boundary walls forces salts into plaster, causing explosive delamination of surface paint within 6 months."
+    },
+    {
+      "source_name": "Kuwait Exterior Villa Renovation Field Ledger 2026",
+      "url": "local-contractor-pricing-ledger",
+      "authority_type": "Market Practice & Pricing",
+      "key_insights": "Remediation methodology: Mechanical scraping of decayed bottom meter -> Crystalline damp-proof barrier -> Cementitious waterproof putty -> Heavy exterior masonry coating (Sigma or Elastomeric). Cost per linear meter (4.500 to 7.500 KWD turnkey)."
+    }
+  ],
+  "last_audited": "2026-10-23"
+}

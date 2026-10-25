@@ -1,0 +1,86 @@
+{
+  "article_id": "ARTICLE-04",
+  "seo_title": "سعر تركيب بديل الرخام الكويت: تكلفة بديل الخشب 2026",
+  "h1": "سعر تركيب بديل الرخام وبديل الخشب في الكويت: تكلفة الألواح والمصنعية 2026",
+  "meta_description": "كم سعر تركيب بديل الرخام في الكويت؟ دليل أسعار ألواح الشويخ (6-12 د.ك) وتكلفة المتر الشامل مع بديل الخشب وشرائح الاستيل ومقايسة جدار شاشة كامل.",
+  "slug": "pvc-marble-wood-installation-cost-kuwait",
+  "primary_keyword": "سعر تركيب بديل الرخام الكويت",
+  "secondary_keywords": [
+    "تكلفة بديل الخشب",
+    "سعر لوح بديل الرخام الشويخ",
+    "اسعار تكسيات الجدران الكويت",
+    "تركيب بديل الخشب مع الصبغ"
+  ],
+  "canonical_url": "https://sabbagh-kuwait.com/blog/pvc-marble-wood-installation-cost-kuwait",
+  "suggested_images": [
+    {
+      "file_name": "pvc-marble-sheet-tv-wall-kuwait.webp",
+      "alt_text": "جدار تلفزيون مكسو ببديل الرخام أوبن بوك وبديل الخشب المضلع مع إضاءة مخفية في صالة كويتية",
+      "placement": "تحت جدول الأسعار"
+    },
+    {
+      "file_name": "wpc-fluted-panels-installation-kuwait.webp",
+      "alt_text": "فني ديكور يقوم بتثبيت شرائح بديل الخشب وصمغ البولي يوريثان في الكويت بميزان الليزر",
+      "placement": "قبل شرح طريقة التركيب الصحيحة"
+    }
+  ],
+  "internal_links": [
+    {"url": "/services-guide", "anchor": "دليل خدمات تركيب الديكورات وبديل الرخام والخشب"},
+    {"url": "/request-quote", "anchor": "طلب فني تركيب بديل رخام وخشب في الكويت عبر منصتنا"},
+    {"url": "/blog/room-painting-cost-kuwait", "anchor": "دليل أسعار صبغ الغرف والصالات في الكويت"},
+    {"url": "/blog/italian-decorative-paints-kuwait", "anchor": "الصبغ الإيطالي وتأثيرات الرخام الفاخرة للصالات"},
+    {"url": "/blog/foam-wall-molding-kuwait", "anchor": "تنسيق براويز الفوم والبانوهات مع الصبغ"}
+  ],
+  "schema_markup": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://sabbagh-kuwait.com/blog/pvc-marble-wood-installation-cost-kuwait#article",
+        "headline": "سعر تركيب بديل الرخام وبديل الخشب في الكويت: تكلفة الألواح والمصنعية 2026",
+        "description": "دليل شامل لتكاليف شراء وتركيب ألواح بديل الرخام وبديل الخشب في الكويت بالدينار الكويتي وحسبة ديكور جدار الشاشة كاملاً.",
+        "inLanguage": "ar",
+        "author": {
+          "@type": "Organization",
+          "name": "صباغ الكويت - قسم الديكورات والتشطيب الداخلي"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "صباغ الكويت",
+          "url": "https://sabbagh-kuwait.com"
+        },
+        "mainEntityOfPage": "https://sabbagh-kuwait.com/blog/pvc-marble-wood-installation-cost-kuwait"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://sabbagh-kuwait.com/blog/pvc-marble-wood-installation-cost-kuwait#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "كم سعر لوح بديل الرخام في الشويخ؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "يتراوح سعر لوح بديل الرخام الخام (مقاس 1.22×2.80 م) في محلات الشويخ بين 6 إلى 12 دينار كويتي، وتصل ألواح الأوبن بوك ذات العروق المتقابلة إلى 15 ديناراً."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "كم تكلفة ديكور جدار تلفزيون كامل بديل رخام وخشب وليد؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "تبلغ تكلفة جدار تلفزيون كامل بعرض 4 أمتار شاملاً لوحي بديل رخام في المنتصف وشرائح بديل خشب وإضاءة ليد مخفية والتركيب ما بين 100 إلى 145 دينار كويتي."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ما هو أفضل صمغ لتثبيت بديل الرخام في حرارة الكويت؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "أفضل صمغ هو سيليكون البولي يوريثان الهجين الألماني (مثل Bostik أو Soudal) لأنه يحافظ على مرونة ميكانيكية تمتص تمدد الجدار دون تفكك أو سقوط اللوح."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

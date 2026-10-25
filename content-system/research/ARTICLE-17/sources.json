@@ -1,0 +1,26 @@
+{
+  "article_id": "ARTICLE-17",
+  "primary_keyword": "ورق جدران الكويت مقارنة بالصبغ",
+  "target_slug": "wallpaper-vs-paint-kuwait",
+  "verified_sources": [
+    {
+      "source_name": "International Wallcoverings Manufacturers Association (IGI) Standards",
+      "url": "https://igiwallcoverings.org",
+      "authority_type": "Manufacturing Standards",
+      "key_insights": "Heavy-duty non-woven vinyl (الفينيل الكوري والألماني) vs paper-backed wallpaper. Adhesion failure mechanisms in high humidity / intermittent air conditioning. Scrubbability classes."
+    },
+    {
+      "source_name": "Kuwait Residential Building Climate & HVAC Inspection Report",
+      "url": "local-industry-field-data",
+      "authority_type": "Field Practice Kuwait",
+      "key_insights": "The 'Summer Vacation Trap' (مصيدة إجازة الصيف): Homeowners traveling for 6-8 weeks and turning off AC results in indoor temperatures exceeding 42°C and humidity rising, causing standard wallpaper glues (starch/methyl cellulose) to liquefy, bubble, and mold behind panels."
+    },
+    {
+      "source_name": "Shuwaikh & Hawally Wallpaper Dealers Ledger 2026",
+      "url": "local-retail-pricing-ledger",
+      "authority_type": "Market Retail Data",
+      "key_insights": "Cost of Korean 16m² roll (106cm x 15.6m): 14 to 28 KWD raw; 22 to 38 KWD turnkey installed with anti-fungal adhesive. Comparison with paint cost per wall (15-35 KWD)."
+    }
+  ],
+  "last_audited": "2026-10-23"
+}

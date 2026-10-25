@@ -1,0 +1,26 @@
+[
+  {
+    "title": "CIE (International Commission on Illumination) - Color Rendering Index (CRI) and Correlated Color Temperature (CCT) Standards",
+    "url": "https://cie.co.at/",
+    "organization": "International Commission on Illumination (CIE)",
+    "relevance": "Scientific principles of metamerism (ظاهرة الميتاميريزم), CRI >90 requirements, and spectral power distribution of LED lighting on architectural pigments."
+  },
+  {
+    "title": "Illuminating Engineering Society (IES) - Residential Lighting Design Guide (RP-11)",
+    "url": "https://www.ies.org/",
+    "organization": "Illuminating Engineering Society",
+    "relevance": "Recommended Kelvin temperatures (2700K, 3000K, 4000K, 6500K) for residential living halls, majlis/diwaniya, master suites, and kitchens."
+  },
+  {
+    "title": "Jotun & Benjamin Moore Color & Light Interaction Technical Studies",
+    "url": "https://www.jotun.com/me-en/decorative/interior/colours/colour-and-light",
+    "organization": "Jotun Middle East / Color Research Laboratories",
+    "relevance": "How popular Kuwaiti shades (Bare 1391, Breeze 0552, Skylight 1624, Timeless 1024) shift dramatically between Warm 3000K and Cool White 6500K."
+  },
+  {
+    "title": "Kuwait Society of Engineers & Interior Design Association Lighting Guidelines (2025/2026)",
+    "url": "https://kse.org.kw/",
+    "organization": "Kuwait Society of Engineers (جمعية المهندسين الكويتية)",
+    "relevance": "Architectural lighting trends in Kuwait villas: magnetic track lights, recessed anti-glare downlights, cove lighting, and natural daylight orientation."
+  }
+]

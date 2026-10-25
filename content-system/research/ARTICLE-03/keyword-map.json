@@ -1,0 +1,21 @@
+{
+  "article_id": "ARTICLE-03",
+  "primary_keyword": "أسعار دهانات جوتن الكويت",
+  "search_intent": "Commercial investigation",
+  "target_serp_features": ["Product Pricing Table", "Featured Snippet"],
+  "secondary_keywords": [
+    {"keyword": "سعر بستيل جوتن", "intent": "Commercial", "context": "تكلفة درام جوتن 18 لتر"},
+    {"keyword": "سعر فينوماستيك الكويت", "intent": "Commercial Investigation", "context": "أسعار الصبغ الداخلي للجدران"},
+    {"keyword": "اسعار جوتاشيلد خارجي", "intent": "Commercial Investigation", "context": "أسعار دهان الواجهات والحرارة"},
+    {"keyword": "سعر جالون جوتن بالكويت", "intent": "Transactional", "context": "حجم 4 لتر للغرف المنفردة"}
+  ],
+  "lsi_and_entities": [
+    "فينوماستيك بيور كولورز",
+    "جوتاشيلد إكستريم عاكس للحرارة",
+    "وندر وول لايف",
+    "قواعد التلوين Base A و Base C",
+    "وكلاء جوتن المعتمدين في الشويخ والفحيحيل",
+    "درام 18 لتر وجالون 4 لتر",
+    "دينار كويتي KWD"
+  ]
+}
