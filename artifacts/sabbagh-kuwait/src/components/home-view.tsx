@@ -141,17 +141,18 @@ export function HomeView() {
   const [favoritesOnly, setFavoritesOnly] = useState(false);
   const [selected, setSelected] = useState<Painter | null>(null);
   const [contacting, setContacting] = useState<Painter | null>(null);
-  const [painters, setPainters] = useState<Painter[]>([]);
+  const [painters, setPainters] = useState<Painter[]>(PAINTERS_DATA);
 
   useEffect(() => {
     apiClient.get<any[]>('/public/painters')
       .then((apiPainters) => {
-        if (Array.isArray(apiPainters)) {
+        if (Array.isArray(apiPainters) && apiPainters.length > 0) {
           setPainters(apiPainters);
         }
       })
       .catch((err) => {
-        console.warn('Could not fetch latest painters for homepage:', err);
+        console.warn('Could not fetch latest painters for homepage, using default catalog:', err);
+        setPainters((prev) => (prev.length > 0 ? prev : PAINTERS_DATA));
       });
   }, []);
 

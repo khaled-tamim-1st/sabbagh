@@ -116,447 +116,1342 @@ export interface Painter {
 
 export const PAINTERS_DATA: Painter[] = [
   {
-    id: 1,
-    slug: 'مؤسسة-لون-الدار',
-    name: 'مؤسسة لون الدار',
-    avatarUrl: 'https://res.cloudinary.com/lgbve8cd/image/upload/v1792828504/sabbagh/avatars/dkltoh2lfbfxs7ti4uiz.webp',
-    avatarPublicId: 'sabbagh/avatars/dkltoh2lfbfxs7ti4uiz',
-    initials: 'لد',
-    region: 'السالمية',
-    rating: '4.9',
-    reviews: 86,
-    years: 11,
-    startingAt: '18 د.ك',
-    services: ['دهان داخلي', 'ورق جدران', 'معجون'],
-    description: 'تشطيب مرتب للبيوت والشقق، مع معاينة الألوان قبل البدء والاهتمام بحماية الأثاث.',
-    tone: '',
-    phone: '+965 94412356',
-    whatsapp: '96594412356',
-    whatsappPrefill: 'السلام عليكم مؤسسة لون الدار، شفت ملفكم في صباغ الكويت وأبي استفسر عن صبغ داخلي وموعد معاينة.',
-    bio: 'فريق متخصص بأعمال الدهانات الداخلية الراقية للشقق والفلل في السالمية وحوالي والعاصمة. نعتمد معجون جوتن الأصلي وصنفرة شفط حديثة لتقليل الغبار داخل البيوت المأهولة، مع ضمان حماية كاملة للمفروشات والأرضيات قبل أن نلمس أي جدار.',
-    governorates: ['حولي', 'العاصمة', 'مبارك الكبير'],
-    primaryGovernorates: ['hawalli', 'capital', 'mubarak-al-kabeer'],
-    isAvailableToday: true,
-    responseTime: 'خلال 30 دقيقة',
-    coverageAreaIds: [
-      'al-salmiya', 'hawalli-city', 'al-rumaithiya', 'al-jabriya', 'mishref', 'bayan', 'salwa', 'al-shaab', 'al-bidaa',
-      'al-dasma', 'al-daiya', 'abdullah-al-salem', 'al-rawda', 'al-shamiya', 'al-nuzha', 'kaifan', 'qurtoba', 'al-surra', 'al-yarmouk',
-      'sabah-al-salem', 'al-messilah', 'al-adan', 'al-qurain'
+    "id": 1,
+    "slug": "خالد-تميم",
+    "name": "خالد تميم",
+    "avatarUrl": "https://res.cloudinary.com/lgbve8cd/image/upload/v1792829294/sabbagh/avatars/piw5pk9gp5rwatbzlx2s.webp",
+    "avatarPublicId": "sabbagh/avatars/piw5pk9gp5rwatbzlx2s",
+    "initials": "خت",
+    "region": "حولي",
+    "rating": "5.0",
+    "reviews": 24,
+    "years": 8,
+    "startingAt": "18 د.ك",
+    "services": [
+      "دهان داخلي",
+      "معجون وتنعيم أسقف",
+      "ورق جدران",
+      "ديكورات وبديل رخام",
+      "ترميم وعلاج رطوبة",
+      "أصباغ إيطالية وسيلك",
+      "دهان خارجي"
     ],
-    warrantyYears: 2,
-    crewSize: 6,
-    paintBrands: ['جوتن فينوماستيك (Jotun)', 'كابارول (Caparol)', 'همبل (Hempel)'],
-    completedProjects: 420,
-    pricingList: [
-      { item: 'صبغ غرفة نوم قياسية (4×4 م) وجهين', price: '18 - 25 د.ك', note: 'شامل حماية الأثاث وسكينة معجون' },
-      { item: 'صبغ غرفة ماستر كاملة مع السقف والتنعيم', price: '28 - 38 د.ك', note: 'شامل صبغ السقف المطفي والجدران ربع لمعة' },
-      { item: 'صبغ صالة استقبال أو مجلس كبير', price: '45 - 75 د.ك', note: 'يعتمد على مساحة الصالة والزوايا والديكور' },
-      { item: 'تركيب ورق جدران رول كوري / إيطالي', price: '4 - 6 د.ك', note: 'للرول الواحد شامل الغراء الأصلي ضد الرطوبة' },
-      { item: 'معالجة الشروخ والنش مع طبقة عازل مائي', price: '12 - 20 د.ك', note: 'للجدار الواحد قبل تطبيق الصبغ' },
+    "description": "صباغ محترف بخبرة في الدهانات الداخلية والخارجية والتشطيب الراقي، معالجة الرطوبة والتشققات، وتنفيذ أحدث الديكورات وبديل الرخام.",
+    "tone": "ochre",
+    "phone": "01554637673",
+    "whatsapp": "01559646676",
+    "whatsappPrefill": "السلام عليكم أ/ خالد تميم، اطلعت على ملفك في دليل صباغ الكويت وأود الاستفسار عن موعد معاينة وأسعار الصبغ.",
+    "bio": "فني صباغة وتشطيبات معتمد في جميع محافظات الكويت. متخصص في تنفيذ الدهانات الحديثة (جوتن، كابارول)، معالجة الرطوبة والنش، سحب المعجون، وتثبيت بديل الرخام وبديل الخشب والبانوهات بدقة متناهية ونظافة تامة وحماية شاملة للأثاث.",
+    "governorates": [
+      "حولي",
+      "العاصمة",
+      "الفروانية",
+      "الأحمدي",
+      "الجهراء",
+      "مبارك الكبير"
     ],
-    gallery: [
-      {
-        id: 101,
-        title: 'تجديد صالة شقة دوبلكس بالسالمية',
-        category: 'دهان داخلي',
-        description: 'تحويل جدران قديمة متشققة إلى مظهر أوف وايت حريري ناعم بتناسق مع الإضاءة المخفية.',
-        beforeLabel: 'قبل الصبغ',
-        afterLabel: 'بعد التشطيب النهائي',
-        beforeDetails: 'جدران باهتة وخدوش بارزة مع اصفرار ناتج عن الرطوبة وتشققات في زوايا الجبس.',
-        afterDetails: 'سحب 3 سكينات معجون جوتن فائق النعومة، وصنفرة آلية، ودهان وجهين فينوماستيك ربع لمعة كود (1024 Timeless).',
-        materialsUsed: 'جوتن فينوماستيك بيور كولورز + معجون جوتن انتيريور',
-      },
-      {
-        id: 102,
-        title: 'غرفة نوم رئيسية مع جدار ديكوري',
-        category: 'ورق جدران ودهان',
-        description: 'تركيب ورق جدران بارز الملمس خلف السرير ودهان باقي الجدران بدرجة بيج هادئ.',
-        beforeLabel: 'قبل العمل',
-        afterLabel: 'النتيجة النهائية',
-        beforeDetails: 'صبغ زيتي قديم وبقع لاصقة وتفاوت بلون الإضاءة.',
-        afterDetails: 'صنفرة كاملة وبرايمر مائي عازل، تركيب ورق جدران كوري ضد الرطوبة مع صبغ متناغم لباقي الغرفة.',
-        materialsUsed: 'ورق جدران كوري 16.5 م² + دهان جوتن مائي مطفي',
-      },
+    "primaryGovernorates": [
+      "hawalli",
+      "capital",
+      "farwaniyah",
+      "ahmadi",
+      "jahra",
+      "mubarak-al-kabeer"
     ],
-    customerReviews: [
-      {
-        id: 1,
-        author: 'أم فهد الخالدي',
-        date: 'منذ أسبوعين',
-        rating: 5,
-        area: 'السالمية',
-        comment: 'أمانة شغلهم يبيض الوجه. نظافة تامة وأهم شي عندي تغطية الأثاث بالنايلون والشطرطون. خلصوا صبغ غرفتين بيوم ونص بدون أي روائح مزعجة.',
-        serviceType: 'دهان داخلي',
-        verified: true,
-      },
-      {
-        id: 2,
-        author: 'م. أحمد السريّع',
-        date: 'منذ شهر',
-        rating: 5,
-        area: 'الرميثية',
-        comment: 'دقة في موعد المعاينة وأسعارهم واضحة بدون لف ودوران. الألوان طلعت مطابقة لكتالوج جوتن بالضبط.',
-        serviceType: 'تجديد شقة كاملة',
-        verified: true,
-      },
-      {
-        id: 3,
-        author: 'بو طلال القطان',
-        date: 'منذ شهرين',
-        rating: 4.8,
-        area: 'الشعب البحري',
-        comment: 'معلم ممتاز وصبور على طلباتنا بتعديل درجات الألوان، وسريع في التنفيذ. أنصح بالتعامل معه.',
-        serviceType: 'ورق جدران ودهان',
-        verified: true,
-      },
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [
+      "hawalli-city",
+      "al-salmiya",
+      "al-jabriya",
+      "al-rawda",
+      "al-dasma",
+      "sabah-al-salem"
     ],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "individual",
+    "warrantyYears": 3,
+    "crewSize": 4,
+    "paintBrands": [
+      "جوتن (Jotun)",
+      "كابارول (Caparol)",
+      "همبل (Hempel)"
+    ],
+    "completedProjects": 350,
+    "pricingList": [
+      {
+        "item": "صبغ غرفة نوم كاملة (4×4 م) وجهين",
+        "price": "18 - 25 د.ك",
+        "note": "شامل حماية الأثاث والأرضيات وسكينة معجون"
+      },
+      {
+        "item": "صبغ ماستر مع السقف والتنعيم",
+        "price": "28 - 38 د.ك",
+        "note": "شامل صبغ السقف وجدران فينوماستيك ربع لمعة"
+      },
+      {
+        "item": "صبغ صالة استقبال كبيرة أو ديوانية",
+        "price": "45 - 70 د.ك",
+        "note": "يعتمد على المساحة والديكورات"
+      },
+      {
+        "item": "تركيب ورق جدران أو بديل رخام",
+        "price": "4 - 7 د.ك",
+        "note": "للرول/اللوح الواحد مع المواد الأصلية"
+      },
+      {
+        "item": "معالجة رطوبة ونش مع طبقة عازل",
+        "price": "15 - 25 د.ك",
+        "note": "للجدار الواحد قبل تطبيق الصبغ"
+      }
+    ],
+    "gallery": [
+      {
+        "id": 1,
+        "title": "تشطيب صالة مودرن بأصباغ جوتن الهادئة",
+        "category": "دهان داخلي",
+        "description": "صبغ جدران وسقف صالة استقبال باللون الأوف وايت مع تحديد البانوهات.",
+        "beforeDetails": "جدران قديمة باهتة مع بعض الشروخ السطحية في الزوايا.",
+        "afterDetails": "معالجة الشروخ وسحب معجون جوتن، ودهان وجهين فينوماستيك ربع لمعة كود Timeless.",
+        "materialsUsed": "جوتن فينوماستيك بيور + معجون جوتن الأصلي"
+      },
+      {
+        "id": 2,
+        "title": "تركيب بديل رخام وبديل خشب مع إضاءة مخفية",
+        "category": "ديكورات وبديل رخام",
+        "description": "تنفيذ جدار تلفزيون راقي من بديل الرخام وبديل الخشب بأعلى دقة.",
+        "beforeDetails": "جدار عادي بدون أي لمسات ديكورية.",
+        "afterDetails": "تثبيت ألواح بديل الرخام والشرائح الخشبية بدقة مع شريط ليد مخفي.",
+        "materialsUsed": "بديل رخام UV + شرائح بديل خشب تركي + سيليكون تثبيت قوي"
+      }
+    ],
+    "customerReviews": [
+      {
+        "id": 101,
+        "author": "م. ناصر العتيبي",
+        "date": "منذ يومين",
+        "rating": 5,
+        "area": "حولي",
+        "comment": "المعلم خالد تميم قمة في الذوق والاحترافية، دقة بالمواعيد ونظافة غير طبيعية بعد الشغل. صبغ الشقة كاملة بوقت قياسي وبدون روائح.",
+        "serviceType": "دهان داخلي وديكورات",
+        "verified": true
+      },
+      {
+        "id": 102,
+        "author": "أبو فهد الرشيدي",
+        "date": "منذ أسبوع",
+        "rating": 5,
+        "area": "السالمية",
+        "comment": "شغل ممتاز وسعر مناسب جداً، الألوان طلعت مطابقة تماماً للكتالوج وتغطية الأثاث كانت ممتازة.",
+        "serviceType": "دهان داخلي ومعجون",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
   },
   {
-    id: 2,
-    slug: 'ورشة-الصفوة-للديكور',
-    name: 'ورشة الصفوة للديكور والأصباغ الحديثة',
-    avatarUrl: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=400&q=80',
-    initials: 'صف',
-    region: 'حولي',
-    rating: '4.8',
-    reviews: 64,
-    years: 8,
-    startingAt: '15 د.ك',
-    services: ['دهان داخلي', 'دهان خارجي', 'ترميم'],
-    description: 'أعمال صبغ وتجديد للمنازل، ومواعيد مرنة تناسب سكان حولي والمناطق القريبة.',
-    tone: 'ochre',
-    phone: '+965 97723489',
-    whatsapp: '96597723489',
-    whatsappPrefill: 'مرحبا بو راشد، لقيت رقمك في صباغ الكويت وحاب استفسر عن صبغ وترميم شقة.',
-    bio: 'معلم دهانات متمرس في أعمال التجديد السريع والترميم وصيانة الجدران التالفة من الرطوبة والمكيفات. نعمل بسرعة قياسية مع الحفاظ على نظافة المكان وجودة المواد الأصلية.',
-    governorates: ['حولي', 'العاصمة', 'الفروانية'],
-    primaryGovernorates: ['hawalli', 'capital', 'farwaniyah'],
-    isAvailableToday: true,
-    responseTime: 'خلال 45 دقيقة',
-    coverageAreaIds: [
-      'hawalli-city', 'al-salmiya', 'al-jabriya', 'al-rumaithiya', 'al-nigra', 'dhaher-al-surra', 'al-salam', 'al-zahra',
-      'shuwaikh-residential', 'shuwaikh-industrial', 'al-faiha', 'kaifan', 'al-khaldiya', 'al-adailiya',
-      'farwaniyah-city', 'khaitan', 'al-omariya', 'al-rehab', 'al-riggae', 'al-ardhiya'
+    "id": 2,
+    "slug": "معلم-مبارك-العازمي",
+    "name": "معلم مبارك العازمي",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "مم",
+    "region": "حولي",
+    "rating": "5.0",
+    "reviews": 1,
+    "years": 7,
+    "startingAt": "20 د.ك",
+    "services": [
+      "دهان داخلي",
+      "معجون أصلي",
+      "صبغ جوتن"
     ],
-    warrantyYears: 2,
-    crewSize: 4,
-    paintBrands: ['جوتن (Jotun)', 'همبل (Hempel)', 'ناشيونال (National)'],
-    completedProjects: 310,
-    pricingList: [
-      { item: 'صبغ غرفة عادية تشطيب سريع', price: '15 - 22 د.ك', note: 'وجهين دهان مائي قابل للمسح' },
-      { item: 'صبغ شقة استثمارية 2 غرفة وصالة', price: '60 - 85 د.ك', note: 'شامل المواد والصبغ المائي النظيف' },
-      { item: 'ترميم وعلاج رطوبة زوايا النوافذ والمكيفات', price: '10 - 18 د.ك', note: 'تكسير القشور ووضع معجون مقاوم للرطوبة' },
-      { item: 'دهان بيبان وأبواب خشب باللاكيه أو الزيتي', price: '7 - 12 د.ك', note: 'للباب الواحد شامل الحف والتأسيس' },
+    "description": "تشطيب متقن وأصباغ أصلية مع ضمان نظافة المكان وسرعة الإنجاز.",
+    "tone": "ochre",
+    "phone": "96597711223",
+    "whatsapp": "96597711223",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "معلم مبارك العازمي - متخصص في دهان داخلي، معجون أصلي، صبغ جوتن بأعلى مستويات الجودة والالتزام بالمواعيد في مناطق حولي والعاصمة.",
+    "governorates": [
+      "حولي",
+      "العاصمة"
     ],
-    gallery: [
+    "primaryGovernorates": [
+      "hawalli",
+      "capital"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "individual",
+    "warrantyYears": 3,
+    "crewSize": 3,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
       {
-        id: 201,
-        title: 'ترميم طوفة متضررة من رطوبة التكييف في حولي',
-        category: 'ترميم ودهان',
-        description: 'معالجة تسرب رطوبة قديم أدى لانتفاخ وسقوط الدهان.',
-        beforeLabel: 'قبل المعالجة',
-        afterLabel: 'بعد الترميم',
-        beforeDetails: 'انتفاخ شديد في اللياسة وتساقط قشور الصبغ الزيتي وسواد ناتج عن العفن.',
-        afterDetails: 'كشط كامل حتى اللياسة، معالجة بمادة مانعة للرطوبة وسكينة معجون وتر برايمر، ثم دهان نهائي متطابق.',
-        materialsUsed: 'عازل رطوبة + برايمر مقاوم للعفن + جوتن فينوماستيك',
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "20 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
       },
-    ],
-    customerReviews: [
       {
-        id: 4,
-        author: 'سالم الشمري',
-        date: 'منذ 3 أسابيع',
-        rating: 5,
-        area: 'حولي',
-        comment: 'بو راشد صباغ شاطر وأسعاره جداً معقولة مقارنة بالسوق. جاء بالموعد المحدد وخلص الشغل قبل الوقت.',
-        serviceType: 'ترميم ودهان شقة',
-        verified: true,
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
       },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
     ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 1,
+        "author": "سعد الشمري",
+        "date": "الآن",
+        "rating": 5,
+        "area": "السالمية",
+        "comment": "شغل احترافي ومواعيد دقيقة، أنصح بالتعامل معه.",
+        "serviceType": "دهان داخلي ومعجون",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
   },
   {
-    id: 3,
-    slug: 'صباغ-قسائم-الأحمدي',
-    name: 'صباغ قسائم الأحمدي والمنطقة العاشرة',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
-    initials: 'قم',
-    region: 'الفروانية',
-    rating: '4.7',
-    reviews: 53,
-    years: 7,
-    startingAt: '20 د.ك',
-    services: ['ورق جدران', 'دهان داخلي', 'ديكورات'],
-    description: 'اختيارات ألوان هادئة وتنفيذ ديكورات جدارية بسيطة للمجالس وغرف النوم.',
-    tone: 'rose',
-    phone: '+965 96634512',
-    whatsapp: '96596634512',
-    whatsappPrefill: 'أهلاً ورشة لمسة فن، حاب استفسر عن تركيب بديل الرخام وبديل الخشب وورق جدران.',
-    bio: 'فريق شغوف بالديكورات الحديثة في الكويت: بديل الرخام، بديل الخشب، البانوهات الجبسية مع أصباغ ناعمة بتدرجات الإضاءة الدافئة. نقدم نصائح لاختيار الألوان حسب توزيع الأثاث.',
-    governorates: ['الفروانية', 'مبارك الكبير', 'الأحمدي'],
-    primaryGovernorates: ['farwaniyah', 'mubarak-al-kabeer', 'ahmadi'],
-    isAvailableToday: false,
-    responseTime: 'خلال 1 - 2 ساعة',
-    coverageAreaIds: [
-      'farwaniyah-city', 'khaitan', 'ishbiliya', 'al-rehab', 'al-andalus', 'sabah-al-nasser', 'west-abdullah-al-mubarak', 'south-abdullah-al-mubarak', 'al-firdous',
-      'sabah-al-salem', 'al-adan', 'al-qusour', 'al-qurain', 'abu-ftaira', 'al-fnaitees',
-      'al-fintas', 'al-egaila', 'mahboula', 'al-mangaf', 'abu-halifa'
+    "id": 3,
+    "slug": "معلم-أحمد-العازمي",
+    "name": "معلم أحمد العازمي",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "مأ",
+    "region": "حولي",
+    "rating": "5.0",
+    "reviews": 1,
+    "years": 8,
+    "startingAt": "20 د.ك",
+    "services": [
+      "دهان داخلي",
+      "أصباغ إيطالية وسيلك",
+      "معجون أصلي"
     ],
-    warrantyYears: 2,
-    crewSize: 5,
-    paintBrands: ['جوتن ليدي ديزاين (Lady Design)', 'كابارول', 'ورق كوري نانو'],
-    completedProjects: 260,
-    pricingList: [
-      { item: 'صبغ غرفة مع ديكور جدار مميز (Feature Wall)', price: '25 - 40 د.ك', note: 'تطبيق لون مغاير أو تأثير ناعم' },
-      { item: 'تركيب لوح بديل الرخام (PVC Marble)', price: '12 - 18 د.ك', note: 'للوح الكامل 122×280 سم شامل السيليكون والمصنعية' },
-      { item: 'تركيب شرائح بديل الخشب WPC', price: '4 - 7 د.ك', note: 'للشريحة الواحدة مع الزوايا النهائية' },
-      { item: 'تفصيل وتركيب بانوهات جدارية فوم / جبس', price: '1.5 - 2.5 د.ك', note: 'للمتر الطولي مع صبغها بنفس لون الجدار' },
+    "description": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة حولي وضواحيها.",
+    "tone": "ochre",
+    "phone": "96591000000",
+    "whatsapp": "96591000000",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة حولي وضواحيها.",
+    "governorates": [
+      "حولي",
+      "العاصمة"
     ],
-    gallery: [
+    "primaryGovernorates": [
+      "hawalli",
+      "capital"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "individual",
+    "warrantyYears": 3,
+    "crewSize": 4,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
       {
-        id: 301,
-        title: 'تنسيق جدار تلفزيون ببديل الرخام والخشب في خيطان',
-        category: 'ديكورات جدارية',
-        description: 'تصميم جدار رئيسي يجمع بين فخامة الرخام ودفء الخشب مع ليد مخفي.',
-        beforeLabel: 'قبل التركيب',
-        afterLabel: 'بعد الإنجاز',
-        beforeDetails: 'جدار سادة تقليدي مع أسلاك تلفزيون ومقابس ظاهرة تشوه المنظر.',
-        afterDetails: 'إخفاء الأسلاك داخل قنوات، تركيب لوحين بديل رخام أبيض إسباني مع شرائح خشبية جانبية وإضاءة مخفية.',
-        materialsUsed: 'بديل رخام PVC + شرائح بديل خشب تركي + سيليكون عالي التماسك',
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "20 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
       },
-    ],
-    customerReviews: [
       {
-        id: 5,
-        author: 'خالد العنزي',
-        date: 'منذ شهر',
-        rating: 5,
-        area: 'الفروانية',
-        comment: 'سوو لي جدار التلفزيون ببديل الخشب والرخام مع بانوهات، الشغل طلع قطعة فنية تبارك الرحمن. سرعة ودقة متناهية.',
-        serviceType: 'ديكورات وبديل الرخام',
-        verified: true,
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
       },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
     ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 2,
+        "author": "فهد العبدالله",
+        "date": "الآن",
+        "rating": 5,
+        "area": "السالمية",
+        "comment": "المعلم أحمد فنان حقيقي وشغله نظيف جداً ودقيق بالموعد.",
+        "serviceType": "دهان داخلي",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
   },
   {
-    id: 4,
-    slug: 'صباغ-الجهراء-المحترف',
-    name: 'صباغ الجهراء المحترف',
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
-    initials: 'جم',
-    region: 'الأحمدي',
-    rating: '4.9',
-    reviews: 42,
-    years: 13,
-    startingAt: '22 د.ك',
-    services: ['دهان خارجي', 'ترميم', 'دهان داخلي'],
-    description: 'خبرة في الواجهات الخارجية ومعالجة آثار الرطوبة والتشققات قبل الدهان.',
-    tone: 'blue',
-    phone: '+965 98845623',
-    whatsapp: '96598845623',
-    whatsappPrefill: 'السلام عليكم صباغ الديرة، نحتاج عرض سعر لصبغ واجهة فيلا خارجية مع معالجة الشروخ.',
-    bio: 'خبرة تزيد عن 13 سنة في تشطيب واجهات الفلل والقسائم في الأحمدي والمنقف وصباح الأحمد. متخصصون في دهانات جوتاشيلد المقاومة لحرارة صيف الكويت الشديدة والغبار والأملاح، مع توفير السقالات المعتمدة والضمان الخطي.',
-    governorates: ['الأحمدي', 'مبارك الكبير', 'العاصمة'],
-    primaryGovernorates: ['ahmadi', 'mubarak-al-kabeer', 'capital'],
-    isAvailableToday: true,
-    responseTime: 'خلال 30 دقيقة',
-    coverageAreaIds: [
-      'ahmadi-city', 'al-fintas', 'al-egaila', 'mahboula', 'al-sabahiya', 'al-mangaf', 'al-fahaheel', 'sabah-al-ahmad-residential', 'sabah-al-ahmad-sea-city', 'al-khiran', 'al-riqqa', 'hadiya',
-      'sabah-al-salem', 'al-messilah', 'abu-ftaira', 'al-masayel', 'abu-al-hasaniya',
-      'kuwait-city', 'shuwaikh-industrial', 'al-rai', 'dasman'
+    "id": 4,
+    "slug": "ورشة-الرقي-للديكور",
+    "name": "ورشة الرقي للديكور",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "وا",
+    "region": "العاصمة",
+    "rating": "5.0",
+    "reviews": 1,
+    "years": 12,
+    "startingAt": "25 د.ك",
+    "services": [
+      "ديكورات وبديل رخام",
+      "بديل خشب",
+      "ورق جدران"
     ],
-    warrantyYears: 3,
-    crewSize: 8,
-    paintBrands: ['جوتن جوتاشيلد (Jotashield Extreme)', 'همبل بروتكتيف', 'كابارول اكستيريور'],
-    completedProjects: 510,
-    pricingList: [
-      { item: 'صبغ داخلي للغرفة أو الصالة', price: '22 - 35 د.ك', note: 'شامل المعجون والدهان المقاوم للرطوبة' },
-      { item: 'صبغ واجهة فيلا كاملة معالجة وصباغة جوتاشيلد', price: '380 - 850 د.ك', note: 'حسب الارتفاع وعدد الأوجه ومساحة الواجهة' },
-      { item: 'معالجة الشروخ الإنشائية وفواصل التمدد بمواد مطاطية', price: '35 - 70 د.ك', note: 'معجون مطاطي ألماني بوليمري يمنع تجدد الشرخ' },
-      { item: 'عزل أسقف وجدران خارجية بطبقة أكرليك عاكسة للحرارة', price: '1.2 - 1.8 د.ك', note: 'للمتر المربع' },
+    "description": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة العاصمة وضواحيها.",
+    "tone": "ochre",
+    "phone": "96591000001",
+    "whatsapp": "96591000001",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة العاصمة وضواحيها.",
+    "governorates": [
+      "العاصمة",
+      "حولي"
     ],
-    gallery: [
+    "primaryGovernorates": [
+      "capital",
+      "hawalli"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "company",
+    "warrantyYears": 3,
+    "crewSize": 6,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
       {
-        id: 401,
-        title: 'تجديد واجهة قسيمة كاملة في صباح الأحمد',
-        category: 'دهان خارجي',
-        description: 'معالجة تصدعات الشمس والغبار وتطبيق جوتاشيلد العاكس للحرارة.',
-        beforeLabel: 'قبل الصبغ الخارجي',
-        afterLabel: 'الواجهة بعد التجديد',
-        beforeDetails: 'بهتان شديد للون الواجهة بسبب الشمس القوية وشروخ شعرية تسرب الرطوبة وقت الأمطار.',
-        afterDetails: 'غسيل بالضغط العالي، فتح وتعبئة الشروخ بمعجون مطاطي مرن، طبقة برايمر زيتي مانع للأملاح، وجهين جوتاشيلد اكستريم.',
-        materialsUsed: 'جوتن جوتاشيلد إكستريم كول ريفلكت + معجون مرن ضد الشروخ',
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "25 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
       },
-    ],
-    customerReviews: [
       {
-        id: 6,
-        author: 'عبدالله الهاجري',
-        date: 'منذ شهرين',
-        rating: 5,
-        area: 'صباح الأحمد السكنية',
-        comment: 'صبغوا لي قسيمتي من الخارج بالكامل مع السقالات. التزام بالوقت وشغل نظيف جداً وتفاوض مريح بالدفعات.',
-        serviceType: 'صبغ واجهة فيلا خارجية',
-        verified: true,
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
       },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
     ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 3,
+        "author": "سليمان الغانم",
+        "date": "الآن",
+        "rating": 5,
+        "area": "الروضة",
+        "comment": "طاقم عمل ممتاز وخدمة راقية وخامات أصلية.",
+        "serviceType": "ديكورات وبديل رخام",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
   },
   {
-    id: 5,
-    slug: 'فني-صبغ-وديكورات-الكويت',
-    name: 'فني صبغ وديكورات الكويت',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
-    initials: 'صب',
-    region: 'الجهراء',
-    rating: '4.6',
-    reviews: 37,
-    years: 6,
-    startingAt: '16 د.ك',
-    services: ['دهان داخلي', 'معجون', 'ترميم'],
-    description: 'صبغ وتجديد الشقق والبيوت في الجهراء، مع توضيح نطاق العمل والتكلفة مسبقاً.',
-    tone: 'ochre',
-    phone: '+965 93356781',
-    whatsapp: '96593356781',
-    whatsappPrefill: 'مرحبا ألوان السور، عندي شقة بالجهراء وأبي أعرف السعر والموعد المتاح للمعاينه.',
-    bio: 'خدمة سريعة ومخلصة لأهالي الجهراء وسعد العبدالله والمطلاع. نوفر عمالة مدربة ملتزمة بالهدوء وحماية مقتنيات المنزل، مع أسعار مناسبة وشفافة دون أي تكاليف مخفية.',
-    governorates: ['الجهراء', 'العاصمة'],
-    primaryGovernorates: ['jahra', 'capital'],
-    isAvailableToday: true,
-    responseTime: 'خلال 20 دقيقة',
-    coverageAreaIds: [
-      'al-jahra-old', 'saad-al-abdullah', 'al-mutlaa', 'al-qasr', 'al-naseem', 'al-naeem', 'al-waha', 'al-oyoun', 'south-saad-al-abdullah', 'teima',
-      'jaber-al-ahmad', 'sulaibikhat', 'al-doha', 'al-nahda', 'al-qairawan', 'gharnata'
+    "id": 5,
+    "slug": "معلم-فهد-الرشيدي",
+    "name": "معلم فهد الرشيدي",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "مف",
+    "region": "الفروانية",
+    "rating": "5.0",
+    "reviews": 1,
+    "years": 6,
+    "startingAt": "18 د.ك",
+    "services": [
+      "دهان داخلي",
+      "معجون وتنعيم أسقف",
+      "صبغ جوتن"
     ],
-    warrantyYears: 2,
-    crewSize: 5,
-    paintBrands: ['جوتن (Jotun)', 'ناشيونال', 'همبل'],
-    completedProjects: 220,
-    pricingList: [
-      { item: 'صبغ غرفة عادية وجهين', price: '16 - 24 د.ك', note: 'شامل الصنفرة والتنظيف بعد الانتهاء' },
-      { item: 'صبغ شقة جديدة تسليم مفتاح بالمطلاع', price: '110 - 180 د.ك', note: 'تأسيس معجون كامل 3 سكينات مع الصبغ' },
-      { item: 'صبغ مجلس ديوانية مع تنسيق درجات فخمة', price: '40 - 70 د.ك', note: 'ألوان كلاسيكية هادئة تعكس هيبة المجلس' },
+    "description": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الفروانية وضواحيها.",
+    "tone": "ochre",
+    "phone": "96591000002",
+    "whatsapp": "96591000002",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الفروانية وضواحيها.",
+    "governorates": [
+      "الفروانية",
+      "العاصمة"
     ],
-    gallery: [
+    "primaryGovernorates": [
+      "farwaniyah",
+      "capital"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "individual",
+    "warrantyYears": 3,
+    "crewSize": 3,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
       {
-        id: 501,
-        title: 'صبغ وتشطيب ديوانية في سعد العبدالله',
-        category: 'دهان داخلي',
-        description: 'تشطيب ناعم بألوان مطفية راقية تعطي اتساعاً للمجلس وفخامة للإضاءة.',
-        beforeLabel: 'قبل الصبغ',
-        afterLabel: 'الديوانية بعد التشطيب',
-        beforeDetails: 'جدران أسمنتية جديدة تحتاج لتأسيس معجون عميق وصنفرة مستوية.',
-        afterDetails: 'سحب 3 أوجه معجون حريري، مع برايمر مائي ووجهين صبغ فينوماستيك لون بيج هادئ مع إطار جبسي ناصع البياض.',
-        materialsUsed: 'معجون جوتن بريمير + فينوماستيك مطفي ناعم',
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "18 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
       },
-    ],
-    customerReviews: [
       {
-        id: 7,
-        author: 'مشعل الظفيري',
-        date: 'منذ أسبوعين',
-        rating: 5,
-        area: 'سعد العبدالله',
-        comment: 'شغل ممتاز وسعر طيب مقارنة بغيرهم. خلصوا صبغ الشقة كاملة بـ 4 أيام بدون أي تعطيل.',
-        serviceType: 'صبغ شقة كاملة',
-        verified: true,
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
       },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
     ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 4,
+        "author": "محمد المطوع",
+        "date": "الآن",
+        "rating": 5,
+        "area": "صباح الناصر",
+        "comment": "صباح الناصر فخورين بوجود هذا الصباغ، أمانة ونظافة بعد العمل.",
+        "serviceType": "دهان داخلي",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
   },
   {
-    id: 6,
-    slug: 'خالد-تميم',
-    name: 'خالد تميم',
-    avatarUrl: 'https://res.cloudinary.com/lgbve8cd/image/upload/v1792825077/sabbagh/avatars/orbygzn9i2uqkr3yr57u.webp',
-    avatarPublicId: 'sabbagh/avatars/orbygzn9i2uqkr3yr57u',
-    initials: 'خت',
-    region: 'صباح السالم',
-    rating: '4.8',
-    reviews: 29,
-    years: 9,
-    startingAt: '24 د.ك',
-    services: ['ديكورات', 'ورق جدران', 'دهان داخلي'],
-    description: 'لمسات ديكورية وأعمال ورق جدران، مع عناية بالتفاصيل والزوايا النهائية.',
-    tone: 'rose',
-    phone: '+965 92267894',
-    whatsapp: '96592267894',
-    whatsappPrefill: 'السلام عليكم دار النقشة، مهتم بتركيب ورق جدران وبانوهات مع صبغ متناسق في صباح السالم.',
-    bio: 'متخصصون في اللمسات الفنية الدقيقة: ورق الجدران ثلاثي الأبعاد، ديكورات الشامواه والمخمل، وتنسيق الألوان المعاصرة في صباح السالم ومبارك الكبير والقرين والقصور.',
-    governorates: ['مبارك الكبير', 'حولي', 'الأحمدي'],
-    primaryGovernorates: ['mubarak-al-kabeer', 'hawalli', 'ahmadi'],
-    isAvailableToday: false,
-    responseTime: 'خلال ساعتين',
-    coverageAreaIds: [
-      'sabah-al-salem', 'al-messilah', 'al-adan', 'al-qusour', 'al-qurain', 'mubarak-al-kabeer-city', 'abu-ftaira', 'al-fnaitees', 'al-masayel', 'abu-al-hasaniya',
-      'al-salmiya', 'al-rumaithiya', 'bayan', 'mishref', 'salwa', 'al-bidaa', 'al-jabriya',
-      'al-fintas', 'al-egaila', 'al-dhaher', 'mahboula'
+    "id": 6,
+    "slug": "شركة-الخليج-للتشطيبات",
+    "name": "شركة الخليج للتشطيبات",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "شا",
+    "region": "الأحمدي",
+    "rating": "5.0",
+    "reviews": 1,
+    "years": 15,
+    "startingAt": "35 د.ك",
+    "services": [
+      "دهان خارجي",
+      "واجهات سيجما",
+      "عوازل مائية وحرارية"
     ],
-    warrantyYears: 2,
-    crewSize: 4,
-    paintBrands: ['جوتن ليدي', 'أصباغ إيطالية فانتاسيا', 'ورق جدران أوروبي'],
-    completedProjects: 340,
-    pricingList: [
-      { item: 'صبغ غرفة كلاسيك مع زوايا دقيقة', price: '24 - 36 د.ك', note: 'شامل تحديد الإطارات والبراويز بلون مغاير' },
-      { item: 'تركيب ورق جدران أوروبي / كوري عالي الجودة', price: '5 - 7 د.ك', note: 'للرول مع معالجة حواف التلاقي بدقة' },
-      { item: 'صبغ ديكوري مخملي أو شامواه أو لؤلؤي', price: '30 - 55 د.ك', note: 'تطبيق تأثيرات جوتن ليدي ديزاين' },
+    "description": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الأحمدي وضواحيها.",
+    "tone": "ochre",
+    "phone": "96591000003",
+    "whatsapp": "96591000003",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الأحمدي وضواحيها.",
+    "governorates": [
+      "الأحمدي",
+      "مبارك الكبير"
     ],
-    gallery: [
+    "primaryGovernorates": [
+      "ahmadi",
+      "mubarak-al-kabeer"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "company",
+    "warrantyYears": 3,
+    "crewSize": 8,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
       {
-        id: 601,
-        title: 'تزيين صالة معيشة بصبغ لؤلؤي وورق جدران بالمسيلة',
-        category: 'ديكورات وصبغ',
-        description: 'إدخال تأثيرات اللؤلؤ الناعمة مع إضاءة الثريا والسبوت لايت.',
-        beforeLabel: 'قبل العمل',
-        afterLabel: 'بعد التشطيب الفاخر',
-        beforeDetails: 'جدار باهت يفتقر للحيوية مع علامات أيدي حول مفاتيح الكهرباء.',
-        afterDetails: 'تنظيف وتأسيس كامل ثم صبغ تأثير ليدي ديزاين بيرل يعكس لمعة خفيفة راقية.',
-        materialsUsed: 'جوتن ليدي ديزاين بيرل + ورق جدران فرنسي فاخر',
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "35 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
       },
-    ],
-    customerReviews: [
       {
-        id: 8,
-        author: 'سارة العتيبي',
-        date: 'منذ شهر',
-        rating: 5,
-        area: 'صباح السالم',
-        comment: 'ما شاء الله على ذوقهم في تركيب ورق الجدران ولا غلطة بالتقاء النقشات. شكراً دار النقشة.',
-        serviceType: 'ورق جدران وديكورات',
-        verified: true,
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
       },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
     ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 5,
+        "author": "خالد السبيعي",
+        "date": "الآن",
+        "rating": 5,
+        "area": "الفحيحيل",
+        "comment": "شركة احترافية وأسعارهم ممتازة مقارنة بالسوق وضمان حقيقي.",
+        "serviceType": "دهان خارجي",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
   },
   {
-    id: 7,
-    slug: 'شركة-أصباغ-الخليج-الحديثة',
-    name: 'شركة أصباغ الخليج الحديثة',
-    avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80',
-    initials: 'خل',
-    region: 'العاصمة',
-    rating: '5.0',
-    reviews: 12,
-    years: 9,
-    startingAt: '22 د.ك',
-    services: ['دهان داخلي', 'دهان خارجي', 'ترميم ومعجون'],
-    description: 'شركة معتمدة في أعمال الدهان والديكور، طاقم متكامل ومواد أصلية.',
-    tone: 'ochre',
-    phone: '+96599001122',
-    whatsapp: '+96599001122',
-    whatsappPrefill: 'السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.',
-    bio: 'شركة متخصصة في التشطيبات المودرن والدهانات الداخلية والخارجية في جميع مناطق الكويت.',
-    governorates: ['العاصمة', 'حولي', 'الفروانية'],
-    primaryGovernorates: ['capital', 'hawalli', 'farwaniyah'],
-    isAvailableToday: true,
-    responseTime: 'خلال 15 دقيقة',
-    coverageAreaIds: ['al-salmiya', 'hawalli-city', 'al-dasma', 'al-rawda'],
-    warrantyYears: 3,
-    crewSize: 8,
-    paintBrands: ['جوتن (Jotun)', 'كابارول'],
-    completedProjects: 190,
-    pricingList: [
-      { item: 'صبغ غرفة قياسية وجهين', price: '20 - 28 د.ك', note: 'شامل حماية الأثاث والمواد' }
+    "id": 7,
+    "slug": "معلم-بدر-المطيري",
+    "name": "معلم بدر المطيري",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "مب",
+    "region": "مبارك الكبير",
+    "rating": "5.0",
+    "reviews": 1,
+    "years": 7,
+    "startingAt": "19 د.ك",
+    "services": [
+      "ورق جدران",
+      "بديل فوم وبانوهات",
+      "دهان غرف نوم"
     ],
-    gallery: [],
-    customerReviews: [],
+    "description": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة مبارك الكبير وضواحيها.",
+    "tone": "ochre",
+    "phone": "96591000004",
+    "whatsapp": "96591000004",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة مبارك الكبير وضواحيها.",
+    "governorates": [
+      "مبارك الكبير",
+      "حولي"
+    ],
+    "primaryGovernorates": [
+      "mubarak-al-kabeer",
+      "hawalli"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "individual",
+    "warrantyYears": 3,
+    "crewSize": 3,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
+      {
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "19 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
+      },
+      {
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
+      },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
+    ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 6,
+        "author": "عبدالرحمن الشطي",
+        "date": "الآن",
+        "rating": 5,
+        "area": "القصور",
+        "comment": "شغل البانوهات والصبغ متقن بدون أي فراغات.",
+        "serviceType": "ورق جدران",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
   },
+  {
+    "id": 8,
+    "slug": "معلم-ناصر-السبيعي",
+    "name": "معلم ناصر السبيعي",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "من",
+    "region": "الجهراء",
+    "rating": "5.0",
+    "reviews": 1,
+    "years": 9,
+    "startingAt": "20 د.ك",
+    "services": [
+      "ترميم وعلاج رطوبة",
+      "معجون وسنفرة",
+      "دهان داخلي"
+    ],
+    "description": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الجهراء وضواحيها.",
+    "tone": "ochre",
+    "phone": "96591000005",
+    "whatsapp": "96591000005",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الجهراء وضواحيها.",
+    "governorates": [
+      "الجهراء",
+      "الفروانية"
+    ],
+    "primaryGovernorates": [
+      "jahra",
+      "farwaniyah"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "individual",
+    "warrantyYears": 3,
+    "crewSize": 4,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
+      {
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "20 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
+      },
+      {
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
+      },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
+    ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 7,
+        "author": "جاسم الظفيري",
+        "date": "الآن",
+        "rating": 5,
+        "area": "الواحة",
+        "comment": "حل مشكلة الرطوبة اللي تعبتني سنين، يعطيه العافية.",
+        "serviceType": "ترميم وعلاج رطوبة",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
+  },
+  {
+    "id": 9,
+    "slug": "معلم-يوسف-الهاجري",
+    "name": "معلم يوسف الهاجري",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "مي",
+    "region": "حولي",
+    "rating": "5.0",
+    "reviews": 1,
+    "years": 10,
+    "startingAt": "22 د.ك",
+    "services": [
+      "أصباغ إيطالية",
+      "ماركو بولو",
+      "دهان غرف أطفال"
+    ],
+    "description": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة حولي وضواحيها.",
+    "tone": "ochre",
+    "phone": "96591000006",
+    "whatsapp": "96591000006",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة حولي وضواحيها.",
+    "governorates": [
+      "حولي",
+      "العاصمة"
+    ],
+    "primaryGovernorates": [
+      "hawalli",
+      "capital"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "individual",
+    "warrantyYears": 3,
+    "crewSize": 3,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
+      {
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "22 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
+      },
+      {
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
+      },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
+    ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 8,
+        "author": "عادل بهبهاني",
+        "date": "الآن",
+        "rating": 5,
+        "area": "الجابرية",
+        "comment": "ذوق راقي واختيار رائع للألوان وتناسقها.",
+        "serviceType": "أصباغ إيطالية",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
+  },
+  {
+    "id": 10,
+    "slug": "مؤسسة-التميز-للصباغة",
+    "name": "مؤسسة التميز للصباغة",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "ما",
+    "region": "العاصمة",
+    "rating": "5.0",
+    "reviews": 1,
+    "years": 14,
+    "startingAt": "24 د.ك",
+    "services": [
+      "دهان قسائم جديدة",
+      "معجون رش أمريكي",
+      "أصباغ كابارول"
+    ],
+    "description": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة العاصمة وضواحيها.",
+    "tone": "ochre",
+    "phone": "96591000007",
+    "whatsapp": "96591000007",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة العاصمة وضواحيها.",
+    "governorates": [
+      "العاصمة",
+      "حولي",
+      "الفروانية"
+    ],
+    "primaryGovernorates": [
+      "capital",
+      "hawalli",
+      "farwaniyah"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "company",
+    "warrantyYears": 3,
+    "crewSize": 10,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
+      {
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "24 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
+      },
+      {
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
+      },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
+    ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 9,
+        "author": "عبدالعزيز البابطين",
+        "date": "الآن",
+        "rating": 5,
+        "area": "الشويخ",
+        "comment": "التزام كامل بالمواصفات والوقت المحدد بالعقد.",
+        "serviceType": "دهان قسائم جديدة",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
+  },
+  {
+    "id": 11,
+    "slug": "معلم-حمدان-الدوسري",
+    "name": "معلم حمدان الدوسري",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "مح",
+    "region": "الأحمدي",
+    "rating": "5.0",
+    "reviews": 1,
+    "years": 11,
+    "startingAt": "17 د.ك",
+    "services": [
+      "تشطيب قسائم كاملة",
+      "أصباغ مقاومة للرطوبة",
+      "دهان داخلي"
+    ],
+    "description": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الأحمدي وضواحيها.",
+    "tone": "ochre",
+    "phone": "96591000008",
+    "whatsapp": "96591000008",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الأحمدي وضواحيها.",
+    "governorates": [
+      "الأحمدي"
+    ],
+    "primaryGovernorates": [
+      "ahmadi"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "individual",
+    "warrantyYears": 3,
+    "crewSize": 5,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
+      {
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "17 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
+      },
+      {
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
+      },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
+    ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 10,
+        "author": "سعود العجمي",
+        "date": "الآن",
+        "rating": 5,
+        "area": "صباح الأحمد",
+        "comment": "أفضل صباغ تعاملت معه في مدينة صباح الأحمد، سرعة وأمانة.",
+        "serviceType": "تشطيب قسائم كاملة",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
+  },
+  {
+    "id": 12,
+    "slug": "معلم-فيصل-الحربي",
+    "name": "معلم فيصل الحربي",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "مف",
+    "region": "الفروانية",
+    "rating": "5.0",
+    "reviews": 1,
+    "years": 6,
+    "startingAt": "18 د.ك",
+    "services": [
+      "صبغ أبواب خشب ولاكيه",
+      "دهان ناري",
+      "دهان جدران"
+    ],
+    "description": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الفروانية وضواحيها.",
+    "tone": "ochre",
+    "phone": "96591000009",
+    "whatsapp": "96591000009",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الفروانية وضواحيها.",
+    "governorates": [
+      "الفروانية",
+      "الجهراء"
+    ],
+    "primaryGovernorates": [
+      "farwaniyah",
+      "jahra"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "individual",
+    "warrantyYears": 3,
+    "crewSize": 3,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
+      {
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "18 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
+      },
+      {
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
+      },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
+    ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 11,
+        "author": "طلال العنزي",
+        "date": "الآن",
+        "rating": 5,
+        "area": "الفردوس",
+        "comment": "الأبواب رجعت كأنها جديدة تبارك الرحمن، تسلم إيده.",
+        "serviceType": "صبغ أبواب خشب ولاكيه",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
+  },
+  {
+    "id": 13,
+    "slug": "معلم-راشد-العنزي",
+    "name": "معلم راشد العنزي",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "مر",
+    "region": "الجهراء",
+    "rating": "5.0",
+    "reviews": 1,
+    "years": 9,
+    "startingAt": "22 د.ك",
+    "services": [
+      "دهان خارجي",
+      "عوازل مائية وأسطح",
+      "صبغ جوتن خشن"
+    ],
+    "description": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الجهراء وضواحيها.",
+    "tone": "ochre",
+    "phone": "96591000010",
+    "whatsapp": "96591000010",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الجهراء وضواحيها.",
+    "governorates": [
+      "الجهراء",
+      "العاصمة"
+    ],
+    "primaryGovernorates": [
+      "jahra",
+      "capital"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "individual",
+    "warrantyYears": 3,
+    "crewSize": 4,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
+      {
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "22 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
+      },
+      {
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
+      },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
+    ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 12,
+        "author": "مشعل الشمري",
+        "date": "الآن",
+        "rating": 5,
+        "area": "الجهراء القديمة",
+        "comment": "شغل ممتاز والعوازل مجربة وممتازة.",
+        "serviceType": "دهان خارجي",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
+  },
+  {
+    "id": 14,
+    "slug": "معلم-طارق-الخالدي",
+    "name": "معلم طارق الخالدي",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "مط",
+    "region": "مبارك الكبير",
+    "rating": "5.0",
+    "reviews": 1,
+    "years": 8,
+    "startingAt": "20 د.ك",
+    "services": [
+      "ديكورات جبس بورد",
+      "صبغ أسقف ناعم",
+      "أصباغ سيلك"
+    ],
+    "description": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة مبارك الكبير وضواحيها.",
+    "tone": "ochre",
+    "phone": "96591000011",
+    "whatsapp": "96591000011",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة مبارك الكبير وضواحيها.",
+    "governorates": [
+      "مبارك الكبير",
+      "حولي"
+    ],
+    "primaryGovernorates": [
+      "mubarak-al-kabeer",
+      "hawalli"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "individual",
+    "warrantyYears": 3,
+    "crewSize": 4,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
+      {
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "20 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
+      },
+      {
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
+      },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
+    ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 13,
+        "author": "فهد الدبوس",
+        "date": "الآن",
+        "rating": 5,
+        "area": "صباح السالم",
+        "comment": "دقة في الزوايا والأسقف المستعارة بدون أي تعرجات.",
+        "serviceType": "ديكورات جبس بورد",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
+  },
+  {
+    "id": 15,
+    "slug": "شركة-دار-الألوان-الكويتية",
+    "name": "شركة دار الألوان الكويتية",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "شد",
+    "region": "العاصمة",
+    "rating": "5.0",
+    "reviews": 1,
+    "years": 18,
+    "startingAt": "28 د.ك",
+    "services": [
+      "مقاولات صبغ متكاملة",
+      "استشارات ألوان",
+      "كفالة 5 سنوات"
+    ],
+    "description": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة العاصمة وضواحيها.",
+    "tone": "ochre",
+    "phone": "96591000012",
+    "whatsapp": "96591000012",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة العاصمة وضواحيها.",
+    "governorates": [
+      "العاصمة",
+      "حولي",
+      "مبارك الكبير"
+    ],
+    "primaryGovernorates": [
+      "capital",
+      "hawalli",
+      "mubarak-al-kabeer"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "company",
+    "warrantyYears": 3,
+    "crewSize": 12,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
+      {
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "28 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
+      },
+      {
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
+      },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
+    ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 14,
+        "author": "نواف الصباح",
+        "date": "الآن",
+        "rating": 5,
+        "area": "الدسمة",
+        "comment": "مستوى احترافي عالي جداً وفريق منظم ونظيف.",
+        "serviceType": "مقاولات صبغ متكاملة",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
+  },
+  {
+    "id": 16,
+    "slug": "معلم-جابر-الشمري",
+    "name": "معلم جابر الشمري",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "مج",
+    "region": "الفروانية",
+    "rating": "4.0",
+    "reviews": 1,
+    "years": 5,
+    "startingAt": "16 د.ك",
+    "services": [
+      "دهان اقتصادي وسريع",
+      "تسليم فوري",
+      "معجون شقوق"
+    ],
+    "description": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الفروانية وضواحيها.",
+    "tone": "ochre",
+    "phone": "96591000013",
+    "whatsapp": "96591000013",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الفروانية وضواحيها.",
+    "governorates": [
+      "الفروانية",
+      "الأحمدي"
+    ],
+    "primaryGovernorates": [
+      "farwaniyah",
+      "ahmadi"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "individual",
+    "warrantyYears": 3,
+    "crewSize": 3,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
+      {
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "16 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
+      },
+      {
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
+      },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
+    ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 15,
+        "author": "مبارك الرشيدي",
+        "date": "الآن",
+        "rating": 4,
+        "area": "خيطان",
+        "comment": "سريع وملتزم بالوقت وسعره جداً مناسب.",
+        "serviceType": "دهان اقتصادي وسريع",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
+  },
+  {
+    "id": 17,
+    "slug": "معلم-صالح-القحطاني",
+    "name": "معلم صالح القحطاني",
+    "avatarUrl": null,
+    "avatarPublicId": null,
+    "initials": "مص",
+    "region": "الأحمدي",
+    "rating": "5.0",
+    "reviews": 1,
+    "years": 10,
+    "startingAt": "21 د.ك",
+    "services": [
+      "دهانات فاخرة",
+      "أصباغ زيتي ومائي",
+      "معجون أمريكي"
+    ],
+    "description": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الأحمدي وضواحيها.",
+    "tone": "ochre",
+    "phone": "96591000014",
+    "whatsapp": "96591000014",
+    "whatsappPrefill": "السلام عليكم، اطلعت على ملفكم في دليل صباغ الكويت.",
+    "bio": "صباغ محترف يقدم أفضل خدمات التشطيب في محافظة الأحمدي وضواحيها.",
+    "governorates": [
+      "الأحمدي",
+      "مبارك الكبير"
+    ],
+    "primaryGovernorates": [
+      "ahmadi",
+      "mubarak-al-kabeer"
+    ],
+    "isAvailableToday": true,
+    "responseTime": "خلال 15 دقيقة",
+    "coverageAreaIds": [],
+    "isVerified": true,
+    "status": "approved",
+    "accountType": "individual",
+    "warrantyYears": 3,
+    "crewSize": 4,
+    "paintBrands": [
+      "جوتن"
+    ],
+    "completedProjects": 10,
+    "pricingList": [
+      {
+        "item": "صبغ غرفة قياسية (4×4 م) وجهين",
+        "price": "21 د.ك - 25 د.ك",
+        "note": "شامل حماية الأثاث والمواد"
+      },
+      {
+        "item": "صبغ صالة أو مجلس",
+        "price": "35 - 55 د.ك",
+        "note": "شامل معجون وتنعيم الجدران"
+      },
+      {
+        "item": "تركيب ديكورات أو ورق جدران",
+        "price": "5 - 8 د.ك",
+        "note": "للرول الواحد أو المتر المربع"
+      }
+    ],
+    "gallery": [],
+    "customerReviews": [
+      {
+        "id": 16,
+        "author": "عبدالله الهاجري",
+        "date": "الآن",
+        "rating": 5,
+        "area": "المنقف",
+        "comment": "ما شاء الله على الصباغ، ديوانيتنا طلعت تحفة والكل سألنا عنه.",
+        "serviceType": "دهانات فاخرة",
+        "verified": true
+      }
+    ],
+    "portfolioProjects": []
+  }
 ];
 
 export const REGIONS_LIST = ['كل المناطق', 'السالمية', 'حولي', 'الفروانية', 'الأحمدي', 'الجهراء', 'صباح السالم'];
