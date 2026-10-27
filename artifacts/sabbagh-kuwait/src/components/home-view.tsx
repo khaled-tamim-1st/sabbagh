@@ -19,6 +19,7 @@ import {
   Phone,
 } from 'lucide-react';
 import { PAINTERS_DATA, SERVICES_LIST, type Painter } from '@/data/painters';
+import { catalogStore } from '@/lib/catalog-store';
 import { KUWAIT_GOVERNORATES } from '@/data/kuwait-areas';
 import { SiteFooter } from '@/components/footer';
 import { Header } from '@/components/header';
@@ -142,19 +143,29 @@ export function HomeView() {
   const [favoritesOnly, setFavoritesOnly] = useState(false);
   const [selected, setSelected] = useState<Painter | null>(null);
   const [contacting, setContacting] = useState<Painter | null>(null);
-  const [painters, setPainters] = useState<Painter[]>(PAINTERS_DATA);
+  const [painters, setPainters] = useState<Painter[]>(() => catalogStore.getApprovedPainters());
 
   useEffect(() => {
+    setPainters(catalogStore.getApprovedPainters());
+
+    const unsubscribe = catalogStore.subscribe(() => {
+      setPainters(catalogStore.getApprovedPainters());
+    });
+
     apiClient.get<any[]>('/public/painters')
       .then((apiPainters) => {
         if (Array.isArray(apiPainters) && apiPainters.length > 0) {
-          setPainters(apiPainters);
+          const approvedOnly = apiPainters.filter((p) => (p.status || 'approved') === 'approved');
+          if (approvedOnly.length > 0) {
+            setPainters(approvedOnly);
+          }
         }
       })
       .catch((err) => {
-        console.warn('Could not fetch latest painters for homepage, using default catalog:', err);
-        setPainters((prev) => (prev.length > 0 ? prev : PAINTERS_DATA));
+        console.warn('Could not fetch latest painters from API, using catalogStore:', err);
       });
+
+    return unsubscribe;
   }, []);
 
   useEffect(() => {
@@ -216,15 +227,18 @@ export function HomeView() {
           (region === 'مبارك الكبير' &&
             (painter.region === 'صباح السالم' || painter.governorates?.includes('مبارك الكبير')));
 
+        const isApproved = (painter.status || 'approved') === 'approved';
+
         return (
+          isApproved &&
           matchesQuery &&
           matchesRegion &&
           (service === 'الكل' || painter.services.includes(service)) &&
           (!favoritesOnly || favorites.includes(painter.id))
         );
       }).sort((a, b) => {
-        const orderA = a.displayOrder !== undefined ? a.displayOrder : a.id;
-        const orderB = b.displayOrder !== undefined ? b.displayOrder : b.id;
+        const orderA = a.displayOrder ?? a.id;
+        const orderB = b.displayOrder ?? b.id;
         return orderA - orderB;
       }),
     [appliedQuery, region, service, favoritesOnly, favorites, painters]

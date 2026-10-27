@@ -21,6 +21,7 @@ import {
   type Governorate,
 } from '@/data/kuwait-areas';
 import { PAINTERS_DATA, type Painter } from '@/data/painters';
+import { catalogStore } from '@/lib/catalog-store';
 import {
   getAreaSeoMeta,
   getAreaAdvice,
@@ -111,9 +112,10 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
 
   // تصفية الصباغين الذين يغطون المحافظة والمنطقة
   const relevantPainters = useMemo(() => {
-    if (!governorate) return PAINTERS_DATA;
+    const basePainters = catalogStore.getApprovedPainters();
+    if (!governorate) return basePainters;
 
-    const matched = PAINTERS_DATA.filter((p) => {
+    const matched = basePainters.filter((p) => {
       const coversGov = p.governorates.some(
         (g) => g.includes(governorate.nameAr) || governorate.nameAr.includes(g)
       );
@@ -121,8 +123,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
       return coversGov || coversRegion;
     });
 
-    // في حال عدم وجود عدد كافٍ، نعرض الصباغين مع إبراز تغطيتهم العامة للكويت
-    return matched.length > 0 ? matched : PAINTERS_DATA.slice(0, 4);
+    return matched.length > 0 ? matched : basePainters.slice(0, 4);
   }, [governorate, area]);
 
   // مشاركة أو نسخ الرابط

@@ -31,6 +31,7 @@ import {
   type KuwaitService,
 } from '@/data/services-data';
 import { PAINTERS_DATA, type Painter } from '@/data/painters';
+import { catalogStore } from '@/lib/catalog-store';
 import {
   SeoSchema,
   generateServiceSchema,
@@ -45,8 +46,8 @@ export default function ServiceDetailPage({ slug: propSlug }: { slug?: string })
   const slug = propSlug || serviceParams?.slug || guideParams?.slug || 'interior-painting';
   const service = getServiceBySlug(slug) || KUWAIT_SERVICES_DATA[0];
 
-  // فلترة الصباغين المتخصصين في هذه الخدمة أو الفئة
-  const specializedPainters = PAINTERS_DATA.filter((p) => {
+  // فلترة الصباغين المتخصصين في هذه الخدمة أو الفئة من الصباغين المعتمدين فقط
+  const specializedPainters = catalogStore.getApprovedPainters().filter((p) => {
     return (
       p.services.some(
         (s) =>

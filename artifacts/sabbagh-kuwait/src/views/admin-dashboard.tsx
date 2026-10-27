@@ -5,7 +5,8 @@ import { useLocation } from '@/lib/nav';
 import { useAuth } from '@/lib/auth-context';
 import { apiClient } from '@/lib/api-client';
 import { Layout } from '@/components/layout';
-import { PAINTERS_DATA, type Painter, type PortfolioImage } from '@/data/painters';
+import { type Painter, type PortfolioImage } from '@/data/painters';
+import { catalogStore, type LeadQuote, type ReviewItem } from '@/lib/catalog-store';
 import {
   ShieldCheck,
   Users,
@@ -31,124 +32,9 @@ import {
   Check,
   X,
   ExternalLink,
+  RotateCcw,
   Image as ImageIcon,
 } from 'lucide-react';
-
-interface LeadQuote {
-  id: number;
-  customerName: string;
-  customerPhone: string;
-  customerNotes?: string;
-  propertyType: string;
-  workType: string;
-  roomsCount: number;
-  includeMaterials?: boolean;
-  paintQuality?: string;
-  preferredDate?: string;
-  governorateId: string;
-  areaId: string;
-  estimatedMinKwd: number;
-  estimatedMaxKwd: number;
-  estimatedAverageKwd: number;
-  assignedPainterId?: number | null;
-  status: 'new' | 'assigned' | 'contacted' | 'completed' | 'cancelled';
-  createdAt: string;
-}
-
-interface ReviewItem {
-  id: number;
-  painterId: number;
-  author: string;
-  whatsapp?: string;
-  authorPhone?: string;
-  date: string;
-  rating: number;
-  area: string;
-  comment: string;
-  serviceType: string;
-  verified: boolean;
-  status: 'approved' | 'pending' | 'rejected';
-}
-
-const INITIAL_FALLBACK_REVIEWS: ReviewItem[] = PAINTERS_DATA.flatMap((p) =>
-  (p.customerReviews || []).map((r) => ({
-    id: r.id,
-    painterId: p.id,
-    author: r.author,
-    whatsapp: p.whatsapp || p.phone,
-    authorPhone: p.phone,
-    date: r.date,
-    rating: r.rating,
-    area: r.area,
-    comment: r.comment,
-    serviceType: r.serviceType,
-    verified: r.verified !== false,
-    status: 'approved' as const,
-  }))
-);
-
-const INITIAL_FALLBACK_QUOTES: LeadQuote[] = [
-  {
-    id: 1,
-    customerName: 'عبدالله الهاجري',
-    customerPhone: '96590111115',
-    customerNotes: 'صبغ ديوانية وصالة استقبال بالأوف وايت وجبس بورد',
-    propertyType: 'villa',
-    workType: 'interior',
-    roomsCount: 4,
-    includeMaterials: true,
-    paintQuality: 'jotun-fenomastic',
-    governorateId: 'hawalli',
-    areaId: 'al-jabriya',
-    preferredDate: 'صباحاً',
-    estimatedMinKwd: 60,
-    estimatedMaxKwd: 110,
-    estimatedAverageKwd: 85,
-    assignedPainterId: 1,
-    status: 'new',
-    createdAt: new Date().toISOString(),
-  },
-  {
-    id: 2,
-    customerName: 'أم فهد الخالدي',
-    customerPhone: '96594412356',
-    customerNotes: 'تجديد دهان غرفتين نوم وصنفرة شروخ',
-    propertyType: 'apartment',
-    workType: 'interior',
-    roomsCount: 2,
-    includeMaterials: true,
-    paintQuality: 'jotun-fenomastic',
-    governorateId: 'capital',
-    areaId: 'al-dasma',
-    preferredDate: 'عصراً',
-    estimatedMinKwd: 40,
-    estimatedMaxKwd: 65,
-    estimatedAverageKwd: 52,
-    assignedPainterId: 2,
-    status: 'contacted',
-    createdAt: new Date(Date.now() - 3600000 * 24).toISOString(),
-  },
-  {
-    id: 3,
-    customerName: 'فهد المطيري',
-    customerPhone: '96590111104',
-    customerNotes: 'تركيب ورق جدران وبديل رخام لجدار التلفزيون',
-    propertyType: 'villa',
-    workType: 'decorative',
-    roomsCount: 1,
-    includeMaterials: true,
-    paintQuality: 'caparol',
-    governorateId: 'farwaniyah',
-    areaId: 'al-firdous',
-    preferredDate: 'أقرب وقت',
-    estimatedMinKwd: 35,
-    estimatedMaxKwd: 55,
-    estimatedAverageKwd: 45,
-    assignedPainterId: 5,
-    status: 'completed',
-    createdAt: new Date(Date.now() - 3600000 * 48).toISOString(),
-  },
-];
 
 export default function AdminDashboardPage() {
   const { user, isLoading: authLoading, logout } = useAuth();
@@ -168,68 +54,36 @@ export default function AdminDashboardPage() {
   const [activeTab, setActiveTab] = useState<'applications' | 'painters' | 'leads' | 'reviews'>('painters');
   const [activeLightboxImg, setActiveLightboxImg] = useState<{ url: string; title: string } | null>(null);
 
-  // Painters State initialized with complete 17 painters
-  const [painters, setPainters] = useState<Painter[]>(PAINTERS_DATA);
+  // Persistent State backed by catalogStore
+  const [painters, setPainters] = useState<Painter[]>(() => catalogStore.getAllPainters());
   const [painterSearch, setPainterSearch] = useState('');
   const [painterGovFilter, setPainterGovFilter] = useState('الكل');
   const [painterStatusFilter, setPainterStatusFilter] = useState('الكل');
 
-  // Leads State initialized with fallback quotes
-  const [leads, setLeads] = useState<LeadQuote[]>(INITIAL_FALLBACK_QUOTES);
+  // Leads State backed by catalogStore
+  const [leads, setLeads] = useState<LeadQuote[]>(() => catalogStore.getAllQuotes());
   const [leadStatusFilter, setLeadStatusFilter] = useState('all');
 
-  // Reviews State initialized with real customer reviews
-  const [reviews, setReviews] = useState<ReviewItem[]>(INITIAL_FALLBACK_REVIEWS);
+  // Reviews State backed by catalogStore
+  const [reviews, setReviews] = useState<ReviewItem[]>(() => catalogStore.getAllReviews());
 
-  // Fetch real data from API on mount
+  // Subscribe to live multi-tab & cross-component changes
   useEffect(() => {
-    const fetchAdminData = async () => {
-      try {
-        const remotePainters = await apiClient.get('/admin/painters');
-        if (Array.isArray(remotePainters) && remotePainters.length > 0) {
-          setPainters(remotePainters);
-        }
-      } catch (err) {
-        console.warn('Error fetching painters for admin, using local catalog:', err);
-      }
+    setPainters(catalogStore.getAllPainters());
+    setLeads(catalogStore.getAllQuotes());
+    setReviews(catalogStore.getAllReviews());
 
-      try {
-        const remoteQuotes = await apiClient.get('/admin/quotes');
-        if (Array.isArray(remoteQuotes) && remoteQuotes.length > 0) {
-          setLeads(remoteQuotes);
-        }
-      } catch (err) {
-        console.warn('Error fetching leads for admin, using local fallback:', err);
-      }
-
-      try {
-        const remoteReviews = await apiClient.get('/admin/reviews');
-        if (Array.isArray(remoteReviews) && remoteReviews.length > 0) {
-          setReviews(remoteReviews);
-        }
-      } catch (err) {
-        console.warn('Error fetching reviews for admin, using local fallback:', err);
-      }
-    };
-
-    fetchAdminData();
+    const unsubscribe = catalogStore.subscribe(() => {
+      setPainters(catalogStore.getAllPainters());
+      setLeads(catalogStore.getAllQuotes());
+      setReviews(catalogStore.getAllReviews());
+    });
+    return unsubscribe;
   }, []);
 
   // Handlers for Painters Tab
   const togglePainterVerified = async (id: number) => {
-    const target = painters.find((p) => p.id === id);
-    if (!target) return;
-    const newVerified = !target.isVerified;
-
-    setPainters((prev) =>
-      prev.map((p) => (p.id === id ? { ...p, isVerified: newVerified } : p))
-    );
-
-    try {
-      await apiClient.patch(`/admin/painters/${id}/verify`, { isVerified: newVerified });
-    } catch (err) {
-      console.warn('API verify painter failed, local state maintained', err);
-    }
+    catalogStore.togglePainterVerified(id);
   };
 
   const movePainterOrder = async (id: number, delta: number) => {
@@ -240,103 +94,36 @@ export default function AdminDashboardPage() {
     const newOrder = Math.max(1, currentOrder + delta);
     if (newOrder === currentOrder) return;
 
-    const updated = painters.map((p) => {
-      if (p.id === id) {
-        return { ...p, displayOrder: newOrder };
-      }
-      return p;
-    }).sort((a, b) => (a.displayOrder ?? a.id) - (b.displayOrder ?? b.id));
-
-    setPainters(updated);
-
-    try {
-      await apiClient.patch(`/admin/painters/${id}/order`, { displayOrder: newOrder });
-    } catch (err) {
-      console.warn('Could not persist order to API, kept locally:', err);
-    }
+    catalogStore.updatePainterOrder(id, newOrder);
   };
 
   const setPainterOrderDirect = async (id: number, newOrder: number) => {
     const validOrder = Math.max(1, Math.floor(newOrder) || 1);
-    const updated = painters.map((p) => {
-      if (p.id === id) {
-        return { ...p, displayOrder: validOrder };
-      }
-      return p;
-    }).sort((a, b) => (a.displayOrder ?? a.id) - (b.displayOrder ?? b.id));
-
-    setPainters(updated);
-
-    try {
-      await apiClient.patch(`/admin/painters/${id}/order`, { displayOrder: validOrder });
-    } catch (err) {
-      console.warn('Could not persist order to API, kept locally:', err);
-    }
+    catalogStore.updatePainterOrder(id, validOrder);
   };
 
   const changePainterStatus = async (id: number, newStatus: 'approved' | 'pending' | 'rejected' | 'suspended') => {
-    setPainters((prev) =>
-      prev.map((p) => (p.id === id ? { ...p, status: newStatus, isVerified: newStatus === 'approved' ? true : p.isVerified } : p))
-    );
-
-    try {
-      await apiClient.patch(`/admin/painters/${id}/status`, {
-        status: newStatus,
-        isVerified: newStatus === 'approved' ? true : undefined,
-      });
-    } catch (err) {
-      console.warn('API status change failed, local state maintained', err);
-    }
+    catalogStore.updatePainterStatus(id, newStatus);
   };
 
   // Handlers for Leads Tab
   const changeLeadStatus = async (leadId: number, newStatus: LeadQuote['status']) => {
-    setLeads((prev) =>
-      prev.map((l) => (l.id === leadId ? { ...l, status: newStatus } : l))
-    );
-
-    try {
-      await apiClient.patch(`/admin/quotes/${leadId}`, { status: newStatus });
-    } catch (err) {
-      console.warn('API lead status change failed, local state maintained', err);
-    }
+    catalogStore.updateQuoteStatus(leadId, newStatus);
   };
 
   const assignPainterToLead = async (leadId: number, painterId: number | null) => {
-    setLeads((prev) =>
-      prev.map((l) =>
-        l.id === leadId
-          ? {
-              ...l,
-              assignedPainterId: painterId,
-              status: painterId ? 'assigned' : 'new',
-            }
-          : l
-      )
-    );
-
-    try {
-      await apiClient.patch(`/admin/quotes/${leadId}`, {
-        assignedPainterId: painterId,
-        status: painterId ? 'assigned' : 'new',
-      });
-    } catch (err) {
-      console.warn('API lead assignment failed, local state maintained', err);
-    }
+    catalogStore.updateQuoteStatus(leadId, painterId ? 'assigned' : 'new', painterId);
   };
 
   // Handlers for Reviews Tab
   const changeReviewStatus = async (reviewId: number, newStatus: 'approved' | 'pending' | 'rejected') => {
-    setReviews((prev) =>
-      prev.map((r) =>
-        r.id === reviewId ? { ...r, status: newStatus, verified: newStatus === 'approved' } : r
-      )
-    );
+    catalogStore.updateReviewStatus(reviewId, newStatus);
+  };
 
-    try {
-      await apiClient.patch(`/admin/reviews/${reviewId}/status`, { status: newStatus });
-    } catch (err) {
-      console.warn('API review status change failed, local state maintained', err);
+  // Reset function to restore original defaults
+  const handleResetCatalog = () => {
+    if (typeof window !== 'undefined' && window.confirm('هل أنت متأكد من استعادة بيانات الصباغين والترتيب والتقييمات إلى الحالة الافتراضية؟')) {
+      catalogStore.resetCatalog();
     }
   };
 
@@ -1385,6 +1172,28 @@ export default function AdminDashboardPage() {
                     <option value="pending">قيد المراجعة (Pending)</option>
                     <option value="suspended">موقوف (Suspended)</option>
                   </select>
+
+                  <button
+                    type="button"
+                    onClick={handleResetCatalog}
+                    title="استعادة البيانات الأصلية والترتيب الافتراضي"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      padding: '9px 14px',
+                      borderRadius: '10px',
+                      border: '1px solid #d8cfbe',
+                      background: '#f8f4eb',
+                      color: '#654f28',
+                      fontSize: '12px',
+                      fontWeight: 600,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <RotateCcw size={14} />
+                    <span>استعادة الافتراضي</span>
+                  </button>
                 </div>
               </div>
 

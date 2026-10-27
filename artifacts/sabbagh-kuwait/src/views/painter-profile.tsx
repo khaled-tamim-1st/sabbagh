@@ -1,17 +1,18 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Link, useRoute } from '@/lib/nav';
 import {
   BadgeCheck, Clock3, MapPin, Star, Phone, MessageCircle,
   ShieldCheck, ChevronRight, Layers,
   Sparkles, CheckCircle2, UserCheck, AlertCircle, X,
-  Building, Check, ThumbsUp, Maximize2, Image as ImageIcon
+  Building, Check, ThumbsUp, Maximize2, Image as ImageIcon, AlertTriangle
 } from 'lucide-react';
 import { Layout } from '@/components/layout';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { PainterAvatar } from '@/components/painter-avatar';
 import { getPainterById, getPainterCoverageDetails, PAINTERS_DATA, type Painter, type PortfolioProject, type PortfolioImage } from '@/data/painters';
+import { catalogStore } from '@/lib/catalog-store';
 import { apiClient } from '@/lib/api-client';
 
 export default function PainterProfilePage({ id: propId }: { id?: number | string }) {
@@ -19,9 +20,17 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
   const [, slugParams] = useRoute('/painters/:slug');
   const rawIdentifier = propId || slugParams?.slug || idParams?.id || 1;
   const decodedIdentifier = typeof rawIdentifier === 'string' ? decodeURIComponent(rawIdentifier) : rawIdentifier;
-  const [painter, setPainter] = useState<Painter>(() => getPainterById(decodedIdentifier) || PAINTERS_DATA[0]);
+  const [painter, setPainter] = useState<Painter>(() => catalogStore.getPainterById(decodedIdentifier) || getPainterById(decodedIdentifier) || PAINTERS_DATA[0]);
 
   useEffect(() => {
+    const updated = catalogStore.getPainterById(decodedIdentifier);
+    if (updated) setPainter(updated);
+
+    const unsubscribe = catalogStore.subscribe(() => {
+      const refreshed = catalogStore.getPainterById(decodedIdentifier);
+      if (refreshed) setPainter(refreshed);
+    });
+
     const fetchTarget = encodeURIComponent(String(decodedIdentifier));
     apiClient.get<any>(`/public/painters/${fetchTarget}`)
       .then((data) => {
@@ -53,7 +62,15 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
       .catch(() => {
         // Fallback to local cached painter
       });
+
+    return unsubscribe;
   }, [decodedIdentifier]);
+
+  const painterApprovedReviews = useMemo(() => {
+    const fromStore = catalogStore.getApprovedReviewsForPainter(painter.id);
+    if (fromStore.length > 0) return fromStore;
+    return (painter.customerReviews || []).filter((r: any) => (r.status || 'approved') === 'approved');
+  }, [painter.id, painter.customerReviews]);
 
   const coverageGroups = getPainterCoverageDetails(painter);
 
@@ -109,6 +126,79 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
   const prefill = painter.whatsappPrefill || `السلام عليكم معلم ${painter.name}، اطلعت على سابقة أعمالك في منصة صباغ الكويت وأود الاتفاق على موعد معاينة.`;
   const whatsappUrl = `https://wa.me/${cleanWhatsapp}?text=${encodeURIComponent(prefill)}`;
   const telUrl = `tel:${cleanPhone}`;
+
+  if (painter.status === 'suspended') {
+    return (
+      <Layout activeNav="/painters">
+        <div
+          dir="rtl"
+          style={{
+            maxWidth: '760px',
+            margin: '60px auto',
+            padding: '48px 24px',
+            textAlign: 'center',
+            background: '#fffdfa',
+            borderRadius: '24px',
+            border: '1px solid #ebdcc5',
+            boxShadow: '0 12px 36px rgba(23,72,62,0.06)',
+          }}
+        >
+          <div
+            style={{
+              width: '68px',
+              height: '68px',
+              borderRadius: '50%',
+              background: '#fef2f2',
+              border: '2px solid #fecaca',
+              display: 'grid',
+              placeItems: 'center',
+              margin: '0 auto 20px',
+            }}
+          >
+            <AlertTriangle size={34} color="#dc2626" />
+          </div>
+          <h1
+            style={{
+              fontSize: '24px',
+              color: '#17483e',
+              fontWeight: 800,
+              margin: '0 0 14px',
+            }}
+          >
+            هذا الحساب موقوف مؤقتاً للمراجعة
+          </h1>
+          <p
+            style={{
+              fontSize: '15px',
+              color: '#606c62',
+              lineHeight: 1.8,
+              maxWidth: '520px',
+              margin: '0 auto 28px',
+            }}
+          >
+            تم إيقاف ملف الفني ({painter.name}) مؤقتاً من قبل إدارة المنصة لإجراء التحديثات والمراجعة الإدارية الدورية. لا تتوفر أرقام التواصل أو طلبات المعاينة لهذا الحساب في الوقت الحالي.
+          </p>
+          <Link
+            href="/"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '12px 30px',
+              borderRadius: '12px',
+              background: '#17483e',
+              color: '#f5efdf',
+              textDecoration: 'none',
+              fontWeight: 700,
+              fontSize: '14px',
+            }}
+          >
+            <span>العودة لدليل الصباغين المعتمدين</span>
+          </Link>
+        </div>
+      </Layout>
+    );
+  }
 
   return (
     <Layout activeNav="/painters">
@@ -386,7 +476,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
             className={`filter-chip${activeTab === 'reviews' ? ' active' : ''}`}
             onClick={() => setActiveTab('reviews')}
           >
-            التقييمات وآراء العملاء ({Array.isArray(painter.customerReviews) ? painter.customerReviews.length : (typeof painter.reviews === 'number' ? painter.reviews : 0)})
+            التقييمات وآراء العملاء ({painterApprovedReviews.length})
           </button>
 
           <button
@@ -1009,7 +1099,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
                         <Star key={i} size={14} fill="#e9bd77" color="#e9bd77" />
                       ))}
                     </div>
-                    <span style={{ fontSize: '11px', color: '#74776d' }}>بناءً على {typeof painter.reviews === 'number' ? painter.reviews : (Array.isArray(painter.reviews) ? (painter.reviews as any[]).length : (painter.customerReviews?.length || 0))} تقييماً موثقاً</span>
+                    <span style={{ fontSize: '11px', color: '#74776d' }}>بناءً على {painterApprovedReviews.length} تقييماً موثقاً</span>
                   </div>
                 </div>
 
@@ -1038,7 +1128,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              {(Array.isArray(painter.customerReviews) ? painter.customerReviews : []).map((rev) => (
+              {painterApprovedReviews.map((rev) => (
                 <div
                   key={rev.id}
                   style={{
