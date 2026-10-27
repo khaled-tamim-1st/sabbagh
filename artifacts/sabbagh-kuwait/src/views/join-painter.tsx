@@ -343,11 +343,11 @@ export default function JoinPainterPage() {
                 marginBottom: '12px',
               }}
             >
-              {submittedData.accountType === 'company' ? '🏢 تم تسجيل المؤسسة / الورشة بنجاح' : '👷‍♂️ تم تسجيل الصباغ المستقل بنجاح'}
+              {submittedData.accountType === 'company' ? 'تم تسجيل المؤسسة / الورشة بنجاح' : 'تم تسجيل الصباغ المستقل بنجاح'}
             </span>
 
             <h2 style={{ fontSize: 'clamp(22px, 5vw, 26px)', color: '#17483e', margin: '0 0 12px', fontWeight: 800 }}>
-              أهلاً بك معنا يا {submittedData.name}! 🚀
+              أهلاً بك معنا يا {submittedData.name}!
             </h2>
 
             <p style={{ fontSize: '14px', color: '#555f53', lineHeight: 1.85, margin: '0 auto 22px', maxWidth: '520px' }}>
@@ -381,7 +381,7 @@ export default function JoinPainterPage() {
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', paddingTop: '8px', borderTop: '1px dashed #d5ccbe' }}>
                 <span>الخطوة التالية:</span>
-                <span style={{ color: '#17483e', fontWeight: 800 }}>إضافة المشاريع من لوحة التحكم 🎨</span>
+                <span style={{ color: '#17483e', fontWeight: 800 }}>إضافة المشاريع من لوحة التحكم</span>
               </div>
             </div>
 
@@ -831,7 +831,7 @@ export default function JoinPainterPage() {
                           minHeight: '44px',
                         }}
                       >
-                        <span>📷 اختيار صورة أو شعار</span>
+                        <span>اختيار صورة أو شعار</span>
                         <input type="file" accept="image/*" onChange={handleAvatarSelect} style={{ display: 'none' }} />
                       </label>
                     )}
@@ -970,7 +970,7 @@ export default function JoinPainterPage() {
                 </div>
                 <div>
                   <h4 style={{ margin: '0 0 4px', fontSize: '13px', color: '#17483e', fontWeight: 800 }}>
-                    معرض وسابقة أعمالك يضاف بعد التسجيل فوراً 📸✨
+                    معرض وسابقة أعمالك يضاف بعد التسجيل فوراً
                   </h4>
                   <p style={{ margin: 0, fontSize: '12px', color: '#687266', lineHeight: 1.65 }}>
                     حرصاً على راحتك وسرعة تسجيلك، لا يتطلب هذا النموذج رفع صور الآن. بمجرد إكمال التسجيل ستنتقل إلى لوحة التحكم الخاصة بك حيث يمكنك إضافة مشاريعك وصور أعمالك ومقارنات قبل وبعد بكل أريحية، وستظهر فوراً في ملفك الشخصي أمام العملاء!
@@ -1031,7 +1031,7 @@ export default function JoinPainterPage() {
                 ) : (
                   <>
                     <UserPlus size={19} />
-                    <span>تسجيل الحساب والانضمام للمنصة 🚀</span>
+                    <span>تسجيل الحساب والانضمام للمنصة</span>
                   </>
                 )}
               </button>

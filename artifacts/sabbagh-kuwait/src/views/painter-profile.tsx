@@ -507,7 +507,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
                                 boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
                               }}
                             >
-                              {currentMode === 'after' ? '✓ النتيجة النهائية (بعد)' : '⚠️ الحالة السابقة (قبل)'}
+                              {currentMode === 'after' ? 'النتيجة النهائية (بعد)' : 'الحالة السابقة (قبل)'}
                             </span>
 
                             {/* Enlarge button */}
@@ -581,7 +581,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
                                   textOverflow: 'ellipsis',
                                 }}
                               >
-                                ✓ بعد التشطيب
+                                بعد التشطيب
                               </button>
 
                               <button
@@ -616,7 +616,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
                               </span>
                               {project.area && (
                                 <span style={{ fontSize: '11px', color: '#7a8074' }}>
-                                  📍 {project.area}
+                                  {project.area}
                                 </span>
                               )}
                             </div>
@@ -705,7 +705,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
                                 fontWeight: 700,
                               }}
                             >
-                              📸 معرض صور المشروع
+                              معرض صور المشروع
                             </span>
 
                             {currentStandardImg?.url && (
@@ -775,7 +775,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
                               </span>
                               {project.area && (
                                 <span style={{ fontSize: '11px', color: '#7a8074' }}>
-                                  📍 {project.area}
+                                  {project.area}
                                 </span>
                               )}
                             </div>
@@ -850,7 +850,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
                             cursor: 'pointer',
                           }}
                         >
-                          ✓ النتيجة النهائية (بعد)
+                          النتيجة النهائية (بعد)
                         </button>
                         <button
                           type="button"
@@ -986,7 +986,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
             </div>
 
             <div style={{ marginTop: '20px', padding: '14px', background: '#f5eee1', borderRadius: '10px', fontSize: '12px', color: '#686f63' }}>
-              💡 <strong>ملاحظة من فريق صباغ الكويت:</strong> ينصح دائماً بطلب معاينة ميدانية مسبقة لتحديد كمية المعجون وأمتار الصبغ المطلوبة والتفاهم على نوعية الصبغ (مطفي، ربع لمعة، أو نص لمعة).
+              <strong>ملاحظة من فريق صباغ الكويت:</strong> ينصح دائماً بطلب معاينة ميدانية مسبقة لتحديد كمية المعجون وأمتار الصبغ المطلوبة والتفاهم على نوعية الصبغ (مطفي، ربع لمعة، أو نص لمعة).
             </div>
           </div>
         )}
@@ -1553,11 +1553,11 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
                     ))}
                   </div>
                   <span style={{ fontSize: '12px', color: '#8d6d37', fontWeight: 700, marginTop: '4px', display: 'block' }}>
-                    {revRating === 5 && 'ممتاز جداً ⭐️⭐️⭐️⭐️⭐️'}
-                    {revRating === 4 && 'جيد جداً ⭐️⭐️⭐️⭐️'}
-                    {revRating === 3 && 'متوسط ⭐️⭐️⭐️'}
-                    {revRating === 2 && 'أقل من المتوقع ⭐️⭐️'}
-                    {revRating === 1 && 'تجربة سيئة ⭐️'}
+                    {revRating === 5 && 'ممتاز جداً (5/5)'}
+                    {revRating === 4 && 'جيد جداً (4/5)'}
+                    {revRating === 3 && 'متوسط (3/5)'}
+                    {revRating === 2 && 'أقل من المتوقع (2/5)'}
+                    {revRating === 1 && 'تجربة سيئة (1/5)'}
                   </span>
                 </div>
 
@@ -1589,7 +1589,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
                 <div style={{ marginTop: '12px' }}>
                   <label className="form-label" htmlFor="rev-whatsapp" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <span>رقم الواتساب الخاص بك</span>
-                    <span style={{ fontSize: '11px', color: '#1f6858', fontWeight: 600 }}>🔐 سري للإدارة فقط للتأكد</span>
+                    <span style={{ fontSize: '11px', color: '#1f6858', fontWeight: 600 }}>سري للإدارة فقط للتأكد</span>
                   </label>
                   <input
                     id="rev-whatsapp"
@@ -1701,7 +1701,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
                     borderRadius: '6px',
                   }}
                 >
-                  ⚡ صورة WebP فائقة الدقة
+                  صورة WebP فائقة الدقة
                 </span>
                 <strong style={{ fontSize: '15px' }}>{activeLightboxImage.title}</strong>
               </div>

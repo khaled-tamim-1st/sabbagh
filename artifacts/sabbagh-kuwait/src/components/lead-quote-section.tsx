@@ -120,35 +120,17 @@ export function LeadQuoteSection({
     >
       <div style={{ maxWidth: '780px', margin: '0 auto' }}>
         {!isModal && (
-          <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-            <div
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: 'rgba(233, 189, 119, 0.15)',
-                color: '#e9bd77',
-                padding: '6px 16px',
-                borderRadius: '50px',
-                fontSize: '13px',
-                fontWeight: 700,
-                marginBottom: '12px',
-                border: '1px solid rgba(233, 189, 119, 0.3)',
-              }}
-            >
-              <Sparkles size={16} />
-              معاينة مجانية 100% وبدون أي التزام
-            </div>
+          <div style={{ textAlign: 'center', marginBottom: '24px' }}>
             <h2
               style={{
-                fontSize: 'clamp(22px, 3.5vw, 32px)',
+                fontSize: 'clamp(22px, 3.5vw, 30px)',
                 fontWeight: 800,
                 color: '#ffffff',
-                marginBottom: '10px',
+                marginBottom: '8px',
                 lineHeight: 1.3,
               }}
             >
-              اطلب معاينة ميدانية وعرض سعر فوري لمنزلك
+              طلب معاينة
             </h2>
             <p
               style={{
@@ -159,7 +141,7 @@ export function LeadQuoteSection({
                 lineHeight: 1.6,
               }}
             >
-              املأ بياناتك في ثوانٍ وسيقوم صباغ معتمد بالتواصل معك فوراً لتحديد موعد المعاينة وتفاصيل التشطيب المناسبة لميزانيتك.
+              أدخل بياناتك وسيتواصل معك فني لمعاينة الموقع وتحديد التكلفة.
             </p>
           </div>
         )}
@@ -443,7 +425,7 @@ export function LeadQuoteSection({
               }}
             >
               <Send size={18} />
-              {isSubmitting ? 'جارٍ إرسال طلبك...' : 'طلب معاينة مجانية وسعر فوري 🚀'}
+              {isSubmitting ? 'جارٍ إرسال طلبك...' : 'طلب معاينة'}
             </button>
 
             {/* ميزات الأمان والسرعة */}

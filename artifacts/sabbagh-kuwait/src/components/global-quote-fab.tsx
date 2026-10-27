@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { Sparkles, X, MessageSquarePlus } from 'lucide-react';
+import { X } from 'lucide-react';
 import { LeadQuoteSection } from './lead-quote-section';
 
 export function GlobalQuoteFab() {
@@ -87,22 +87,7 @@ export function GlobalQuoteFab() {
             e.currentTarget.style.boxShadow = '0 8px 24px rgba(23, 72, 62, 0.45), 0 0 16px rgba(233, 189, 119, 0.25)';
           }}
         >
-          <div
-            style={{
-              width: '28px',
-              height: '28px',
-              borderRadius: '50%',
-              background: '#e9bd77',
-              color: '#0e2d26',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
-            }}
-          >
-            <Sparkles size={16} />
-          </div>
-          <span>طلب معاينة وسعر فوري ⚡</span>
+          <span>طلب معاينة</span>
         </button>
       </div>
 
@@ -169,29 +154,12 @@ export function GlobalQuoteFab() {
             </button>
 
             {/* الهيدر الخاص بالنافذة */}
-            <div style={{ textAlign: 'center', marginBottom: '20px', paddingRight: '20px' }}>
-              <div
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  color: '#e9bd77',
-                  fontSize: '12px',
-                  fontWeight: 700,
-                  background: 'rgba(233, 189, 119, 0.12)',
-                  padding: '4px 12px',
-                  borderRadius: '30px',
-                  marginBottom: '8px',
-                }}
-              >
-                <Sparkles size={14} />
-                معاينة مجانية بدون أي التزام
-              </div>
-              <h3 style={{ fontSize: '20px', fontWeight: 800, color: '#ffffff', margin: '4px 0' }}>
-                طلب معاينة وعرض سعر فوري
+            <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+              <h3 style={{ fontSize: '20px', fontWeight: 800, color: '#ffffff', margin: '0 0 6px' }}>
+                طلب معاينة
               </h3>
               <p style={{ fontSize: '13px', color: '#c4d1c6', margin: 0 }}>
-                اترك بياناتك وسيتواصل معك فني صباغة معتمد فورياً
+                أدخل بياناتك وسيتواصل معك فني لمعاينة الموقع وتحديد التكلفة
               </p>
             </div>
 

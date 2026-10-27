@@ -557,7 +557,7 @@ export default function RequestQuotePage() {
 
               {/* نصائح توفير التكلفة */}
               <div style={{ background: '#f5efe1', borderRadius: '12px', padding: '14px', fontSize: '11px', color: '#687063', lineHeight: 1.8 }}>
-                <strong style={{ color: '#c7664f', display: 'block', marginBottom: '4px' }}>💡 نصيحة خبير صباغ الكويت:</strong>
+                <strong style={{ color: '#c7664f', display: 'block', marginBottom: '4px' }}>نصيحة خبير صباغ الكويت:</strong>
                 صبغ الشقة أو البيت بالكامل في زيارة واحدة يوفر لك ما يقارب <strong>20% إلى 25%</strong> مقارنة بصبغ كل غرفة بشكل منفصل، بسبب تقليل تكلفة تحريك السقالات والعمالة.
               </div>
             </aside>

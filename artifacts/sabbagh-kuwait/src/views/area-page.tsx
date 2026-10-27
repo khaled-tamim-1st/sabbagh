@@ -445,7 +445,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                       fontWeight: 600,
                     }}
                   >
-                    ✓ {paint}
+                    {paint}
                   </span>
                 ))}
               </div>

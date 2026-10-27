@@ -441,7 +441,7 @@ export function HomeView() {
                         marginTop: '12px',
                       }}
                     >
-                      انضم الآن كصباغ 🚀
+                      انضم الآن كصباغ
                     </Link>
                   </>
                 ) : (

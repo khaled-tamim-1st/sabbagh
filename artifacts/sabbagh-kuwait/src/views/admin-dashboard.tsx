@@ -573,7 +573,7 @@ export default function AdminDashboardPage() {
                 </div>
               </div>
               <div style={{ marginTop: '12px', fontSize: '11px', color: stats.pendingPainters > 0 ? '#c7664f' : '#687266' }}>
-                {stats.pendingPainters > 0 ? '⚠️ يتطلب مراجعة فورية للملفات' : '✅ لا توجد طلبات معلقة حالياً'}
+                {stats.pendingPainters > 0 ? 'يتطلب مراجعة فورية للملفات' : 'لا توجد طلبات معلقة حالياً'}
               </div>
             </div>
 
@@ -627,7 +627,7 @@ export default function AdminDashboardPage() {
                 <div>
                   <span style={{ fontSize: '12px', color: '#687266', fontWeight: 600 }}>متوسط التقييم العام</span>
                   <div style={{ fontSize: '28px', fontWeight: 800, color: '#17483e', marginTop: '4px' }}>
-                    {stats.averageRating} <span style={{ fontSize: '16px', color: '#c48927' }}>★</span>
+                    {stats.averageRating} <Star size={18} fill="#c48927" color="#c48927" style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '4px' }} />
                   </div>
                 </div>
                 <div
@@ -1833,14 +1833,14 @@ export default function AdminDashboardPage() {
                         {/* Quote Specs */}
                         <div style={{ fontSize: '12px', color: '#555e53', lineHeight: 1.8, marginBottom: '14px' }}>
                           <div>
-                            📍 <strong>المنطقة:</strong> {lead.governorateId} - {lead.areaId}
+                            <strong>المنطقة:</strong> {lead.governorateId} - {lead.areaId}
                           </div>
                           <div>
-                            🏠 <strong>المشروع:</strong> {lead.roomsCount} غرف •{' '}
+                            <strong>المشروع:</strong> {lead.roomsCount} غرف •{' '}
                             {lead.workType === 'interior' ? 'صبغ داخلي' : 'صبغ واجهات وترميم'}
                           </div>
                           <div>
-                            💰 <strong>التكلفة المقدرة:</strong> {lead.estimatedMinKwd} - {lead.estimatedMaxKwd} د.ك
+                            <strong>التكلفة المقدرة:</strong> {lead.estimatedMinKwd} - {lead.estimatedMaxKwd} د.ك
                             (متوسط {lead.estimatedAverageKwd} د.ك)
                           </div>
                           {lead.customerNotes && (
@@ -1854,7 +1854,7 @@ export default function AdminDashboardPage() {
                                 color: '#444d42',
                               }}
                             >
-                              📝 "{lead.customerNotes}"
+                              "{lead.customerNotes}"
                             </div>
                           )}
                         </div>

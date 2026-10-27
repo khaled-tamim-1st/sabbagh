@@ -209,7 +209,7 @@ export default function PainterDashboardPage() {
 
       const finalUrl = res?.avatarUrl || croppedWebpDataUri;
       setAvatarUrl(finalUrl);
-      setAvatarMessage({ type: 'success', text: 'تم قص وضبط وتحديث صورتك الشخصية على طريقة واتساب بنجاح! 🚀' });
+      setAvatarMessage({ type: 'success', text: 'تم قص وضبط وتحديث صورتك الشخصية على طريقة واتساب بنجاح!' });
       setCropperModalOpen(false);
       setRawImageForCrop(null);
       await refreshUser();
@@ -621,7 +621,7 @@ export default function PainterDashboardPage() {
                         textDecoration: 'underline',
                       }}
                     >
-                      {isUploadingAvatar ? 'جاري ضغط ورفع الصورة...' : 'تغيير الصورة 📷'}
+                      {isUploadingAvatar ? 'جاري ضغط ورفع الصورة...' : 'تغيير الصورة'}
                       <input
                         type="file"
                         accept="image/*"
@@ -792,7 +792,7 @@ export default function PainterDashboardPage() {
                 <div>
                   <span style={{ fontSize: '12px', color: '#687266', fontWeight: 600 }}>تقييم العملاء</span>
                   <div style={{ fontSize: '26px', fontWeight: 800, color: '#17483e', marginTop: '4px' }}>
-                    {painterInfo.rating} <span style={{ fontSize: '16px', color: '#c48927' }}>★</span>
+                    {painterInfo.rating} <Star size={18} fill="#c48927" color="#c48927" style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '4px' }} />
                   </div>
                 </div>
                 <div
@@ -1162,17 +1162,17 @@ export default function PainterDashboardPage() {
                             }}
                           >
                             <div>
-                              📍 <strong>المنطقة:</strong> {lead.governorateId} ({lead.areaId})
+                              <strong>المنطقة:</strong> {lead.governorateId} ({lead.areaId})
                             </div>
                             <div>
-                              🏠 <strong>نوع العقار:</strong>{' '}
+                              <strong>نوع العقار:</strong>{' '}
                               {lead.propertyType === 'apartment' ? 'شقة سكنية' : 'فيلا / قسيمة'}
                             </div>
                             <div>
-                              🖌️ <strong>المساحة:</strong> {lead.roomsCount} غرف
+                              <strong>المساحة:</strong> {lead.roomsCount} غرف
                             </div>
                             <div>
-                              💰 <strong>الميزانية التقديرية:</strong> {lead.estimatedMinKwd} - {lead.estimatedMaxKwd} د.ك
+                              <strong>الميزانية التقديرية:</strong> {lead.estimatedMinKwd} - {lead.estimatedMaxKwd} د.ك
                             </div>
                           </div>
 
@@ -1354,7 +1354,7 @@ export default function PainterDashboardPage() {
                           cursor: 'pointer',
                         }}
                       >
-                        ➕ إضافة أول مشروع الآن
+                        إضافة أول مشروع الآن
                       </button>
                     </div>
                   ) : (
@@ -1494,7 +1494,7 @@ export default function PainterDashboardPage() {
                                 boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
                               }}
                             >
-                              {project.displayMode === 'before_after' ? '🔄 قبل وبعد' : '📸 صور عمل'}
+                              {project.displayMode === 'before_after' ? 'قبل وبعد' : 'صور عمل'}
                             </span>
                           </div>
 
@@ -1515,7 +1515,7 @@ export default function PainterDashboardPage() {
                               </span>
                               {project.area && (
                                 <span style={{ fontSize: '11px', color: '#727970' }}>
-                                  📍 {project.area}
+                                  {project.area}
                                 </span>
                               )}
                             </div>
@@ -1565,7 +1565,7 @@ export default function PainterDashboardPage() {
                                 }}
                               >
                                 <Edit3 size={13} />
-                                <span>تعديل ✏️</span>
+                                <span>تعديل</span>
                               </button>
 
                               <button
@@ -1586,7 +1586,7 @@ export default function PainterDashboardPage() {
                                 }}
                               >
                                 <Trash2 size={13} />
-                                <span>حذف 🗑️</span>
+                                <span>حذف</span>
                               </button>
                             </div>
                           </div>
@@ -1720,7 +1720,7 @@ export default function PainterDashboardPage() {
                 </div>
 
                 <p style={{ margin: '10px 0 0', fontSize: '11px', color: '#7a8278', lineHeight: 1.6 }}>
-                  ⚡ يتم ضغط الصورة مباشرة داخل المتصفح بصيغة WebP لتظهر فوراً لعملاء الكويت دون استهلاك للبيانات.
+                  يتم ضغط الصورة مباشرة داخل المتصفح بصيغة WebP لتظهر فوراً لعملاء الكويت دون استهلاك للبيانات.
                 </p>
               </div>
 
@@ -1782,7 +1782,7 @@ export default function PainterDashboardPage() {
                     lineHeight: 1.7,
                   }}
                 >
-                  💡 <strong>نصيحة المنصة:</strong> أضف أعمالاً حقيقية من منازل الزبائن في الكويت، حيث يفضل 82% من العملاء رؤية صور Before & After قبل الاتفاق.
+                  <strong>نصيحة المنصة:</strong> أضف أعمالاً حقيقية من منازل الزبائن في الكويت، حيث يفضل 82% من العملاء رؤية صور Before & After قبل الاتفاق.
                 </div>
               </div>
 
@@ -1867,7 +1867,7 @@ export default function PainterDashboardPage() {
               >
                 <div>
                   <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 800, color: '#17483e' }}>
-                    {editingProject ? 'تعديل مشروع في سابقة الأعمال' : '➕ إضافة عمل جديد للبورتفوليو'}
+                    {editingProject ? 'تعديل مشروع في سابقة الأعمال' : 'إضافة عمل جديد للبورتفوليو'}
                   </h3>
                   <span style={{ fontSize: '11px', color: '#687266' }}>
                     يتم ضغط جميع الصور المرفوعة بتقنية WebP لتحميل فائق السرعة
@@ -1916,7 +1916,7 @@ export default function PainterDashboardPage() {
                       }}
                     >
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-                        <span style={{ fontSize: '18px' }}>📸</span>
+                        <ImageIcon size={18} color="#17483e" />
                         <strong style={{ fontSize: '13px', color: '#17483e' }}>معرض صور المشروع</strong>
                       </div>
                       <span style={{ fontSize: '11px', color: '#687266', display: 'block' }}>
@@ -1939,7 +1939,7 @@ export default function PainterDashboardPage() {
                       }}
                     >
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-                        <span style={{ fontSize: '18px' }}>🔄</span>
+                        <RefreshCw size={18} color="#80552b" />
                         <strong style={{ fontSize: '13px', color: '#80552b' }}>مقارنة قبل وبعد (Before & After)</strong>
                       </div>
                       <span style={{ fontSize: '11px', color: '#687266', display: 'block' }}>
@@ -2095,7 +2095,7 @@ export default function PainterDashboardPage() {
                         }}
                       >
                         {isCompressingImages ? <RefreshCw size={14} className="animate-spin" /> : <Upload size={14} />}
-                        <span>{isCompressingImages ? 'جاري ضغط الصور...' : '➕ إضافة صور'}</span>
+                        <span>{isCompressingImages ? 'جاري ضغط الصور...' : 'إضافة صور'}</span>
                         <input
                           type="file"
                           accept="image/*"
