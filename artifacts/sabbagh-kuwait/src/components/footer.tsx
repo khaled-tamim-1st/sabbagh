@@ -14,41 +14,50 @@ import {
   BookOpen,
 } from 'lucide-react';
 
-export function Brand({ light = false }: { light?: boolean }) {
+export function Brand({
+  light = false,
+  showName = true,
+  size = 52,
+}: {
+  light?: boolean;
+  showName?: boolean;
+  size?: number;
+}) {
   return (
     <Link
       href="/"
       className="brand"
-      aria-label="صباغ الكويت، الرئيسية"
+      aria-label="الرئيسية"
       style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}
     >
       <div
         style={{
-          width: '56px',
-          height: '56px',
+          width: `${size}px`,
+          height: `${size}px`,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          overflow: 'hidden',
           flexShrink: 0,
         }}
       >
         <img
           src="/logo.png"
-          alt="شعار صباغ الكويت"
-          style={{ width: '92px', height: '92px', maxWidth: 'none', objectFit: 'contain' }}
+          alt="شعار الموقع"
+          style={{ width: '100%', height: '100%', objectFit: 'contain' }}
         />
       </div>
-      <span
-        style={{
-          fontSize: '22px',
-          fontWeight: 700,
-          letterSpacing: '-0.03em',
-          color: light ? '#f5efdf' : '#17483e',
-        }}
-      >
-        صباغ الكويت
-      </span>
+      {showName && (
+        <span
+          style={{
+            fontSize: '22px',
+            fontWeight: 700,
+            letterSpacing: '-0.03em',
+            color: light ? '#f5efdf' : '#17483e',
+          }}
+        >
+          صباغ الكويت
+        </span>
+      )}
     </Link>
   );
 }

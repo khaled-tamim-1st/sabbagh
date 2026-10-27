@@ -89,8 +89,8 @@ export const Header: FC<HeaderProps> = ({
     <>
       <header className="topbar">
         <div className="topbar-inner">
-          {/* يمين: اللوجو واسم صباغ الكويت */}
-          <Brand />
+          {/* يمين: اللوجو فقط */}
+          <Brand showName={false} size={54} />
 
           {/* وسط: روابط التنقل في الأجهزة الكبيرة فقط */}
           <nav className="navlinks" aria-label="التنقل الرئيسي">
@@ -274,7 +274,7 @@ export const Header: FC<HeaderProps> = ({
                 background: '#f9f5ed',
               }}
             >
-              <Brand />
+              <Brand showName={false} size={46} />
               <button
                 type="button"
                 onClick={() => setIsMenuOpen(false)}
