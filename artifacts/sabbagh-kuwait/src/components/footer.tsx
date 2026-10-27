@@ -328,7 +328,7 @@ export const SiteFooter: FC = () => {
               ))}
               <li style={{ paddingTop: '4px' }}>
                 <Link
-                  href="/services-guide"
+                  href="/services"
                   style={{
                     color: '#e9bd77',
                     textDecoration: 'none',
@@ -430,7 +430,7 @@ export const SiteFooter: FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/services-guide" style={{ color: '#c4d1c6', textDecoration: 'none', fontSize: '12px' }}>
+                <Link href="/services" style={{ color: '#c4d1c6', textDecoration: 'none', fontSize: '12px' }}>
                   دليل الأصباغ والديكور (12 خدمة)
                 </Link>
               </li>
@@ -453,12 +453,6 @@ export const SiteFooter: FC = () => {
                 <Link href="/join-painter" style={{ color: '#c4d1c6', textDecoration: 'none', fontSize: '12px' }}>
                   انضم كصباغ وسجل ورشتك
                 </Link>
-              </li>
-              <li>
-                <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" style={{ color: '#c4d1c6', textDecoration: 'none', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <span>خريطة الموقع (Sitemap XML)</span>
-                  <ArrowUpLeft size={12} />
-                </a>
               </li>
             </ul>
           </div>
@@ -546,8 +540,6 @@ export const SiteFooter: FC = () => {
             <span style={{ color: '#d9c597' }}>تواصل مباشر مع الصباغ بدون وسيط أو عمولة</span>
             <span>•</span>
             <Link href="/faq" style={{ color: 'inherit', textDecoration: 'none' }}>الضمان والمصداقية</Link>
-            <span>•</span>
-            <a href="/robots.txt" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Robots</a>
           </div>
         </div>
       </div>

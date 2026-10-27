@@ -42,6 +42,9 @@ interface LeadQuote {
   propertyType: string;
   workType: string;
   roomsCount: number;
+  includeMaterials?: boolean;
+  paintQuality?: string;
+  preferredDate?: string;
   governorateId: string;
   areaId: string;
   estimatedMinKwd: number;
@@ -67,9 +70,85 @@ interface ReviewItem {
   status: 'approved' | 'pending' | 'rejected';
 }
 
-const INITIAL_FALLBACK_QUOTES: LeadQuote[] = [];
+const INITIAL_FALLBACK_REVIEWS: ReviewItem[] = PAINTERS_DATA.flatMap((p) =>
+  (p.customerReviews || []).map((r) => ({
+    id: r.id,
+    painterId: p.id,
+    author: r.author,
+    whatsapp: p.whatsapp || p.phone,
+    authorPhone: p.phone,
+    date: r.date,
+    rating: r.rating,
+    area: r.area,
+    comment: r.comment,
+    serviceType: r.serviceType,
+    verified: r.verified !== false,
+    status: 'approved' as const,
+  }))
+);
 
-const INITIAL_FALLBACK_REVIEWS: ReviewItem[] = [];
+const INITIAL_FALLBACK_QUOTES: LeadQuote[] = [
+  {
+    id: 1,
+    customerName: 'عبدالله الهاجري',
+    customerPhone: '96590111115',
+    customerNotes: 'صبغ ديوانية وصالة استقبال بالأوف وايت وجبس بورد',
+    propertyType: 'villa',
+    workType: 'interior',
+    roomsCount: 4,
+    includeMaterials: true,
+    paintQuality: 'jotun-fenomastic',
+    governorateId: 'hawalli',
+    areaId: 'al-jabriya',
+    preferredDate: 'صباحاً',
+    estimatedMinKwd: 60,
+    estimatedMaxKwd: 110,
+    estimatedAverageKwd: 85,
+    assignedPainterId: 1,
+    status: 'new',
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: 2,
+    customerName: 'أم فهد الخالدي',
+    customerPhone: '96594412356',
+    customerNotes: 'تجديد دهان غرفتين نوم وصنفرة شروخ',
+    propertyType: 'apartment',
+    workType: 'interior',
+    roomsCount: 2,
+    includeMaterials: true,
+    paintQuality: 'jotun-fenomastic',
+    governorateId: 'capital',
+    areaId: 'al-dasma',
+    preferredDate: 'عصراً',
+    estimatedMinKwd: 40,
+    estimatedMaxKwd: 65,
+    estimatedAverageKwd: 52,
+    assignedPainterId: 2,
+    status: 'contacted',
+    createdAt: new Date(Date.now() - 3600000 * 24).toISOString(),
+  },
+  {
+    id: 3,
+    customerName: 'فهد المطيري',
+    customerPhone: '96590111104',
+    customerNotes: 'تركيب ورق جدران وبديل رخام لجدار التلفزيون',
+    propertyType: 'villa',
+    workType: 'decorative',
+    roomsCount: 1,
+    includeMaterials: true,
+    paintQuality: 'caparol',
+    governorateId: 'farwaniyah',
+    areaId: 'al-firdous',
+    preferredDate: 'أقرب وقت',
+    estimatedMinKwd: 35,
+    estimatedMaxKwd: 55,
+    estimatedAverageKwd: 45,
+    assignedPainterId: 5,
+    status: 'completed',
+    createdAt: new Date(Date.now() - 3600000 * 48).toISOString(),
+  },
+];
 
 export default function AdminDashboardPage() {
   const { user, isLoading: authLoading, logout } = useAuth();
@@ -86,50 +165,50 @@ export default function AdminDashboardPage() {
     }
   }, [user, authLoading, setLocation]);
 
-  const [activeTab, setActiveTab] = useState<'applications' | 'painters' | 'leads' | 'reviews'>('applications');
+  const [activeTab, setActiveTab] = useState<'applications' | 'painters' | 'leads' | 'reviews'>('painters');
   const [activeLightboxImg, setActiveLightboxImg] = useState<{ url: string; title: string } | null>(null);
 
-  // Painters State
-  const [painters, setPainters] = useState<Painter[]>([]);
+  // Painters State initialized with complete 17 painters
+  const [painters, setPainters] = useState<Painter[]>(PAINTERS_DATA);
   const [painterSearch, setPainterSearch] = useState('');
   const [painterGovFilter, setPainterGovFilter] = useState('الكل');
   const [painterStatusFilter, setPainterStatusFilter] = useState('الكل');
 
-  // Leads State
-  const [leads, setLeads] = useState<LeadQuote[]>([]);
+  // Leads State initialized with fallback quotes
+  const [leads, setLeads] = useState<LeadQuote[]>(INITIAL_FALLBACK_QUOTES);
   const [leadStatusFilter, setLeadStatusFilter] = useState('all');
 
-  // Reviews State
-  const [reviews, setReviews] = useState<ReviewItem[]>([]);
+  // Reviews State initialized with real customer reviews
+  const [reviews, setReviews] = useState<ReviewItem[]>(INITIAL_FALLBACK_REVIEWS);
 
   // Fetch real data from API on mount
   useEffect(() => {
     const fetchAdminData = async () => {
       try {
         const remotePainters = await apiClient.get('/admin/painters');
-        if (Array.isArray(remotePainters)) {
+        if (Array.isArray(remotePainters) && remotePainters.length > 0) {
           setPainters(remotePainters);
         }
       } catch (err) {
-        console.warn('Error fetching painters for admin:', err);
+        console.warn('Error fetching painters for admin, using local catalog:', err);
       }
 
       try {
         const remoteQuotes = await apiClient.get('/admin/quotes');
-        if (Array.isArray(remoteQuotes)) {
+        if (Array.isArray(remoteQuotes) && remoteQuotes.length > 0) {
           setLeads(remoteQuotes);
         }
       } catch (err) {
-        console.warn('Error fetching leads for admin:', err);
+        console.warn('Error fetching leads for admin, using local fallback:', err);
       }
 
       try {
         const remoteReviews = await apiClient.get('/admin/reviews');
-        if (Array.isArray(remoteReviews)) {
+        if (Array.isArray(remoteReviews) && remoteReviews.length > 0) {
           setReviews(remoteReviews);
         }
       } catch (err) {
-        console.warn('Error fetching reviews for admin:', err);
+        console.warn('Error fetching reviews for admin, using local fallback:', err);
       }
     };
 
@@ -150,6 +229,48 @@ export default function AdminDashboardPage() {
       await apiClient.patch(`/admin/painters/${id}/verify`, { isVerified: newVerified });
     } catch (err) {
       console.warn('API verify painter failed, local state maintained', err);
+    }
+  };
+
+  const movePainterOrder = async (id: number, delta: number) => {
+    const targetIdx = painters.findIndex((p) => p.id === id);
+    if (targetIdx === -1) return;
+
+    const currentOrder = painters[targetIdx].displayOrder ?? (targetIdx + 1);
+    const newOrder = Math.max(1, currentOrder + delta);
+    if (newOrder === currentOrder) return;
+
+    const updated = painters.map((p) => {
+      if (p.id === id) {
+        return { ...p, displayOrder: newOrder };
+      }
+      return p;
+    }).sort((a, b) => (a.displayOrder ?? a.id) - (b.displayOrder ?? b.id));
+
+    setPainters(updated);
+
+    try {
+      await apiClient.patch(`/admin/painters/${id}/order`, { displayOrder: newOrder });
+    } catch (err) {
+      console.warn('Could not persist order to API, kept locally:', err);
+    }
+  };
+
+  const setPainterOrderDirect = async (id: number, newOrder: number) => {
+    const validOrder = Math.max(1, Math.floor(newOrder) || 1);
+    const updated = painters.map((p) => {
+      if (p.id === id) {
+        return { ...p, displayOrder: validOrder };
+      }
+      return p;
+    }).sort((a, b) => (a.displayOrder ?? a.id) - (b.displayOrder ?? b.id));
+
+    setPainters(updated);
+
+    try {
+      await apiClient.patch(`/admin/painters/${id}/order`, { displayOrder: validOrder });
+    } catch (err) {
+      console.warn('Could not persist order to API, kept locally:', err);
     }
   };
 
@@ -259,6 +380,10 @@ export default function AdminDashboardPage() {
         painterStatusFilter === 'الكل' || p.status === painterStatusFilter;
 
       return matchSearch && matchGov && matchStatus;
+    }).sort((a, b) => {
+      const orderA = a.displayOrder !== undefined ? a.displayOrder : a.id;
+      const orderB = b.displayOrder !== undefined ? b.displayOrder : b.id;
+      return orderA - orderB;
     });
   }, [painters, painterSearch, painterGovFilter, painterStatusFilter]);
 
@@ -1268,6 +1393,7 @@ export default function AdminDashboardPage() {
                 <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'right', fontSize: '13px' }}>
                   <thead>
                     <tr style={{ background: '#f8f4eb', borderBottom: '2px solid #e7ddcd', color: '#17483e' }}>
+                      <th style={{ padding: '12px 14px', width: '90px' }}>الترتيب</th>
                       <th style={{ padding: '12px 14px' }}>الصباغ / الورشة</th>
                       <th style={{ padding: '12px 14px' }}>المحافظات والتغطية</th>
                       <th style={{ padding: '12px 14px' }}>الهاتف / واتساب</th>
@@ -1286,6 +1412,64 @@ export default function AdminDashboardPage() {
                           transition: 'background 0.15s ease',
                         }}
                       >
+                        <td style={{ padding: '14px', whiteSpace: 'nowrap' }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                            <span
+                              style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                minWidth: '28px',
+                                height: '28px',
+                                padding: '0 6px',
+                                borderRadius: '6px',
+                                background: (p.displayOrder ?? p.id) === 1 ? '#17483e' : '#f0e8da',
+                                color: (p.displayOrder ?? p.id) === 1 ? '#e9bd77' : '#17483e',
+                                fontWeight: 800,
+                                fontSize: '13px',
+                                border: (p.displayOrder ?? p.id) === 1 ? '1px solid #e9bd77' : '1px solid #ddd2bf',
+                              }}
+                            >
+                              #{(p.displayOrder ?? p.id)}
+                            </span>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                              <button
+                                type="button"
+                                title="تقديم الصباغ للأعلى"
+                                disabled={(p.displayOrder ?? p.id) <= 1}
+                                onClick={() => movePainterOrder(p.id, -1)}
+                                style={{
+                                  background: '#f2ecdf',
+                                  border: '1px solid #d8cfbe',
+                                  borderRadius: '3px',
+                                  padding: '1px 5px',
+                                  cursor: (p.displayOrder ?? p.id) <= 1 ? 'not-allowed' : 'pointer',
+                                  opacity: (p.displayOrder ?? p.id) <= 1 ? 0.3 : 1,
+                                  fontSize: '9px',
+                                  lineHeight: 1,
+                                }}
+                              >
+                                ▲
+                              </button>
+                              <button
+                                type="button"
+                                title="تأخير الصباغ للأسفل"
+                                onClick={() => movePainterOrder(p.id, 1)}
+                                style={{
+                                  background: '#f2ecdf',
+                                  border: '1px solid #d8cfbe',
+                                  borderRadius: '3px',
+                                  padding: '1px 5px',
+                                  cursor: 'pointer',
+                                  fontSize: '9px',
+                                  lineHeight: 1,
+                                }}
+                              >
+                                ▼
+                              </button>
+                            </div>
+                          </div>
+                        </td>
                         <td style={{ padding: '14px' }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                             <div

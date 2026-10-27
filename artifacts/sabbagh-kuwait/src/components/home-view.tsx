@@ -25,6 +25,7 @@ import { Header } from '@/components/header';
 import { Link } from '@/lib/nav';
 import { apiClient } from '@/lib/api-client';
 import { PainterAvatar } from '@/components/painter-avatar';
+import { LeadQuoteSection } from '@/components/lead-quote-section';
 
 const regions = [
   'كل المناطق',
@@ -221,6 +222,10 @@ export function HomeView() {
           (service === 'الكل' || painter.services.includes(service)) &&
           (!favoritesOnly || favorites.includes(painter.id))
         );
+      }).sort((a, b) => {
+        const orderA = a.displayOrder !== undefined ? a.displayOrder : a.id;
+        const orderB = b.displayOrder !== undefined ? b.displayOrder : b.id;
+        return orderA - orderB;
       }),
     [appliedQuery, region, service, favoritesOnly, favorites, painters]
   );
@@ -713,6 +718,11 @@ export function HomeView() {
             </div>
           </div>
         </section>
+
+        {/* نموذج طلب المعاينة وعرض السعر الفوري */}
+        <div style={{ padding: '0 16px' }}>
+          <LeadQuoteSection />
+        </div>
       </main>
 
       <SiteFooter />

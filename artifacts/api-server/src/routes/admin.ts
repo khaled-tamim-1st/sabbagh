@@ -86,6 +86,29 @@ router.patch("/painters/:id/status", (req: Request, res: Response) => {
   res.json(updated);
 });
 
+// PATCH /painters/:id/order
+router.patch("/painters/:id/order", (req: Request, res: Response) => {
+  const id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.status(400).json({ error: "Invalid painter ID" });
+    return;
+  }
+
+  const { displayOrder } = req.body;
+  if (typeof displayOrder !== "number") {
+    res.status(400).json({ error: "displayOrder (number) is required in request body" });
+    return;
+  }
+
+  const updated = storage.setPainterDisplayOrder(id, displayOrder);
+  if (!updated) {
+    res.status(404).json({ error: "Painter not found" });
+    return;
+  }
+
+  res.json(updated);
+});
+
 // POST /painters/:id/avatar
 router.post("/painters/:id/avatar", async (req: Request, res: Response) => {
   const id = Number(req.params.id);

@@ -112,6 +112,7 @@ export interface Painter {
   commercialLicense?: string | null;
   sampleWorkImages?: PortfolioImage[];
   slug?: string;
+  displayOrder?: number;
 }
 
 export const PAINTERS_DATA: Painter[] = [
@@ -248,7 +249,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 1
   },
   {
     "id": 2,
@@ -323,7 +325,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 2
   },
   {
     "id": 3,
@@ -398,7 +401,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 3
   },
   {
     "id": 4,
@@ -473,7 +477,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 4
   },
   {
     "id": 5,
@@ -548,7 +553,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 5
   },
   {
     "id": 6,
@@ -623,7 +629,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 6
   },
   {
     "id": 7,
@@ -698,7 +705,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 7
   },
   {
     "id": 8,
@@ -773,7 +781,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 8
   },
   {
     "id": 9,
@@ -848,7 +857,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 9
   },
   {
     "id": 10,
@@ -925,7 +935,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 10
   },
   {
     "id": 11,
@@ -998,7 +1009,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 11
   },
   {
     "id": 12,
@@ -1073,7 +1085,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 12
   },
   {
     "id": 13,
@@ -1148,7 +1161,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 13
   },
   {
     "id": 14,
@@ -1223,7 +1237,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 14
   },
   {
     "id": 15,
@@ -1300,7 +1315,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 15
   },
   {
     "id": 16,
@@ -1375,7 +1391,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 16
   },
   {
     "id": 17,
@@ -1450,7 +1467,8 @@ export const PAINTERS_DATA: Painter[] = [
         "verified": true
       }
     ],
-    "portfolioProjects": []
+    "portfolioProjects": [],
+    "displayOrder": 17
   }
 ];
 

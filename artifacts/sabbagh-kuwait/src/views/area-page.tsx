@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { Layout } from '@/components/layout';
 import { PainterAvatar } from '@/components/painter-avatar';
+import { LeadQuoteSection } from '@/components/lead-quote-section';
 import {
   KUWAIT_GOVERNORATES,
   getGovernorateById,
@@ -714,7 +715,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                 </h2>
               </div>
               <Link
-                href="/services-guide"
+                href="/services"
                 style={{
                   color: '#17483e',
                   fontSize: '12px',
@@ -994,6 +995,9 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
               </Link>
             </div>
           </section>
+
+          {/* نموذج طلب المعاينة وعرض السعر الفوري */}
+          <LeadQuoteSection initialGovernorate={governorate.nameAr} />
 
         </div>
 

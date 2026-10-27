@@ -190,6 +190,12 @@ class StorageManager {
       );
     }
 
+    result.sort((a, b) => {
+      const orderA = a.displayOrder !== undefined ? a.displayOrder : a.id;
+      const orderB = b.displayOrder !== undefined ? b.displayOrder : b.id;
+      return orderA - orderB;
+    });
+
     return result;
   }
 
@@ -295,6 +301,10 @@ class StorageManager {
 
   public setPainterStatus(id: number, status: "approved" | "pending" | "rejected" | "suspended") {
     return this.updatePainter(id, { status });
+  }
+
+  public setPainterDisplayOrder(id: number, displayOrder: number) {
+    return this.updatePainter(id, { displayOrder });
   }
 
   // ==========================================

@@ -68,6 +68,7 @@ export interface PainterRecord {
   managerName?: string | null;
   commercialLicense?: string | null;
   sampleWorkImages?: PortfolioImage[];
+  displayOrder?: number;
   createdAt: string;
   updatedAt: string;
 }

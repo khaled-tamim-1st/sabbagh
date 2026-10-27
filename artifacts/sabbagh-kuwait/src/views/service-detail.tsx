@@ -70,7 +70,7 @@ export default function ServiceDetailPage({ slug: propSlug }: { slug?: string })
 
   const breadcrumbItems = [
     { label: 'الرئيسية', href: '/' },
-    { label: 'دليل الأصباغ والديكور', href: '/services-guide' },
+    { label: 'دليل الأصباغ والديكور', href: '/services' },
     { label: service.shortName, isCurrent: true },
   ];
 
@@ -94,7 +94,7 @@ export default function ServiceDetailPage({ slug: propSlug }: { slug?: string })
   const faqSchema = service.faqs.length > 0 ? generateFaqSchema({ items: service.faqs }) : null;
 
   return (
-    <Layout activeNav="/services-guide">
+    <Layout activeNav="/services">
       {/* Schemas للسيو الغني لمحركات البحث */}
       <SeoSchema schemas={[breadcrumbSchema, serviceSchema, faqSchema]} />
 

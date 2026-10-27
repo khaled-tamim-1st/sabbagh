@@ -65,7 +65,7 @@ export const Header: FC<HeaderProps> = ({
   const navItems = [
     { href: '/', label: 'الرئيسية', icon: HomeIcon, exact: true },
     { href: '/areas', label: 'مناطق الكويت', icon: MapPin },
-    { href: '/services-guide', label: 'دليل الخدمات', icon: Layers },
+    { href: '/services', label: 'دليل الخدمات', icon: Layers },
     { href: '/blog', label: 'المدونة والنصائح', icon: Newspaper },
     { href: '/request-quote', label: 'احسب التكلفة', icon: Calculator },
     { href: '/faq', label: 'الأسئلة والضمان', icon: HelpCircle },
@@ -100,7 +100,7 @@ export const Header: FC<HeaderProps> = ({
                 ? currentPath === '/'
                 : (item.href === '/areas'
                   ? currentPath.startsWith('/areas')
-                  : (item.href === '/services-guide'
+                  : ((item.href === '/services' || item.href === '/services-guide')
                     ? (currentPath.startsWith('/services') || currentPath.startsWith('/services-guide'))
                     : (item.href === '/blog'
                       ? currentPath.startsWith('/blog')
@@ -462,7 +462,7 @@ export const Header: FC<HeaderProps> = ({
                   ? location === '/'
                   : (item.href === '/areas'
                     ? location.startsWith('/areas')
-                    : (item.href === '/services-guide'
+                    : ((item.href === '/services' || item.href === '/services-guide')
                       ? (location.startsWith('/services') || location.startsWith('/services-guide'))
                       : (item.href === '/blog'
                         ? location.startsWith('/blog')

@@ -93,6 +93,7 @@ export const paintersTable = pgTable("painters", {
   managerName: text("manager_name"),
   commercialLicense: text("commercial_license"),
   sampleWorkImages: jsonb("sample_work_images").$type<PortfolioImage[]>().default([]),
+  displayOrder: integer("display_order").default(99),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });

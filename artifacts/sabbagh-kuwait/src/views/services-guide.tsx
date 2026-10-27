@@ -10,6 +10,7 @@ import { Layout } from '@/components/layout';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { KUWAIT_SERVICES_DATA, KUWAIT_PAINTING_MARKET_TIPS, type KuwaitService } from '@/data/services-data';
 import { Link } from '@/lib/nav';
+import { LeadQuoteSection } from '@/components/lead-quote-section';
 
 export default function ServicesGuidePage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -33,7 +34,7 @@ export default function ServicesGuidePage() {
     : KUWAIT_SERVICES_DATA.filter((s) => s.category === selectedCategory);
 
   return (
-    <Layout activeNav="/services-guide">
+    <Layout activeNav="/services">
       {/* مسار التنقل المهيأ لمحركات البحث */}
       <Breadcrumbs
         items={[
@@ -248,6 +249,9 @@ export default function ServicesGuidePage() {
             </table>
           </div>
         </section>
+
+        {/* نموذج طلب المعاينة وعرض السعر الفوري */}
+        <LeadQuoteSection />
 
       </div>
 
