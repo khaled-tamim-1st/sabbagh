@@ -772,19 +772,26 @@ export default function ServiceDetailPage({ slug: propSlug }: { slug?: string })
                   e.preventDefault();
                   setInspectionSent(true);
                 }}
+                data-webmcp-tool="service_inspection_request"
+                data-webmcp-description={`طلب معاينة فنية مجانية لخدمة: ${service.title}`}
+                aria-label={`طلب معاينة مجانية لـ ${service.shortName}`}
               >
                 <h3 style={{ fontSize: '20px', color: '#17483e', margin: '0 0 6px', fontWeight: 700 }}>
                   طلب معاينة مجانية لـ {service.shortName}
                 </h3>
-                <p style={{ fontSize: '12px', color: '#77857c', margin: '0 0 18px', lineHeight: 1.6 }}>
+                <p style={{ fontSize: '12px', color: '#4a5649', margin: '0 0 18px', lineHeight: 1.6 }}>
                   معاينة ميدانية مجانية 100% دون أي التزام مالي في كافة مناطق الكويت.
                 </p>
 
                 <div style={{ marginBottom: '14px' }}>
-                  <label style={{ display: 'block', fontSize: '12px', fontWeight: 600, color: '#33443a', marginBottom: '6px' }}>
+                  <label htmlFor="service-cust-name" style={{ display: 'block', fontSize: '12px', fontWeight: 600, color: '#33443a', marginBottom: '6px' }}>
                     الاسم الكريم
                   </label>
                   <input
+                    id="service-cust-name"
+                    name="customerName"
+                    aria-label="الاسم الكريم"
+                    autoComplete="name"
                     required
                     value={customerName}
                     onChange={(e) => setCustomerName(e.target.value)}
@@ -794,10 +801,14 @@ export default function ServiceDetailPage({ slug: propSlug }: { slug?: string })
                 </div>
 
                 <div style={{ marginBottom: '20px' }}>
-                  <label style={{ display: 'block', fontSize: '12px', fontWeight: 600, color: '#33443a', marginBottom: '6px' }}>
+                  <label htmlFor="service-cust-phone" style={{ display: 'block', fontSize: '12px', fontWeight: 600, color: '#33443a', marginBottom: '6px' }}>
                     رقم الهاتف / الواتساب
                   </label>
                   <input
+                    id="service-cust-phone"
+                    name="customerPhone"
+                    aria-label="رقم الهاتف أو الواتساب"
+                    autoComplete="tel"
                     required
                     type="tel"
                     value={customerPhone}

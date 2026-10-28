@@ -4,7 +4,7 @@
  * Supports LocalStorage persistence, multi-tab live sync, and backend API sync.
  */
 
-import { PAINTERS_DATA, type Painter, generatePainterSlug } from '@/data/painters';
+import { PAINTERS_DATA, type Painter, type PortfolioProject, type PortfolioImage, generatePainterSlug } from '@/data/painters';
 import { apiClient } from '@/lib/api-client';
 
 export interface LeadQuote {
@@ -387,6 +387,108 @@ class CatalogStore {
       });
   }
 
+  public addPainter(painterData: Partial<Painter>): Painter {
+    if (!this.initialized && isBrowser()) this.loadFromStorage();
+    const maxId = this.painters.length > 0 ? Math.max(...this.painters.map((p) => p.id)) : 0;
+    const newId = maxId + 1;
+    const name = (painterData.name || 'صباغ جديد').trim();
+    const slug = painterData.slug || generatePainterSlug(name, newId);
+
+    const newPainter: Painter = {
+      id: newId,
+      slug,
+      name,
+      avatarUrl: painterData.avatarUrl || painterData.avatar || null,
+      avatar: (painterData.avatar || painterData.avatarUrl) || undefined,
+      avatarPublicId: painterData.avatarPublicId || null,
+      initials: painterData.initials || name.slice(0, 2),
+      region: painterData.region || painterData.governorates?.[0] || 'الكويت',
+      rating: '5.0',
+      reviews: 0,
+      years: Number(painterData.years) || 5,
+      startingAt: painterData.startingAt || '18 د.ك',
+      priceStart: painterData.priceStart || 18,
+      services:
+        painterData.services && painterData.services.length > 0
+          ? painterData.services
+          : ['دهان داخلي', 'معجون وتنعيم أسقف'],
+      description:
+        painterData.description ||
+        (painterData.accountType === 'company'
+          ? 'مؤسسة متخصصة في أعمال الأصباغ والتشطيبات الحديثة في الكويت.'
+          : 'صباغ محترف بخبرة في الدهانات والتشطيب.'),
+      tone: painterData.tone || 'ochre',
+      phone: painterData.phone || '',
+      whatsapp: painterData.whatsapp || painterData.phone || '',
+      whatsappPrefill:
+        painterData.whatsappPrefill ||
+        `السلام عليكم معلم ${name}، اطلعت على ملفك في دليل صباغ الكويت وأود حجز موعد معاينة.`,
+      bio: painterData.bio || painterData.description || 'فني صباغة وتشطيبات معتمد في الكويت.',
+      governorates:
+        painterData.governorates && painterData.governorates.length > 0
+          ? painterData.governorates
+          : ['العاصمة', 'حولي'],
+      warrantyYears: painterData.warrantyYears || 3,
+      crewSize: painterData.crewSize || 3,
+      paintBrands: painterData.paintBrands || ['جوتن', 'كابارول'],
+      completedProjects: painterData.completedProjects || 0,
+      pricingList: painterData.pricingList || [],
+      gallery: painterData.gallery || [],
+      customerReviews: [],
+      portfolioProjects: painterData.portfolioProjects || [],
+      isAvailableToday:
+        painterData.isAvailableToday !== undefined ? painterData.isAvailableToday : true,
+      responseTime: painterData.responseTime || 'خلال 15 دقيقة',
+      coverageAreaIds: painterData.coverageAreaIds || [],
+      primaryGovernorates: painterData.primaryGovernorates || ['capital', 'hawalli'],
+      isVerified: false,
+      status: 'pending', // Starts as pending so it appears in Admin -> Applications tab!
+      accountType: painterData.accountType || 'individual',
+      companyName: painterData.companyName || null,
+      managerName: painterData.managerName || null,
+      commercialLicense: painterData.commercialLicense || null,
+      sampleWorkImages: painterData.sampleWorkImages || [],
+      displayOrder: this.painters.length + 1,
+    };
+
+    this.painters = [newPainter, ...this.painters];
+    this.savePainters();
+    this.notify();
+
+    apiClient.post('/auth/register-painter', painterData).catch((err) => {
+      console.warn('API sync painter registration failed (persisted locally):', err);
+    });
+
+    return newPainter;
+  }
+
+  public updatePainterPortfolio(
+    painterId: number,
+    portfolioProjects: PortfolioProject[]
+  ): void {
+    if (!this.initialized && isBrowser()) this.loadFromStorage();
+    this.painters = this.painters.map((p) =>
+      p.id === painterId
+        ? {
+            ...p,
+            portfolioProjects,
+            sampleWorkImages:
+              portfolioProjects.length > 0 && portfolioProjects[0].galleryImages
+                ? portfolioProjects[0].galleryImages
+                : p.sampleWorkImages,
+          }
+        : p
+    );
+    this.savePainters();
+    this.notify();
+
+    apiClient
+      .put(`/painter/portfolio`, { painterId, portfolioProjects })
+      .catch((err) => {
+        console.warn('API sync portfolio failed (persisted locally):', err);
+      });
+  }
+
   // --- Reviews Accessors & Mutators ---
 
   public getAllReviews(): ReviewItem[] {
@@ -399,6 +501,57 @@ class CatalogStore {
     return this.reviews.filter(
       (r) => r.painterId === painterId && r.status === 'approved'
     );
+  }
+
+  public addReview(review: {
+    painterId: number;
+    author: string;
+    whatsapp?: string;
+    rating: number;
+    area?: string;
+    comment: string;
+    serviceType?: string;
+    status?: 'approved' | 'pending' | 'rejected';
+  }): ReviewItem {
+    if (!this.initialized && isBrowser()) this.loadFromStorage();
+    const newId = this.reviews.length > 0 ? Math.max(...this.reviews.map((r) => r.id)) + 1 : 1;
+    const painter = this.painters.find((p) => p.id === review.painterId);
+
+    const newReview: ReviewItem = {
+      id: newId,
+      painterId: review.painterId,
+      author: review.author.trim() || 'عميل محترم',
+      whatsapp: review.whatsapp?.trim() || '',
+      authorPhone: review.whatsapp?.trim() || '',
+      date: 'اليوم',
+      rating: Number(review.rating) || 5,
+      area: review.area?.trim() || painter?.region || 'الكويت',
+      comment: review.comment.trim(),
+      serviceType: review.serviceType?.trim() || 'تشطيب ودهان عام',
+      verified: true,
+      status: review.status || 'pending', // Pending so admin can review and approve!
+    };
+
+    this.reviews = [newReview, ...this.reviews];
+    this.saveReviews();
+    this.syncPaintersReviewCounts();
+    this.savePainters();
+    this.notify();
+
+    apiClient
+      .post(`/public/painters/${review.painterId}/reviews`, {
+        author: newReview.author,
+        whatsapp: newReview.whatsapp,
+        rating: newReview.rating,
+        area: newReview.area,
+        serviceType: newReview.serviceType,
+        comment: newReview.comment,
+      })
+      .catch((err) => {
+        console.warn('API sync review creation failed (persisted locally):', err);
+      });
+
+    return newReview;
   }
 
   public updateReviewStatus(

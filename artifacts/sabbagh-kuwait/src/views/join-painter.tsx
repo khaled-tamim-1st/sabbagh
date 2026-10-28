@@ -11,6 +11,7 @@ import { Layout } from '@/components/layout';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Link } from '@/lib/nav';
 import { apiClient } from '@/lib/api-client';
+import { catalogStore } from '@/lib/catalog-store';
 import { compressImageToWebP } from '@/lib/image-compressor';
 
 export default function JoinPainterPage() {
@@ -118,11 +119,9 @@ export default function JoinPainterPage() {
 
     setIsSubmitting(true);
     try {
-      const payload = {
-        email: email.trim().toLowerCase(),
-        password,
-        accountType,
+      const newPainter = catalogStore.addPainter({
         name: displayName.trim(),
+        accountType,
         companyName: accountType === 'company' ? (companyName || name).trim() : undefined,
         managerName: accountType === 'company' ? managerName.trim() : undefined,
         commercialLicense: accountType === 'company' ? commercialLicense.trim() : undefined,
@@ -131,24 +130,68 @@ export default function JoinPainterPage() {
         region: selectedGovernorates[0] || 'كل المناطق',
         governorates: selectedGovernorates,
         services: selectedServices,
-        years: years || '5',
-        crewSize: accountType === 'company' ? crewSize || '4' : '1',
+        years: Number(years) || 5,
+        crewSize: accountType === 'company' ? Number(crewSize) || 4 : 1,
         startingAt: `${startingPrice} د.ك`,
-        description: description.trim() || (accountType === 'company' ? `مؤسسة متخصصة في أعمال الأصباغ والتشطيبات الحديثة في الكويت.` : `صباغ محترف بخبرة في الدهانات الداخلية والخارجية والتشطيب.`),
+        description:
+          description.trim() ||
+          (accountType === 'company'
+            ? 'مؤسسة متخصصة في أعمال الأصباغ والتشطيبات الحديثة في الكويت.'
+            : 'صباغ محترف بخبرة في الدهانات الداخلية والخارجية والتشطيب.'),
+        avatarUrl: avatarDataUri || undefined,
         avatar: avatarDataUri || undefined,
-      };
+        status: 'pending',
+      });
 
-      const res = await apiClient.post<any>('/auth/register-painter', payload);
+      // Background API registration
+      try {
+        const payload = {
+          email: email.trim().toLowerCase(),
+          password,
+          accountType,
+          name: displayName.trim(),
+          companyName: accountType === 'company' ? (companyName || name).trim() : undefined,
+          managerName: accountType === 'company' ? managerName.trim() : undefined,
+          commercialLicense: accountType === 'company' ? commercialLicense.trim() : undefined,
+          phone: phone.trim(),
+          whatsapp: whatsapp.trim() || phone.trim(),
+          region: selectedGovernorates[0] || 'كل المناطق',
+          governorates: selectedGovernorates,
+          services: selectedServices,
+          years: years || '5',
+          crewSize: accountType === 'company' ? crewSize || '4' : '1',
+          startingAt: `${startingPrice} د.ك`,
+          description: description.trim() || (accountType === 'company' ? `مؤسسة متخصصة في أعمال الأصباغ والتشطيبات الحديثة في الكويت.` : `صباغ محترف بخبرة في الدهانات الداخلية والخارجية والتشطيب.`),
+          avatar: avatarDataUri || undefined,
+          id: newPainter.id,
+          slug: newPainter.slug,
+        };
+        const res = await apiClient.post<any>('/auth/register-painter', payload);
+        if (res?.token && res?.user) {
+          localStorage.setItem('token', res.token);
+          localStorage.setItem('user', JSON.stringify(res.user));
+        }
+      } catch (apiErr) {
+        console.warn('API register background note (saved locally):', apiErr);
+      }
 
-      // Auto-save auth session so painter is logged in immediately
-      if (res?.token && res?.user) {
-        localStorage.setItem('token', res.token);
-        localStorage.setItem('user', JSON.stringify(res.user));
+      // Auto-save auth session for new painter if not set
+      if (!localStorage.getItem('token')) {
+        const mockUser = {
+          id: newPainter.id,
+          email: email.trim().toLowerCase(),
+          name: newPainter.name,
+          phone: newPainter.phone,
+          role: 'painter',
+          painterProfile: newPainter,
+        };
+        localStorage.setItem('token', `demo-token-${newPainter.id}`);
+        localStorage.setItem('user', JSON.stringify(mockUser));
       }
 
       setSubmittedData({
-        id: res?.painter?.id,
-        slug: res?.painter?.slug,
+        id: newPainter.id,
+        slug: newPainter.slug,
         accountType,
         name: displayName,
         phone,
@@ -437,7 +480,7 @@ export default function JoinPainterPage() {
           /* نموذج التسجيل المتكامل المتجاوب للهاتف */
           <div className="join-main-grid">
             {/* استمارة التسجيل */}
-            <form onSubmit={handleSubmit} className="join-form-card">
+            <form onSubmit={handleSubmit} className="join-form-card" data-webmcp-tool="register_painter" aria-label="نموذج انضمام صباغ أو مؤسسة دهانات">
               {/* الخطوة 1: اختيار الكيان (مؤسسة أو فني) */}
               <div style={{ marginBottom: '24px' }}>
                 <span
@@ -595,6 +638,7 @@ export default function JoinPainterPage() {
                       <input
                         id="company-name"
                         name="company-name"
+                        aria-label="اسم المؤسسة أو الورشة"
                         required
                         className="form-input"
                         placeholder="مثال: مؤسسة لون الدار للأصباغ"
@@ -607,6 +651,7 @@ export default function JoinPainterPage() {
                       <input
                         id="manager-name"
                         name="manager-name"
+                        aria-label="اسم المدير أو المشرف المسؤول"
                         required
                         className="form-input"
                         placeholder="مثال: م. أحمد المطيري"
@@ -621,6 +666,7 @@ export default function JoinPainterPage() {
                     <input
                       id="painter-name"
                       name="name"
+                      aria-label="الاسم والكنية المهنية"
                       required
                       className="form-input"
                       placeholder="مثال: المعلم أبو خالد الكندري"
@@ -639,6 +685,7 @@ export default function JoinPainterPage() {
                         <input
                           id="comm-license"
                           name="commercial-license"
+                          aria-label="رقم السجل التجاري أو الترخيص"
                           className="form-input"
                           placeholder="مثال: CR-49821-KW"
                           value={commercialLicense}
@@ -650,6 +697,7 @@ export default function JoinPainterPage() {
                         <input
                           id="crew-size"
                           name="crew-size"
+                          aria-label="حجم طاقم الفنيين بالورشة"
                           type="number"
                           inputMode="numeric"
                           min="1"
@@ -666,6 +714,7 @@ export default function JoinPainterPage() {
                       <input
                         id="exp-years"
                         name="experience-years"
+                        aria-label="سنوات الخبرة في الكويت"
                         type="number"
                         inputMode="numeric"
                         min="1"
@@ -685,6 +734,7 @@ export default function JoinPainterPage() {
                     <input
                       id="painter-phone"
                       name="phone"
+                      aria-label="رقم هاتف الاتصال المباشر"
                       required
                       type="tel"
                       inputMode="tel"
@@ -701,6 +751,7 @@ export default function JoinPainterPage() {
                     <input
                       id="painter-wa"
                       name="whatsapp"
+                      aria-label="رقم الواتساب للمحادثات المباشرة"
                       required
                       type="tel"
                       inputMode="tel"
@@ -721,6 +772,7 @@ export default function JoinPainterPage() {
                     <input
                       id="login-email"
                       name="email"
+                      aria-label="البريد الإلكتروني لدخول لوحة التحكم"
                       required
                       type="email"
                       inputMode="email"
@@ -738,6 +790,7 @@ export default function JoinPainterPage() {
                       <input
                         id="login-password"
                         name="password"
+                        aria-label="كلمة المرور"
                         required
                         type={showPassword ? 'text' : 'password'}
                         autoComplete="new-password"
@@ -759,7 +812,7 @@ export default function JoinPainterPage() {
                           transform: 'translateY(-50%)',
                           background: 'none',
                           border: 'none',
-                          color: '#7a8277',
+                          color: '#4a5649',
                           cursor: 'pointer',
                           width: '42px',
                           height: '42px',
@@ -835,7 +888,7 @@ export default function JoinPainterPage() {
                         <input type="file" accept="image/*" onChange={handleAvatarSelect} style={{ display: 'none' }} />
                       </label>
                     )}
-                    <span style={{ fontSize: '11px', color: '#7a8277', lineHeight: 1.5 }}>
+                    <span style={{ fontSize: '11px', color: '#4a5649', lineHeight: 1.5 }}>
                       يتم ضغط الصورة تلقائياً لـ WebP وتجهيزها للعرض
                     </span>
                   </div>
@@ -917,6 +970,7 @@ export default function JoinPainterPage() {
                     <input
                       id="starting-price"
                       name="starting-price"
+                      aria-label="سعر البدء للغرفة بالدينار الكويتي"
                       type="number"
                       inputMode="numeric"
                       min="10"
@@ -932,6 +986,7 @@ export default function JoinPainterPage() {
                     <input
                       id="painter-desc"
                       name="description"
+                      aria-label="نبذة تعريفية ومميزات العمل"
                       className="form-input"
                       placeholder="مثال: دقة في المواعيد، حماية تامة للأثاث، وضمان 5 سنوات"
                       value={description}

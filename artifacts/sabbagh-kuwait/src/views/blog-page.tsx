@@ -112,6 +112,8 @@ export default function BlogPage() {
 
             {/* شريط البحث في المقالات */}
             <div
+              role="search"
+              aria-label="البحث في مقالات ونصائح الصباغة والديكور"
               style={{
                 position: 'relative',
                 maxWidth: '460px',
@@ -119,10 +121,13 @@ export default function BlogPage() {
             >
               <Search
                 size={18}
-                color="#647368"
+                color="#4a5649"
                 style={{ position: 'absolute', right: '14px', top: '50%', transform: 'translateY(-50%)' }}
               />
               <input
+                id="blog-search-input"
+                name="blogSearch"
+                aria-label="ابحث في مقالات ونصائح الصباغة والديكور"
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -190,7 +195,7 @@ export default function BlogPage() {
                 >
                   مقال مميز
                 </span>
-                <span style={{ fontSize: '12px', color: '#889389' }}>
+                <span style={{ fontSize: '12px', color: '#4a5649' }}>
                   {featuredArticle.categoryLabelAr}
                 </span>
               </div>
@@ -198,6 +203,7 @@ export default function BlogPage() {
               <h2 style={{ fontSize: '24px', color: '#17483e', margin: '0 0 12px', fontWeight: 700, lineHeight: 1.4 }}>
                 <Link
                   href={`/blog/${featuredArticle.slug}`}
+                  aria-label={`اقرأ مقال: ${featuredArticle.title}`}
                   style={{ color: 'inherit', textDecoration: 'none' }}
                 >
                   {featuredArticle.title}
@@ -208,9 +214,9 @@ export default function BlogPage() {
                 {featuredArticle.excerpt}
               </p>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '12px', color: '#77847c', marginBottom: '20px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', fontSize: '12px', color: '#4a5649', marginBottom: '20px' }}>
                 <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  <User size={14} color="#c7664f" />
+                  <User size={14} color="#9c3b24" />
                   <strong>{featuredArticle.author.name}</strong>
                 </span>
                 <span>•</span>
@@ -227,6 +233,7 @@ export default function BlogPage() {
 
               <Link
                 href={`/blog/${featuredArticle.slug}`}
+                aria-label={`اقرأ مقال: ${featuredArticle.title}`}
                 className="contact-button"
                 style={{
                   display: 'inline-flex',
@@ -317,7 +324,7 @@ export default function BlogPage() {
                     >
                       {article.categoryLabelAr}
                     </span>
-                    <span style={{ fontSize: '11px', color: '#889389', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <span style={{ fontSize: '11px', color: '#4a5649', display: 'flex', alignItems: 'center', gap: '4px' }}>
                       <Clock size={12} />
                       {article.readTime}
                     </span>
@@ -334,6 +341,7 @@ export default function BlogPage() {
                   >
                     <Link
                       href={`/blog/${article.slug}`}
+                      aria-label={`مقال: ${article.title}`}
                       style={{ color: 'inherit', textDecoration: 'none' }}
                     >
                       {article.title}
@@ -357,7 +365,7 @@ export default function BlogPage() {
                         key={idx}
                         style={{
                           fontSize: '11px',
-                          color: '#77847c',
+                          color: '#4a5649',
                           background: '#faf6ee',
                           padding: '2px 8px',
                           borderRadius: '4px',
@@ -379,14 +387,15 @@ export default function BlogPage() {
                     justifyContent: 'space-between',
                   }}
                 >
-                  <span style={{ fontSize: '11px', color: '#889389' }}>
+                  <span style={{ fontSize: '11px', color: '#4a5649' }}>
                     إعداد: {article.author.name}
                   </span>
 
                   <Link
                     href={`/blog/${article.slug}`}
+                    aria-label={`قراءة مقال: ${article.title}`}
                     style={{
-                      color: '#c7664f',
+                      color: '#9c3b24',
                       fontWeight: 700,
                       fontSize: '12px',
                       textDecoration: 'none',
@@ -412,11 +421,11 @@ export default function BlogPage() {
               border: '1px solid #e7decd',
             }}
           >
-            <BookOpen size={36} color="#889389" style={{ margin: '0 auto 12px' }} />
+            <BookOpen size={36} color="#4a5649" style={{ margin: '0 auto 12px' }} />
             <h3 style={{ fontSize: '18px', color: '#17483e', margin: '0 0 8px' }}>
               لا توجد مقالات مطابقة لبحثك
             </h3>
-            <p style={{ fontSize: '13px', color: '#77857c', margin: '0 0 16px' }}>
+            <p style={{ fontSize: '13px', color: '#4a5649', margin: '0 0 16px' }}>
               جرّب تغيير كلمة البحث أو تصفح كافة التصنيفات.
             </p>
             <button

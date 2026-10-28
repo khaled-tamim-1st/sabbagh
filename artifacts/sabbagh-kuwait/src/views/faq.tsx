@@ -143,6 +143,8 @@ export default function FaqPage() {
         {/* حقل البحث */}
         <div style={{ maxWidth: '620px', margin: '0 auto 28px' }}>
           <div
+            role="search"
+            aria-label="البحث في الأسئلة الشائعة والضمان"
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -155,6 +157,9 @@ export default function FaqPage() {
           >
             <Search size={18} color="#17483e" style={{ marginLeft: '10px' }} />
             <input
+              id="faq-search-input"
+              name="faqSearch"
+              aria-label="ابحث في الأسئلة الشائعة والضمان"
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -172,8 +177,9 @@ export default function FaqPage() {
             {searchQuery && (
               <button
                 type="button"
+                aria-label="مسح حقل البحث"
                 onClick={() => setSearchQuery('')}
-                style={{ border: 'none', background: 'transparent', color: '#888', cursor: 'pointer', fontSize: '12px' }}
+                style={{ border: 'none', background: 'transparent', color: '#4a5649', cursor: 'pointer', fontSize: '12px' }}
               >
                 مسح
               </button>
@@ -324,6 +330,7 @@ export default function FaqPage() {
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <Link
               href="/request-quote"
+              aria-label="احسب التكلفة واطلب معاينة فنية مجانية لبيتك"
               className="saved-nav"
               style={{ background: '#e9bd77', color: '#17483e', border: 'none', padding: '12px 20px', textDecoration: 'none' }}
             >
@@ -331,6 +338,7 @@ export default function FaqPage() {
             </Link>
             <Link
               href="/"
+              aria-label="تصفح قائمة الصباغين المعتمدين في الكويت"
               className="saved-nav"
               style={{ background: 'transparent', color: '#fff', borderColor: 'rgba(255,255,255,0.4)', padding: '12px 18px', textDecoration: 'none' }}
             >

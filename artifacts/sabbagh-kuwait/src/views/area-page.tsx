@@ -1057,11 +1057,20 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                   </div>
                 </div>
               ) : (
-                <form className="contact-form" onSubmit={handleModalSubmit}>
+                <form
+                  className="contact-form"
+                  onSubmit={handleModalSubmit}
+                  data-webmcp-tool="area_inspection_request"
+                  data-webmcp-description={`طلب معاينة صباغ مجانية في منطقة ${area.nameAr} - ${governorate.nameAr}`}
+                  aria-label={`طلب معاينة صباغ في ${area.nameAr}`}
+                >
                   <label className="form-label" htmlFor="cust-name">الاسم الكريم</label>
                   <input
                     className="form-input"
                     id="cust-name"
+                    name="customerName"
+                    aria-label="الاسم الكريم"
+                    autoComplete="name"
                     required
                     value={modalCustomerName}
                     onChange={(e) => setModalCustomerName(e.target.value)}
@@ -1072,6 +1081,9 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                   <input
                     className="form-input"
                     id="cust-phone"
+                    name="customerPhone"
+                    aria-label="رقم الهاتف في الكويت"
+                    autoComplete="tel"
                     required
                     type="tel"
                     value={modalCustomerPhone}
@@ -1079,8 +1091,11 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                     placeholder="مثال: 9XXXXXXX أو 5XXXXXXX"
                   />
 
-                  <label className="form-label">المنطقة والموقع</label>
+                  <label className="form-label" htmlFor="area-location-fixed">المنطقة والموقع</label>
                   <input
+                    id="area-location-fixed"
+                    name="location"
+                    aria-label="المنطقة والموقع المحدد"
                     className="form-input"
                     disabled
                     value={`${area.nameAr} - محافظة ${governorate.nameAr}`}
@@ -1183,17 +1198,25 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
               </div>
 
               {/* حقل بحث سريع داخل المحافظة */}
-              <div style={{ minWidth: '240px' }}>
+              <div style={{ minWidth: '240px' }} role="search">
                 <div className="search-field" style={{ background: '#fffdf8', border: '1px solid #dcd3c1', borderRadius: '12px', padding: '6px 12px' }}>
-                  <Search size={16} />
+                  <Search size={16} aria-hidden="true" />
                   <input
+                    id="gov-area-search"
+                    name="govAreaSearch"
+                    aria-label={`ابحث داخل مناطق ${governorate.nameAr}`}
                     placeholder={`ابحث داخل ${governorate.nameAr}...`}
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     style={{ fontSize: '12px', padding: '6px 0' }}
                   />
                   {searchQuery && (
-                    <button type="button" onClick={() => setSearchQuery('')} style={{ background: 'none', border: 'none', padding: 0 }}>
+                    <button
+                      type="button"
+                      onClick={() => setSearchQuery('')}
+                      aria-label="مسح حقل البحث"
+                      style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+                    >
                       <X size={14} />
                     </button>
                   )}
@@ -1206,6 +1229,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                 <Link
                   key={item.id}
                   href={`/areas/${governorate.id}/${item.id}`}
+                  aria-label={`صباغ منطقة ${item.nameAr} - ${item.nameEn}`}
                   style={{
                     background: '#fffdf8',
                     border: '1px solid #e4dccc',
@@ -1387,7 +1411,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
           </p>
 
           {/* محرك البحث الفوري عن أي منطقة */}
-          <div style={{ marginTop: '28px', maxWidth: '640px' }}>
+          <div style={{ marginTop: '28px', maxWidth: '640px' }} role="search">
             <div
               style={{
                 background: '#fffdf8',
@@ -1399,9 +1423,12 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                 boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
               }}
             >
-              <Search size={20} color="#17483e" />
+              <Search size={20} color="#17483e" aria-hidden="true" />
               <input
+                id="all-areas-search-input"
+                name="areasQuery"
                 type="text"
+                aria-label="ابحث عن منطقتك في الكويت"
                 placeholder="ابحث عن منطقتك (مثال: الرميثية، المطلاع، السالمية، كيفان، صباح السالم...)"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -1419,6 +1446,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                 <button
                   type="button"
                   onClick={() => setSearchQuery('')}
+                  aria-label="مسح حقل البحث"
                   style={{ background: 'none', border: 'none', color: '#687063', cursor: 'pointer' }}
                 >
                   <X size={18} />

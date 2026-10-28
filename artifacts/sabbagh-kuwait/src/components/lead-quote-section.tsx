@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { KUWAIT_GOVERNORATES } from '@/data/kuwait-areas';
 import { apiClient } from '@/lib/api-client';
+import { catalogStore } from '@/lib/catalog-store';
 
 interface LeadQuoteSectionProps {
   initialService?: string;
@@ -70,7 +71,7 @@ export function LeadQuoteSection({
     setIsSubmitting(true);
 
     try {
-      await apiClient.post('/public/quotes', {
+      catalogStore.addQuote({
         customerName: customerName.trim() || 'عميل محترم',
         customerPhone: customerPhone.trim(),
         customerNotes: `الخدمة: ${serviceType} | المنطقة: ${area || currentGovObj.nameAr} | ملاحظات: ${notes}`,
@@ -90,8 +91,7 @@ export function LeadQuoteSection({
       setIsSuccess(true);
       if (onSuccess) onSuccess();
     } catch (err) {
-      console.warn('API error, falling back to client success:', err);
-      // Even if API is static/offline, acknowledge the user so they can WhatsApp directly
+      console.warn('Quote submission note:', err);
       setIsSuccess(true);
       if (onSuccess) onSuccess();
     } finally {

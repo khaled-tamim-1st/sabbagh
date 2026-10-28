@@ -138,7 +138,7 @@ export default function ServicesGuidePage() {
                   <span className="tag" style={{ background: '#f2eee5', color: '#17483e', fontWeight: 600 }}>
                     {service.categoryLabelAr}
                   </span>
-                  <span style={{ fontSize: '11px', color: '#888b7d' }}>{service.executionTime}</span>
+                  <span style={{ fontSize: '11px', color: '#4a5649' }}>{service.executionTime}</span>
                 </div>
 
                 <h3 style={{ fontSize: '18px', color: '#1d4038', margin: '0 0 8px', fontWeight: 700 }}>
@@ -175,11 +175,11 @@ export default function ServicesGuidePage() {
               <div style={{ borderTop: '1px solid #eee8dc', paddingTop: '16px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
                   <div>
-                    <span style={{ fontSize: '10px', color: '#828378', display: 'block' }}>نطاق السعر الإرشادي</span>
+                    <span style={{ fontSize: '10px', color: '#4a5649', display: 'block' }}>نطاق السعر الإرشادي</span>
                     <strong style={{ fontSize: '17px', color: '#17483e' }}>
                       {service.price.fromKWD} - {service.price.toKWD} د.ك
                     </strong>
-                    <span style={{ fontSize: '11px', color: '#6d746a' }}> ({service.price.unit})</span>
+                    <span style={{ fontSize: '11px', color: '#4a5649' }}> ({service.price.unit})</span>
                   </div>
 
                   <span className="tag" style={{ background: '#eaf4ee', color: '#275347', fontWeight: 700 }}>
@@ -191,14 +191,16 @@ export default function ServicesGuidePage() {
                   <Link
                     href={`/services/${service.slug}`}
                     className="detail-button"
+                    aria-label={`صفحة أسعار وتفاصيل خدمة ${service.title}`}
                     style={{ flex: 1, textAlign: 'center', textDecoration: 'none', display: 'grid', placeItems: 'center' }}
                   >
-                    صفحة الخدمة والأسعار
+                    تفاصيل الخدمة والأسعار
                   </Link>
 
                   <Link
                     href={`/request-quote?service=${encodeURIComponent(service.id)}`}
                     className="contact-button"
+                    aria-label={`طلب عرض سعر ومقايسة لخدمة ${service.title}`}
                     style={{ flex: 1, textAlign: 'center', textDecoration: 'none', display: 'grid', placeItems: 'center' }}
                   >
                     طلب عرض سعر
@@ -214,7 +216,7 @@ export default function ServicesGuidePage() {
           <h2 style={{ fontSize: '20px', color: '#1d4038', margin: '0 0 8px' }}>
             جدول متوسط أسعار الأصباغ والديكورات في الكويت (KWD)
           </h2>
-          <p style={{ fontSize: '13px', color: '#72776d', margin: '0 0 20px' }}>
+          <p style={{ fontSize: '13px', color: '#4a5649', margin: '0 0 20px' }}>
             دليل إرشادي محدث لمتوسط التكاليف بالسوق الكويتي شامل الصبغ الأصلي والعمالة.
           </p>
 
@@ -300,6 +302,7 @@ export default function ServicesGuidePage() {
               <div style={{ display: 'flex', gap: '10px' }}>
                 <Link
                   href="/request-quote"
+                  aria-label={`احسب تكلفة ${activeServiceModal.title} الآن عبر حاسبة الأسعار`}
                   className="contact-button modal-action"
                   style={{ textAlign: 'center', textDecoration: 'none', display: 'grid', placeItems: 'center', margin: 0 }}
                   onClick={() => setActiveServiceModal(null)}

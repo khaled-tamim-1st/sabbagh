@@ -556,12 +556,12 @@ export const SiteFooter: FC = () => {
           }}
         >
           <div>
-            جميع الحقوق محفوظة © {new Date().getFullYear()} صباغ الكويت · منصة خدمات وتشطيب المنازل
+            جميع الحقوق محفوظة © {new Date().getFullYear()} صباغ الكويت · إحدى خدمات منصة فني الكويت المعتمدة
           </div>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
             <span style={{ color: '#d9c597' }}>تواصل مباشر مع الصباغ بدون وسيط أو عمولة</span>
             <span>•</span>
-            <Link href="/faq" style={{ color: 'inherit', textDecoration: 'none' }}>الضمان والمصداقية</Link>
+            <Link href="/faq" aria-label="شروط الضمان والمصداقية" style={{ color: 'inherit', textDecoration: 'none' }}>الضمان والمصداقية</Link>
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import { apiClient } from '@/lib/api-client';
 import { Layout } from '@/components/layout';
 import { compressImageToWebP } from '@/lib/image-compressor';
 import { AvatarCropperModal } from '@/components/avatar-cropper-modal';
+import { catalogStore } from '@/lib/catalog-store';
 import type { PortfolioProject, PortfolioImage } from '@/data/painters';
 import {
   Paintbrush,

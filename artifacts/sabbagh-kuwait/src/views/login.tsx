@@ -240,7 +240,7 @@ export default function LoginPage() {
             )}
 
             {/* Login Form */}
-            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <form onSubmit={handleSubmit} aria-label="تسجيل الدخول إلى منصة صباغ الكويت" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <div>
                 <label
                   htmlFor="login-email"
@@ -251,7 +251,10 @@ export default function LoginPage() {
                 <div style={{ position: 'relative' }}>
                   <input
                     id="login-email"
+                    name="email"
                     type="email"
+                    autoComplete="email"
+                    aria-label="البريد الإلكتروني"
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -270,7 +273,7 @@ export default function LoginPage() {
                   />
                   <Mail
                     size={18}
-                    color="#889389"
+                    color="#4a5649"
                     style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)' }}
                   />
                 </div>
@@ -286,7 +289,10 @@ export default function LoginPage() {
                 <div style={{ position: 'relative' }}>
                   <input
                     id="login-password"
+                    name="password"
                     type="password"
+                    autoComplete="current-password"
+                    aria-label="كلمة المرور"
                     required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
@@ -305,7 +311,7 @@ export default function LoginPage() {
                   />
                   <KeyRound
                     size={18}
-                    color="#889389"
+                    color="#4a5649"
                     style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)' }}
                   />
                 </div>
@@ -313,6 +319,7 @@ export default function LoginPage() {
 
               <button
                 type="submit"
+                aria-label="تسجيل الدخول إلى لوحة التحكم"
                 disabled={isSubmitting}
                 style={{
                   marginTop: '8px',
@@ -349,10 +356,10 @@ export default function LoginPage() {
                 fontSize: '12px',
               }}
             >
-              <Link href="/join-painter" style={{ color: '#c7664f', fontWeight: 600, textDecoration: 'none' }}>
+              <Link href="/join-painter" style={{ color: '#9c3b24', fontWeight: 600, textDecoration: 'none' }}>
                 لست مسجلاً؟ انضم كصباغ
               </Link>
-              <Link href="/" style={{ color: '#687266', textDecoration: 'none' }}>
+              <Link href="/" style={{ color: '#4a5649', textDecoration: 'none' }}>
                 العودة للرئيسية
               </Link>
             </div>

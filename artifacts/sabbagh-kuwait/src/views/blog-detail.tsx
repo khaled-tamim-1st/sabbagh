@@ -58,7 +58,9 @@ export default function BlogDetailPage({ slug: propSlug }: { slug?: string }) {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'صباغ الكويت',
+      name: 'فني الكويت | صباغ الكويت',
+      alternateName: 'صباغ الكويت',
+      brand: 'فني الكويت',
       url: 'https://sabbagh-kuwait.com',
       logo: 'https://sabbagh-kuwait.com/logo.png',
     },
@@ -467,7 +469,7 @@ export default function BlogDetailPage({ slug: propSlug }: { slug?: string }) {
               boxShadow: '0 6px 20px rgba(23,72,62,0.06)',
             }}
           >
-            <span style={{ fontSize: '11px', color: '#c7664f', fontWeight: 700, display: 'block', marginBottom: '6px' }}>
+            <span style={{ fontSize: '11px', color: '#9c3b24', fontWeight: 700, display: 'block', marginBottom: '6px' }}>
               خدمة سريعة في كل مناطق الكويت
             </span>
             <h3 style={{ fontSize: '18px', color: '#17483e', margin: '0 0 10px', fontWeight: 700 }}>
@@ -479,6 +481,7 @@ export default function BlogDetailPage({ slug: propSlug }: { slug?: string }) {
 
             <Link
               href="/request-quote"
+              aria-label="احسب تكلفة غرف بيتك فوراً عبر حاسبة الأسعار"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -501,6 +504,7 @@ export default function BlogDetailPage({ slug: propSlug }: { slug?: string }) {
 
             <Link
               href="/#directory"
+              aria-label="تصفح دليل الصباغين المعتمدين في الكويت"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -537,6 +541,7 @@ export default function BlogDetailPage({ slug: propSlug }: { slug?: string }) {
                 <Link
                   key={rel.id}
                   href={`/blog/${rel.slug}`}
+                  aria-label={`قراءة مقال ذو صلة: ${rel.title}`}
                   style={{
                     background: '#fff',
                     border: '1px solid #e7decd',
@@ -546,13 +551,13 @@ export default function BlogDetailPage({ slug: propSlug }: { slug?: string }) {
                     display: 'block',
                   }}
                 >
-                  <span style={{ fontSize: '10px', color: '#c7664f', fontWeight: 700, display: 'block', marginBottom: '4px' }}>
+                  <span style={{ fontSize: '10px', color: '#9c3b24', fontWeight: 700, display: 'block', marginBottom: '4px' }}>
                     {rel.categoryLabelAr}
                   </span>
                   <h4 style={{ margin: '0 0 6px', fontSize: '13px', color: '#17483e', fontWeight: 700, lineHeight: 1.4 }}>
                     {rel.title}
                   </h4>
-                  <span style={{ fontSize: '11px', color: '#889389', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                  <span style={{ fontSize: '11px', color: '#4a5649', display: 'flex', alignItems: 'center', gap: '4px' }}>
                     <Clock size={11} />
                     {rel.readTime}
                   </span>
