@@ -48,7 +48,7 @@ router.put("/profile", (req: Request, res: Response) => {
     crewSize,
     coverageAreaIds,
     primaryGovernorates,
-  } = req.body;
+  } = req.body || {};
 
   const updated = storage.updatePainter(painter.id, {
     ...(name !== undefined ? { name } : {}),
@@ -128,7 +128,7 @@ router.post("/portfolio", async (req: Request, res: Response) => {
     return;
   }
 
-  const { title, category } = req.body;
+  const { title, category } = req.body || {};
   if (!title || !category) {
     res.status(400).json({ error: "title and category are required" });
     return;
@@ -190,7 +190,7 @@ router.patch("/availability", (req: Request, res: Response) => {
     return;
   }
 
-  const { isAvailable } = req.body;
+  const { isAvailable } = req.body || {};
   if (typeof isAvailable !== "boolean") {
     res.status(400).json({ error: "isAvailable (boolean) is required in request body" });
     return;
@@ -249,7 +249,7 @@ router.patch("/quotes/:id/status", (req: Request, res: Response) => {
     return;
   }
 
-  const { status } = req.body;
+  const { status } = req.body || {};
   if (!status) {
     res.status(400).json({ error: "status is required in request body" });
     return;

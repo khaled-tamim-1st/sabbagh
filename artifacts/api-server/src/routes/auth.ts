@@ -22,7 +22,7 @@ const registerLimiter = createRateLimiter({
 
 // POST /login
 router.post("/login", loginLimiter, (req: Request, res: Response) => {
-  const { email, password } = req.body;
+  const { email, password } = req.body || {};
 
   if (!email || !password) {
     res.status(400).json({ error: "Email and password are required" });
@@ -91,7 +91,8 @@ router.get("/me", authenticate, (req: Request, res: Response) => {
 
 // POST /register-painter
 router.post("/register-painter", registerLimiter, async (req: Request, res: Response) => {
-  const { email, password, name, phone } = req.body;
+  const b = req.body || {};
+  const { email, password, name, phone } = b;
 
   if (!email || !password || !name || !phone) {
     res.status(400).json({ error: "الاسم والبريد الإلكتروني وكلمة المرور ورقم الهاتف حقول مطلوبة" });
@@ -105,15 +106,15 @@ router.post("/register-painter", registerLimiter, async (req: Request, res: Resp
   }
 
   try {
-    const accountType = req.body.accountType === "company" ? "company" : "individual";
-    const companyName = req.body.companyName || (accountType === "company" ? name : null);
-    const managerName = req.body.managerName || null;
-    const commercialLicense = req.body.commercialLicense || null;
+    const accountType = b.accountType === "company" ? "company" : "individual";
+    const companyName = b.companyName || (accountType === "company" ? name : null);
+    const managerName = b.managerName || null;
+    const commercialLicense = b.commercialLicense || null;
 
     // 1. Process Avatar upload if provided
-    let avatarUrl: string | null = req.body.avatarUrl || null;
+    let avatarUrl: string | null = b.avatarUrl || null;
     let avatarPublicId: string | null = null;
-    if (req.body.avatar && typeof req.body.avatar === "string" && req.body.avatar.startsWith("data:")) {
+    if (b.avatar && typeof b.avatar === "string" && b.avatar.startsWith("data:")) {
       try {
         const avatarRes = await uploadImageToCloudinary({
           dataUriOrBase64: req.body.avatar,

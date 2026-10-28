@@ -154,21 +154,28 @@ export default function PainterDashboardPage() {
     fetchLeads();
   }, []);
 
-  // Load portfolio from API
+  // Load portfolio from store and API
   useEffect(() => {
     const fetchPortfolio = async () => {
+      const painterId = user?.painterProfile?.id || 1;
+      const painterRecord = catalogStore.getPainterById(painterId);
+      if (painterRecord && Array.isArray(painterRecord.portfolioProjects) && painterRecord.portfolioProjects.length > 0) {
+        setPortfolioProjects(painterRecord.portfolioProjects);
+      }
+
       try {
         const remotePortfolio = await apiClient.get<PortfolioProject[]>('/painter/portfolio');
-        if (Array.isArray(remotePortfolio)) {
+        if (Array.isArray(remotePortfolio) && remotePortfolio.length > 0) {
           setPortfolioProjects(remotePortfolio);
+          catalogStore.updatePainterPortfolio(painterId, remotePortfolio);
         }
       } catch (err) {
-        console.warn('Using cached or seed portfolio:', err);
+        console.warn('Using catalogStore portfolio:', err);
       }
     };
 
     fetchPortfolio();
-  }, []);
+  }, [user]);
 
   // Availability Toggle Handler
   const handleToggleAvailability = async () => {
@@ -395,44 +402,36 @@ export default function PainterDashboardPage() {
       afterDetails: formDisplayMode === 'before_after' ? formAfterDetails.trim() : undefined,
     };
 
+    const painterId = user?.painterProfile?.id || 1;
+    let nextProjects: PortfolioProject[] = [];
+
+    if (editingProject) {
+      const updatedItem: PortfolioProject = { ...editingProject, ...payload };
+      nextProjects = portfolioProjects.map((p) => (p.id === editingProject.id ? updatedItem : p));
+    } else {
+      const newProj: PortfolioProject = {
+        ...payload,
+        id: `proj-${Date.now()}`,
+        painterId,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+      nextProjects = [newProj, ...portfolioProjects];
+    }
+
+    setPortfolioProjects(nextProjects);
+    catalogStore.updatePainterPortfolio(painterId, nextProjects);
+    setIsProjectModalOpen(false);
+
     try {
       if (editingProject) {
-        const updated = await apiClient.put(`/painter/portfolio/${editingProject.id}`, payload);
-        const resolved = updated && updated.id ? updated : { ...editingProject, ...payload };
-        setPortfolioProjects((prev) =>
-          prev.map((p) => (p.id === editingProject.id ? resolved : p))
-        );
+        await apiClient.put(`/painter/portfolio/${editingProject.id}`, payload);
       } else {
-        const created = await apiClient.post('/painter/portfolio', payload);
-        const newProj: PortfolioProject = created && created.id ? created : {
-          ...payload,
-          id: `proj-${Date.now()}`,
-          painterId: user?.painterProfile?.id || 1,
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-        };
-        setPortfolioProjects((prev) => [newProj, ...prev]);
+        await apiClient.post('/painter/portfolio', payload);
       }
-      setIsProjectModalOpen(false);
       await refreshUser();
     } catch (err: any) {
-      console.warn('API sync note, updating local portfolio state:', err);
-      alert('حدث خطأ أثناء حفظ المشروع: ' + (err?.message || 'تعذر الاتصال بالخادم'));
-      if (editingProject) {
-        setPortfolioProjects((prev) =>
-          prev.map((p) => (p.id === editingProject.id ? { ...p, ...payload, id: editingProject.id } : p))
-        );
-      } else {
-        const newProj: PortfolioProject = {
-          ...payload,
-          id: `proj-${Date.now()}`,
-          painterId: user?.painterProfile?.id || 1,
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-        };
-        setPortfolioProjects((prev) => [newProj, ...prev]);
-      }
-      setIsProjectModalOpen(false);
+      console.warn('API sync portfolio note (saved locally in catalogStore):', err);
     } finally {
       setIsSubmittingProject(false);
     }
@@ -444,12 +443,16 @@ export default function PainterDashboardPage() {
       return;
     }
 
+    const painterId = user?.painterProfile?.id || 1;
+    const nextProjects = portfolioProjects.filter((p) => p.id !== projectId);
+    setPortfolioProjects(nextProjects);
+    catalogStore.updatePainterPortfolio(painterId, nextProjects);
+
     try {
       await apiClient.delete(`/painter/portfolio/${projectId}`);
     } catch (err) {
-      console.warn('API delete note, removing from local state:', err);
+      console.warn('API delete note (removed locally from catalogStore):', err);
     }
-    setPortfolioProjects((prev) => prev.filter((p) => p.id !== projectId));
   };
 
   if (authLoading || !user || user.role !== 'painter') {

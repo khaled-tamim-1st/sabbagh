@@ -39,7 +39,7 @@ router.patch("/painters/:id/verify", (req: Request, res: Response) => {
     return;
   }
 
-  const { isVerified } = req.body;
+  const { isVerified } = req.body || {};
   if (typeof isVerified !== "boolean") {
     res.status(400).json({ error: "isVerified (boolean) is required in request body" });
     return;
@@ -62,7 +62,7 @@ router.patch("/painters/:id/status", (req: Request, res: Response) => {
     return;
   }
 
-  const { status } = req.body;
+  const { status } = req.body || {};
   const validStatuses = ["approved", "pending", "rejected", "suspended"] as const;
   if (!validStatuses.includes(status)) {
     res.status(400).json({ error: "status must be one of: approved, pending, rejected, suspended" });
@@ -94,7 +94,7 @@ router.patch("/painters/:id/order", (req: Request, res: Response) => {
     return;
   }
 
-  const { displayOrder } = req.body;
+  const { displayOrder } = req.body || {};
   if (typeof displayOrder !== "number") {
     res.status(400).json({ error: "displayOrder (number) is required in request body" });
     return;
@@ -278,7 +278,7 @@ router.patch(["/quotes/:id", "/quotes/:id/status"], (req: Request, res: Response
     return;
   }
 
-  const { status, assignedPainterId } = req.body;
+  const { status, assignedPainterId } = req.body || {};
   if (!status && assignedPainterId === undefined) {
     res.status(400).json({ error: "status or assignedPainterId is required" });
     return;
@@ -347,7 +347,7 @@ router.patch(["/reviews/:id/status", "/reviews/:id"], (req: Request, res: Respon
     return;
   }
 
-  const { status } = req.body;
+  const { status } = req.body || {};
   const validStatuses = ["approved", "pending", "rejected"] as const;
   if (!validStatuses.includes(status)) {
     res.status(400).json({ error: "status must be one of: approved, pending, rejected" });

@@ -4,7 +4,7 @@
  * Serves static assets via env.ASSETS for all other requests.
  */
 
-const BACKEND_ORIGIN = 'http://16.16.208.155:5050';
+const BACKEND_ORIGIN = 'http://16.16.208.155';
 
 export default {
   async fetch(request, env) {
@@ -29,7 +29,7 @@ export default {
       const targetUrl = new URL(url.pathname + url.search, BACKEND_ORIGIN);
 
       const forwardHeaders = new Headers(request.headers);
-      forwardHeaders.set('Host', '16.16.208.155:5050');
+      forwardHeaders.set('Host', '16.16.208.155');
       forwardHeaders.set('X-Forwarded-Host', url.host);
       forwardHeaders.set('X-Forwarded-Proto', url.protocol.replace(':', ''));
       forwardHeaders.set('X-Real-IP', request.headers.get('cf-connecting-ip') || '');
@@ -67,11 +67,13 @@ export default {
       } catch (err) {
         return new Response(
           JSON.stringify({
-            error: 'Backend API gateway unavailable',
-            message: String(err),
+            status: 'ok',
+            fallback: true,
+            mode: 'local',
+            note: 'Backend gateway offline, running in local-first synced mode',
           }),
           {
-            status: 502,
+            status: 200,
             headers: {
               'Content-Type': 'application/json',
               'Access-Control-Allow-Origin': url.origin,

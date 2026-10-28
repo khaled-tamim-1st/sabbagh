@@ -34,7 +34,7 @@ router.post("/quotes", quoteLimiter, (req: Request, res: Response) => {
     estimatedMaxKwd,
     estimatedAverageKwd,
     assignedPainterId,
-  } = req.body;
+  } = req.body || {};
 
   if (!customerPhone) {
     res.status(400).json({ error: "Customer phone number is required" });
@@ -121,7 +121,7 @@ router.post("/painters/:id/reviews", reviewLimiter, (req: Request, res: Response
     return;
   }
 
-  const { author, whatsapp, rating, comment, area, serviceType } = req.body;
+  const { author, whatsapp, rating, comment, area, serviceType } = req.body || {};
 
   if (!author || !author.trim()) {
     res.status(400).json({ error: "اسم صاحب التقييم مطلوب" });
@@ -169,7 +169,7 @@ router.post("/painters/:id/reviews", reviewLimiter, (req: Request, res: Response
 
 // POST /inquiries
 router.post("/inquiries", (req: Request, res: Response) => {
-  const { customerName, customerPhone, message, painterId } = req.body;
+  const { customerName, customerPhone, message, painterId } = req.body || {};
 
   if (!customerPhone) {
     res.status(400).json({ error: "Customer phone number is required" });
