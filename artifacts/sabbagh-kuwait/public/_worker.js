@@ -4,7 +4,7 @@
  * Serves static assets via env.ASSETS for all other requests.
  */
 
-const BACKEND_ORIGIN = 'http://16.16.208.155';
+const BACKEND_ORIGIN = 'http://ec2-16-16-208-155.eu-north-1.compute.amazonaws.com';
 
 export default {
   async fetch(request, env) {
@@ -29,7 +29,7 @@ export default {
       const targetUrl = new URL(url.pathname + url.search, BACKEND_ORIGIN);
 
       const forwardHeaders = new Headers(request.headers);
-      forwardHeaders.set('Host', '16.16.208.155');
+      forwardHeaders.set('Host', 'ec2-16-16-208-155.eu-north-1.compute.amazonaws.com');
       forwardHeaders.set('X-Forwarded-Host', url.host);
       forwardHeaders.set('X-Forwarded-Proto', url.protocol.replace(':', ''));
       forwardHeaders.set('X-Real-IP', request.headers.get('cf-connecting-ip') || '');
@@ -41,17 +41,6 @@ export default {
           body: request.method !== 'GET' && request.method !== 'HEAD' ? request.body : undefined,
           redirect: 'follow',
         });
-
-        if (backendResponse.status === 403) {
-          return new Response(JSON.stringify({ status: 'ok', fallback: true, mode: 'local' }), {
-            status: 200,
-            headers: {
-              'Content-Type': 'application/json',
-              'Access-Control-Allow-Origin': url.origin,
-              'Access-Control-Allow-Credentials': 'true',
-            },
-          });
-        }
 
         const responseHeaders = new Headers(backendResponse.headers);
         responseHeaders.set('Access-Control-Allow-Origin', url.origin);
