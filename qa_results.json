@@ -1,0 +1,168 @@
+{
+  "total": 32,
+  "passed": 31,
+  "failed": 0,
+  "warnings": 1,
+  "tests": [
+    {
+      "name": "Route: /",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /services-guide/",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /request-quote/",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /join-painter/",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /blog/",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /faq/",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /login/",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /admin/",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /painter/",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /ai-catalog.json",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /.well-known/ai-catalog.json",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /robots.txt",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /sitemap.xml",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /areas/hawalli/",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /services/interior-painting/",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /painters/1/",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /painters/%D8%AE%D8%A7%D9%84%D8%AF-%D8%AA%D9%85%D9%8A%D9%85/",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /painters/%D9%85%D8%B9%D9%84%D9%85-%D8%A8%D8%AF%D8%B1-%D8%A7%D9%84%D8%B1%D8%B4%D9%8A%D8%AF%D9%8A/",
+      "status": "PASS",
+      "details": "Status: 200, Content snippet verified"
+    },
+    {
+      "name": "Route: /painters/completely-nonexistent-slug-xyz/",
+      "status": "PASS",
+      "details": "Status: 404, Content snippet verified"
+    },
+    {
+      "name": "Route: /random-unmatched-url-404/",
+      "status": "PASS",
+      "details": "Status: 404, Content snippet verified"
+    },
+    {
+      "name": "API /api/healthz",
+      "status": "PASS",
+      "details": "Status: 200"
+    },
+    {
+      "name": "API /api/public/painters",
+      "status": "PASS",
+      "details": "Returned 18 approved painters"
+    },
+    {
+      "name": "API /api/public/painters/1 (by ID)",
+      "status": "PASS",
+      "details": "Status: 200"
+    },
+    {
+      "name": "API /api/public/painters/%D8%AE%D8%A7%D9%84%D8%AF-%D8%AA%D9%85%D9%8A%D9%85 (by Slug)",
+      "status": "PASS",
+      "details": "Status: 200"
+    },
+    {
+      "name": "API POST /api/public/quotes (Valid)",
+      "status": "PASS",
+      "details": "Status: 201, Body: {\"success\":true,\"quote\":{\"id\":20,\"customerName\":\"فهد السالم - فحص الجودة\",\"customerPhone\":\"965998877"
+    },
+    {
+      "name": "API POST /api/public/quotes (Missing Phone)",
+      "status": "PASS",
+      "details": "Expected 400, got: 400"
+    },
+    {
+      "name": "API POST /api/public/painters/1/reviews (Valid)",
+      "status": "PASS",
+      "details": "Status: 201, Resp: {\"success\":true,\"message\":\"تم استلام تقييمك بنجاح! سيتم التحقق منه وتوثيقه من قِبل إدارة المنصة قبل "
+    },
+    {
+      "name": "API POST reviews (Rating = 999 Boundary Check)",
+      "status": "WARN",
+      "details": "Backend returned 201, body: {\"success\":true,\"message\":\"تم استلام تقييمك بنجاح! سيتم التحقق منه وتوثيقه من قِبل إدارة المنصة قبل "
+    },
+    {
+      "name": "API POST /api/auth/login (Invalid credentials)",
+      "status": "PASS",
+      "details": "Expected 401, got: 401"
+    },
+    {
+      "name": "API POST /api/auth/login (Empty payload)",
+      "status": "PASS",
+      "details": "Expected 400, got: 400"
+    },
+    {
+      "name": "Cloudflare Proxy /api/healthz",
+      "status": "PASS",
+      "details": "Status: 200, Text: {\"status\":\"ok\"}"
+    },
+    {
+      "name": "Cloudflare Proxy /api/public/painters",
+      "status": "PASS",
+      "details": "Status: 200"
+    }
+  ]
+}

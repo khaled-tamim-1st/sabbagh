@@ -6,6 +6,7 @@
  *    - Resolves new painters without rebuilding on Cloudflare
  *    - Injects dynamic SEO (<title>, meta description, canonical) and OpenGraph tags for Googlebot and WhatsApp
  *    - Provides instant 200 OK responses with edge caching
+ *    - Returns true 404 for nonexistent painters (avoids Google Search Console Soft-404s)
  */
 
 const BACKEND_ORIGIN = 'http://ec2-16-16-208-155.eu-north-1.compute.amazonaws.com:5050';
@@ -89,83 +90,81 @@ export default {
       const rawIdentifier = painterMatch[1];
       const decodedIdentifier = decodeURIComponent(rawIdentifier);
 
-      // Fetch base template HTML from existing static painter shell (/painters/1/)
-      const shellUrl = new URL('/painters/1/', request.url);
-      let shellResponse = await env.ASSETS.fetch(new Request(shellUrl.toString(), {
-        headers: request.headers,
-        redirect: 'follow',
-      }));
-
-      // If redirected or not 200, try index.html directly
-      if (shellResponse.status !== 200) {
-        shellResponse = await env.ASSETS.fetch(new Request(new URL('/painters/1/index.html', request.url).toString()));
+      // Query backend API for painter data first
+      let painterData = null;
+      try {
+        const apiTarget = `${BACKEND_ORIGIN}/api/public/painters/${encodeURIComponent(decodedIdentifier)}`;
+        const apiRes = await fetch(apiTarget, {
+          headers: {
+            'Accept': 'application/json',
+            'Host': 'ec2-16-16-208-155.eu-north-1.compute.amazonaws.com:5050'
+          },
+          signal: AbortSignal.timeout(3000),
+        });
+        if (apiRes.ok) {
+          painterData = await apiRes.json();
+        }
+      } catch (e) {
+        // Backend query failed or timed out
       }
 
-      if (shellResponse.status === 200) {
-        let html = await shellResponse.text();
+      // If painter exists and is valid, serve shell with dynamic SEO tags
+      if (painterData && painterData.name) {
+        const shellUrl = new URL('/painters/1/', request.url);
+        let shellResponse = await env.ASSETS.fetch(new Request(shellUrl.toString(), {
+          headers: request.headers,
+          redirect: 'follow',
+        }));
 
-        // Query backend API for painter data
-        let painterData = null;
-        try {
-          const apiTarget = `${BACKEND_ORIGIN}/api/public/painters/${encodeURIComponent(decodedIdentifier)}`;
-          const apiRes = await fetch(apiTarget, {
-            headers: {
-              'Accept': 'application/json',
-              'Host': 'ec2-16-16-208-155.eu-north-1.compute.amazonaws.com:5050'
-            },
-            signal: AbortSignal.timeout(3000),
-          });
-          if (apiRes.ok) {
-            painterData = await apiRes.json();
-          }
-        } catch (e) {
-          // Backend query failed or timed out
+        if (shellResponse.status !== 200) {
+          shellResponse = await env.ASSETS.fetch(new Request(new URL('/painters/1/index.html', request.url).toString()));
         }
 
-        const cleanName = decodedIdentifier.replace(/[-_]/g, ' ');
-        const painterName = painterData?.name || cleanName;
-        const painterRegion = painterData?.region || 'الكويت';
-        const painterYears = painterData?.years || 5;
-        const painterPhone = painterData?.phone || '';
-        const painterGovernorates = Array.isArray(painterData?.governorates) && painterData.governorates.length > 0
-          ? painterData.governorates.join('، ')
-          : 'كافة محافظات الكويت';
-        const painterRating = painterData?.rating || '5.0';
-        const ogImage = painterData?.avatarUrl || 'https://sabbagh-kuwait.com/logo.png';
-        const canonicalUrl = `https://sabbagh-kuwait.com/painters/${encodeURIComponent(decodedIdentifier)}/`;
+        if (shellResponse.status === 200) {
+          let html = await shellResponse.text();
 
-        const seoTitle = `${painterName} | صباغ معتمد في ${painterRegion} - فني الكويت | فني الكويت (صباغ الكويت)`;
-        const seoDesc = `تواصل مع ${painterName} - صباغ وفني معتمد بخبرة ${painterYears} سنوات في ${painterGovernorates}. تقييم ${painterRating} نجمة، معاينة مجانية وواتساب مباشر: ${painterPhone}`;
-        const ogTitle = `${painterName} - صباغ وفني معتمد في الكويت`;
-        const ogDesc = `خبرة ${painterYears} سنوات، تقييم ${painterRating}/5. تواصل واتساب فوري: ${painterPhone}`;
+          const painterName = painterData.name;
+          const painterRegion = painterData.region || 'الكويت';
+          const painterYears = painterData.years || 5;
+          const painterPhone = painterData.phone || '';
+          const painterGovernorates = Array.isArray(painterData.governorates) && painterData.governorates.length > 0
+            ? painterData.governorates.join('، ')
+            : 'كافة محافظات الكويت';
+          const painterRating = painterData.rating || '5.0';
+          const ogImage = painterData.avatarUrl || 'https://sabbagh-kuwait.com/logo.png';
+          const canonicalUrl = `https://sabbagh-kuwait.com/painters/${encodeURIComponent(decodedIdentifier)}/`;
 
-        // Inject Dynamic Meta & Title
-        html = html.replace(/<title>.*?<\/title>/i, `<title>${seoTitle}</title>`);
-        html = html.replace(/<meta\s+name=["']description["']\s+content=["'].*?["']\s*\/?>/i, `<meta name="description" content="${seoDesc}" />`);
-        html = html.replace(/<link\s+rel=["']canonical["']\s+href=["'].*?["']\s*\/?>/i, `<link rel="canonical" href="${canonicalUrl}" />`);
-        html = html.replace(/<meta\s+property=["']og:title["']\s+content=["'].*?["']\s*\/?>/i, `<meta property="og:title" content="${ogTitle}" />`);
-        html = html.replace(/<meta\s+property=["']og:description["']\s+content=["'].*?["']\s*\/?>/i, `<meta property="og:description" content="${ogDesc}" />`);
-        html = html.replace(/<meta\s+property=["']og:url["']\s+content=["'].*?["']\s*\/?>/i, `<meta property="og:url" content="${canonicalUrl}" />`);
-        html = html.replace(/<meta\s+property=["']og:image["']\s+content=["'].*?["']\s*\/?>/i, `<meta property="og:image" content="${ogImage}" />`);
+          const seoTitle = `${painterName} | صباغ معتمد في ${painterRegion} - فني الكويت | فني الكويت (صباغ الكويت)`;
+          const seoDesc = `تواصل مع ${painterName} - صباغ وفني معتمد بخبرة ${painterYears} سنوات في ${painterGovernorates}. تقييم ${painterRating} نجمة، معاينة مجانية وواتساب مباشر: ${painterPhone}`;
+          const ogTitle = `${painterName} - صباغ وفني معتمد في الكويت`;
+          const ogDesc = `خبرة ${painterYears} سنوات، تقييم ${painterRating}/5. تواصل واتساب فوري: ${painterPhone}`;
 
-        // Inject dynamic painter state for client hydration if found
-        if (painterData && painterData.name) {
+          // Inject Dynamic Meta & Title
+          html = html.replace(/<title>.*?<\/title>/i, `<title>${seoTitle}</title>`);
+          html = html.replace(/<meta\s+name=["']description["']\s+content=["'].*?["']\s*\/?>/i, `<meta name="description" content="${seoDesc}" />`);
+          html = html.replace(/<link\s+rel=["']canonical["']\s+href=["'].*?["']\s*\/?>/i, `<link rel="canonical" href="${canonicalUrl}" />`);
+          html = html.replace(/<meta\s+property=["']og:title["']\s+content=["'].*?["']\s*\/?>/i, `<meta property="og:title" content="${ogTitle}" />`);
+          html = html.replace(/<meta\s+property=["']og:description["']\s+content=["'].*?["']\s*\/?>/i, `<meta property="og:description" content="${ogDesc}" />`);
+          html = html.replace(/<meta\s+property=["']og:url["']\s+content=["'].*?["']\s*\/?>/i, `<meta property="og:url" content="${canonicalUrl}" />`);
+          html = html.replace(/<meta\s+property=["']og:image["']\s+content=["'].*?["']\s*\/?>/i, `<meta property="og:image" content="${ogImage}" />`);
+
+          // Inject dynamic painter state for instant client hydration
           const injection = `<script>window.__DYNAMIC_PAINTER__ = ${JSON.stringify(painterData)};</script></head>`;
           html = html.replace(/<\/head>/i, injection);
+
+          const headers = new Headers(shellResponse.headers);
+          headers.set('Content-Type', 'text/html; charset=utf-8');
+          headers.set('Cache-Control', 'public, max-age=120, s-maxage=3600, stale-while-revalidate=86400');
+
+          return new Response(html, {
+            status: 200,
+            headers,
+          });
         }
-
-        const headers = new Headers(shellResponse.headers);
-        headers.set('Content-Type', 'text/html; charset=utf-8');
-        headers.set('Cache-Control', 'public, max-age=120, s-maxage=3600, stale-while-revalidate=86400');
-
-        return new Response(html, {
-          status: 200,
-          headers,
-        });
       }
     }
 
-    // 4. Fallback to normal asset response (404)
+    // 4. Fallback to normal asset response (404 for completely nonexistent pages)
     return assetResponse;
   },
 };
