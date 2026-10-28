@@ -16,11 +16,29 @@ import { catalogStore } from '@/lib/catalog-store';
 import { apiClient } from '@/lib/api-client';
 
 export default function PainterProfilePage({ id: propId }: { id?: number | string }) {
+  // Determine identifier directly from the active browser URL to ensure dynamically routed painters hydrate accurately
+  let browserSlug = '';
+  if (typeof window !== 'undefined') {
+    const match = window.location.pathname.match(/\/painters\/([^/]+)/);
+    if (match) {
+      browserSlug = decodeURIComponent(match[1]);
+    }
+  }
+
   const [, idParams] = useRoute('/painters/:id');
   const [, slugParams] = useRoute('/painters/:slug');
-  const rawIdentifier = propId || slugParams?.slug || idParams?.id || 1;
+  const rawIdentifier = browserSlug || propId || slugParams?.slug || idParams?.id || 1;
   const decodedIdentifier = typeof rawIdentifier === 'string' ? decodeURIComponent(rawIdentifier) : rawIdentifier;
-  const [painter, setPainter] = useState<Painter>(() => catalogStore.getPainterById(decodedIdentifier) || getPainterById(decodedIdentifier) || PAINTERS_DATA[0]);
+
+  const [painter, setPainter] = useState<Painter>(() => {
+    if (typeof window !== 'undefined' && (window as any).__DYNAMIC_PAINTER__) {
+      const dyn = (window as any).__DYNAMIC_PAINTER__;
+      if (String(dyn.id) === String(decodedIdentifier) || dyn.slug === decodedIdentifier) {
+        return dyn;
+      }
+    }
+    return catalogStore.getPainterById(decodedIdentifier) || getPainterById(decodedIdentifier) || PAINTERS_DATA[0];
+  });
 
   useEffect(() => {
     const updated = catalogStore.getPainterById(decodedIdentifier);
