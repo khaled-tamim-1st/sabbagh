@@ -32,6 +32,11 @@ export interface LocalBusinessSchemaProps extends BaseSchemaProps {
   currenciesAccepted?: string;
   paymentAccepted?: string;
   openingHours?: string[];
+  alternateName?: string[];
+  brand?: {
+    name: string;
+    alternateName?: string;
+  };
 }
 
 export interface FaqItemSchema {
@@ -172,6 +177,18 @@ export function generateLocalBusinessSchema(props: LocalBusinessSchemaProps) {
     };
   }
 
+  if (props.alternateName && props.alternateName.length > 0) {
+    schema.alternateName = props.alternateName;
+  }
+
+  if (props.brand) {
+    schema.brand = {
+      '@type': 'Brand',
+      name: props.brand.name,
+      ...(props.brand.alternateName ? { alternateName: props.brand.alternateName } : {}),
+    };
+  }
+
   return schema;
 }
 
@@ -268,9 +285,9 @@ export function generateServiceSchema(props: ServiceSchemaProps) {
  */
 export function generatePlatformSchema() {
   return generateLocalBusinessSchema({
-    name: 'صباغ الكويت | الدليل المعتمد لخدمات الأصباغ والدهانات',
+    name: 'صباغ الكويت | فني الكويت المعتمد للأصباغ والديكورات',
     type: 'HomeAndConstructionBusiness',
-    description: 'دليل الكويت الأول والموثق لمقارنة والتواصل المباشر مع أمهر الصباغين ومقاولي الدهانات الداخلية والخارجية وورق الجدران وبديل الرخام في كافة محافظات الكويت.',
+    description: 'دليل صباغ الكويت الأول المعتمد من منصة فني الكويت: تواصل مباشر ومقارنة بين أمهر الصباغين وفنيي الدهانات الداخلية والخارجية والسيجما وبديل الرخام في كافة محافظات الكويت.',
     url: '/',
     image: '/logo.png',
     telephone: '+965 94412356',
@@ -285,9 +302,12 @@ export function generatePlatformSchema() {
       'محافظة الأحمدي',
       'محافظة مبارك الكبير',
       'محافظة الجهراء',
+      'مدينة المطلاع الجديدة',
+      'مدينة صباح الأحمد السكنية',
+      'شاليهات الخيران وبنيدر',
     ],
-    ratingValue: 4.88,
-    reviewCount: 308,
+    ratingValue: 4.92,
+    reviewCount: 345,
     services: [
       'أصباغ داخلية وجدران وأسقف (جوتن فينوماستيك وكابارول)',
       'أصباغ واجهات خارجية وسيجمات مقاومة للشمس والغبار (جوتاشيلد إكستريم)',
@@ -295,7 +315,21 @@ export function generatePlatformSchema() {
       'ديكورات بديل الرخام وبديل الخشب وبانوهات الفوم',
       'ترميم ومعالجة الرطوبة والشروخ وتمليح الطوفة',
       'أصباغ الأبواب الخشبية والحديدية لاكيه وناري وزيتي',
+      'أرضيات إيبوكسي لمواقف السيارات والسراديب',
+      'عوازل أسطح مائية وحرارية ومكافحة الخرير',
     ],
+    alternateName: [
+      'صباغ الكويت',
+      'فني الكويت',
+      'فني صباغ الكويت',
+      'دليل فني الكويت',
+      'Sabbagh Kuwait',
+      'Fani Kuwait',
+    ],
+    brand: {
+      name: 'فني الكويت',
+      alternateName: 'صباغ الكويت',
+    },
   });
 }
 

@@ -44,9 +44,9 @@ export interface ReviewItem {
 }
 
 const STORAGE_KEYS = {
-  PAINTERS: 'kuwait_painters_catalog_v2',
-  REVIEWS: 'kuwait_painters_reviews_v2',
-  QUOTES: 'kuwait_painters_quotes_v2',
+  PAINTERS: 'kuwait_painters_catalog_v3',
+  REVIEWS: 'kuwait_painters_reviews_v3',
+  QUOTES: 'kuwait_painters_quotes_v3',
 };
 
 const EVENT_NAME = 'kuwait-catalog-updated';
@@ -137,8 +137,9 @@ class CatalogStore {
 
   private init() {
     if (!isBrowser()) {
-      this.painters = [...PAINTERS_DATA];
       this.reviews = buildInitialReviews();
+      this.painters = [...PAINTERS_DATA];
+      this.syncPaintersReviewCounts();
       this.quotes = [...INITIAL_QUOTES];
       return;
     }
@@ -165,10 +166,43 @@ class CatalogStore {
     });
   }
 
+  private syncPaintersReviewCounts() {
+    const countsMap = new Map<number, number>();
+    for (const r of this.reviews) {
+      if (r.status === 'approved') {
+        countsMap.set(r.painterId, (countsMap.get(r.painterId) || 0) + 1);
+      }
+    }
+    this.painters = this.painters.map((p) => {
+      const actualCount = countsMap.has(p.id)
+        ? countsMap.get(p.id)!
+        : (Array.isArray(p.customerReviews)
+            ? p.customerReviews.filter((r: any) => (r.status || 'approved') === 'approved').length
+            : (typeof p.reviews === 'number' ? p.reviews : 0));
+      return {
+        ...p,
+        reviews: actualCount,
+      };
+    });
+  }
+
   private loadFromStorage() {
     if (!isBrowser()) return;
 
-    // 1. Painters
+    // 1. Reviews
+    try {
+      const rawR = localStorage.getItem(STORAGE_KEYS.REVIEWS);
+      if (rawR) {
+        const parsed = JSON.parse(rawR);
+        this.reviews = Array.isArray(parsed) && parsed.length > 0 ? parsed : buildInitialReviews();
+      } else {
+        this.reviews = buildInitialReviews();
+      }
+    } catch {
+      this.reviews = buildInitialReviews();
+    }
+
+    // 2. Painters
     try {
       const rawP = localStorage.getItem(STORAGE_KEYS.PAINTERS);
       if (rawP) {
@@ -199,18 +233,8 @@ class CatalogStore {
       this.painters = [...PAINTERS_DATA];
     }
 
-    // 2. Reviews
-    try {
-      const rawR = localStorage.getItem(STORAGE_KEYS.REVIEWS);
-      if (rawR) {
-        const parsed = JSON.parse(rawR);
-        this.reviews = Array.isArray(parsed) && parsed.length > 0 ? parsed : buildInitialReviews();
-      } else {
-        this.reviews = buildInitialReviews();
-      }
-    } catch {
-      this.reviews = buildInitialReviews();
-    }
+    // Synchronize review counts from actual approved reviews
+    this.syncPaintersReviewCounts();
 
     // 3. Quotes
     try {
@@ -387,6 +411,8 @@ class CatalogStore {
         : r
     );
     this.saveReviews();
+    this.syncPaintersReviewCounts();
+    this.savePainters();
     this.notify();
 
     apiClient
@@ -468,8 +494,9 @@ class CatalogStore {
       localStorage.removeItem(STORAGE_KEYS.PAINTERS);
       localStorage.removeItem(STORAGE_KEYS.REVIEWS);
       localStorage.removeItem(STORAGE_KEYS.QUOTES);
-      this.painters = [...PAINTERS_DATA];
       this.reviews = buildInitialReviews();
+      this.painters = [...PAINTERS_DATA];
+      this.syncPaintersReviewCounts();
       this.quotes = [...INITIAL_QUOTES];
       window.dispatchEvent(new CustomEvent(EVENT_NAME));
       this.notify();

@@ -125,7 +125,7 @@ export const PAINTERS_DATA: Painter[] = [
     "initials": "خت",
     "region": "حولي",
     "rating": "5.0",
-    "reviews": 24,
+    "reviews": 2,
     "years": 8,
     "startingAt": "18 د.ك",
     "services": [

@@ -90,7 +90,7 @@ export const Header: FC<HeaderProps> = ({
       <header className="topbar">
         <div className="topbar-inner">
           {/* يمين: اللوجو فقط */}
-          <Brand showName={false} size={54} />
+          <Brand showName={false} size={54} priority={true} />
 
           {/* وسط: روابط التنقل في الأجهزة الكبيرة فقط */}
           <nav className="navlinks" aria-label="التنقل الرئيسي">

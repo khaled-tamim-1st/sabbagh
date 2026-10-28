@@ -18,11 +18,17 @@ export function Brand({
   light = false,
   showName = true,
   size = 52,
+  priority = false,
 }: {
   light?: boolean;
   showName?: boolean;
   size?: number;
+  priority?: boolean;
 }) {
+  const width = Math.round(size * 1.28);
+  const webpSrc = light ? '/logo-light.webp' : '/logo.webp';
+  const pngSrc = light ? '/logo-light.png' : '/logo.png';
+
   return (
     <Link
       href="/"
@@ -32,6 +38,7 @@ export function Brand({
     >
       <div
         style={{
+          width: `${width}px`,
           height: `${size}px`,
           display: 'flex',
           alignItems: 'center',
@@ -39,11 +46,18 @@ export function Brand({
           flexShrink: 0,
         }}
       >
-        <img
-          src={light ? '/logo-light.png' : '/logo.png'}
-          alt="شعار الموقع"
-          style={{ height: `${size}px`, width: 'auto', objectFit: 'contain' }}
-        />
+        <picture>
+          <source srcSet={webpSrc} type="image/webp" />
+          <img
+            src={pngSrc}
+            alt="شعار صباغ الكويت"
+            width={width}
+            height={size}
+            loading={priority ? 'eager' : 'lazy'}
+            decoding="async"
+            style={{ width: `${width}px`, height: `${size}px`, objectFit: 'contain', display: 'block' }}
+          />
+        </picture>
       </div>
       {showName && (
         <span

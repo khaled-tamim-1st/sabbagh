@@ -314,7 +314,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
                     <span className="metric-val" style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                       <span>{painter.rating}</span>
                       <span style={{ fontSize: '10px', fontWeight: 500, color: '#7a7e74' }}>
-                        ({typeof painter.reviews === 'number' ? painter.reviews : (Array.isArray(painter.reviews) ? (painter.reviews as any[]).length : 0)} تقييم)
+                        ({painterApprovedReviews.length} تقييم)
                       </span>
                     </span>
                   </div>

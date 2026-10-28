@@ -37,8 +37,8 @@ export async function generateMetadata({
   const targetSlug = painter.slug || generatePainterSlug(painter.accountType === 'company' && painter.companyName ? painter.companyName : painter.name, painter.id);
 
   return {
-    title: `${painter.name} | صباغ موثوق في ${painter.region} الكويت`,
-    description: `تواصل مع ${painter.name} - صباغ معتمد بخبرة ${painter.years} سنوات في ${painter.governorates.join('، ')}. تقييم ${painter.rating} نجمة، معاينة مجانية وواتساب مباشر: ${painter.phone}`,
+    title: `${painter.name} | صباغ معتمد في ${painter.region} - فني الكويت`,
+    description: `تواصل مع ${painter.name} - صباغ وفني معتمد بخبرة ${painter.years} سنوات في ${painter.governorates.join('، ')}. تقييم ${painter.rating} نجمة، معاينة مجانية وواتساب مباشر: ${painter.phone}`,
     keywords: [
       painter.name,
       `صباغ ${painter.region}`,
@@ -46,9 +46,10 @@ export async function generateMetadata({
       ...painter.governorates.map((g) => `صباغ ${g}`),
     ],
     openGraph: {
-      title: `${painter.name} - صباغ معتمد في الكويت`,
+      title: `${painter.name} - صباغ وفني معتمد في الكويت`,
       description: `خبرة ${painter.years} سنوات، تقييم ${painter.rating}/5. تواصل واتساب فوري: ${painter.phone}`,
       url: `https://sabbagh-kuwait.com/painters/${encodeURIComponent(targetSlug)}`,
+      siteName: 'فني الكويت | صباغ الكويت',
       type: 'profile',
       images: [
         {

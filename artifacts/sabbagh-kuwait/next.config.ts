@@ -6,8 +6,21 @@ const isDev = process.env.NODE_ENV !== 'production';
 const nextConfig: NextConfig = {
   ...(!isDev ? { output: 'export' } : {}),
   distDir: 'dist/public',
+  compress: true,
+  poweredByHeader: false,
+  reactStrictMode: true,
   images: {
     unoptimized: true,
+    formats: ['image/avif', 'image/webp'],
+  },
+  experimental: {
+    optimizePackageImports: [
+      'lucide-react',
+      'date-fns',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu',
+    ],
   },
   trailingSlash: true,
   outputFileTracingRoot: path.resolve(__dirname, '../../'),
@@ -28,3 +41,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+

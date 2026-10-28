@@ -1,20 +1,35 @@
 import type { Metadata, Viewport } from 'next';
+import { Cairo } from 'next/font/google';
 import '../index.css';
 import { Providers } from './providers';
+
+const cairo = Cairo({
+  subsets: ['arabic', 'latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+  variable: '--font-cairo',
+  preload: true,
+});
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
 };
 
 export const metadata: Metadata = {
-  title: 'صباغ الكويت | دليل خدمات الأصباغ والدهانات والديكورات المعتمدة',
+  title: {
+    default: 'صباغ الكويت | أفضل فني دهانات وديكورات معتمد - فني الكويت',
+    template: '%s | فني الكويت (صباغ الكويت)',
+  },
   description:
-    'دليل صباغ الكويت الأول: قارن وتواصل مباشرة مع أفضل صباغين موثقين في كافة مناطق الكويت (حولي، العاصمة، الفروانية، الأحمدي، مبارك الكبير، والجهراء). أسعار حقيقية بالدينار الكويتي، أصباغ جوتن وهمبل وكابارول، معاينة مجانية وواتساب مباشر.',
+    'دليل صباغ الكويت المعتمد من فني الكويت: تواصل مع أمهر الصباغين وفنيي الديكورات في كافة المحافظات (حولي، العاصمة، الفروانية، الأحمدي، مبارك الكبير، والجهراء). أسعار حقيقية بالدينار، دهانات جوتن الأصلية، معاينة مجانية وواتساب فوري.',
   keywords: [
     'صباغ الكويت',
+    'فني الكويت',
+    'فني صباغ الكويت',
     'صباغ شاطر ورخيص',
+    'رقم صباغ بالكويت',
+    'معلم دهانات الكويت',
     'صباغ حولي',
     'صباغ السالمية',
     'صباغ العاصمة',
@@ -22,7 +37,9 @@ export const metadata: Metadata = {
     'أصباغ جوتن الكويت',
     'دهان منازل',
     'بديل الرخام',
+    'بديل الخشب',
     'ورق جدران',
+    'سيجما واجهات الكويت',
   ],
   robots: {
     index: true,
@@ -35,23 +52,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://sabbagh-kuwait.com/',
-    title: 'صباغ الكويت | الدليل المعتمد لخدمات الصباغة والتشطيب',
+    title: 'صباغ الكويت | أفضل فني دهانات وديكورات معتمد - فني الكويت',
     description:
-      'قارن بين أمهر الصباغين في الكويت، تعرف على الأسعار بالدينار، واطلب معاينة مجانية عبر الواتساب مباشرة.',
-    siteName: 'صباغ الكويت',
+      'قارن بين أمهر الصباغين في الكويت، تعرف على الأسعار بالدينار، واطلب معاينة مجانية عبر الواتساب مباشرة من منصة فني الكويت.',
+    siteName: 'فني الكويت | صباغ الكويت',
     locale: 'ar_KW',
     images: [
       {
         url: '/logo.png',
         width: 1200,
         height: 630,
-        alt: 'صباغ الكويت',
+        alt: 'صباغ الكويت - فني الكويت',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'صباغ الكويت | دليل الأصباغ والدهانات',
+    title: 'صباغ الكويت | أفضل فني دهانات وتشطيبات - فني الكويت',
     description: 'دليل معتمد وموثق لخدمات الصبغ والديكورات في جميع محافظات الكويت.',
     images: ['/logo.png'],
   },
@@ -63,19 +80,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ar" dir="rtl">
+    <html lang="ar" dir="rtl" className={cairo.variable}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
         <link rel="icon" type="image/png" href="/favicon.png" />
       </head>
-      <body>
+      <body className={cairo.className}>
         <Providers>{children}</Providers>
       </body>
     </html>
   );
 }
+

@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
 
@@ -60,6 +60,10 @@ export function PainterAvatar({
           src={painter.avatarUrl}
           alt={painter.name || 'الصباغ'}
           onError={() => setImgFailed(true)}
+          width={size || 52}
+          height={size || 52}
+          loading="lazy"
+          decoding="async"
           style={{
             width: '100%',
             height: '100%',

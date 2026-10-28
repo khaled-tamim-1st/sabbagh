@@ -1335,7 +1335,9 @@ export default function AdminDashboardPage() {
                           <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                             <Star size={13} fill="#c48927" color="#c48927" />
                             <strong>{p.rating}</strong>
-                            <span style={{ fontSize: '11px', color: '#7a8277' }}>({p.reviews})</span>
+                            <span style={{ fontSize: '11px', color: '#7a8277' }}>
+                              ({reviews.filter((r) => r.painterId === p.id && r.status === 'approved').length || p.reviews})
+                            </span>
                           </div>
                           <span style={{ fontSize: '11px', color: '#7a8277' }}>{p.years} سنوات خبرة</span>
                         </td>

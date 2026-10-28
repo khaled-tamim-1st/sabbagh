@@ -11,23 +11,51 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
-# Immutable caching for hashed Vite static assets (CSS, JS)
+# ==============================================================================
+# Cloudflare Pages Custom Headers Configuration
+# ==============================================================================
+
+# Global security headers for all routes
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# Immutable caching for hashed Next.js static assets (CSS, JS, Fonts)
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Static fonts and media
+/_next/static/media/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Fallback for Vite assets if any
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
 # Image and static asset caching
+/*.webp
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
 /*.png
-  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
 /*.svg
-  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
 /*.jpg
-  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
-/*.webp
-  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+/*.ico
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
-# Always revalidate index.html for immediate deployment visibility
+# Revalidate HTML entry pages
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
+

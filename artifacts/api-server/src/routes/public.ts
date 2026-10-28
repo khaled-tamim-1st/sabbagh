@@ -107,7 +107,7 @@ router.get("/painters/:id", (req: Request, res: Response) => {
     avatarUrl: painter.avatarUrl ?? null,
     avatarPublicId: painter.avatarPublicId ?? null,
     portfolioProjects: painter.portfolioProjects || [],
-    reviews: typeof painter.reviews === 'number' ? painter.reviews : (Array.isArray(reviews) ? reviews.length : 0),
+    reviews: Array.isArray(reviews) ? reviews.length : (typeof painter.reviews === 'number' ? painter.reviews : 0),
     customerReviews: sanitizedReviews,
   });
 });
