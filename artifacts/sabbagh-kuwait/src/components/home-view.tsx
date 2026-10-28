@@ -308,10 +308,19 @@ export function HomeView() {
                 <em>على ذوقك.</em>
               </h1>
               <p>قارن بين صبّاغين في منطقتك، شوف تقييماتهم وخدماتهم، واختر اللي يناسب بيتك.</p>
-              <form className="search-panel" onSubmit={doSearch} role="search">
-                <label className="search-field">
+              <form
+                className="search-panel"
+                onSubmit={doSearch}
+                role="search"
+                data-webmcp-tool="search_painters"
+                data-webmcp-description="البحث عن صباغين معتمدين في مناطق الكويت حسب المنطقة ونوع الخدمة"
+                aria-label="نموذج البحث عن صباغ في الكويت"
+              >
+                <label className="search-field" htmlFor="home-search-query">
                   <Search aria-hidden="true" />
                   <input
+                    id="home-search-query"
+                    name="query"
                     value={query}
                     onChange={(event) => setQuery(event.target.value)}
                     placeholder="اسم الصبّاغ أو الخدمة"
@@ -319,9 +328,11 @@ export function HomeView() {
                     data-testid="input-search"
                   />
                 </label>
-                <label className="search-field">
+                <label className="search-field" htmlFor="home-region-select">
                   <MapPin aria-hidden="true" />
                   <select
+                    id="home-region-select"
+                    name="region"
                     aria-label="اختر المنطقة"
                     value={region}
                     onChange={(event) => setRegion(event.target.value)}
@@ -603,7 +614,7 @@ export function HomeView() {
                       <div
                         style={{
                           fontSize: '11px',
-                          color: isSelected ? '#b9cbbe' : '#888f83',
+                          color: isSelected ? '#b9cbbe' : '#4a5649',
                           marginBottom: '16px',
                         }}
                       >
@@ -631,6 +642,7 @@ export function HomeView() {
                       </button>
                       <Link
                         href={`/areas/${gov.id}`}
+                        aria-label={`دليل صباغ محافظة ${gov.nameAr}`}
                         style={{
                           padding: '9px 12px',
                           borderRadius: '10px',
@@ -644,7 +656,7 @@ export function HomeView() {
                           gap: '4px',
                         }}
                       >
-                        <span>صفحة المحافظة</span>
+                        <span>صفحة {gov.nameAr}</span>
                         <ExternalLink size={12} />
                       </Link>
                     </div>

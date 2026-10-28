@@ -1700,6 +1700,8 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
                   <label className="form-label" htmlFor="rev-service">نوع الخدمة المنجزة</label>
                   <select
                     id="rev-service"
+                    name="revServiceType"
+                    aria-label="نوع الخدمة المنجزة"
                     className="form-input"
                     value={revServiceType}
                     onChange={(e) => setRevServiceType(e.target.value)}

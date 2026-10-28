@@ -120,7 +120,7 @@ export const PAINTERS_DATA: Painter[] = [
     "id": 1,
     "slug": "خالد-تميم",
     "name": "خالد تميم",
-    "avatarUrl": "https://res.cloudinary.com/lgbve8cd/image/upload/v1792829294/sabbagh/avatars/piw5pk9gp5rwatbzlx2s.webp",
+    "avatarUrl": "https://res.cloudinary.com/lgbve8cd/image/upload/c_thumb,w_160,h_160,g_face,q_auto,f_auto/v1792829294/sabbagh/avatars/piw5pk9gp5rwatbzlx2s.webp",
     "avatarPublicId": "sabbagh/avatars/piw5pk9gp5rwatbzlx2s",
     "initials": "خت",
     "region": "حولي",

@@ -1226,7 +1226,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                       <strong style={{ fontSize: '15px', color: '#17483e', display: 'block', marginBottom: '2px' }}>
                         صباغ {item.nameAr}
                       </strong>
-                      <span style={{ fontSize: '11px', color: '#888f83' }}>{item.nameEn}</span>
+                      <span style={{ fontSize: '11px', color: '#4a5649' }}>{item.nameEn}</span>
                     </div>
                     {item.popularForPainting && (
                       <span style={{ background: '#faede8', color: '#c7664f', fontSize: '10px', padding: '3px 8px', borderRadius: '6px', fontWeight: 700 }}>
@@ -1547,7 +1547,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                       </div>
                       <div>
                         <h3 style={{ margin: 0, fontSize: '18px', color: '#17483e' }}>محافظة {gov.nameAr}</h3>
-                        <span style={{ fontSize: '11px', color: '#888f83' }}>{gov.nameEn} · العاصمة: {gov.capitalAr}</span>
+                        <span style={{ fontSize: '11px', color: '#4a5649' }}>{gov.nameEn} · العاصمة: {gov.capitalAr}</span>
                       </div>
                     </div>
                     <span style={{ background: '#e2efea', color: '#17483e', borderRadius: '8px', padding: '4px 10px', fontSize: '11px', fontWeight: 700 }}>

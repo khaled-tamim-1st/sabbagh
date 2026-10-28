@@ -83,6 +83,8 @@ export default function RootLayout({
     <html lang="ar" dir="rtl" className={cairo.variable}>
       <head>
         <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="service-catalog" type="application/json" href="/.well-known/ai-catalog.json" />
+        <link rel="ai-catalog" type="application/json" href="/ai-catalog.json" />
       </head>
       <body className={cairo.className}>
         <Providers>{children}</Providers>

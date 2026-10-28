@@ -220,6 +220,9 @@ export function LeadQuoteSection({
         ) : (
           <form
             onSubmit={handleSubmit}
+            data-webmcp-tool="quote_request"
+            data-webmcp-description="طلب مقايسة وعرض سعر صباغ في الكويت"
+            aria-label="نموذج طلب مقايسة وعرض سعر صباغة"
             style={{
               background: isModal ? 'transparent' : 'rgba(255, 255, 255, 0.04)',
               backdropFilter: isModal ? 'none' : 'blur(10px)',
@@ -248,15 +251,19 @@ export function LeadQuoteSection({
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px', marginBottom: '16px' }}>
               {/* الاسم */}
               <div>
-                <label style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#e9bd77', marginBottom: '6px' }}>
+                <label htmlFor="lead-customer-name" style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#e9bd77', marginBottom: '6px' }}>
                   <User size={14} style={{ display: 'inline', marginLeft: '6px' }} />
                   الاسم الكريم
                 </label>
                 <input
+                  id="lead-customer-name"
+                  name="customerName"
                   type="text"
                   placeholder="مثال: أبو فهد"
                   value={customerName}
                   onChange={(e) => setCustomerName(e.target.value)}
+                  aria-label="الاسم الكريم"
+                  autoComplete="name"
                   style={{
                     width: '100%',
                     padding: '11px 14px',
@@ -272,16 +279,20 @@ export function LeadQuoteSection({
 
               {/* رقم الهاتف */}
               <div>
-                <label style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#e9bd77', marginBottom: '6px' }}>
+                <label htmlFor="lead-customer-phone" style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#e9bd77', marginBottom: '6px' }}>
                   <Phone size={14} style={{ display: 'inline', marginLeft: '6px' }} />
                   رقم الهاتف (للتواصل وتأكيد الموعد) *
                 </label>
                 <input
+                  id="lead-customer-phone"
+                  name="customerPhone"
                   type="tel"
                   dir="ltr"
                   placeholder="+965 9999 9999"
                   value={customerPhone}
                   onChange={(e) => setCustomerPhone(e.target.value)}
+                  aria-label="رقم الهاتف للتواصل وتأكيد الموعد"
+                  autoComplete="tel"
                   required
                   style={{
                     width: '100%',
@@ -301,13 +312,16 @@ export function LeadQuoteSection({
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px', marginBottom: '16px' }}>
               {/* نوع الخدمة */}
               <div>
-                <label style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#e9bd77', marginBottom: '6px' }}>
+                <label htmlFor="lead-service-type" style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#e9bd77', marginBottom: '6px' }}>
                   <Paintbrush size={14} style={{ display: 'inline', marginLeft: '6px' }} />
                   نوع الخدمة المطلوبة
                 </label>
                 <select
+                  id="lead-service-type"
+                  name="serviceType"
                   value={serviceType}
                   onChange={(e) => setServiceType(e.target.value)}
+                  aria-label="نوع الخدمة المطلوبة"
                   style={{
                     width: '100%',
                     padding: '11px 14px',
@@ -329,17 +343,20 @@ export function LeadQuoteSection({
 
               {/* المحافظة */}
               <div>
-                <label style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#e9bd77', marginBottom: '6px' }}>
+                <label htmlFor="lead-governorate" style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#e9bd77', marginBottom: '6px' }}>
                   <MapPin size={14} style={{ display: 'inline', marginLeft: '6px' }} />
                   المحافظة والمنطقة
                 </label>
                 <div style={{ display: 'flex', gap: '8px' }}>
                   <select
+                    id="lead-governorate"
+                    name="governorate"
                     value={governorate}
                     onChange={(e) => {
                       setGovernorate(e.target.value);
                       setArea('');
                     }}
+                    aria-label="المحافظة"
                     style={{
                       flex: 1,
                       padding: '11px 10px',
@@ -358,10 +375,13 @@ export function LeadQuoteSection({
                     ))}
                   </select>
                   <input
+                    id="lead-area"
+                    name="area"
                     type="text"
                     placeholder="المنطقة (اختياري)"
                     value={area}
                     onChange={(e) => setArea(e.target.value)}
+                    aria-label="المنطقة في الكويت"
                     style={{
                       flex: 1,
                       padding: '11px 12px',
@@ -379,15 +399,18 @@ export function LeadQuoteSection({
 
             {/* ملاحظات إضافية */}
             <div style={{ marginBottom: '20px' }}>
-              <label style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#e9bd77', marginBottom: '6px' }}>
+              <label htmlFor="lead-notes" style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#e9bd77', marginBottom: '6px' }}>
                 <FileText size={14} style={{ display: 'inline', marginLeft: '6px' }} />
                 ملاحظات أو تفاصيل المكان (اختياري)
               </label>
               <textarea
+                id="lead-notes"
+                name="notes"
                 rows={2}
                 placeholder="مثال: صبغ صالة وغرفتين نوم، الجدران بها شروخ خفيفة، ونحتاج معاينة يوم الجمعة..."
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
+                aria-label="ملاحظات أو تفاصيل المكان"
                 style={{
                   width: '100%',
                   padding: '10px 14px',

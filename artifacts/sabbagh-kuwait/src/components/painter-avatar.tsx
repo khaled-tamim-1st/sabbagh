@@ -41,6 +41,13 @@ export function PainterAvatar({
 
   const toneClass = painter.tone || 'ochre';
 
+  const getOptimizedAvatarUrl = (url: string, targetSize: number = 160) => {
+    if (url.includes('res.cloudinary.com') && url.includes('/upload/') && !url.includes('/c_thumb') && !url.includes('/w_')) {
+      return url.replace('/upload/', `/upload/c_thumb,w_${targetSize},h_${targetSize},g_face,q_auto,f_auto/`);
+    }
+    return url;
+  };
+
   if (painter.avatarUrl && !imgFailed) {
     return (
       <div
@@ -57,7 +64,7 @@ export function PainterAvatar({
         aria-hidden="true"
       >
         <img
-          src={painter.avatarUrl}
+          src={getOptimizedAvatarUrl(painter.avatarUrl, (size || 52) * 2)}
           alt={painter.name || 'الصباغ'}
           onError={() => setImgFailed(true)}
           width={size || 52}

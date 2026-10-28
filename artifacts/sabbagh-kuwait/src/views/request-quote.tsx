@@ -208,6 +208,9 @@ export default function RequestQuotePage() {
             {/* العمود الأيمن: نموذج طلب السعر والتفاصيل */}
             <form
               onSubmit={handleSubmit}
+              data-webmcp-tool="quote_calculator"
+              data-webmcp-description="حاسبة تكلفة وطلب مقايسة صباغة في الكويت"
+              aria-label="حاسبة تكلفة وطلب مقايسة صباغة"
               style={{
                 background: '#fffdf8',
                 border: '1px solid #e8e1d3',
@@ -387,6 +390,8 @@ export default function RequestQuotePage() {
                   <label className="form-label" htmlFor="select-gov">المحافظة</label>
                   <select
                     id="select-gov"
+                    name="governorate"
+                    aria-label="المحافظة"
                     className="form-input"
                     value={selectedGovId}
                     onChange={(e) => {
@@ -405,6 +410,8 @@ export default function RequestQuotePage() {
                   <label className="form-label" htmlFor="select-area">المنطقة</label>
                   <select
                     id="select-area"
+                    name="area"
+                    aria-label="المنطقة"
                     className="form-input"
                     value={selectedAreaId}
                     onChange={(e) => setSelectedAreaId(e.target.value)}
@@ -445,6 +452,9 @@ export default function RequestQuotePage() {
                   <label className="form-label" htmlFor="cust-name">الاسم الكريم</label>
                   <input
                     id="cust-name"
+                    name="customerName"
+                    aria-label="الاسم الكريم"
+                    autoComplete="name"
                     required
                     className="form-input"
                     placeholder="مثال: ناصر العبدلي"
@@ -456,6 +466,9 @@ export default function RequestQuotePage() {
                   <label className="form-label" htmlFor="cust-phone">رقم الهاتف أو الواتساب</label>
                   <input
                     id="cust-phone"
+                    name="customerPhone"
+                    aria-label="رقم الهاتف أو الواتساب"
+                    autoComplete="tel"
                     required
                     type="tel"
                     className="form-input"
@@ -470,6 +483,8 @@ export default function RequestQuotePage() {
                 <label className="form-label" htmlFor="cust-notes">ملاحظات إضافية (اختياري)</label>
                 <textarea
                   id="cust-notes"
+                  name="notes"
+                  aria-label="ملاحظات إضافية"
                   className="form-textarea"
                   placeholder="أي تفاصيل عن حالة الطوفة، ألوان محددة، أو وقت البدء المناسب..."
                   value={customerNotes}
