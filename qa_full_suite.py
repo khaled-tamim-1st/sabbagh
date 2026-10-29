@@ -123,7 +123,12 @@ core_routes = [
     ("/en/areas/hawalli/", 200, "Hawalli Governorate"),
     ("/en/request-quote/", 200, "Calculate Your Painting Cost in Kuwait"),
     ("/en/services-guide/", 200, "Kuwait Painting Prices Guide 2026"),
-    ("/en/faq/", 200, "Frequently Asked Questions")
+    ("/en/faq/", 200, "Frequently Asked Questions"),
+    ("/en/blog/", 200, "Kuwait Painting, Decor"),
+    ("/en/blog/room-painting-cost-kuwait/", 200, "How Much Does It Cost to Paint a Room"),
+    ("/en/join-painter/", 200, "Join Fani Kuwait as a Certified Painter"),
+    ("/en/login/", 200, "Portal Sign In"),
+    ("/en/painters/1/", 200, "Verified")
 ]
 
 for path, expected_status, expected_snippet in core_routes:

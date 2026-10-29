@@ -73,6 +73,7 @@ export const Header: FC<HeaderProps> = ({
         { href: '/en/', label: 'Home', icon: HomeIcon, exact: true },
         { href: '/en/areas/', label: 'Areas', icon: MapPin },
         { href: '/en/services/', label: 'Services', icon: Layers },
+        { href: '/en/blog/', label: 'Guides', icon: Newspaper },
         { href: '/en/services-guide/', label: 'Price Guide', icon: Newspaper },
         { href: '/en/request-quote/', label: 'Quote', icon: Calculator },
         { href: '/en/faq/', label: 'FAQ', icon: HelpCircle },

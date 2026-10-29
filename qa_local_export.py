@@ -44,6 +44,13 @@ expected_files = [
     ("en/services-guide/index.html", ["Price Guide", "Shuwaikh"]),
     ("en/faq/index.html", ["Frequently Asked Questions", "English-speaking"]),
     
+    # Phase 2 English Routes
+    ("en/blog/index.html", ["Kuwait Painting", "Decor"]),
+    ("en/blog/room-painting-cost-kuwait/index.html", ["How Much Does It Cost to Paint a Room", "KWD"]),
+    ("en/join-painter/index.html", ["Join Fani Kuwait as a Certified Painter"]),
+    ("en/login/index.html", ["Portal Sign In"]),
+    ("en/painters/1/index.html", ["Verified", "reviews"]),
+    
     # AI Discovery & SEO
     ("sitemap.xml", ["/en/", "/en/services/", "/en/areas/capital/"]),
     ("robots.txt", ["Allow: /en/"]),
