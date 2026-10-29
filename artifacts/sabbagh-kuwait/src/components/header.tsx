@@ -197,7 +197,7 @@ export const Header: FC<HeaderProps> = ({
               style={{ background: '#17483e', color: '#fff9ee', borderColor: '#17483e' }}
             >
               <Calculator size={15} aria-hidden="true" />
-              <span>'احسب التكلفة'</span>
+              <span>احسب التكلفة</span>
             </Link>
 
             <button
@@ -208,7 +208,7 @@ export const Header: FC<HeaderProps> = ({
               data-testid="button-favorites-filter"
             >
               <Heart fill={favoritesOnly ? 'currentColor' : 'none'} aria-hidden="true" />
-              <span>'المفضلة'</span>
+              <span>المفضلة</span>
               <span>({favoritesCount})</span>
             </button>
           </div>
@@ -224,7 +224,7 @@ export const Header: FC<HeaderProps> = ({
               aria-expanded={isMenuOpen}
             >
               <Menu size={20} aria-hidden="true" />
-              <span>'القائمة'</span>
+              <span>القائمة</span>
             </button>
           </div>
         </div>
@@ -427,7 +427,7 @@ export const Header: FC<HeaderProps> = ({
                 }}
               >
                 <Calculator size={18} />
-                <span>'احسب التكلفة واطلب معاينة'</span>
+                <span>احسب التكلفة واطلب معاينة</span>
               </Link>
 
               <button
@@ -450,7 +450,7 @@ export const Header: FC<HeaderProps> = ({
                 }}
               >
                 <Heart size={16} fill={favoritesOnly ? '#c7664f' : 'none'} color={favoritesOnly ? '#c7664f' : '#17483e'} />
-                <span>`الصباغون المفضلون (${favoritesCount})`</span>
+                <span>الصباغون المفضلون ({favoritesCount})</span>
               </button>
             </div>
 

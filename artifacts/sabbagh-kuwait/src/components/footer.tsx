@@ -188,7 +188,7 @@ export const SiteFooter: FC<{ lang?: string }> = () => {
             }}
           >
             <span style={{ fontSize: '11px', color: '#e9bd77', fontWeight: 700 }}>
-              'مواد أصلية معتمدة:'
+              مواد أصلية معتمدة:
             </span>
             <span style={{ fontSize: '11px', color: '#d9e0d3' }}>Jotun Kuwait</span>
             <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
@@ -392,7 +392,7 @@ export const SiteFooter: FC<{ lang?: string }> = () => {
                   border: '1px solid rgba(255, 255, 255, 0.06)',
                 }}
               >
-                `صباغ ${area.name}`
+                صباغ {area.name}
               </Link>
             ))}
           </div>
