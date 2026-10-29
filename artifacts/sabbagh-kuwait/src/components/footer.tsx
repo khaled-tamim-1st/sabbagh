@@ -15,7 +15,6 @@ import {
   BookOpen,
   Globe,
 } from 'lucide-react';
-import { LanguageSwitcher } from '@/components/language-switcher';
 
 export function Brand({
   light = false,
@@ -83,20 +82,10 @@ export function Brand({
 /**
  * مصفوفة الروابط الداخلية المبوبة لدليل صباغ الكويت لتصدر محركات البحث (SEO Internal Linking Architecture)
  */
-export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
-  const isEn = lang === 'en';
+export const SiteFooter: FC<{ lang?: string }> = () => {
 
   // محافظات الكويت الست
-  const governorates = isEn
-    ? [
-        { name: 'Capital Governorate Painters', href: '/en/areas/capital', count: '29 Areas' },
-        { name: 'Hawalli Governorate Painters', href: '/en/areas/hawalli', count: '16 Areas' },
-        { name: 'Farwaniya Governorate Painters', href: '/en/areas/farwaniya', count: '16 Areas' },
-        { name: 'Ahmadi Governorate Painters', href: '/en/areas/ahmadi', count: '20 Areas' },
-        { name: 'Mubarak Al-Kabeer Painters', href: '/en/areas/mubarak-al-kabeer', count: '12 Areas' },
-        { name: 'Jahra Governorate Painters', href: '/en/areas/jahra', count: '15 Areas' },
-      ]
-    : [
+  const governorates = [
         { name: 'صباغ محافظة العاصمة', href: '/areas/capital', count: '29 منطقة' },
         { name: 'صباغ محافظة حولي', href: '/areas/hawalli', count: '16 منطقة' },
         { name: 'صباغ محافظة الفروانية', href: '/areas/farwaniyah', count: '16 منطقة' },
@@ -106,16 +95,7 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
       ];
 
   // المدن السكنية الجديدة الأكثر طلباً
-  const newCities = isEn
-    ? [
-        { name: 'Painters in Salmiya & Hawalli', href: '/en/areas/hawalli', badge: 'High Expat Demand' },
-        { name: 'Painters in Mahboula & Fintas', href: '/en/areas/ahmadi', badge: 'Apartment Repaint' },
-        { name: 'Painters in Kuwait City & Sharq', href: '/en/areas/capital', badge: 'Commercial & Office' },
-        { name: 'Al Mutlaa City Villa Finishing', href: '/en/areas/jahra', badge: 'New Villas' },
-        { name: 'Khiran & Sea City Chalet Paints', href: '/en/areas/ahmadi', badge: 'Marine Coatings' },
-        { name: 'Sabah Al-Ahmad Residential City', href: '/en/areas/ahmadi', badge: 'Full Finishing' },
-      ]
-    : [
+  const newCities = [
         { name: 'صباغ مدينة المطلاع السكنية', href: '/areas/jahra/al-mutlaa', badge: 'أكبر حركة تشطيب' },
         { name: 'صباغ مدينة صباح الأحمد', href: '/areas/ahmadi/sabah-al-ahmad-residential', badge: 'قسائم وبيوت' },
         { name: 'صباغ مدينة جابر الأحمد', href: '/areas/capital/jaber-al-ahmad', badge: 'شقق وقسائم' },
@@ -126,18 +106,7 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
       ];
 
   // خدمات الأصباغ والديكور المميزة
-  const paintingServices = isEn
-    ? [
-        { name: 'Interior Wall Painting (Jotun Fenomastic)', href: '/en/services/interior-painting', desc: 'Eggshell, Matt & Silk' },
-        { name: 'Italian Decorative Paints & Stucco', href: '/en/services/italian-decorative-paints', desc: 'Marmorino, Travertino, Valpaint' },
-        { name: '3D Wallpaper & Korean Roll Installation', href: '/en/services/wallpapers-3d', desc: 'Moisture-resistant vinyl' },
-        { name: 'PVC Marble & WPC Fluted Wood Panels', href: '/en/services/pvc-marble-wpc-wood-fluted-panels', desc: 'Modern TV Units & Led Profiles' },
-        { name: 'Moisture, Salt Dampness & Crack Repair', href: '/en/services/moisture-humidity-cracks-treatment', desc: 'Waterproofing & Peeling Wall Fix' },
-        { name: 'Exterior Facade & Sigma Coating', href: '/en/services/exterior-facade-sigma-jotun', desc: 'Jotun Jotashield 50°C+ UV Protection' },
-        { name: 'Epoxy Flooring (Garages & Basements)', href: '/en/services/epoxy-flooring', desc: 'Hot-tire proof & chemical resistant' },
-        { name: 'Door & Woodwork Spray Refinishing', href: '/en/services/doors-wood-painting', desc: 'Duco, Lacquer & Polyurethane' },
-      ]
-    : [
+  const paintingServices = [
         { name: 'أصباغ داخلية (جوتن فينوماستيك)', href: '/services/interior-painting', desc: 'مطفي، ربع لمعة، نصف لمعة' },
         { name: 'أصباغ إيطالية ديكورية وترافرتينو', href: '/services/italian-decorative-paints', desc: 'مارمورينو، فالفنت، ستوكو' },
         { name: 'تركيب ورق جدران 3D ورول كوري', href: '/services/wallpapers-3d', desc: 'فينيل مقاوم للرطوبة والعفن' },
@@ -149,14 +118,7 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
       ];
 
   // أحدث مقالات وأدلة
-  const blogArticles = isEn
-    ? [
-        { name: 'Kuwait Painting Prices Guide 2026', href: '/en/services-guide', category: 'Cost Guide' },
-        { name: 'How to Repaint a Rental Apartment to Recover Deposit', href: '/en/services/interior-painting', category: 'Expat Tips' },
-        { name: 'Best Paint Brands for Kuwait Summer Heat (50°C)', href: '/en/services/exterior-facade-sigma-jotun', category: 'Quality Guide' },
-        { name: 'Fixing Peeling Wall Paint from AC Humidity', href: '/en/services/moisture-humidity-cracks-treatment', category: 'Maintenance' },
-      ]
-    : [
+  const blogArticles = [
         { name: 'سعر صبغ الغرفة والشقة بالدينار الكويتي 2026', href: '/blog/room-painting-cost-kuwait', category: 'أسعار وتكاليف' },
         { name: 'سعر متر السيجما والواجهات الخارجية بالكويت', href: '/blog/sigma-exterior-cost-kuwait', category: 'واجهات وسيجما' },
         { name: 'أسعار دهانات جوتن بالكويت (فينوماستيك وجوتاشيلد)', href: '/blog/jotun-paint-prices-kuwait', category: 'أسعار وتكاليف' },
@@ -164,22 +126,7 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
       ];
 
   // المناطق الأكثر طلباً (سريعة النقر)
-  const popularAreas = isEn
-    ? [
-        { name: 'Salmiya', href: '/en/areas/hawalli' },
-        { name: 'Hawalli', href: '/en/areas/hawalli' },
-        { name: 'Jabriya', href: '/en/areas/hawalli' },
-        { name: 'Rumaithiya', href: '/en/areas/hawalli' },
-        { name: 'Mahboula', href: '/en/areas/ahmadi' },
-        { name: 'Fintas', href: '/en/areas/ahmadi' },
-        { name: 'Fahaheel', href: '/en/areas/ahmadi' },
-        { name: 'Kuwait City / Sharq', href: '/en/areas/capital' },
-        { name: 'Kaifan & Rawda', href: '/en/areas/capital' },
-        { name: 'Khaitan & Farwaniya', href: '/en/areas/farwaniya' },
-        { name: 'Sabah Al-Salem', href: '/en/areas/mubarak-al-kabeer' },
-        { name: 'Al Mutlaa', href: '/en/areas/jahra' },
-      ]
-    : [
+  const popularAreas = [
         { name: 'السالمية', href: '/areas/hawalli/al-salmiya' },
         { name: 'حولي', href: '/areas/hawalli/hawalli-city' },
         { name: 'الجابرية', href: '/areas/hawalli/al-jabriya' },
@@ -194,10 +141,10 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
         { name: 'الروضة', href: '/areas/capital/al-rawda' },
       ];
 
-  const ArrowIcon = isEn ? ArrowUpRight : ArrowUpLeft;
+  const ArrowIcon = ArrowUpLeft;
 
   return (
-    <footer className="footer" dir={isEn ? 'ltr' : 'rtl'} style={{ background: '#12332c', color: '#d9e0d3', paddingTop: '48px', paddingBottom: '32px' }}>
+    <footer className="footer" dir="rtl" style={{ background: '#12332c', color: '#d9e0d3', paddingTop: '48px', paddingBottom: '32px' }}>
       <div style={{ width: 'min(1192px, calc(100% - 48px))', margin: 'auto' }}>
         
         {/* صف العلامة والموثوقية العلوية */}
@@ -213,7 +160,7 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
           }}
         >
           <div>
-            <Brand light={true} href={isEn ? '/en/' : '/'} />
+            <Brand light={true} href="/" />
             <p
               style={{
                 margin: '10px 0 0',
@@ -223,9 +170,7 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
                 lineHeight: 1.8,
               }}
             >
-              {isEn
-                ? 'Kuwait’s leading verified directory connecting homeowners, expats, and businesses with certified painting technicians, wall decorators, and waterproofing experts across all governorates.'
-                : 'دليل الكويت الأول المتخصص في الربط المباشر بين أصحاب المنازل والفلل وأمهر معلمي وورش الأصباغ والديكورات والترميم في كافة محافظات الكويت.'}
+              دليل الكويت الأول المتخصص في الربط المباشر بين أصحاب المنازل والفلل وأمهر معلمي وورش الأصباغ والديكورات والترميم في كافة محافظات الكويت.
             </p>
           </div>
 
@@ -243,7 +188,7 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
             }}
           >
             <span style={{ fontSize: '11px', color: '#e9bd77', fontWeight: 700 }}>
-              {isEn ? 'Certified Authentic Paints:' : 'مواد أصلية معتمدة:'}
+              'مواد أصلية معتمدة:'
             </span>
             <span style={{ fontSize: '11px', color: '#d9e0d3' }}>Jotun Kuwait</span>
             <span style={{ color: 'rgba(255,255,255,0.2)' }}>•</span>
@@ -268,7 +213,7 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#e9bd77', marginBottom: '14px', fontWeight: 700, fontSize: '13px' }}>
               <Building2 size={16} />
-              <span>{isEn ? 'Kuwait Governorates' : 'محافظات الكويت الست'}</span>
+              <span>محافظات الكويت الست</span>
             </div>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {governorates.map((gov) => (
@@ -298,7 +243,7 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#e9bd77', marginBottom: '14px', fontWeight: 700, fontSize: '13px' }}>
               <Compass size={16} />
-              <span>{isEn ? 'Key Hubs & Expat Areas' : 'مدن ومناطق حيوية'}</span>
+              <span>مدن ومناطق حيوية</span>
             </div>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {newCities.map((city) => (
@@ -328,7 +273,7 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#e9bd77', marginBottom: '14px', fontWeight: 700, fontSize: '13px' }}>
               <Paintbrush size={16} />
-              <span>{isEn ? 'Painting & Decor Services' : 'خدمات الأصباغ والتشطيب'}</span>
+              <span>خدمات الأصباغ والتشطيب</span>
             </div>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {paintingServices.slice(0, 6).map((service) => (
@@ -356,7 +301,7 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#e9bd77', marginBottom: '14px', fontWeight: 700, fontSize: '13px' }}>
               <BookOpen size={16} />
-              <span>{isEn ? 'Guides & Calculators' : 'أدلة الأسعار والمعرفة'}</span>
+              <span>أدلة الأسعار والمعرفة</span>
             </div>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {blogArticles.map((art) => (
@@ -379,7 +324,7 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
               ))}
               <li style={{ paddingTop: '8px', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
                 <Link
-                  href={isEn ? '/en/request-quote/' : '/request-quote'}
+                  href="/request-quote"
                   style={{
                     color: '#fff',
                     textDecoration: 'none',
@@ -395,7 +340,7 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
                   }}
                 >
                   <Calculator size={14} color="#e9bd77" />
-                  <span>{isEn ? 'Calculate Painting Cost (Instant)' : 'احسب تكلفة صبغ بيتك فوراً'}</span>
+                  <span>احسب تكلفة صبغ بيتك فوراً</span>
                   <ArrowIcon size={14} style={{ marginInlineStart: 'auto' }} />
                 </Link>
               </li>
@@ -423,7 +368,7 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
             }}
           >
             <MapPin size={13} />
-            <span>{isEn ? 'Painters currently available across popular Kuwait districts:' : 'صباغين متاحين الآن في أشهر مناطق الكويت:'}</span>
+            <span>صباغين متاحين الآن في أشهر مناطق الكويت:</span>
           </div>
 
           <div
@@ -447,7 +392,7 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
                   border: '1px solid rgba(255, 255, 255, 0.06)',
                 }}
               >
-                {isEn ? `Painter in ${area.name}` : `صباغ ${area.name}`}
+                `صباغ ${area.name}`
               </Link>
             ))}
           </div>
@@ -468,20 +413,17 @@ export const SiteFooter: FC<{ lang?: 'ar' | 'en' }> = ({ lang = 'ar' }) => {
           }}
         >
           <div>
-            {isEn
-              ? `All rights reserved © ${new Date().getFullYear()} Fani Kuwait (Kuwait Painters Platform) · Certified painting directory in Kuwait.`
-              : `جميع الحقوق محفوظة © ${new Date().getFullYear()} صباغ الكويت · إحدى خدمات منصة فني الكويت المعتمدة`}
+            جميع الحقوق محفوظة © {new Date().getFullYear()} صباغ الكويت · إحدى خدمات منصة فني الكويت المعتمدة
           </div>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
             <span style={{ color: '#d9c597' }}>
-              {isEn ? 'Direct painter contact with zero intermediary markup' : 'تواصل مباشر مع الصباغ بدون وسيط أو عمولة'}
+              تواصل مباشر مع الصباغ بدون وسيط أو عمولة
             </span>
             <span>•</span>
-            <Link href={isEn ? '/en/faq/' : '/faq'} aria-label={isEn ? 'Warranty and Trust' : 'شروط الضمان والمصداقية'} style={{ color: 'inherit', textDecoration: 'none' }}>
-              {isEn ? 'Warranty & Quality' : 'الضمان والمصداقية'}
+            <Link href="/faq" aria-label="شروط الضمان والمصداقية" style={{ color: 'inherit', textDecoration: 'none' }}>
+              الضمان والمصداقية
             </Link>
-            <span>•</span>
-            <LanguageSwitcher variant="compact" />
+            
           </div>
         </div>
       </div>

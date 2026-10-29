@@ -353,6 +353,15 @@ class CatalogStore {
       });
   }
 
+  public updatePainter(id: number, partial: Partial<Painter>): void {
+    const idx = this.painters.findIndex((p) => p.id === id);
+    if (idx !== -1) {
+      this.painters[idx] = { ...this.painters[idx], ...partial };
+      this.savePainters();
+      this.notify();
+    }
+  }
+
   public updatePainterOrder(id: number, newOrder: number): void {
     const validOrder = Math.max(1, Math.floor(newOrder) || 1);
     this.painters = this.painters

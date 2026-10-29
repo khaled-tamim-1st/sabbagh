@@ -85,8 +85,7 @@
       "identifier": "urn:air:sabbagh-kuwait.pages.dev:webmcp:quote-request-en",
       "displayName": "Kuwait Painting Cost Calculator & Free Inspection (English)",
       "type": "application/mcp-server-card+json",
-      "url": "https://sabbagh-kuwait.pages.dev/en/request-quote/",
-      "description": "Instant online calculator for house and apartment painting costs in Kuwaiti Dinar (KWD), with free on-site inspections across all Kuwait areas.",
+            "description": "Instant online calculator for house and apartment painting costs in Kuwaiti Dinar (KWD), with free on-site inspections across all Kuwait areas.",
       "tags": [
         "painters",
         "kuwait",
@@ -111,8 +110,7 @@
       "identifier": "urn:air:sabbagh-kuwait.pages.dev:webmcp:search-painters-en",
       "displayName": "Directory of Verified Painters in Kuwait (English)",
       "type": "application/mcp-server-card+json",
-      "url": "https://sabbagh-kuwait.pages.dev/en/",
-      "description": "Verified directory of certified painters and decor technicians in Kuwait with English coordination, reviews, and portfolio galleries.",
+            "description": "Verified directory of certified painters and decor technicians in Kuwait with English coordination, reviews, and portfolio galleries.",
       "tags": [
         "painters directory",
         "english speaking painter",
