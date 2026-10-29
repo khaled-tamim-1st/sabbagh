@@ -118,11 +118,11 @@ core_routes = [
     ("/en/", 200, "Kuwait Painters"),
     ("/en/services/", 200, "Painting Services"),
     ("/en/services/interior-painting/", 200, "Interior Painting"),
-    ("/en/areas/", 200, "Coverage Areas"),
+    ("/en/areas/", 200, "Painters Across All Kuwait Governorates"),
     ("/en/areas/capital/", 200, "Capital Governorate"),
     ("/en/areas/hawalli/", 200, "Hawalli Governorate"),
-    ("/en/request-quote/", 200, "Instant Quote"),
-    ("/en/services-guide/", 200, "Pricing Guide"),
+    ("/en/request-quote/", 200, "Calculate Your Painting Cost in Kuwait"),
+    ("/en/services-guide/", 200, "Kuwait Painting Prices Guide 2026"),
     ("/en/faq/", 200, "Frequently Asked Questions")
 ]
 

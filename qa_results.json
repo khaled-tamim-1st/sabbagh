@@ -112,7 +112,7 @@
     {
       "name": "API /api/public/painters",
       "status": "PASS",
-      "details": "Returned 18 approved painters"
+      "details": "Returned 19 approved painters"
     },
     {
       "name": "API /api/public/painters/1 (by ID)",
@@ -127,7 +127,7 @@
     {
       "name": "API POST /api/public/quotes (Valid)",
       "status": "PASS",
-      "details": "Status: 201, Body: {\"success\":true,\"quote\":{\"id\":20,\"customerName\":\"فهد السالم - فحص الجودة\",\"customerPhone\":\"965998877"
+      "details": "Status: 201, Body: {\"success\":true,\"quote\":{\"id\":23,\"customerName\":\"فهد السالم - فحص الجودة\",\"customerPhone\":\"965998877"
     },
     {
       "name": "API POST /api/public/quotes (Missing Phone)",
