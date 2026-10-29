@@ -67,6 +67,20 @@ const GOVERNORATES_DICTIONARY: Record<string, { en: string; ar: string }> = {
 };
 
 /**
+ * Helper to translate a service string to English
+ */
+export function translateServiceToEn(service: string): string {
+  return SERVICES_DICTIONARY[service]?.en || service;
+}
+
+/**
+ * Helper to translate a governorate string to English
+ */
+export function translateGovernorateToEn(governorate: string): string {
+  return GOVERNORATES_DICTIONARY[governorate]?.en || governorate;
+}
+
+/**
  * Detect primary language (Arabic vs English)
  */
 export function detectLanguage(text: string): 'ar' | 'en' {
@@ -81,9 +95,58 @@ export async function translatePainterProfile(
   profile: RawPainterProfile,
   geminiApiKey?: string
 ): Promise<TranslatedPainterProfile> {
-  const detectedLang = detectLanguage(profile.name + ' ' + (profile.description || ''));
+  const detectedLang = detectLanguage(profile.name + ' ' + (profile.bio || profile.description || ''));
 
-  // If Gemini API Key is provided, call Gemini Flash API with structured output
+  // 1. Primary Engine: Cloudflare Workers AI Edge Endpoint (@cf/meta/m2m100-1.2b)
+  try {
+    const edgeRes = await fetch('/api/edge/translate-profile', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: profile.name,
+        bio: profile.bio || profile.description || '',
+        services: profile.services || [],
+        governorates: profile.governorates || [],
+        sourceLang: detectedLang,
+        targetLang: detectedLang === 'ar' ? 'en' : 'ar',
+      }),
+    });
+
+    if (edgeRes.ok) {
+      const edgeData = await edgeRes.json();
+      if (edgeData?.success && edgeData.translated) {
+        const trans = edgeData.translated;
+        const nameEn = detectedLang === 'ar' ? (trans.name || transliterateArabicNameToEn(profile.name)) : profile.name;
+        const nameAr = detectedLang === 'ar' ? profile.name : (trans.name || profile.name);
+        const bioEn = detectedLang === 'ar' ? (trans.bio || '') : (profile.bio || '');
+        const bioAr = detectedLang === 'ar' ? (profile.bio || '') : (trans.bio || '');
+        const servicesEn = detectedLang === 'ar' ? trans.services : (profile.services || []);
+        const servicesAr = detectedLang === 'ar' ? (profile.services || []) : trans.services;
+
+        return {
+          nameEn,
+          nameAr,
+          bioEn,
+          bioAr,
+          descriptionEn: bioEn,
+          descriptionAr: bioAr,
+          servicesEn: servicesEn.length > 0 ? servicesEn : ['Interior Wall Painting', 'Putty Skim Coat', 'Authentic Jotun Paints'],
+          servicesAr: servicesAr.length > 0 ? servicesAr : ['دهان داخلي', 'معجون أصلي', 'أصباغ جوتن'],
+          regionEn: detectedLang === 'ar' ? (GOVERNORATES_DICTIONARY[profile.region || '']?.en || 'All Kuwait') : (profile.region || 'All Kuwait'),
+          regionAr: detectedLang === 'ar' ? (profile.region || 'كافة المناطق') : (GOVERNORATES_DICTIONARY[profile.region || '']?.ar || 'كافة المناطق'),
+          whatsappPrefillEn: `Hello ${nameEn}, I need a painting quotation.`,
+          whatsappPrefillAr: `مرحباً ${nameAr}، أود طلب مقايسة صبغ.`,
+          responseTimeEn: 'Within 15 minutes',
+          responseTimeAr: 'خلال 15 دقيقة',
+          sourceLanguage: detectedLang,
+        };
+      }
+    }
+  } catch (e) {
+    // Edge API not available or in local mode, continue to next fallback
+  }
+
+  // 2. Secondary Engine: Google Gemini Flash API (if API Key provided)
   if (geminiApiKey) {
     try {
       const prompt = `You are a Kuwait construction and painting localization specialist.

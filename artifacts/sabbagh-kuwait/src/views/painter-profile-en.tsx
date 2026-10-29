@@ -15,6 +15,7 @@ import { PainterAvatar } from '@/components/painter-avatar';
 import { getPainterById, PAINTERS_DATA, type Painter } from '@/data/painters';
 import { catalogStore } from '@/lib/catalog-store';
 import { apiClient } from '@/lib/api-client';
+import { translateServiceToEn, translateGovernorateToEn } from '@/lib/profile-translator';
 
 export default function PainterProfilePageEn({ id: propId }: { id?: number | string }) {
   let browserSlug = '';
@@ -58,8 +59,14 @@ export default function PainterProfilePageEn({ id: propId }: { id?: number | str
     return () => unsubscribe();
   }, [decodedIdentifier]);
 
+  const displayName = painter.nameEn || painter.name;
+  const displayBio = painter.bioEn || painter.bio || painter.description || 'Experienced professional painter offering comprehensive interior, exterior, and specialty decorative finishes across Kuwait with authentic materials.';
+  const displayRegion = painter.regionEn || translateGovernorateToEn(painter.region) || 'All Kuwait Governorates';
+  const displayServices = painter.servicesEn || (painter.services || []).map(translateServiceToEn);
+  const displayGovernorates = (painter.governorates || []).map(translateGovernorateToEn);
+
   const whatsappMessage = encodeURIComponent(
-    `Hello ${painter.name}, I found your verified profile on Fani Kuwait. I would like to request an inspection and quotation for my property.`
+    `Hello ${displayName}, I found your verified profile on Fani Kuwait. I would like to request an inspection and quotation for my property.`
   );
 
   return (
@@ -71,7 +78,7 @@ export default function PainterProfilePageEn({ id: propId }: { id?: number | str
             items={[
               { label: 'Home', href: '/en/' },
               { label: 'Painters Directory', href: '/en/areas/' },
-              { label: painter.name, isCurrent: true },
+              { label: displayName, isCurrent: true },
             ]}
           />
         </div>
@@ -91,7 +98,7 @@ export default function PainterProfilePageEn({ id: propId }: { id?: number | str
                 <div>
                   <div className="flex items-center gap-2 mb-1">
                     <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 leading-tight">
-                      {painter.name}
+                      {displayName}
                     </h1>
                     {painter.isVerified && (
                       <span className="inline-flex items-center gap-1 text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full text-xs font-bold border border-emerald-200">
@@ -110,7 +117,7 @@ export default function PainterProfilePageEn({ id: propId }: { id?: number | str
                     <span>·</span>
                     <span className="flex items-center gap-1">
                       <MapPin className="w-3.5 h-3.5 text-stone-400" />
-                      <span>{painter.region || 'All Kuwait Governorates'}</span>
+                      <span>{displayRegion}</span>
                     </span>
                     <span>·</span>
                     <span className="flex items-center gap-1">
@@ -157,7 +164,7 @@ export default function PainterProfilePageEn({ id: propId }: { id?: number | str
                 Technician Bio &amp; Experience
               </h2>
               <p className="text-stone-700 text-sm leading-relaxed mb-4">
-                {painter.bio || painter.description || 'Experienced professional painter offering comprehensive interior, exterior, and specialty decorative finishes across Kuwait with authentic materials.'}
+                {displayBio}
               </p>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-stone-100 text-center">
@@ -186,7 +193,7 @@ export default function PainterProfilePageEn({ id: propId }: { id?: number | str
                 Provided Painting Services
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {painter.services.map((srv, idx) => (
+                {displayServices.map((srv, idx) => (
                   <div
                     key={idx}
                     className="flex items-center gap-2.5 p-3 rounded-xl bg-stone-50 border border-stone-100 text-xs text-stone-800 font-medium"
@@ -204,7 +211,7 @@ export default function PainterProfilePageEn({ id: propId }: { id?: number | str
                 Covered Kuwait Governorates
               </h2>
               <div className="flex flex-wrap gap-2">
-                {painter.governorates.map((gov, idx) => (
+                {displayGovernorates.map((gov, idx) => (
                   <span
                     key={idx}
                     className="bg-[#17483e]/10 text-[#17483e] border border-[#17483e]/20 px-3 py-1.5 rounded-lg text-xs font-semibold"

@@ -113,6 +113,13 @@ export interface Painter {
   sampleWorkImages?: PortfolioImage[];
   slug?: string;
   displayOrder?: number;
+
+  // الحقول المترجمة بالإنجليزية (Cloudflare Workers AI Localization)
+  nameEn?: string;
+  bioEn?: string;
+  descriptionEn?: string;
+  servicesEn?: string[];
+  regionEn?: string;
 }
 
 export const PAINTERS_DATA: Painter[] = [
