@@ -37,7 +37,7 @@ export function Brand({
     <Link
       href={href}
       className="brand"
-      aria-label={href.startsWith('/en') ? 'Home' : 'الرئيسية'}
+      aria-label="الرئيسية"
       style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}
     >
       <div
@@ -54,7 +54,7 @@ export function Brand({
           <source srcSet={webpSrc} type="image/webp" />
           <img
             src={pngSrc}
-            alt={href.startsWith('/en') ? 'Kuwait Painters Logo' : 'شعار صباغ الكويت'}
+            alt="شعار صباغ الكويت"
             width={width}
             height={size}
             loading={priority ? 'eager' : 'lazy'}
@@ -72,7 +72,7 @@ export function Brand({
             color: light ? '#f5efdf' : '#17483e',
           }}
         >
-          {href.startsWith('/en') ? 'Kuwait Painters' : 'صباغ الكويت'}
+          صباغ الكويت
         </span>
       )}
     </Link>
