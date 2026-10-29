@@ -54,6 +54,7 @@ export function Brand({
             width={width}
             height={size}
             loading={priority ? 'eager' : 'lazy'}
+            fetchPriority={priority ? 'high' : 'auto'}
             decoding="async"
             style={{ width: `${width}px`, height: `${size}px`, objectFit: 'contain', display: 'block' }}
           />
