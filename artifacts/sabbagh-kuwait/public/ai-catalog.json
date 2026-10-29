@@ -82,51 +82,57 @@
       "updatedAt": "2026-10-29T04:00:00Z"
     },
     {
-      "identifier": "urn:air:sabbagh-kuwait.pages.dev:webmcp:quote-request-en",
-      "displayName": "Kuwait Painting Cost Calculator & Free Inspection (English)",
+      "identifier": "urn:air:sabbagh-kuwait.pages.dev:webmcp:services-guide",
+      "displayName": "دليل خدمات الصباغة والتشطيبات بالكويت",
       "type": "application/mcp-server-card+json",
-            "description": "Instant online calculator for house and apartment painting costs in Kuwaiti Dinar (KWD), with free on-site inspections across all Kuwait areas.",
+      "url": "https://sabbagh-kuwait.pages.dev/services-guide/",
+      "description": "دليل شامل لكافة خدمات الأصباغ والديكورات الداخلية والخارجية وورق الجدران وبديل الخشب والرخام في الكويت.",
       "tags": [
-        "painters",
-        "kuwait",
-        "painting services",
-        "jotun",
-        "cost calculator",
-        "expats"
+        "خدمات صباغة",
+        "أصباغ داخلية",
+        "أصباغ خارجية",
+        "ورق جدران",
+        "بديل الرخام",
+        "بديل الخشب",
+        "الكويت"
       ],
       "capabilities": [
-        "QuoteRequest",
-        "PriceEstimation"
+        "ServicesCatalog",
+        "PriceGuide"
       ],
       "representativeQueries": [
-        "how much to paint 3 bedroom apartment in salmiya kuwait",
-        "book free painter inspection kuwait english",
-        "villa painting cost kuwait"
+        "ما هي خدمات الصباغة المتوفرة بالكويت",
+        "اسعار بديل الخشب وبديل الرخام بالكويت",
+        "دليل دهانات جوتن بالكويت"
       ],
-      "version": "1.1.0",
+      "version": "1.0.0",
       "updatedAt": "2026-10-29T04:00:00Z"
     },
     {
-      "identifier": "urn:air:sabbagh-kuwait.pages.dev:webmcp:search-painters-en",
-      "displayName": "Directory of Verified Painters in Kuwait (English)",
+      "identifier": "urn:air:sabbagh-kuwait.pages.dev:webmcp:areas-directory",
+      "displayName": "دليل مناطق ومحافظات صباغي الكويت",
       "type": "application/mcp-server-card+json",
-            "description": "Verified directory of certified painters and decor technicians in Kuwait with English coordination, reviews, and portfolio galleries.",
+      "url": "https://sabbagh-kuwait.pages.dev/areas/",
+      "description": "دليل تغطية خدمات الصباغة في كافة محافظات الكويت الست وجميع مناطقها مع أرقام الصباغين المعتمدين.",
       "tags": [
-        "painters directory",
-        "english speaking painter",
-        "kuwait painters",
-        "vetted technicians"
+        "مناطق الكويت",
+        "صباغ حولي",
+        "صباغ السالمية",
+        "صباغ الفروانية",
+        "صباغ الأحمدي",
+        "صباغ الجهراء",
+        "صباغ العاصمة"
       ],
       "capabilities": [
-        "PainterSearch",
-        "DirectoryLookup"
+        "AreaLookup",
+        "GovernorateCoverage"
       ],
       "representativeQueries": [
-        "find english speaking painter in kuwait",
-        "reliable flat painters in salmiya",
-        "cheap painter near me kuwait"
+        "ارقام صباغين في السالمية",
+        "صباغ في صباح السالم",
+        "صباغين معتمدين في المطلاع والجهراء"
       ],
-      "version": "1.1.0",
+      "version": "1.0.0",
       "updatedAt": "2026-10-29T04:00:00Z"
     }
   ]

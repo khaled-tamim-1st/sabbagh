@@ -76,14 +76,17 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="service-catalog" type="application/json" href="/.well-known/ai-catalog.json" />
         <link rel="ai-catalog" type="application/json" href="/ai-catalog.json" />
       </head>
-      <body>
+      <body
+        className="font-sans antialiased bg-background text-foreground"
+        style={{ fontFamily: "'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>
