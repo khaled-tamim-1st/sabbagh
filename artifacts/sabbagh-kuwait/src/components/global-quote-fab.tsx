@@ -6,12 +6,7 @@ import { X } from 'lucide-react';
 import { LeadQuoteSection } from './lead-quote-section';
 
 export function GlobalQuoteFab() {
-  let pathname: string | null = null;
-  try {
-    pathname = usePathname();
-  } catch {
-    pathname = null;
-  }
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 

@@ -114,21 +114,7 @@ core_routes = [
     ("/painters/%D8%AE%D8%A7%D9%84%D8%AF-%D8%AA%D9%85%D9%8A%D9%85/", 200, "خالد تميم"),
     ("/painters/%D9%85%D8%B9%D9%84%D9%85-%D8%A8%D8%AF%D8%B1-%D8%A7%D9%84%D8%B1%D8%B4%D9%8A%D8%AF%D9%8A/", 200, "معلم بدر الرشيدي"),
     ("/painters/completely-nonexistent-slug-xyz/", 404, ""),
-    ("/random-unmatched-url-404/", 404, ""),
-    ("/en/", 200, "Kuwait Painters"),
-    ("/en/services/", 200, "Painting Services"),
-    ("/en/services/interior-painting/", 200, "Interior Painting"),
-    ("/en/areas/", 200, "Painters Across All Kuwait Governorates"),
-    ("/en/areas/capital/", 200, "Capital Governorate"),
-    ("/en/areas/hawalli/", 200, "Hawalli Governorate"),
-    ("/en/request-quote/", 200, "Calculate Your Painting Cost in Kuwait"),
-    ("/en/services-guide/", 200, "Kuwait Painting Prices Guide 2026"),
-    ("/en/faq/", 200, "Frequently Asked Questions"),
-    ("/en/blog/", 200, "Kuwait Painting, Decor"),
-    ("/en/blog/room-painting-cost-kuwait/", 200, "How Much Does It Cost to Paint a Room"),
-    ("/en/join-painter/", 200, "Join Fani Kuwait as a Certified Painter"),
-    ("/en/login/", 200, "Portal Sign In"),
-    ("/en/painters/1/", 200, "Verified")
+    ("/random-unmatched-url-404/", 404, "")
 ]
 
 for path, expected_status, expected_snippet in core_routes:

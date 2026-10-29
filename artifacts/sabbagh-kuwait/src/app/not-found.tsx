@@ -1,6 +1,5 @@
-'use client';
-
 import React from 'react';
+import { Link } from '@/lib/nav';
 import { AlertCircle, Home } from 'lucide-react';
 
 export default function NotFound() {
@@ -14,13 +13,13 @@ export default function NotFound() {
         <p className="text-sm text-[#687266] mb-6 leading-relaxed">
           الصفحة التي تبحث عنها قد تم نقلها أو أن الرابط غير صحيح. يمكنك العودة إلى الدليل الرئيسي للعثور على صباغين في منطقتك.
         </p>
-        <a
+        <Link
           href="/"
           className="inline-flex items-center justify-center gap-2 bg-[#17483e] text-[#fff8eb] font-bold py-3 px-6 rounded-xl hover:bg-[#123830] transition-colors w-full"
         >
           <Home size={18} />
           <span>العودة للصفحة الرئيسية</span>
-        </a>
+        </Link>
       </div>
     </div>
   );
