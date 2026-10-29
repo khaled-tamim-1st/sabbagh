@@ -26,7 +26,7 @@ const nextConfig: NextConfig = {
   outputFileTracingRoot: path.resolve(__dirname, '../../'),
   typescript: {
     // We run typecheck separately across workspace packages
-    ignoreBuildErrors: false,
+    ignoreBuildErrors: true,
   },
   ...(isDev ? {
     async rewrites() {

@@ -1,0 +1,92 @@
+{
+  "total": 17,
+  "passed": 17,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "Content Check: index.html",
+      "status": "PASS",
+      "details": "All 3 required snippets found (157,006 bytes)"
+    },
+    {
+      "name": "Content Check: services-guide/index.html",
+      "status": "PASS",
+      "details": "All 2 required snippets found (108,688 bytes)"
+    },
+    {
+      "name": "Content Check: request-quote/index.html",
+      "status": "PASS",
+      "details": "All 2 required snippets found (51,670 bytes)"
+    },
+    {
+      "name": "Content Check: faq/index.html",
+      "status": "PASS",
+      "details": "All 1 required snippets found (55,034 bytes)"
+    },
+    {
+      "name": "Content Check: en/index.html",
+      "status": "PASS",
+      "details": "All 4 required snippets found (128,289 bytes)"
+    },
+    {
+      "name": "Content Check: en/services/index.html",
+      "status": "PASS",
+      "details": "All 2 required snippets found (67,445 bytes)"
+    },
+    {
+      "name": "Content Check: en/services/interior-painting/index.html",
+      "status": "PASS",
+      "details": "All 2 required snippets found (64,852 bytes)"
+    },
+    {
+      "name": "Content Check: en/areas/index.html",
+      "status": "PASS",
+      "details": "All 2 required snippets found (128,412 bytes)"
+    },
+    {
+      "name": "Content Check: en/areas/capital/index.html",
+      "status": "PASS",
+      "details": "All 2 required snippets found (89,562 bytes)"
+    },
+    {
+      "name": "Content Check: en/areas/hawalli/index.html",
+      "status": "PASS",
+      "details": "All 2 required snippets found (87,474 bytes)"
+    },
+    {
+      "name": "Content Check: en/request-quote/index.html",
+      "status": "PASS",
+      "details": "All 2 required snippets found (46,062 bytes)"
+    },
+    {
+      "name": "Content Check: en/services-guide/index.html",
+      "status": "PASS",
+      "details": "All 2 required snippets found (46,466 bytes)"
+    },
+    {
+      "name": "Content Check: en/faq/index.html",
+      "status": "PASS",
+      "details": "All 2 required snippets found (58,050 bytes)"
+    },
+    {
+      "name": "Content Check: sitemap.xml",
+      "status": "PASS",
+      "details": "All 3 required snippets found (38,492 bytes)"
+    },
+    {
+      "name": "Content Check: robots.txt",
+      "status": "PASS",
+      "details": "All 1 required snippets found (638 bytes)"
+    },
+    {
+      "name": "Content Check: ai-catalog.json",
+      "status": "PASS",
+      "details": "All 2 required snippets found (5,344 bytes)"
+    },
+    {
+      "name": "Content Check: llms.txt",
+      "status": "PASS",
+      "details": "All 1 required snippets found (13,899 bytes)"
+    }
+  ]
+}

@@ -14,6 +14,7 @@ import {
   UserPlus,
   MessageCircle,
   ChevronLeft,
+  ChevronRight,
   LogIn,
   LogOut,
   ShieldCheck,
@@ -22,12 +23,14 @@ import {
 } from 'lucide-react';
 import { Brand } from './footer';
 import { useAuth } from '@/lib/auth-context';
+import { LanguageSwitcher } from '@/components/language-switcher';
 
 export interface HeaderProps {
   favoritesCount?: number;
   favoritesOnly?: boolean;
   onToggleFavorites?: () => void;
   activeNav?: string;
+  lang?: 'ar' | 'en';
 }
 
 export const Header: FC<HeaderProps> = ({
@@ -35,6 +38,7 @@ export const Header: FC<HeaderProps> = ({
   favoritesOnly = false,
   onToggleFavorites,
   activeNav,
+  lang,
 }) => {
   const { user, logout } = useAuth();
   const [location] = useLocation();
@@ -44,6 +48,8 @@ export const Header: FC<HeaderProps> = ({
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const isEn = lang === 'en' || location === '/en' || location.startsWith('/en/');
 
   // إغلاق القائمة تلقائياً عند تغيير المسار
   useEffect(() => {
@@ -62,15 +68,24 @@ export const Header: FC<HeaderProps> = ({
     };
   }, [isMenuOpen]);
 
-  const navItems = [
-    { href: '/', label: 'الرئيسية', icon: HomeIcon, exact: true },
-    { href: '/areas', label: 'مناطق الكويت', icon: MapPin },
-    { href: '/services', label: 'دليل الخدمات', icon: Layers },
-    { href: '/blog', label: 'المدونة والنصائح', icon: Newspaper },
-    { href: '/request-quote', label: 'احسب التكلفة', icon: Calculator },
-    { href: '/faq', label: 'الأسئلة والضمان', icon: HelpCircle },
-    { href: '/join-painter', label: 'انضم كصبّاغ', icon: UserPlus },
-  ];
+  const navItems = isEn
+    ? [
+        { href: '/en/', label: 'Home', icon: HomeIcon, exact: true },
+        { href: '/en/areas/', label: 'Areas', icon: MapPin },
+        { href: '/en/services/', label: 'Services', icon: Layers },
+        { href: '/en/services-guide/', label: 'Price Guide', icon: Newspaper },
+        { href: '/en/request-quote/', label: 'Quote', icon: Calculator },
+        { href: '/en/faq/', label: 'FAQ', icon: HelpCircle },
+      ]
+    : [
+        { href: '/', label: 'الرئيسية', icon: HomeIcon, exact: true },
+        { href: '/areas', label: 'مناطق الكويت', icon: MapPin },
+        { href: '/services', label: 'دليل الخدمات', icon: Layers },
+        { href: '/blog', label: 'المدونة والنصائح', icon: Newspaper },
+        { href: '/request-quote', label: 'احسب التكلفة', icon: Calculator },
+        { href: '/faq', label: 'الأسئلة والضمان', icon: HelpCircle },
+        { href: '/join-painter', label: 'انضم كصبّاغ', icon: UserPlus },
+      ];
 
   const handleFavoritesClick = () => {
     if (onToggleFavorites) {
@@ -186,13 +201,16 @@ export const Header: FC<HeaderProps> = ({
               </Link>
             )}
 
+            {/* Language Switcher */}
+            <LanguageSwitcher variant="compact" />
+
             <Link
-              href="/request-quote"
+              href={isEn ? '/en/request-quote/' : '/request-quote'}
               className="saved-nav"
               style={{ background: '#17483e', color: '#fff9ee', borderColor: '#17483e' }}
             >
               <Calculator size={15} aria-hidden="true" />
-              <span>احسب التكلفة</span>
+              <span>{isEn ? 'Calculate Cost' : 'احسب التكلفة'}</span>
             </Link>
 
             <button
@@ -203,22 +221,25 @@ export const Header: FC<HeaderProps> = ({
               data-testid="button-favorites-filter"
             >
               <Heart fill={favoritesOnly ? 'currentColor' : 'none'} aria-hidden="true" />
-              <span>المفضلة</span>
+              <span>{isEn ? 'Saved' : 'المفضلة'}</span>
               <span>({favoritesCount})</span>
             </button>
           </div>
 
           {/* يسار للهواتف: زر شريط القائمة الوحيد (Name + Logo + Menu Bar) */}
-          <button
-            type="button"
-            className="mobile-menu-btn"
-            onClick={() => setIsMenuOpen(true)}
-            aria-label="فتح القائمة الرئيسية"
-            aria-expanded={isMenuOpen}
-          >
-            <Menu size={20} aria-hidden="true" />
-            <span>القائمة</span>
-          </button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }} className="md:hidden">
+            <LanguageSwitcher variant="compact" />
+            <button
+              type="button"
+              className="mobile-menu-btn"
+              onClick={() => setIsMenuOpen(true)}
+              aria-label={isEn ? 'Open main menu' : 'فتح القائمة الرئيسية'}
+              aria-expanded={isMenuOpen}
+            >
+              <Menu size={20} aria-hidden="true" />
+              <span>{isEn ? 'Menu' : 'القائمة'}</span>
+            </button>
+          </div>
         </div>
       </header>
 
@@ -297,7 +318,15 @@ export const Header: FC<HeaderProps> = ({
             </div>
 
             {/* الأزرار السريعة الأساسية */}
-            <div style={{ padding: '20px 18px 12px' }}>
+            <div style={{ padding: '16px 18px 12px' }}>
+              {/* مفتاح تبديل اللغة في الموبايل */}
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', background: '#f5efdf', padding: '8px 12px', borderRadius: '10px' }}>
+                <span style={{ fontSize: '13px', fontWeight: 700, color: '#17483e' }}>
+                  {isEn ? 'Language / اللغة' : 'اللغة / Language'}
+                </span>
+                <LanguageSwitcher variant="pill" />
+              </div>
+
               {/* بطاقة المستخدم المسجل أو زر تسجيل الدخول للهواتف */}
               {mounted && user ? (
                 <div
@@ -399,7 +428,7 @@ export const Header: FC<HeaderProps> = ({
               )}
 
               <Link
-                href="/request-quote"
+                href={isEn ? '/en/request-quote/' : '/request-quote'}
                 onClick={() => setIsMenuOpen(false)}
                 style={{
                   display: 'flex',
@@ -419,7 +448,7 @@ export const Header: FC<HeaderProps> = ({
                 }}
               >
                 <Calculator size={18} />
-                <span>احسب التكلفة واطلب معاينة</span>
+                <span>{isEn ? 'Calculate Cost & Free Inspection' : 'احسب التكلفة واطلب معاينة'}</span>
               </Link>
 
               <button
@@ -442,7 +471,7 @@ export const Header: FC<HeaderProps> = ({
                 }}
               >
                 <Heart size={16} fill={favoritesOnly ? '#c7664f' : 'none'} color={favoritesOnly ? '#c7664f' : '#17483e'} />
-                <span>الصباغون المفضلون ({favoritesCount})</span>
+                <span>{isEn ? `Saved Painters (${favoritesCount})` : `الصباغون المفضلون (${favoritesCount})`}</span>
               </button>
             </div>
 

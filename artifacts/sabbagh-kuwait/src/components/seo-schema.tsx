@@ -366,21 +366,21 @@ export function SeoSchema({
  * مكوّنات مخصصة جاهزة للاستخدام المباشر
  */
 export function LocalBusinessSchema(props: LocalBusinessSchemaProps) {
-  const schema = React.useMemo(() => generateLocalBusinessSchema(props), [props]);
+  const schema = generateLocalBusinessSchema(props);
   return <SeoSchema schemas={schema} />;
 }
 
 export function FaqSchema(props: FaqSchemaProps) {
-  const schema = React.useMemo(() => generateFaqSchema(props), [props]);
+  const schema = generateFaqSchema(props);
   return <SeoSchema schemas={schema} />;
 }
 
 export function BreadcrumbSchema(props: BreadcrumbSchemaProps) {
-  const schema = React.useMemo(() => generateBreadcrumbSchema(props), [props]);
+  const schema = generateBreadcrumbSchema(props);
   return <SeoSchema schemas={schema} />;
 }
 
 export function ServiceSchema(props: ServiceSchemaProps) {
-  const schema = React.useMemo(() => generateServiceSchema(props), [props]);
+  const schema = generateServiceSchema(props);
   return <SeoSchema schemas={schema} />;
 }
