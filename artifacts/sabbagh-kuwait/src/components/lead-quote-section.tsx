@@ -312,7 +312,7 @@ export function LeadQuoteSection({
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px', marginBottom: '16px' }}>
               {/* نوع الخدمة */}
               <div>
-                <label htmlFor="lead-service-type" style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#e9bd77', marginBottom: '6px' }}>
+                <label id="label-lead-service-type" htmlFor="lead-service-type" style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#e9bd77', marginBottom: '6px' }}>
                   <Paintbrush size={14} style={{ display: 'inline', marginLeft: '6px' }} />
                   نوع الخدمة المطلوبة
                 </label>
@@ -321,7 +321,9 @@ export function LeadQuoteSection({
                   name="serviceType"
                   value={serviceType}
                   onChange={(e) => setServiceType(e.target.value)}
+                  aria-labelledby="label-lead-service-type"
                   aria-label="نوع الخدمة المطلوبة"
+                  title="نوع الخدمة المطلوبة"
                   style={{
                     width: '100%',
                     padding: '11px 14px',
@@ -343,7 +345,7 @@ export function LeadQuoteSection({
 
               {/* المحافظة */}
               <div>
-                <label htmlFor="lead-governorate" style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#e9bd77', marginBottom: '6px' }}>
+                <label id="label-lead-governorate" htmlFor="lead-governorate" style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#e9bd77', marginBottom: '6px' }}>
                   <MapPin size={14} style={{ display: 'inline', marginLeft: '6px' }} />
                   المحافظة والمنطقة
                 </label>
@@ -356,7 +358,9 @@ export function LeadQuoteSection({
                       setGovernorate(e.target.value);
                       setArea('');
                     }}
+                    aria-labelledby="label-lead-governorate"
                     aria-label="المحافظة"
+                    title="المحافظة"
                     style={{
                       flex: 1,
                       padding: '11px 10px',

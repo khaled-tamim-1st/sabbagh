@@ -328,12 +328,14 @@ export function HomeView() {
                     data-testid="input-search"
                   />
                 </label>
-                <label className="search-field" htmlFor="home-region-select">
+                <label id="label-home-region-select" className="search-field" htmlFor="home-region-select">
                   <MapPin aria-hidden="true" />
                   <select
                     id="home-region-select"
                     name="region"
-                    aria-label="اختر المنطقة"
+                    aria-labelledby="label-home-region-select"
+                    aria-label="اختر المنطقة أو المحافظة"
+                    title="اختر المنطقة أو المحافظة"
                     value={region}
                     onChange={(event) => setRegion(event.target.value)}
                     data-testid="select-region"

@@ -1,0 +1,85 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "صباغ الكويت | فني الكويت",
+    "identifier": "did:web:sabbagh-kuwait.pages.dev",
+    "documentationUrl": "https://sabbagh-kuwait.pages.dev/services-guide/",
+    "logoUrl": "https://sabbagh-kuwait.pages.dev/logo.png"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:sabbagh-kuwait.pages.dev:webmcp:quote-request",
+      "displayName": "طلب مقايسة ومعاينة صباغ بالكويت",
+      "type": "application/mcp-server-card+json",
+      "url": "https://sabbagh-kuwait.pages.dev/request-quote/",
+      "description": "طلب معاينة ومقايسة فنية مجانية لأعمال الأصباغ والدهانات والديكورات في جميع محافظات ومناطق الكويت الست.",
+      "tags": [
+        "صباغ",
+        "الكويت",
+        "دهانات",
+        "جوتن",
+        "مقايسة",
+        "ديكورات"
+      ],
+      "capabilities": [
+        "QuoteRequest",
+        "PriceEstimation"
+      ],
+      "representativeQueries": [
+        "طلب مقايسة صبغ شقة في حولي",
+        "حجز موعد معاينة صباغ بالكويت",
+        "كم تكلفة دهان صالة استقبال جوتن في العاصمة"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-29T04:00:00Z"
+    },
+    {
+      "identifier": "urn:air:sabbagh-kuwait.pages.dev:webmcp:search-painters",
+      "displayName": "البحث عن صباغين معتمدين في الكويت",
+      "type": "application/mcp-server-card+json",
+      "url": "https://sabbagh-kuwait.pages.dev/",
+      "description": "البحث في دليل صباغي الكويت المعتمدين والمصنفين حسب المحافظة والخدمة والتقييم الحقيقي وسابقة الأعمال.",
+      "tags": [
+        "صباغين",
+        "دليل",
+        "معلم صباغ",
+        "الكويت",
+        "تقييمات"
+      ],
+      "capabilities": [
+        "PainterSearch",
+        "DirectoryLookup"
+      ],
+      "representativeQueries": [
+        "ابحث عن صباغ شاطر ورخيص في حولي",
+        "صباغين معتمدين في الفروانية",
+        "افضل معلم دهانات بالاحمدي"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-29T04:00:00Z"
+    },
+    {
+      "identifier": "urn:air:sabbagh-kuwait.pages.dev:api:quotes",
+      "displayName": "واجهة برمجية لطلبات الأسعار والمقايسات",
+      "type": "application/mcp-server-card+json",
+      "url": "https://sabbagh-kuwait.pages.dev/api/public/quotes",
+      "description": "واجهة API برمجية لاستقبال طلبات المقايسة وحساب التكلفة التقديرية للأصباغ والتشطيبات بالدينار الكويتي.",
+      "tags": [
+        "API",
+        "REST",
+        "Quotes",
+        "Kuwait"
+      ],
+      "capabilities": [
+        "CreateQuote",
+        "GetEstimates"
+      ],
+      "representativeQueries": [
+        "حساب تكلفة أصباغ غرف النوم بالكويت",
+        "استخراج عروض اسعار صباغة بالدينار"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-29T04:00:00Z"
+    }
+  ]
+}

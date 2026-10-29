@@ -1,140 +1,85 @@
 {
-  "$schema": "https://agenticweb.org/schema/v1/ai-catalog.json",
-  "name": "صباغ الكويت | فني الكويت",
-  "umbrellaBrand": "فني الكويت",
-  "serviceBrand": "صباغ الكويت",
-  "description": "دليل وخدمات صباغة ودهانات وديكورات معتمدة في جميع مناطق ومحافظات دولة الكويت الست مع أسعار شفافة بالدينار ومعاينة مجانية.",
-  "url": "https://sabbagh-kuwait.com",
-  "version": "1.0.0",
-  "metadata": {
-    "country": "KW",
-    "currency": "KWD",
-    "primaryLanguage": "ar-KW",
-    "supportedLanguages": [
-      "ar-KW",
-      "en-KW"
-    ],
-    "governorates": [
-      "العاصمة",
-      "حولي",
-      "الفروانية",
-      "الأحمدي",
-      "مبارك الكبير",
-      "الجهراء"
-    ]
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "صباغ الكويت | فني الكويت",
+    "identifier": "did:web:sabbagh-kuwait.pages.dev",
+    "documentationUrl": "https://sabbagh-kuwait.pages.dev/services-guide/",
+    "logoUrl": "https://sabbagh-kuwait.pages.dev/logo.png"
   },
-  "capabilities": [
+  "entries": [
     {
-      "id": "search_painters",
-      "name": "البحث عن صباغين معتمدين",
-      "description": "البحث في دليل صباغي الكويت المعتمدين والمصنفين حسب المحافظة والمنطقة ونوع الخدمة والتقييم.",
-      "endpoint": "https://sabbagh-kuwait.com/#directory",
-      "method": "GET",
-      "formSelector": "form.search-panel[role='search']",
-      "parameters": {
-        "type": "object",
-        "properties": {
-          "query": {
-            "type": "string",
-            "description": "اسم الصباغ أو نوع الدهان المطلوب (جوتن، سيجما، بديل خشب، ورق جدران)"
-          },
-          "region": {
-            "type": "string",
-            "description": "المحافظة أو المنطقة المستهدفة في الكويت (مثال: حولي، السالمية، صباح الأحمد، العاصمة)"
-          }
-        }
-      }
+      "identifier": "urn:air:sabbagh-kuwait.pages.dev:webmcp:quote-request",
+      "displayName": "طلب مقايسة ومعاينة صباغ بالكويت",
+      "type": "application/mcp-server-card+json",
+      "url": "https://sabbagh-kuwait.pages.dev/request-quote/",
+      "description": "طلب معاينة ومقايسة فنية مجانية لأعمال الأصباغ والدهانات والديكورات في جميع محافظات ومناطق الكويت الست.",
+      "tags": [
+        "صباغ",
+        "الكويت",
+        "دهانات",
+        "جوتن",
+        "مقايسة",
+        "ديكورات"
+      ],
+      "capabilities": [
+        "QuoteRequest",
+        "PriceEstimation"
+      ],
+      "representativeQueries": [
+        "طلب مقايسة صبغ شقة في حولي",
+        "حجز موعد معاينة صباغ بالكويت",
+        "كم تكلفة دهان صالة استقبال جوتن في العاصمة"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-29T04:00:00Z"
     },
     {
-      "id": "quote_request",
-      "name": "طلب مقايسة ومعاينة صباغ",
-      "description": "إرسال طلب معاينة ومقايسة ميدانية مجانية لفني دهانات وديكورات معتمد في الكويت.",
-      "endpoint": "https://sabbagh-kuwait.com/request-quote",
-      "method": "POST",
-      "formSelector": "form[data-webmcp-tool='quote_request']",
-      "parameters": {
-        "type": "object",
-        "required": [
-          "customerPhone",
-          "serviceType",
-          "governorate"
-        ],
-        "properties": {
-          "customerName": {
-            "type": "string",
-            "description": "اسم العميل الكريم"
-          },
-          "customerPhone": {
-            "type": "string",
-            "description": "رقم الهاتف أو الواتساب الكويتي (+965XXXXXXXX)"
-          },
-          "serviceType": {
-            "type": "string",
-            "description": "نوع الخدمة المطلوبة: صبغ داخلي، أصباغ جوتن، ورق جدران، بديل خشب ورخام، سيجما خارجي"
-          },
-          "governorate": {
-            "type": "string",
-            "description": "المحافظة الكويتية (العاصمة، حولي، الفروانية، الأحمدي، مبارك الكبير، الجهراء)"
-          },
-          "area": {
-            "type": "string",
-            "description": "اسم المنطقة أو القطعة السكنية"
-          },
-          "notes": {
-            "type": "string",
-            "description": "تفاصيل وملاحظات إضافية حول حجم العقار وموعد المعاينة المناسب"
-          }
-        }
-      }
+      "identifier": "urn:air:sabbagh-kuwait.pages.dev:webmcp:search-painters",
+      "displayName": "البحث عن صباغين معتمدين في الكويت",
+      "type": "application/mcp-server-card+json",
+      "url": "https://sabbagh-kuwait.pages.dev/",
+      "description": "البحث في دليل صباغي الكويت المعتمدين والمصنفين حسب المحافظة والخدمة والتقييم الحقيقي وسابقة الأعمال.",
+      "tags": [
+        "صباغين",
+        "دليل",
+        "معلم صباغ",
+        "الكويت",
+        "تقييمات"
+      ],
+      "capabilities": [
+        "PainterSearch",
+        "DirectoryLookup"
+      ],
+      "representativeQueries": [
+        "ابحث عن صباغ شاطر ورخيص في حولي",
+        "صباغين معتمدين في الفروانية",
+        "افضل معلم دهانات بالاحمدي"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-29T04:00:00Z"
     },
     {
-      "id": "quote_calculator",
-      "name": "حاسبة تكلفة الصباغة التقديرية",
-      "description": "تقدير أسعار أعمال الدهانات والتشطيبات بالدينار الكويتي (KWD) شاملة المواد الأصلية أو المصنعية.",
-      "endpoint": "https://sabbagh-kuwait.com/request-quote",
-      "method": "GET",
-      "parameters": {
-        "type": "object",
-        "properties": {
-          "propertyType": {
-            "type": "string",
-            "enum": [
-              "apartment",
-              "villa",
-              "qasima",
-              "building",
-              "commercial"
-            ],
-            "description": "نوع العقار: شقة، فيلا، قسيمة، عمارة، مكتب/محل"
-          },
-          "workType": {
-            "type": "string",
-            "enum": [
-              "interior",
-              "wallpaper",
-              "decorative",
-              "exterior",
-              "repair"
-            ],
-            "description": "نوع العمل: داخلي، ورق جدران، ديكورات، خارجي، ترميم"
-          },
-          "roomsCount": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 30,
-            "description": "عدد الغرف أو المساحات المراد صبغها"
-          },
-          "includeMaterials": {
-            "type": "boolean",
-            "description": "هل يشمل الدهانات والمواد الأصلية (جوتن فينوماستيك، كابارول)"
-          }
-        }
-      }
+      "identifier": "urn:air:sabbagh-kuwait.pages.dev:api:quotes",
+      "displayName": "واجهة برمجية لطلبات الأسعار والمقايسات",
+      "type": "application/mcp-server-card+json",
+      "url": "https://sabbagh-kuwait.pages.dev/api/public/quotes",
+      "description": "واجهة API برمجية لاستقبال طلبات المقايسة وحساب التكلفة التقديرية للأصباغ والتشطيبات بالدينار الكويتي.",
+      "tags": [
+        "API",
+        "REST",
+        "Quotes",
+        "Kuwait"
+      ],
+      "capabilities": [
+        "CreateQuote",
+        "GetEstimates"
+      ],
+      "representativeQueries": [
+        "حساب تكلفة أصباغ غرف النوم بالكويت",
+        "استخراج عروض اسعار صباغة بالدينار"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-29T04:00:00Z"
     }
-  ],
-  "agentDirectives": {
-    "crawlingPolicy": "Allowed for all leading AI models and research bots",
-    "citationPreference": "Provide direct canonical link: https://sabbagh-kuwait.com and mention 'فني الكويت - صباغ الكويت'",
-    "contactSupport": "https://sabbagh-kuwait.com/faq"
-  }
+  ]
 }
