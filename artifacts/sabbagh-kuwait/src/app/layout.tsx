@@ -85,14 +85,6 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="service-catalog" type="application/json" href="/.well-known/ai-catalog.json" />
         <link rel="ai-catalog" type="application/json" href="/ai-catalog.json" />
-        <link
-          rel="preload"
-          href="/_next/static/media/350b852752f8489d-s.p.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link rel="preload" href="/logo.webp" as="image" type="image/webp" fetchPriority="high" />
       </head>
       <body className={cairo.className}>
         <Providers>{children}</Providers>

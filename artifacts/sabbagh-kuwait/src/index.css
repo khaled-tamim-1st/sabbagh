@@ -178,16 +178,6 @@
 /* Floating Bottom Bars: Mobile Dock vs Desktop Floating Pill */
 .desktop-floating-bar { display:block; }
 .mobile-painter-bottom-bar { display:none; }
-
-/* Modern Core Web Vitals (Speed Index & Rendering) Optimization */
-.directory-grid,
-.how-section,
-.faq-section,
-.lead-quote-form-wrapper {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 500px;
-}
-
 @media(max-width:767px) {
   .desktop-floating-bar { display:none !important; }
   .mobile-painter-bottom-bar {

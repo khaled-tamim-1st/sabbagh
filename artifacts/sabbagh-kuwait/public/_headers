@@ -52,14 +52,12 @@
 /*.ico
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
-# Revalidate HTML entry pages with Early Hints Preload
+# Revalidate HTML entry pages
 /
   Cache-Control: public, max-age=0, must-revalidate
-  Link: </_next/static/media/350b852752f8489d-s.p.woff2>; rel=preload; as=font; type=font/woff2; crossorigin=anonymous, </logo.webp>; rel=preload; as=image; type=image/webp
 
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
-  Link: </_next/static/media/350b852752f8489d-s.p.woff2>; rel=preload; as=font; type=font/woff2; crossorigin=anonymous, </logo.webp>; rel=preload; as=image; type=image/webp
 
 # AI Agentic Resource Discovery (ARD) Manifests
 /ai-catalog.json
