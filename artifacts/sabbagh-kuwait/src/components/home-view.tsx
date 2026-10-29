@@ -355,17 +355,138 @@ export function HomeView() {
               </form>
             </div>
             <div className="hero-visual" aria-hidden="true">
-              <div className="hero-arch">
-                <div className="room-art" />
-                <div className="paint-swatch" />
+              <div className="arch-backdrop-glow" />
+
+              <div className="hero-arch-v2">
+                <div className="arch-inner-portal">
+                  <div className="wall-mouldings" />
+                  <div className="sunbeam" />
+
+                  <div className="arched-window">
+                    <div className="window-panes">
+                      <div /><div />
+                      <div /><div />
+                      <div /><div />
+                    </div>
+                  </div>
+
+                  <div className="pendant-light">
+                    <div className="light-cord" />
+                    <div className="light-shade" />
+                    <div className="light-glow" />
+                  </div>
+
+                  <svg className="luxury-designer-sofa" viewBox="0 0 148 96" width="142" height="92" style={{ position: 'absolute', bottom: '14px', left: '16px', zIndex: 2 }}>
+                    <defs>
+                      <linearGradient id="sofaBackGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stopColor="#246456" />
+                        <stop offset="50%" stopColor="#17483e" />
+                        <stop offset="100%" stopColor="#0f3029" />
+                      </linearGradient>
+                      <linearGradient id="sofaSeatGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stopColor="#286e5f" />
+                        <stop offset="35%" stopColor="#1a5247" />
+                        <stop offset="100%" stopColor="#10362f" />
+                      </linearGradient>
+                      <linearGradient id="armLeftGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#225c4f" />
+                        <stop offset="70%" stopColor="#17483e" />
+                        <stop offset="100%" stopColor="#0e2e28" />
+                      </linearGradient>
+                      <linearGradient id="armRightGrad" x1="100%" y1="0%" x2="0%" y2="0%">
+                        <stop offset="0%" stopColor="#225c4f" />
+                        <stop offset="70%" stopColor="#17483e" />
+                        <stop offset="100%" stopColor="#0e2e28" />
+                      </linearGradient>
+                      <linearGradient id="sofaBrassLeg" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#f5e1b5" />
+                        <stop offset="50%" stopColor="#caa15c" />
+                        <stop offset="100%" stopColor="#805d23" />
+                      </linearGradient>
+                      <filter id="sofaShadow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feDropShadow dx="0" dy="3" stdDeviation="2.5" floodColor="#0a2620" floodOpacity="0.3" />
+                      </filter>
+                    </defs>
+
+                    <ellipse cx="74" cy="90" rx="62" ry="4.5" fill="rgba(15, 48, 41, 0.3)" />
+
+                    <polygon points="34,74 38,74 35,88 32,88" fill="#785923" />
+                    <polygon points="110,74 114,74 113,88 110,88" fill="#785923" />
+                    <polygon points="22,76 27,76 20,91 16,91" fill="url(#sofaBrassLeg)" />
+                    <polygon points="121,76 126,76 132,91 128,91" fill="url(#sofaBrassLeg)" />
+
+                    <path d="M 18,52 C 16,22 34,14 74,14 C 114,14 132,22 130,52 Z" fill="url(#sofaBackGrad)" filter="url(#sofaShadow)" />
+
+                    <path d="M 46,18 C 45,30 44,44 44,54" stroke="rgba(255,255,255,0.18)" strokeWidth="1.6" strokeLinecap="round" />
+                    <path d="M 46,18 C 45,30 44,44 44,54" stroke="rgba(0,0,0,0.22)" strokeWidth="1" strokeLinecap="round" />
+
+                    <path d="M 74,15 C 74,28 74,43 74,54" stroke="rgba(255,255,255,0.2)" strokeWidth="1.8" strokeLinecap="round" />
+                    <path d="M 74,15 C 74,28 74,43 74,54" stroke="rgba(0,0,0,0.25)" strokeWidth="1" strokeLinecap="round" />
+
+                    <path d="M 102,18 C 103,30 104,44 104,54" stroke="rgba(255,255,255,0.18)" strokeWidth="1.6" strokeLinecap="round" />
+                    <path d="M 102,18 C 103,30 104,44 104,54" stroke="rgba(0,0,0,0.22)" strokeWidth="1" strokeLinecap="round" />
+
+                    <rect x="18" y="66" width="112" height="12" rx="4" fill="#0c2621" />
+
+                    <g filter="url(#sofaShadow)">
+                      <rect x="22" y="52" width="50" height="19" rx="6" fill="url(#sofaSeatGrad)" />
+                      <path d="M 24,54 Q 47,53 70,54" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" fill="none" />
+                    </g>
+
+                    <g filter="url(#sofaShadow)">
+                      <rect x="76" y="52" width="50" height="19" rx="6" fill="url(#sofaSeatGrad)" />
+                      <path d="M 78,54 Q 101,53 124,54" stroke="rgba(255,255,255,0.25)" strokeWidth="1.5" fill="none" />
+                    </g>
+
+                    <g filter="url(#sofaShadow)">
+                      <path d="M 10,44 C 10,36 21,35 24,42 L 24,68 C 24,74 13,74 10,68 Z" fill="url(#armLeftGrad)" />
+                      <path d="M 12,46 L 12,66" stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
+                    </g>
+
+                    <g filter="url(#sofaShadow)">
+                      <path d="M 138,44 C 138,36 127,35 124,42 L 124,68 C 124,74 135,74 138,68 Z" fill="url(#armRightGrad)" />
+                      <path d="M 136,46 L 136,66" stroke="rgba(255,255,255,0.15)" strokeWidth="1" />
+                    </g>
+                  </svg>
+
+                  <div className="terracotta-plant">
+                    <div className="plant-stem">
+                      <div className="plant-leaf leaf-1" />
+                      <div className="plant-leaf leaf-2" />
+                      <div className="plant-leaf leaf-3" />
+                    </div>
+                    <div className="plant-pot" />
+                  </div>
+                </div>
               </div>
-              <div className="hero-stamp">
-                <ShieldCheck />
-                <span>
-                  اختيارك
-                  <br />
-                  بكل وضوح
-                </span>
+
+              <div className="color-fan-container" title="كتالوج درجات ألوان أصباغ جوتن المعتمدة">
+                <div className="swatch-blade swatch-blade-1">
+                  <div className="swatch-color-fill fill-gold" />
+                  <span className="swatch-label">JOTUN 1032</span>
+                </div>
+                <div className="swatch-blade swatch-blade-2">
+                  <div className="swatch-color-fill fill-terracotta" />
+                  <span className="swatch-label">FENOMASTIC</span>
+                </div>
+                <div className="swatch-blade swatch-blade-3">
+                  <div className="swatch-color-fill fill-emerald" />
+                  <span className="swatch-label">ROYAL SILK</span>
+                </div>
+                <div className="fan-rivet" />
+              </div>
+
+              <div className="hero-stamp-v2">
+                <div className="stamp-icon-circle">
+                  <ShieldCheck aria-hidden="true" />
+                </div>
+                <div className="stamp-text-group">
+                  <span className="stamp-title">صباغ معتمد</span>
+                  <span className="stamp-subtitle">
+                    <span className="stars-row">★★★★★</span>
+                    <span>فحص وضمان</span>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
