@@ -8,14 +8,16 @@ interface LayoutProps {
   children: ReactNode;
   activeNav?: string;
   hideFooterAction?: boolean;
+  lang?: 'ar' | 'en';
 }
 
-export function Layout({ children, activeNav }: LayoutProps) {
+export function Layout({ children, activeNav, lang = 'ar' }: LayoutProps) {
+  const isEn = lang === 'en';
   return (
-    <div className="site-shell" dir="rtl">
-      <Header activeNav={activeNav} />
+    <div className="site-shell" dir={isEn ? 'ltr' : 'rtl'}>
+      <Header activeNav={activeNav} lang={lang} />
       <main>{children}</main>
-      <SiteFooter />
+      <SiteFooter lang={lang} />
     </div>
   );
 }

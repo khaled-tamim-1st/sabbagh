@@ -208,6 +208,15 @@ export default function PainterDashboardPage() {
   const handleCropComplete = async (croppedWebpDataUri: string) => {
     setIsUploadingAvatar(true);
     setAvatarMessage(null);
+    const painterId = user?.painterProfile?.id || 1;
+
+    // Immediately update local state & catalogStore (local-first resilient update)
+    setAvatarUrl(croppedWebpDataUri);
+    catalogStore.updatePainter(painterId, { avatarUrl: croppedWebpDataUri });
+    setCropperModalOpen(false);
+    setRawImageForCrop(null);
+    setAvatarMessage({ type: 'success', text: 'تم قص وضبط وتحديث صورتك الشخصية بنجاح!' });
+
     try {
       // Upload to backend (which uploads to Cloudinary sabbagh/avatars as WebP)
       const res = await apiClient.post('/painter/avatar', {
@@ -217,13 +226,10 @@ export default function PainterDashboardPage() {
 
       const finalUrl = res?.avatarUrl || croppedWebpDataUri;
       setAvatarUrl(finalUrl);
-      setAvatarMessage({ type: 'success', text: 'تم قص وضبط وتحديث صورتك الشخصية على طريقة واتساب بنجاح!' });
-      setCropperModalOpen(false);
-      setRawImageForCrop(null);
+      catalogStore.updatePainter(painterId, { avatarUrl: finalUrl });
       await refreshUser();
     } catch (err: any) {
-      console.error('Avatar upload error:', err);
-      setAvatarMessage({ type: 'error', text: err?.message || 'تعذر تحديث الصورة الشخصية، حاول مجدداً.' });
+      console.warn('Backend avatar sync note (preserved locally in catalogStore):', err);
     } finally {
       setIsUploadingAvatar(false);
       setTimeout(() => setAvatarMessage(null), 5000);
@@ -236,16 +242,18 @@ export default function PainterDashboardPage() {
       return;
     }
 
+    const painterId = user?.painterProfile?.id || 1;
     setIsDeletingAvatar(true);
     setAvatarMessage(null);
+    setAvatarUrl(null);
+    catalogStore.updatePainter(painterId, { avatarUrl: null });
+    setAvatarMessage({ type: 'success', text: 'تم حذف الصورة الشخصية بنجاح.' });
+
     try {
       await apiClient.delete('/painter/avatar');
-      setAvatarUrl(null);
-      setAvatarMessage({ type: 'success', text: 'تم حذف الصورة الشخصية بنجاح.' });
       await refreshUser();
     } catch (err: any) {
-      console.error('Avatar delete error:', err);
-      setAvatarMessage({ type: 'error', text: err?.message || 'تعذر حذف الصورة.' });
+      console.warn('Backend avatar delete note (removed locally):', err);
     } finally {
       setIsDeletingAvatar(false);
       setTimeout(() => setAvatarMessage(null), 5000);

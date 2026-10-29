@@ -240,7 +240,13 @@ export const POPULAR_AREAS_SUMMARY: string[] = [
  * استرجاع محافظة معينة بواسطة معرفها
  */
 export function getGovernorateById(id: string): Governorate | undefined {
-  return KUWAIT_GOVERNORATES.find((g) => g.id === id);
+  if (!id) return undefined;
+  const cleanId = id.trim().toLowerCase();
+  return KUWAIT_GOVERNORATES.find((g) => 
+    g.id === cleanId || 
+    (cleanId === 'farwaniya' && g.id === 'farwaniyah') ||
+    (cleanId === 'mubarak' && g.id === 'mubarak-al-kabeer')
+  );
 }
 
 /**
@@ -283,8 +289,12 @@ export function searchAreas(query: string): Area[] {
  */
 export function getAreaById(govId: string, areaId: string): { governorate: Governorate; area: Area } | undefined {
   const gov = getGovernorateById(govId);
-  if (!gov) return undefined;
-  const area = gov.areas.find((a) => a.id === areaId);
+  if (!gov || !areaId) return undefined;
+  const cleanAreaId = areaId.trim().toLowerCase();
+  const area = gov.areas.find((a) => 
+    a.id === cleanAreaId ||
+    a.id.replace(/^al-/, '') === cleanAreaId.replace(/^al-/, '')
+  );
   if (!area) return undefined;
   return { governorate: gov, area };
 }
@@ -293,8 +303,13 @@ export function getAreaById(govId: string, areaId: string): { governorate: Gover
  * استرجاع منطقة بواسطة معرفها في أي محافظة (Fallback)
  */
 export function findAreaById(areaId: string): { governorate: Governorate; area: Area } | undefined {
+  if (!areaId) return undefined;
+  const cleanId = areaId.trim().toLowerCase();
   for (const gov of KUWAIT_GOVERNORATES) {
-    const area = gov.areas.find((a) => a.id === areaId);
+    const area = gov.areas.find((a) => 
+      a.id === cleanId ||
+      a.id.replace(/^al-/, '') === cleanId.replace(/^al-/, '')
+    );
     if (area) return { governorate: gov, area };
   }
   return undefined;

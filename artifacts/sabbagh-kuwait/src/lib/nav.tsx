@@ -17,13 +17,29 @@ export const Link: React.FC<CustomLinkProps> = ({ href, children, ...props }) =>
 };
 
 export function useLocation(): [string, (to: string) => void] {
-  const pathname = usePathname() || '/';
-  const router = useRouter();
-  return [pathname, (to: string) => router.push(to)];
+  let pathname = '/';
+  try {
+    pathname = usePathname() || '/';
+  } catch {
+    pathname = '/';
+  }
+  let push = (to: string) => {};
+  try {
+    const router = useRouter();
+    if (router && typeof router.push === 'function') {
+      push = (to: string) => router.push(to);
+    }
+  } catch {}
+  return [pathname, push];
 }
 
 export function useRoute<T extends Record<string, string> = Record<string, string>>(pattern: string): [boolean, T] {
-  const pathname = usePathname() || '';
+  let pathname = '';
+  try {
+    pathname = usePathname() || '';
+  } catch {
+    pathname = '';
+  }
   const patternParts = pattern.split('/').filter(Boolean);
   const pathParts = pathname.split('/').filter(Boolean);
 

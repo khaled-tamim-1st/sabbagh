@@ -7,9 +7,12 @@ import { SeoSchema, generateBreadcrumbSchema } from '@/components/seo-schema';
 export const dynamic = 'force-static';
 
 export async function generateStaticParams() {
-  return KUWAIT_GOVERNORATES.map((g) => ({
-    id: g.id,
-  }));
+  const govParams = KUWAIT_GOVERNORATES.map((g) => ({ id: g.id }));
+  const aliasParams = [{ id: 'farwaniya' }];
+  const areaParams = KUWAIT_GOVERNORATES.flatMap((g) =>
+    g.areas.map((a) => ({ id: a.id }))
+  );
+  return [...govParams, ...aliasParams, ...areaParams];
 }
 
 export async function generateMetadata({
@@ -55,20 +58,24 @@ export default async function AreaRoutePage({
 }) {
   const { id } = await params;
   const gov = getGovernorateById(id);
-  const govName = gov ? gov.nameAr : id;
+  const areaMatch = !gov ? findAreaById(id) : null;
+  const pageName = gov ? gov.nameAr : areaMatch ? areaMatch.area.nameAr : id;
 
   const breadcrumbSchema = generateBreadcrumbSchema({
     items: [
       { name: 'الرئيسية', url: 'https://sabbagh-kuwait.com' },
-      { name: 'مناطق الكويت', url: 'https://sabbagh-kuwait.com/#areas' },
-      { name: govName, url: `https://sabbagh-kuwait.com/areas/${id}` },
+      { name: 'مناطق الكويت', url: 'https://sabbagh-kuwait.com/areas' },
+      { name: pageName, url: `https://sabbagh-kuwait.com/areas/${id}` },
     ],
   });
 
   return (
     <>
       <SeoSchema schemas={[breadcrumbSchema]} />
-      <AreaPage govId={id} />
+      <AreaPage
+        govId={gov ? gov.id : areaMatch?.governorate.id}
+        areaId={areaMatch?.area.id}
+      />
     </>
   );
 }
