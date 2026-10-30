@@ -282,7 +282,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
             {/* أزرار الإجراء السريع للمنطقة */}
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '26px' }}>
               <a
-                href={`tel:${relevantPainters[0]?.phone.replace(/\s+/g, '') || '+96594412356'}`}
+                href={`tel:${(relevantPainters[0]?.phone || '+96594412356').replace(/\s+/g, '')}`}
                 className="contact-button"
                 style={{
                   background: '#e9bd77',
@@ -956,7 +956,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
 
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <a
-                href={`tel:${relevantPainters[0]?.phone.replace(/\s+/g, '') || '+96594412356'}`}
+                href={`tel:${(relevantPainters[0]?.phone || '+96594412356').replace(/\s+/g, '')}`}
                 className="contact-button"
                 style={{
                   background: '#e9bd77',
@@ -972,7 +972,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                 }}
               >
                 <Phone size={16} />
-                <span>اتصل الآن ({relevantPainters[0]?.phone})</span>
+                <span>اتصل الآن ({relevantPainters[0]?.phone || '+965 94412356'})</span>
               </a>
 
               <Link

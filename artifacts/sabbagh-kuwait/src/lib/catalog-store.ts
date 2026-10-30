@@ -44,9 +44,9 @@ export interface ReviewItem {
 }
 
 const STORAGE_KEYS = {
-  PAINTERS: 'kuwait_painters_catalog_v3',
-  REVIEWS: 'kuwait_painters_reviews_v3',
-  QUOTES: 'kuwait_painters_quotes_v3',
+  PAINTERS: 'kuwait_painters_catalog_clean_v1',
+  REVIEWS: 'kuwait_painters_reviews_clean_v1',
+  QUOTES: 'kuwait_painters_quotes_clean_v1',
 };
 
 const EVENT_NAME = 'kuwait-catalog-updated';
@@ -81,48 +81,7 @@ export function buildInitialReviews(): ReviewItem[] {
   return list;
 }
 
-export const INITIAL_QUOTES: LeadQuote[] = [
-  {
-    id: 1,
-    customerName: 'عبدالله الهاجري',
-    customerPhone: '96590111115',
-    customerNotes: 'صبغ ديوانية وصالة استقبال بالأوف وايت وجبس بورد',
-    propertyType: 'villa',
-    workType: 'interior',
-    roomsCount: 4,
-    includeMaterials: true,
-    paintQuality: 'jotun-fenomastic',
-    governorateId: 'hawalli',
-    areaId: 'al-jabriya',
-    preferredDate: 'صباحاً',
-    estimatedMinKwd: 60,
-    estimatedMaxKwd: 110,
-    estimatedAverageKwd: 85,
-    assignedPainterId: 1,
-    status: 'new',
-    createdAt: new Date().toISOString(),
-  },
-  {
-    id: 2,
-    customerName: 'أم فهد الخالدي',
-    customerPhone: '96594412356',
-    customerNotes: 'تجديد دهان غرفتين نوم وصنفرة شروخ',
-    propertyType: 'apartment',
-    workType: 'interior',
-    roomsCount: 2,
-    includeMaterials: true,
-    paintQuality: 'jotun-fenomastic',
-    governorateId: 'capital',
-    areaId: 'al-rawda',
-    preferredDate: 'مساءً',
-    estimatedMinKwd: 35,
-    estimatedMaxKwd: 70,
-    estimatedAverageKwd: 50,
-    assignedPainterId: 2,
-    status: 'contacted',
-    createdAt: new Date().toISOString(),
-  },
-];
+export const INITIAL_QUOTES: LeadQuote[] = [];
 
 class CatalogStore {
   private painters: Painter[] = [];
@@ -143,6 +102,12 @@ class CatalogStore {
       this.quotes = [...INITIAL_QUOTES];
       return;
     }
+
+    try {
+      localStorage.removeItem('kuwait_painters_catalog_v3');
+      localStorage.removeItem('kuwait_painters_reviews_v3');
+      localStorage.removeItem('kuwait_painters_quotes_v3');
+    } catch {}
 
     this.loadFromStorage();
     this.initialized = true;
