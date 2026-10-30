@@ -30,14 +30,14 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
   const rawIdentifier = browserSlug || propId || slugParams?.slug || idParams?.id || 1;
   const decodedIdentifier = typeof rawIdentifier === 'string' ? decodeURIComponent(rawIdentifier) : rawIdentifier;
 
-  const [painter, setPainter] = useState<Painter>(() => {
+  const [painter, setPainter] = useState<Painter | null>(() => {
     if (typeof window !== 'undefined' && (window as any).__DYNAMIC_PAINTER__) {
       const dyn = (window as any).__DYNAMIC_PAINTER__;
       if (String(dyn.id) === String(decodedIdentifier) || dyn.slug === decodedIdentifier) {
         return dyn;
       }
     }
-    return catalogStore.getPainterById(decodedIdentifier) || getPainterById(decodedIdentifier) || PAINTERS_DATA[0];
+    return catalogStore.getPainterById(decodedIdentifier) || getPainterById(decodedIdentifier) || null;
   });
 
   useEffect(() => {
@@ -61,20 +61,23 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
             ? data.customerReviews
             : (Array.isArray(data.reviews) ? data.reviews : []);
 
-          setPainter((prev) => ({
-            ...prev,
-            ...data,
-            name: data.name || prev.name,
-            phone: data.phone || prev.phone,
-            whatsapp: data.whatsapp || data.phone || prev.whatsapp,
-            bio: data.bio || data.description || prev.bio,
-            reviews: reviewCount || prev.reviews,
-            customerReviews: customerReviewsList.length > 0 ? customerReviewsList : (prev.customerReviews || []),
-            pricingList: Array.isArray(data.pricingList) && data.pricingList.length > 0 ? data.pricingList : (prev.pricingList || []),
-            gallery: Array.isArray(data.gallery) && data.gallery.length > 0 ? data.gallery : (prev.gallery || []),
-            portfolioProjects: Array.isArray(data.portfolioProjects) ? data.portfolioProjects : (prev.portfolioProjects || []),
-            avatarUrl: data.avatarUrl !== undefined ? data.avatarUrl : (data.avatar || prev.avatarUrl),
-          }));
+          setPainter((prev) => {
+            if (!prev) return null;
+            return {
+              ...prev,
+              ...data,
+              name: data.name || prev.name,
+              phone: data.phone || prev.phone,
+              whatsapp: data.whatsapp || data.phone || prev.whatsapp,
+              bio: data.bio || data.description || prev.bio,
+              reviews: reviewCount || prev.reviews,
+              customerReviews: customerReviewsList.length > 0 ? customerReviewsList : (prev.customerReviews || []),
+              pricingList: Array.isArray(data.pricingList) && data.pricingList.length > 0 ? data.pricingList : (prev.pricingList || []),
+              gallery: Array.isArray(data.gallery) && data.gallery.length > 0 ? data.gallery : (prev.gallery || []),
+              portfolioProjects: Array.isArray(data.portfolioProjects) ? data.portfolioProjects : (prev.portfolioProjects || []),
+              avatarUrl: data.avatarUrl !== undefined ? data.avatarUrl : (data.avatar || prev.avatarUrl),
+            };
+          });
         }
       })
       .catch(() => {
@@ -84,16 +87,46 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
     return unsubscribe;
   }, [decodedIdentifier]);
 
-  const painterApprovedReviews = useMemo(() => {
-    const fromStore = catalogStore.getApprovedReviewsForPainter(painter.id);
-    if (fromStore.length > 0) return fromStore;
-    return (painter.customerReviews || []).filter((r: any) => (r.status || 'approved') === 'approved');
-  }, [painter.id, painter.customerReviews]);
+    const safePainter: Painter = painter || {
+    id: 0,
+    name: 'غير متوفر',
+    initials: '',
+    region: 'الكويت',
+    rating: '5.0',
+    reviews: 0,
+    years: 0,
+    startingAt: '',
+    services: [],
+    description: '',
+    tone: '',
+    phone: '',
+    whatsapp: '',
+    whatsappPrefill: '',
+    bio: '',
+    governorates: [],
+    primaryGovernorates: [],
+    warrantyYears: 0,
+    crewSize: 0,
+    paintBrands: [],
+    completedProjects: 0,
+    pricingList: [],
+    gallery: [],
+    customerReviews: [],
+    isAvailableToday: false,
+    responseTime: '',
+    coverageAreaIds: [],
+  };
 
-  const coverageGroups = getPainterCoverageDetails(painter);
+  const painterApprovedReviews = useMemo(() => {
+    const fromStore = catalogStore.getApprovedReviewsForPainter(safePainter.id);
+    if (fromStore.length > 0) return fromStore;
+    return (safePainter.customerReviews || []).filter((r: any) => (r.status || 'approved') === 'approved');
+  }, [safePainter.id, safePainter.customerReviews]);
+
+  const coverageGroups = getPainterCoverageDetails(safePainter);
 
   const [activeTab, setActiveTab] = useState<'gallery' | 'pricing' | 'reviews' | 'coverage' | 'about'>('gallery');
-  const [selectedGalleryItem, setSelectedGalleryItem] = useState(painter.gallery?.[0] || null);
+  const [selectedGalleryItem, setSelectedGalleryItem] = useState(safePainter.gallery?.[0] || null);
   const [viewMode, setViewMode] = useState<'after' | 'before'>('after');
 
   // Before & After Switcher state for portfolio projects
@@ -108,7 +141,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
   const [revRating, setRevRating] = useState(5);
   const [revAuthor, setRevAuthor] = useState('');
   const [revWhatsapp, setRevWhatsapp] = useState('');
-  const [revArea, setRevArea] = useState(painter.region || 'الكويت');
+  const [revArea, setRevArea] = useState(safePainter.region || 'الكويت');
   const [revServiceType, setRevServiceType] = useState('دهان داخلي ومعجون');
   const [revComment, setRevComment] = useState('');
   const [revLoading, setRevLoading] = useState(false);
@@ -123,11 +156,11 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
     setRevLoading(true);
     try {
       catalogStore.addReview({
-        painterId: painter.id,
+        painterId: safePainter.id,
         author: revAuthor.trim(),
         whatsapp: revWhatsapp.trim(),
         rating: revRating,
-        area: revArea.trim() || painter.region,
+        area: revArea.trim() || safePainter.region,
         serviceType: revServiceType.trim() || 'تشطيب ودهان عام',
         comment: revComment.trim(),
         status: 'pending',
@@ -141,11 +174,51 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
     }
   };
 
-  const cleanPhone = (painter.phone || '').replace(/[^\d+]/g, '');
-  const cleanWhatsapp = (painter.whatsapp || painter.phone || '').replace(/[^\d]/g, '');
-  const prefill = painter.whatsappPrefill || `السلام عليكم معلم ${painter.name}، اطلعت على سابقة أعمالك في منصة صباغ الكويت وأود الاتفاق على موعد معاينة.`;
+  const cleanPhone = (safePainter.phone || '').replace(/[^\d+]/g, '');
+  const cleanWhatsapp = (safePainter.whatsapp || safePainter.phone || '').replace(/[^\d]/g, '');
+  const prefill = safePainter.whatsappPrefill || `السلام عليكم معلم ${safePainter.name}، اطلعت على سابقة أعمالك في منصة صباغ الكويت وأود الاتفاق على موعد معاينة.`;
   const whatsappUrl = `https://wa.me/${cleanWhatsapp}?text=${encodeURIComponent(prefill)}`;
   const telUrl = `tel:${cleanPhone}`;
+
+  if (!painter) {
+    return (
+      <Layout activeNav="/painters">
+        <div
+          dir="rtl"
+          style={{
+            maxWidth: '680px',
+            margin: '60px auto',
+            padding: '48px 24px',
+            textAlign: 'center',
+            background: '#fffdfa',
+            borderRadius: '20px',
+            border: '1px solid #ebdcc6',
+          }}
+        >
+          <h2 style={{ color: '#17483e', fontSize: '22px', marginBottom: '12px' }}>
+            لم يتم العثور على هذا الفني
+          </h2>
+          <p style={{ color: '#687266', fontSize: '14px', lineHeight: 1.8, marginBottom: '24px' }}>
+            قد يكون هذا الملف غير متوفر أو تم حذفه من المنصة. يمكنك تصفح دليل المناطق أو العودة للرئيسية.
+          </p>
+          <Link
+            href="/"
+            style={{
+              display: 'inline-block',
+              background: '#17483e',
+              color: '#fff9ee',
+              padding: '10px 24px',
+              borderRadius: '10px',
+              textDecoration: 'none',
+              fontWeight: 700,
+            }}
+          >
+            العودة للرئيسية
+          </Link>
+        </div>
+      </Layout>
+    );
+  }
 
   if (painter.status === 'suspended') {
     return (

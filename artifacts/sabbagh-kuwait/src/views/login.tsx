@@ -148,73 +148,46 @@ export default function LoginPage() {
           </div>
 
           <div style={{ padding: '28px 24px' }}>
-            {/* Quick Demo Access Box */}
+            {/* Admin Management Quick Access */}
             <div
               style={{
                 background: '#faf6ee',
                 border: '1px solid #e4d7c3',
                 borderRadius: '16px',
-                padding: '16px',
+                padding: '14px 16px',
                 marginBottom: '24px',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                gap: '12px',
               }}
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
-                <Sparkles size={16} color="#c7664f" />
-                <span style={{ fontSize: '12px', fontWeight: 700, color: '#17483e' }}>
-                  الدخول السريع بنقرة واحدة (حسابات تجريبية):
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <ShieldCheck size={18} color="#17483e" />
+                <span style={{ fontSize: '13px', fontWeight: 700, color: '#17483e' }}>
+                  دخول لوحة تحكم الإدارة:
                 </span>
               </div>
-
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
-                <button
-                  type="button"
-                  disabled={isSubmitting}
-                  onClick={() => handleQuickLogin('admin')}
-                  style={{
-                    background: '#17483e',
-                    color: '#f6f1e6',
-                    border: '1px solid #17483e',
-                    borderRadius: '12px',
-                    padding: '10px 8px',
-                    fontSize: '12px',
-                    fontWeight: 700,
-                    cursor: 'pointer',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    gap: '4px',
-                    boxShadow: '0 2px 8px rgba(23,72,62,0.15)',
-                    transition: 'all 0.15s ease',
-                  }}
-                >
-                  <ShieldCheck size={16} color="#e9bd77" />
-                  <span>مدير النظام (Admin)</span>
-                </button>
-
-                <button
-                  type="button"
-                  disabled={isSubmitting}
-                  onClick={() => handleQuickLogin('painter')}
-                  style={{
-                    background: '#fffdf8',
-                    color: '#17483e',
-                    border: '1.5px solid #17483e',
-                    borderRadius: '12px',
-                    padding: '10px 8px',
-                    fontSize: '12px',
-                    fontWeight: 700,
-                    cursor: 'pointer',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    gap: '4px',
-                    transition: 'all 0.15s ease',
-                  }}
-                >
-                  <Paintbrush size={16} color="#c7664f" />
-                  <span>صباغ معتمد (Painter)</span>
-                </button>
-              </div>
+              <button
+                type="button"
+                disabled={isSubmitting}
+                onClick={() => handleQuickLogin('admin')}
+                style={{
+                  background: '#17483e',
+                  color: '#e9bd77',
+                  border: '0',
+                  borderRadius: '10px',
+                  padding: '8px 16px',
+                  fontSize: '12px',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                }}
+              >
+                <span>دخول الإدارة</span>
+              </button>
             </div>
 
             {/* Error Message */}

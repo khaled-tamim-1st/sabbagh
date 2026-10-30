@@ -591,7 +591,8 @@ export default function ServiceDetailPage({ slug: propSlug }: { slug?: string })
             <h3 style={{ fontSize: '17px', color: '#17483e', margin: '0 0 16px', fontWeight: 700 }}>
               فنيون معتمدون لتنفيذ {service.shortName}:
             </h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+            {specializedPainters.length > 0 ? (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
               {specializedPainters.map((painter) => (
                 <div
                   key={painter.id}
@@ -672,7 +673,10 @@ export default function ServiceDetailPage({ slug: propSlug }: { slug?: string })
                   </div>
                 </div>
               ))}
-            </div>
+              </div>
+            ) : (
+              <p style={{ fontSize: '13px', color: '#687266', margin: 0 }}>لا يوجد صباغين مسجلين لهذه الخدمة حالياً. <Link href="/join-painter" style={{ color: '#17483e', fontWeight: 700, textDecoration: 'underline' }}>سجل ورشتك أو خدماتك الآن</Link></p>
+            )}
           </div>
 
           {/* خدمات أخرى ذات صلة */}

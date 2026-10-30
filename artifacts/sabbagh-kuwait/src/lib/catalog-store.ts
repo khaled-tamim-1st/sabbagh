@@ -44,9 +44,9 @@ export interface ReviewItem {
 }
 
 const STORAGE_KEYS = {
-  PAINTERS: 'kuwait_painters_catalog_clean_v1',
-  REVIEWS: 'kuwait_painters_reviews_clean_v1',
-  QUOTES: 'kuwait_painters_quotes_clean_v1',
+  PAINTERS: 'kuwait_painters_catalog_empty_v2',
+  REVIEWS: 'kuwait_painters_reviews_empty_v2',
+  QUOTES: 'kuwait_painters_quotes_empty_v2',
 };
 
 const EVENT_NAME = 'kuwait-catalog-updated';
@@ -104,9 +104,14 @@ class CatalogStore {
     }
 
     try {
+      localStorage.removeItem('kuwait_painters_catalog_v1');
+      localStorage.removeItem('kuwait_painters_catalog_v2');
       localStorage.removeItem('kuwait_painters_catalog_v3');
       localStorage.removeItem('kuwait_painters_reviews_v3');
       localStorage.removeItem('kuwait_painters_quotes_v3');
+      localStorage.removeItem('kuwait_painters_catalog_clean_v1');
+      localStorage.removeItem('kuwait_painters_reviews_clean_v1');
+      localStorage.removeItem('kuwait_painters_quotes_clean_v1');
     } catch {}
 
     this.loadFromStorage();
@@ -173,9 +178,10 @@ class CatalogStore {
       if (rawP) {
         const parsed = JSON.parse(rawP);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          // Merge with PAINTERS_DATA in case new fields were added
           const existingMap = new Map<number, Painter>(parsed.map((p: Painter) => [p.id, p]));
-          this.painters = PAINTERS_DATA.map((base) => {
+          const baseIds = new Set(PAINTERS_DATA.map(p => p.id));
+          const customPainters = parsed.filter(p => !baseIds.has(p.id));
+          const mergedBase = PAINTERS_DATA.map((base) => {
             const saved = existingMap.get(base.id);
             if (saved) {
               return {
@@ -187,7 +193,8 @@ class CatalogStore {
               };
             }
             return base;
-          }).sort((a, b) => (a.displayOrder ?? a.id) - (b.displayOrder ?? b.id));
+          });
+          this.painters = [...mergedBase, ...customPainters].sort((a, b) => (a.displayOrder ?? a.id) - (b.displayOrder ?? b.id));
         } else {
           this.painters = [...PAINTERS_DATA];
         }

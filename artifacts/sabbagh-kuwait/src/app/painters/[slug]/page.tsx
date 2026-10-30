@@ -23,6 +23,12 @@ export async function generateStaticParams() {
     // Also include numeric ID for backward compatibility
     params.push({ slug: p.id.toString() });
   }
+
+  // Next.js static export requires at least one route parameter
+  if (params.length === 0) {
+    params.push({ slug: 'preview' });
+  }
+
   return params;
 }
 
@@ -33,7 +39,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const decoded = decodeURIComponent(slug);
-  const painter = getPainterById(decoded) || PAINTERS_DATA[0];
+  const painter = getPainterById(decoded);
+
+  if (!painter) {
+    return {
+      title: 'صباغ في الكويت | دليل صباغ الكويت',
+      description: 'دليل صباغين وفنيي دهان معتمدين في كافة مناطق الكويت.',
+    };
+  }
+
   const targetSlug = painter.slug || generatePainterSlug(painter.accountType === 'company' && painter.companyName ? painter.companyName : painter.name, painter.id);
 
   return {
@@ -71,7 +85,12 @@ export default async function PainterDetailPage({
 }) {
   const { slug } = await params;
   const decoded = decodeURIComponent(slug);
-  const painter = getPainterById(decoded) || PAINTERS_DATA[0];
+  const painter = getPainterById(decoded);
+
+  if (!painter) {
+    return <PainterProfilePage id={decoded} />;
+  }
+
   const targetSlug = painter.slug || generatePainterSlug(painter.accountType === 'company' && painter.companyName ? painter.companyName : painter.name, painter.id);
 
   const businessSchema = generateLocalBusinessSchema({

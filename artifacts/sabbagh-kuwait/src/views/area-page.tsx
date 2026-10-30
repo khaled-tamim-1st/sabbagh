@@ -486,7 +486,8 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
               <span className="result-count">{relevantPainters.length} فنيين متاحين</span>
             </div>
 
-            <div className="directory-grid">
+            {relevantPainters.length > 0 ? (
+              <div className="directory-grid">
               {relevantPainters.map((painter) => (
                 <article key={painter.id} className="painter-card" data-testid={`card-area-painter-${painter.id}`}>
                   <div className="card-top">
@@ -564,7 +565,14 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                   </div>
                 </article>
               ))}
-            </div>
+              </div>
+            ) : (
+              <div className="empty-state" style={{ padding: "36px 20px", textAlign: "center", background: "#fffdfa", borderRadius: "16px", border: "1px solid #ebdcc6" }}>
+                <h3 style={{ fontSize: "18px", color: "#17483e", marginBottom: "8px" }}>لا يوجد فنيين مسجلين في {area.nameAr} حالياً</h3>
+                <p style={{ fontSize: "13px", color: "#6a7266", marginBottom: "16px" }}>هل تقدم خدمات الصبغ أو التشطيب في هذه المنطقة؟ انضم مجاناً واستقبل طلبات العملاء مباشرة.</p>
+                <Link href="/join-painter" style={{ display: "inline-block", background: "#17483e", color: "#e9bd77", padding: "10px 24px", borderRadius: "8px", textDecoration: "none", fontWeight: 700, fontSize: "13px" }}>سجل كصباغ معتمد الآن</Link>
+              </div>
+            )}
           </section>
 
           {/* جدول الأسعار الإرشادية لخدمات الصبغ في المنطقة */}
@@ -1278,7 +1286,8 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
               </div>
             </div>
 
-            <div className="directory-grid">
+            {relevantPainters.length > 0 ? (
+              <div className="directory-grid">
               {relevantPainters.map((painter) => (
                 <article key={painter.id} className="painter-card">
                   <div className="card-top">
@@ -1315,7 +1324,14 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                   </div>
                 </article>
               ))}
-            </div>
+              </div>
+            ) : (
+              <div className="empty-state" style={{ padding: "36px 20px", textAlign: "center", background: "#fffdfa", borderRadius: "16px", border: "1px solid #ebdcc6" }}>
+                <h3 style={{ fontSize: "18px", color: "#17483e", marginBottom: "8px" }}>لا يوجد فنيين مسجلين في محافظة {governorate.nameAr} حالياً</h3>
+                <p style={{ fontSize: "13px", color: "#6a7266", marginBottom: "16px" }}>هل تقدم خدمات الصبغ أو التشطيب في هذه المحافظة؟ انضم مجاناً واستقبل طلبات العملاء مباشرة.</p>
+                <Link href="/join-painter" style={{ display: "inline-block", background: "#17483e", color: "#e9bd77", padding: "10px 24px", borderRadius: "8px", textDecoration: "none", fontWeight: 700, fontSize: "13px" }}>سجل كصباغ معتمد الآن</Link>
+              </div>
+            )}
           </section>
 
           {/* أسئلة شائعة للمحافظة */}

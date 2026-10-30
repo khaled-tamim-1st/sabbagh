@@ -41,34 +41,13 @@ export interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-// Demo Fallback Users
+// Admin Fallback User (Offline / Static Deployments)
 export const DEMO_ADMIN: AuthUser = {
   id: 1,
   email: 'admin@sabbagh-kuwait.com',
-  name: 'أحمد الصالح (مدير المنصة)',
+  name: 'مدير منصة صباغ الكويت',
   phone: '+96590001122',
   role: 'admin',
-};
-
-export const DEMO_PAINTER: AuthUser = {
-  id: 2,
-  email: 'painter@sabbagh-kuwait.com',
-  name: 'معلم أبو فهد الكويتي',
-  phone: '+96598882233',
-  role: 'painter',
-  painterProfile: {
-    id: 1,
-    name: 'أبو فهد للأصباغ الحديثة والتشطيب',
-    region: 'محافظة العاصمة وحولي',
-    isAvailableToday: true,
-    rating: '5.0',
-    reviews: 2,
-    years: 12,
-    isVerified: true,
-    status: 'approved',
-    completedProjects: 85,
-    responseTime: 'خلال 15 دقيقة',
-  },
 };
 
 const TOKEN_KEY = 'token';
@@ -180,12 +159,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         return DEMO_ADMIN;
       }
 
-      if (normalizedEmail === 'painter@sabbagh-kuwait.com' && password === 'Painter@123456') {
-        const demoToken = 'demo-jwt-painter-token-sabbagh-kuwait-2026';
-        saveAuth(demoToken, DEMO_PAINTER);
-        setIsLoading(false);
-        return DEMO_PAINTER;
-      }
+
 
       setIsLoading(false);
       throw new Error(apiError?.message || 'بيانات الدخول غير صحيحة. يرجى التحقق من البريد وكلمة المرور.');
@@ -195,9 +169,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const quickDemoLogin = async (role: 'admin' | 'painter'): Promise<AuthUser> => {
     if (role === 'admin') {
       return login('admin@sabbagh-kuwait.com', 'Admin@123456');
-    } else {
-      return login('painter@sabbagh-kuwait.com', 'Painter@123456');
     }
+    throw new Error('لا يوجد حساب صباغ تجريبي. يرجى تسجيل الدخول بحسابك المسجل أو الانضمام كصباغ جديد.');
   };
 
   const updatePainterAvailability = async (isAvailable: boolean): Promise<boolean> => {
