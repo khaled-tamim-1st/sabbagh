@@ -413,7 +413,7 @@ export const SiteFooter: FC<{ lang?: string }> = () => {
           }}
         >
           <div>
-            جميع الحقوق محفوظة © {new Date().getFullYear()} صباغ الكويت · إحدى خدمات منصة فني الكويت المعتمدة
+            جميع الحقوق محفوظة © {new Date().getFullYear()} صباغ الكويت · الدليل المعتمد لخدمات الأصباغ والدهانات
           </div>
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
             <span style={{ color: '#d9c597' }}>

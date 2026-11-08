@@ -285,9 +285,9 @@ export function generateServiceSchema(props: ServiceSchemaProps) {
  */
 export function generatePlatformSchema() {
   return generateLocalBusinessSchema({
-    name: 'صباغ الكويت | فني الكويت المعتمد للأصباغ والديكورات',
+    name: 'صباغ الكويت | الدليل المعتمد للأصباغ والديكورات',
     type: 'HomeAndConstructionBusiness',
-    description: 'دليل صباغ الكويت الأول المعتمد من منصة فني الكويت: تواصل مباشر ومقارنة بين أمهر الصباغين وفنيي الدهانات الداخلية والخارجية والسيجما وبديل الرخام في كافة محافظات الكويت.',
+    description: 'دليل صباغ الكويت الأول المعتمد: تواصل مباشر ومقارنة بين أمهر الصباغين وفنيي الدهانات الداخلية والخارجية والسيجما وبديل الرخام في كافة محافظات الكويت.',
     url: '/',
     image: '/logo.png',
     telephone: '+965 94412356',
@@ -320,14 +320,14 @@ export function generatePlatformSchema() {
     ],
     alternateName: [
       'صباغ الكويت',
-      'فني الكويت',
-      'فني صباغ الكويت',
-      'دليل فني الكويت',
+      'صباغ الكويت شاطر ورخيص',
+      'رقم صباغ بالكويت',
+      'معلم دهانات الكويت',
       'Sabbagh Kuwait',
-      'Fani Kuwait',
+      'Kuwait Painters',
     ],
     brand: {
-      name: 'فني الكويت',
+      name: 'صباغ الكويت شاطر ورخيص',
       alternateName: 'صباغ الكويت',
     },
   });

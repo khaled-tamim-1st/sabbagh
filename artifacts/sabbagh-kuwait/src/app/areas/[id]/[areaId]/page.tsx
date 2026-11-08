@@ -26,7 +26,7 @@ export async function generateMetadata({
   const govName = gov ? gov.nameAr : id;
   const areaName = areaMatch ? areaMatch.nameAr : areaId;
 
-  const title = `صباغ ${areaName} | أفضل فني دهانات وديكورات في ${govName} - فني الكويت`;
+  const title = `صباغ ${areaName} | أفضل فني دهانات وديكورات في ${govName} - صباغ الكويت`;
   const desc = `خدمات أصباغ ودهانات وتشطيبات في ${areaName} بمحافظة ${govName}. أمهر الصباغين المعتمدين، دهانات جوتن الأصلية، بديل الرخام، معاينة مجانية وواتساب مباشر.`;
 
   return {
@@ -39,7 +39,7 @@ export async function generateMetadata({
       title,
       description: desc,
       url: `https://sabbagh-kuwait.com/areas/${id}/${areaId}`,
-      siteName: 'فني الكويت | صباغ الكويت',
+      siteName: 'صباغ الكويت',
       type: 'website',
     },
   };

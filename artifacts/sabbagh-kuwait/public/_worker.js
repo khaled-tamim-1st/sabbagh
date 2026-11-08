@@ -134,7 +134,7 @@ export default {
           const ogImage = painterData.avatarUrl || 'https://sabbagh-kuwait.com/logo.png';
           const canonicalUrl = `https://sabbagh-kuwait.com/painters/${encodeURIComponent(decodedIdentifier)}/`;
 
-          const seoTitle = `${painterName} | صباغ معتمد في ${painterRegion} - فني الكويت | فني الكويت (صباغ الكويت)`;
+          const seoTitle = `${painterName} | صباغ معتمد في ${painterRegion} - صباغ الكويت`;
           const seoDesc = `تواصل مع ${painterName} - صباغ وفني معتمد بخبرة ${painterYears} سنوات في ${painterGovernorates}. تقييم ${painterRating} نجمة، معاينة مجانية وواتساب مباشر: ${painterPhone}`;
           const ogTitle = `${painterName} - صباغ وفني معتمد في الكويت`;
           const ogDesc = `خبرة ${painterYears} سنوات، تقييم ${painterRating}/5. تواصل واتساب فوري: ${painterPhone}`;

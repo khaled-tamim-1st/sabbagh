@@ -20,7 +20,7 @@ export async function generateMetadata({
   const article = getBlogArticleBySlug(slug) || BLOG_ARTICLES[0];
 
   return {
-    title: `${article.title} | فني الكويت (صباغ معتمد)`,
+    title: `${article.title} | صباغ الكويت`,
     description: article.excerpt,
     alternates: {
       canonical: `https://sabbagh-kuwait.com/blog/${article.slug}`,
@@ -29,7 +29,7 @@ export async function generateMetadata({
       title: article.title,
       description: article.excerpt,
       url: `https://sabbagh-kuwait.com/blog/${article.slug}`,
-      siteName: 'فني الكويت | صباغ الكويت',
+      siteName: 'صباغ الكويت',
       type: 'article',
       publishedTime: article.publishedAt,
       authors: [article.author.name],

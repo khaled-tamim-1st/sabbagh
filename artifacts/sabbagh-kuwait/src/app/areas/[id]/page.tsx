@@ -24,16 +24,16 @@ export async function generateMetadata({
   const gov = getGovernorateById(id);
   const areaMatch = !gov ? findAreaById(id) : null;
   const title = gov
-    ? `صباغ محافظة ${gov.nameAr} | أفضل فني دهانات وديكورات - فني الكويت`
+    ? `صباغ محافظة ${gov.nameAr} | أفضل فني دهانات وديكورات - صباغ الكويت`
     : areaMatch
-    ? `صباغ ${areaMatch.area.nameAr} | أفضل فني دهانات وديكورات - فني الكويت`
-    : 'صباغ الكويت | دليل مناطق ومحافظات فني الكويت';
+    ? `صباغ ${areaMatch.area.nameAr} | أفضل فني دهانات وديكورات - صباغ الكويت`
+    : 'صباغ الكويت | دليل مناطق ومحافظات الكويت';
 
   const desc = gov
-    ? `ابحث عن أفضل صباغ في محافظة ${gov.nameAr} (${gov.areasCount} منطقة). أسعار حقيقية بالدينار، دهانات جوتن، معاينة مجانية وواتساب مباشر من فني الكويت.`
+    ? `ابحث عن أفضل صباغ في محافظة ${gov.nameAr} (${gov.areasCount} منطقة). أسعار حقيقية بالدينار، دهانات جوتن، معاينة مجانية وواتساب مباشر من صباغ الكويت.`
     : areaMatch
-    ? `خدمات أصباغ ودهانات وديكورات في ${areaMatch.area.nameAr} بمحافظة ${areaMatch.governorate.nameAr}. صباغين موثوقين ومحترفين من فني الكويت.`
-    : 'دليل مناطق ومحافظات الكويت للأصباغ والدهانات من فني الكويت.';
+    ? `خدمات أصباغ ودهانات وديكورات في ${areaMatch.area.nameAr} بمحافظة ${areaMatch.governorate.nameAr}. صباغين موثوقين ومحترفين من صباغ الكويت.`
+    : 'دليل مناطق ومحافظات الكويت للأصباغ والدهانات من صباغ الكويت.';
 
   return {
     title,
@@ -45,7 +45,7 @@ export async function generateMetadata({
       title,
       description: desc,
       url: `https://sabbagh-kuwait.com/areas/${id}`,
-      siteName: 'فني الكويت | صباغ الكويت',
+      siteName: 'صباغ الكويت',
       type: 'website',
     },
   };

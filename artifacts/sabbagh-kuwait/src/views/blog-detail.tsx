@@ -58,9 +58,9 @@ export default function BlogDetailPage({ slug: propSlug }: { slug?: string }) {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'فني الكويت | صباغ الكويت',
+      name: 'صباغ الكويت',
       alternateName: 'صباغ الكويت',
-      brand: 'فني الكويت',
+      brand: 'صباغ الكويت',
       url: 'https://sabbagh-kuwait.com',
       logo: 'https://sabbagh-kuwait.com/logo.png',
     },

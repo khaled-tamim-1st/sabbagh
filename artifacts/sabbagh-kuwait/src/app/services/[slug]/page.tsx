@@ -20,16 +20,16 @@ export async function generateMetadata({
   const service = getServiceBySlug(slug) || KUWAIT_SERVICES_DATA[0];
 
   return {
-    title: `${service.title} في الكويت | فني الكويت (صباغ معتمد)`,
-    description: `${service.tagline || service.description} - خدمات معتمدة من فني الكويت بأسعار تبدأ من ${service.price.fromKWD} د.ك مع معاينة مجانية وواتساب مباشر.`,
+    title: `${service.title} في الكويت | صباغ الكويت`,
+    description: `${service.tagline || service.description} - خدمات معتمدة من صباغ الكويت بأسعار تبدأ من ${service.price.fromKWD} د.ك مع معاينة مجانية وواتساب مباشر.`,
     alternates: {
       canonical: `https://sabbagh-kuwait.com/services/${service.slug}`,
     },
     openGraph: {
-      title: `${service.title} في الكويت | فني الكويت`,
+      title: `${service.title} في الكويت | صباغ الكويت`,
       description: service.tagline || service.description,
       url: `https://sabbagh-kuwait.com/services/${service.slug}`,
-      siteName: 'فني الكويت | صباغ الكويت',
+      siteName: 'صباغ الكويت',
     },
   };
 }
