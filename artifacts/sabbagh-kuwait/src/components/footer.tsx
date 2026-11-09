@@ -144,7 +144,7 @@ export const SiteFooter: FC<{ lang?: string }> = () => {
   const ArrowIcon = ArrowUpLeft;
 
   return (
-    <footer className="footer" dir="rtl" style={{ background: '#12332c', color: '#d9e0d3', paddingTop: '48px', paddingBottom: '32px' }}>
+    <footer className="footer" dir="rtl" style={{ background: '#12332c', color: '#d9e0d3', paddingTop: '48px', paddingBottom: '0px' }}>
       <div style={{ width: 'min(1192px, calc(100% - 48px))', margin: 'auto' }}>
         
         {/* صف العلامة والموثوقية العلوية */}
@@ -425,32 +425,68 @@ export const SiteFooter: FC<{ lang?: string }> = () => {
             </Link>
           </div>
         </div>
+      </div>
 
-        {/* شريط المطور / صنع بشغف بواسطة webinoo */}
+      {/* شريط المطور الكامل - WebinOO */}
+      <div
+        style={{
+          background: '#090d16',
+          borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+          marginTop: '28px',
+          padding: '12px 16px',
+        }}
+      >
         <div
           style={{
-            borderTop: '1px solid rgba(255, 255, 255, 0.05)',
-            marginTop: '16px',
-            paddingTop: '12px',
+            width: 'min(1192px, calc(100% - 32px))',
+            margin: '0 auto',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            gap: '8px 12px',
+            fontSize: '12px',
+            color: '#f1f5f9',
             textAlign: 'center',
-            fontSize: '11px',
-            color: '#718779',
+            lineHeight: 1.6,
           }}
         >
-          <span>صنع بشغف بواسطة </span>
+          <span style={{ color: '#f8fafc', fontWeight: 500 }}>
+            صُنع بإتقان وشغف بواسطة
+          </span>
           <a
             href="https://webinoo.online"
             target="_blank"
             rel="nofollow noopener noreferrer"
+            aria-label="WebinOO - حلول الويب وتصدر Google"
             style={{
-              color: '#d9c597',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: '#6d28d9',
+              color: '#ffffff',
+              fontWeight: 700,
+              fontSize: '11.5px',
+              padding: '3px 14px',
+              borderRadius: '9999px',
               textDecoration: 'none',
-              fontWeight: 600,
-              letterSpacing: '0.02em',
+              letterSpacing: '0.03em',
+              boxShadow: '0 2px 8px rgba(109, 40, 217, 0.35)',
             }}
           >
-            webinoo
+            WebinOO
           </a>
+          <span
+            style={{
+              color: '#cbd5e1',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+            }}
+          >
+            <span style={{ color: '#64748b' }}>•</span>
+            <span>حلول الويب وتصدر Google</span>
+          </span>
         </div>
       </div>
     </footer>
