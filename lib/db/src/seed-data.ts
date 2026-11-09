@@ -128,7 +128,7 @@ export const INITIAL_USERS: UserRecord[] = [
     passwordHash: hashPassword("Admin@123456"),
     role: "admin",
     name: "مدير منصة صباغ الكويت",
-    phone: "96590001122",
+    phone: "+201554637673",
     isActive: true,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),

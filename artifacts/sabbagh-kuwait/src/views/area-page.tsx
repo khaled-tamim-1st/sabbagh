@@ -177,7 +177,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
             name: `${area.nameAr}، محافظة ${governorate.nameAr}، دولة الكويت`,
           },
           priceRange: '$$',
-          telephone: relevantPainters[0]?.phone || '+965 94412356',
+          telephone: relevantPainters[0]?.phone || '+201554637673',
         },
         {
           '@type': 'FAQPage',
@@ -282,7 +282,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
             {/* أزرار الإجراء السريع للمنطقة */}
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '26px' }}>
               <a
-                href={`tel:${(relevantPainters[0]?.phone || '+96594412356').replace(/\s+/g, '')}`}
+                href={`tel:${(relevantPainters[0]?.phone || '+201554637673').replace(/\s+/g, '')}`}
                 className="contact-button"
                 style={{
                   background: '#e9bd77',
@@ -302,7 +302,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
               </a>
 
               <a
-                href={`https://wa.me/${relevantPainters[0]?.whatsapp || '96594412356'}?text=${encodeURIComponent(`السلام عليكم، شفت إعلانكم في صباغ الكويت وأبي استفسر عن صبغ في منطقة ${area.nameAr}، هل متاح موعد للمعاينة؟`)}`}
+                href={`https://wa.me/${relevantPainters[0]?.whatsapp || '201554637673'}?text=${encodeURIComponent(`السلام عليكم، شفت إعلانكم في صباغ الكويت وأبي استفسر عن صبغ في منطقة ${area.nameAr}، هل متاح موعد للمعاينة؟`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="detail-button"
@@ -964,7 +964,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
 
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <a
-                href={`tel:${(relevantPainters[0]?.phone || '+96594412356').replace(/\s+/g, '')}`}
+                href={`tel:${(relevantPainters[0]?.phone || '+201554637673').replace(/\s+/g, '')}`}
                 className="contact-button"
                 style={{
                   background: '#e9bd77',
@@ -980,7 +980,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                 }}
               >
                 <Phone size={16} />
-                <span>اتصل الآن ({relevantPainters[0]?.phone || '+965 94412356'})</span>
+                <span>اتصل الآن ({relevantPainters[0]?.phone || '+201554637673'})</span>
               </a>
 
               <Link
