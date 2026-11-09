@@ -387,8 +387,8 @@ class CatalogStore {
       rating: '5.0',
       reviews: 0,
       years: Number(painterData.years) || 5,
-      startingAt: painterData.startingAt || '18 د.ك',
-      priceStart: painterData.priceStart || 18,
+      startingAt: painterData.startingAt || 'معاينة مجانية',
+      priceStart: painterData.priceStart || 0,
       services:
         painterData.services && painterData.services.length > 0
           ? painterData.services

@@ -105,11 +105,9 @@ function PainterCard({
         ))}
       </div>
       <div className="card-bottom">
-        <div>
-          <span className="price-label">يبدأ من</span>
-          <span className="price-value">
-            {painter.startingAt} <small>للغرفة</small>
-          </span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#17483e', fontWeight: 600, fontSize: '12px' }}>
+          <ShieldCheck size={16} color="#4b8064" />
+          <span>معاينة مجانية</span>
         </div>
         <div className="card-actions">
           <button
@@ -941,9 +939,9 @@ export function HomeView() {
               </div>
             </div>
             <div className="modal-section">
-              <h4>السعر الإرشادي</h4>
+              <h4>المعاينة والتقدير</h4>
               <p>
-                يبدأ من <strong>{selected.startingAt}</strong> للغرفة. السعر النهائي يعتمد على المساحة ونوع المواد.
+                معاينة فنية مجانية في موقعك لرفع المقاسات وتقديم الاستشارة واختيار الألوان بدون أي التزام مسبق.
               </p>
             </div>
 

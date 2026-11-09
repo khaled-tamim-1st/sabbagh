@@ -10,7 +10,6 @@ import {
   Star,
   Phone,
   MessageCircle,
-  Calculator,
   Layers,
   ChevronDown,
   Sparkles,
@@ -88,8 +87,6 @@ export default function ServiceDetailPage({ slug: propSlug }: { slug?: string })
     name: service.title,
     description: service.description,
     category: service.categoryLabelAr,
-    price: service.price.averageKWD,
-    priceUnit: service.price.unit,
     url: canonicalUrl,
   });
   const faqSchema = service.faqs.length > 0 ? generateFaqSchema({ items: service.faqs }) : null;
@@ -171,15 +168,14 @@ export default function ServiceDetailPage({ slug: propSlug }: { slug?: string })
                   borderRadius: '12px',
                   padding: '10px 18px',
                   display: 'flex',
-                  alignItems: 'baseline',
+                  alignItems: 'center',
                   gap: '8px',
                 }}
               >
-                <span style={{ fontSize: '12px', color: '#cad8cf' }}>متوسط السعر:</span>
-                <strong style={{ fontSize: '22px', color: '#e9bd77' }}>
-                  {service.price.fromKWD} - {service.price.toKWD} د.ك
+                <ShieldCheck size={20} color="#e9bd77" />
+                <strong style={{ fontSize: '15px', color: '#e9bd77' }}>
+                  معاينة فنية واستشارة مجانية
                 </strong>
-                <span style={{ fontSize: '11px', color: '#b9c9be' }}>/ {service.price.unit}</span>
               </div>
 
               <Link
@@ -199,8 +195,8 @@ export default function ServiceDetailPage({ slug: propSlug }: { slug?: string })
                   boxShadow: '0 4px 14px rgba(0,0,0,0.18)',
                 }}
               >
-                <Calculator size={16} />
-                <span>احسب التكلفة واطلب معاينة</span>
+                <CalendarCheck size={16} />
+                <span>طلب معاينة فنية مجانية</span>
               </Link>
 
               <button
@@ -499,17 +495,17 @@ export default function ServiceDetailPage({ slug: propSlug }: { slug?: string })
               boxShadow: '0 6px 20px rgba(23,72,62,0.06)',
             }}
           >
-            <span style={{ fontSize: '12px', color: '#c7664f', fontWeight: 700, display: 'block' }}>
-              جدول تسعير الخدمة في الكويت KWD
+            <span style={{ fontSize: '12px', color: '#17483e', fontWeight: 700, display: 'block' }}>
+              معاينة واستشارة فنية مجانية
             </span>
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px', margin: '10px 0 6px' }}>
-              <strong style={{ fontSize: '32px', color: '#17483e', fontWeight: 800 }}>
-                {service.price.averageKWD} د.ك
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', margin: '10px 0 6px' }}>
+              <ShieldCheck size={26} color="#17483e" />
+              <strong style={{ fontSize: '20px', color: '#17483e', fontWeight: 800 }}>
+                معاينة مجانية 100%
               </strong>
-              <span style={{ fontSize: '13px', color: '#77857d' }}>/ {service.price.unit} تقريباً</span>
             </div>
             <p style={{ margin: '0 0 14px', fontSize: '12px', color: '#55665d', lineHeight: 1.6 }}>
-              {service.price.notesAr}
+              يقوم الفني بزيارة موقعك، رفع المقاسات الدقيقة، فحص الجدران وتقديم عرض العمل المناسب لاحتياجاتك بدون أي التزام مالي.
             </p>
 
             <div
@@ -526,11 +522,7 @@ export default function ServiceDetailPage({ slug: propSlug }: { slug?: string })
               }}
             >
               <CheckCircle2 size={16} color="#17483e" />
-              <span>
-                {service.price.includesMaterials
-                  ? 'السعر يشمل المواد الأصلية ومصنعية اليد'
-                  : 'السعر لمصنعية اليد والعمالة فقط'}
-              </span>
+              <span>فنيون معتمدون مع كفالة على جودة التشطيب</span>
             </div>
 
             <Link
@@ -551,8 +543,8 @@ export default function ServiceDetailPage({ slug: propSlug }: { slug?: string })
                 marginBottom: '10px',
               }}
             >
-              <Calculator size={18} />
-              <span>احسب تكلفة بيتك بدقة</span>
+              <CalendarCheck size={18} />
+              <span>طلب معاينة فنية مجانية</span>
             </Link>
 
             <button

@@ -87,7 +87,7 @@ export function generateLocalBusinessSchema(props: LocalBusinessSchemaProps) {
     url,
     image: imageUrl,
     logo: `${domain}/logo.png`,
-    priceRange: props.priceRange || '18 - 150 KWD',
+    ...(props.priceRange ? { priceRange: props.priceRange } : {}),
     currenciesAccepted: props.currenciesAccepted || 'KWD',
     paymentAccepted: props.paymentAccepted || 'Cash, KNET, Electronic Bank Transfer',
     address: {
@@ -291,7 +291,6 @@ export function generatePlatformSchema() {
     url: '/',
     image: '/logo.png',
     telephone: '+201554637673',
-    priceRange: '18 - 150 KWD',
     addressLocality: 'مدينة الكويت',
     addressRegion: 'العاصمة',
     addressCountry: 'KW',

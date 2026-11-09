@@ -132,7 +132,7 @@ export default function JoinPainterPage() {
         services: selectedServices,
         years: Number(years) || 5,
         crewSize: accountType === 'company' ? Number(crewSize) || 4 : 1,
-        startingAt: `${startingPrice} د.ك`,
+        startingAt: 'معاينة مجانية',
         description:
           description.trim() ||
           (accountType === 'company'
@@ -160,7 +160,7 @@ export default function JoinPainterPage() {
           services: selectedServices,
           years: years || '5',
           crewSize: accountType === 'company' ? crewSize || '4' : '1',
-          startingAt: `${startingPrice} د.ك`,
+          startingAt: 'معاينة مجانية',
           description: description.trim() || (accountType === 'company' ? `مؤسسة متخصصة في أعمال الأصباغ والتشطيبات الحديثة في الكويت.` : `صباغ محترف بخبرة في الدهانات الداخلية والخارجية والتشطيب.`),
           avatar: avatarDataUri || undefined,
           id: newPainter.id,
@@ -963,36 +963,18 @@ export default function JoinPainterPage() {
                   </div>
                 </div>
 
-                {/* سعر البدء والنبذة */}
-                <div className="form-grid-split" style={{ marginBottom: '16px' }}>
-                  <div>
-                    <label className="form-label" htmlFor="starting-price">سعر البدء للغرفة (د.ك) *</label>
-                    <input
-                      id="starting-price"
-                      name="starting-price"
-                      aria-label="سعر البدء للغرفة بالدينار الكويتي"
-                      type="number"
-                      inputMode="numeric"
-                      min="10"
-                      max="150"
-                      required
-                      className="form-input"
-                      value={startingPrice}
-                      onChange={(e) => setStartingPrice(e.target.value)}
-                    />
-                  </div>
-                  <div>
-                    <label className="form-label" htmlFor="painter-desc">نبذة تعريفية ومميزات العمل</label>
-                    <input
-                      id="painter-desc"
-                      name="description"
-                      aria-label="نبذة تعريفية ومميزات العمل"
-                      className="form-input"
-                      placeholder="مثال: دقة في المواعيد، حماية تامة للأثاث، وضمان 5 سنوات"
-                      value={description}
-                      onChange={(e) => setDescription(e.target.value)}
-                    />
-                  </div>
+                {/* النبذة التعريفية ومميزات العمل */}
+                <div style={{ marginBottom: '16px' }}>
+                  <label className="form-label" htmlFor="painter-desc">نبذة تعريفية ومميزات العمل وخبرات الفريق</label>
+                  <input
+                    id="painter-desc"
+                    name="description"
+                    aria-label="نبذة تعريفية ومميزات العمل"
+                    className="form-input"
+                    placeholder="مثال: فني صباغ معتمد خبرة 10 سنوات في صبغ الفلل والشقق والدهانات الديكورية والسيجما..."
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                  />
                 </div>
               </div>
 

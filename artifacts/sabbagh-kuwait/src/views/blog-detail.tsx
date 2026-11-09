@@ -11,7 +11,7 @@ import {
   CheckCircle2,
   AlertCircle,
   HelpCircle,
-  Calculator,
+  CalendarCheck,
   Phone,
   MessageCircle,
   ChevronLeft,
@@ -481,7 +481,7 @@ export default function BlogDetailPage({ slug: propSlug }: { slug?: string }) {
 
             <Link
               href="/request-quote"
-              aria-label="احسب تكلفة غرف بيتك فوراً عبر حاسبة الأسعار"
+              aria-label="طلب معاينة فنية مجانية لمنزلك"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -498,8 +498,8 @@ export default function BlogDetailPage({ slug: propSlug }: { slug?: string }) {
                 marginBottom: '10px',
               }}
             >
-              <Calculator size={16} />
-              <span>احسب تكلفة غرف بيتك فوراً</span>
+              <CalendarCheck size={16} />
+              <span>طلب معاينة فنية مجانية</span>
             </Link>
 
             <Link

@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import {
-  Calculator, Home, Building2, Paintbrush, Layers,
+  CalendarCheck, Home, Building2, Paintbrush, Layers,
   Calendar, Phone, CheckCircle2, ShieldCheck, MapPin,
   Clock, Sparkles, AlertCircle, ArrowLeft, Send
 } from 'lucide-react';
@@ -30,47 +30,15 @@ export default function RequestQuotePage() {
   const [customerNotes, setCustomerNotes] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // حساب التكلفة التقديرية الفورية بالدينار الكويتي (KWD)
+  // حساب المدة التقديرية لإنجاز الأعمال
   const calculation = useMemo(() => {
-    let baseRatePerRoom = 22; // تكلفة أساسية لصبغ الغرفة الواحدة
-    
-    // تعديل بناءً على نوع العمل
-    if (workType === 'interior') baseRatePerRoom = 24;
-    else if (workType === 'wallpaper') baseRatePerRoom = 28;
-    else if (workType === 'decorative') baseRatePerRoom = 35;
-    else if (workType === 'repair') baseRatePerRoom = 26;
-    else if (workType === 'exterior') baseRatePerRoom = 75; // للواجهات
-
-    // تعديل بناءً على نوع العقار
-    let propertyMultiplier = 1;
-    if (propertyType === 'villa' || propertyType === 'qasima') propertyMultiplier = 1.15;
-    else if (propertyType === 'building') propertyMultiplier = 0.9; // خصم كميات
-
-    // تكلفة المواد
-    let materialCostPerRoom = 0;
-    if (includeMaterials) {
-      if (paintQuality === 'jotun-fenomastic') materialCostPerRoom = 14;
-      else if (paintQuality === 'caparol') materialCostPerRoom = 12;
-      else materialCostPerRoom = 10;
-    }
-
-    const totalMin = Math.round((baseRatePerRoom * 0.85 + materialCostPerRoom) * roomsCount * propertyMultiplier);
-    const totalMax = Math.round((baseRatePerRoom * 1.25 + materialCostPerRoom * 1.15) * roomsCount * propertyMultiplier);
-    const average = Math.round((totalMin + totalMax) / 2);
-
-    // المدة التقديرية للأيام
     let daysEstimate = Math.ceil(roomsCount * 0.8);
     if (workType === 'exterior') daysEstimate = Math.max(5, roomsCount * 2);
 
     return {
-      minKWD: totalMin,
-      maxKWD: totalMax,
-      averageKWD: average,
-      laborEstimate: Math.round(average * (includeMaterials ? 0.6 : 1.0)),
-      materialsEstimate: includeMaterials ? Math.round(average * 0.4) : 0,
       days: daysEstimate,
     };
-  }, [propertyType, workType, roomsCount, includeMaterials, paintQuality]);
+  }, [roomsCount, workType]);
 
   // قائمة المناطق التابعة للمحافظة المختارة
   const currentGovernorate = useMemo(() => {
@@ -102,9 +70,9 @@ export default function RequestQuotePage() {
         governorateId: selectedGovId,
         areaId: selectedAreaId,
         preferredDate,
-        estimatedMinKwd: calculation.minKWD,
-        estimatedMaxKwd: calculation.maxKWD,
-        estimatedAverageKwd: calculation.averageKWD,
+        estimatedMinKwd: 0,
+        estimatedMaxKwd: 0,
+        estimatedAverageKwd: 0,
       });
       setIsSubmitted(true);
     } catch (err: any) {
@@ -120,24 +88,24 @@ export default function RequestQuotePage() {
       {/* مسار التنقل المهيأ لمحركات البحث */}
       <Breadcrumbs
         items={[
-          { label: 'اطلب عرض سعر ومعاينة', isCurrent: true },
+          { label: 'طلب معاينة فنية مجانية', isCurrent: true },
         ]}
       />
 
       {/* هيدر الصفحة الكلاسيكي */}
       <section style={{ background: '#17483e', color: '#f6f1e6', padding: '44px 0 36px', borderBottom: '3px solid #e9bd77' }}>
         <div style={{ width: 'min(1192px, calc(100% - 48px))', margin: 'auto' }}>
-          <span className="eyebrow" style={{ color: '#d9c597' }}>حاسبة التكلفة الميدانية</span>
+          <span className="eyebrow" style={{ color: '#d9c597' }}>خدمة مجانية 100%</span>
           <h1 style={{ fontSize: 'clamp(28px, 4vw, 42px)', margin: '12px 0 8px', fontWeight: 700 }}>
-            اطلب عرض سعر / معاينة فورية لبيتك
+            طلب معاينة واستشارة فنية مجانية
           </h1>
-          <p style={{ margin: 0, color: '#d2dfd7', fontSize: '15px', maxWidth: '620px', lineHeight: 1.8 }}>
-            حدد مواصفات منزلك وشاهد التكلفة الإرشادية بالدينار الكويتي في ثوانٍ، مع إمكانية حجز موعد معاينة مجاني مع أفضل صباغي منطقتك.
+          <p style={{ margin: 0, color: '#d2dfd7', fontSize: '15px', maxWidth: '640px', lineHeight: 1.8 }}>
+            حدد تفاصيل موقعك ونوع العمل المطلوب وسيقوم أفضل فني صباغ معتمد بالتواصل معك لتحديد موعد الزيارة وفحص الجدران مجاناً بدون أي التزام مالي.
           </p>
         </div>
       </section>
 
-      {/* المحتوى الرئيسي للنموذج والحاسبة */}
+      {/* المحتوى الرئيسي لنموذج المعاينة المجانية */}
       <div style={{ width: 'min(1192px, calc(100% - 48px))', margin: '36px auto 70px' }}>
         
         {isSubmitted ? (
@@ -168,24 +136,27 @@ export default function RequestQuotePage() {
               <CheckCircle2 size={40} />
             </div>
 
-            <h2 style={{ fontSize: '24px', color: '#17483e', margin: '0 0 12px' }}>تم استلام طلب المعاينة وعرض السعر!</h2>
+            <h2 style={{ fontSize: '24px', color: '#17483e', margin: '0 0 12px' }}>تم استلام طلب المعاينة بنجاح!</h2>
             <p style={{ fontSize: '14px', color: '#687165', lineHeight: 1.9, margin: '0 auto 24px', maxWidth: '480px' }}>
-              شكراً لك يا <strong>{customerName || 'عزيزنا العميل'}</strong>. متوسط التكلفة التقديرية لطلبك هو <strong>{calculation.averageKWD} د.ك</strong>.
-              تم توجيه طلبك لأفضل صباغي منطقة <strong>{currentGovernorate.nameAr}</strong> للتنسيق معك على الرقم <strong>{customerPhone}</strong>.
+              شكراً لك يا <strong>{customerName || 'عزيزنا العميل'}</strong>. تم توجيه طلبك لأفضل صباغ معتمد في <strong>{currentGovernorate.nameAr}</strong> للتواصل وتأكيد موعد المعاينة على الرقم <strong>{customerPhone}</strong>.
             </p>
 
-            <div style={{ background: '#f8f4ea', borderRadius: '12px', padding: '16px', margin: '0 auto 26px', maxWidth: '400px', textAlign: 'right', fontSize: '12px', color: '#596356' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
-                <span>نطاق التكلفة التقديري:</span>
-                <strong style={{ color: '#17483e' }}>{calculation.minKWD} - {calculation.maxKWD} د.ك</strong>
+            <div style={{ background: '#f8f4ea', borderRadius: '12px', padding: '16px', margin: '0 auto 26px', maxWidth: '400px', textAlign: 'right', fontSize: '13px', color: '#596356' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+                <span>نوع الخدمة:</span>
+                <strong style={{ color: '#17483e' }}>معاينة واستشارة فنية مجانية</strong>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
                 <span>عدد الغرف / المساحات:</span>
                 <span>{roomsCount} مساحات</span>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
                 <span>الموعد المفضل للمعاينة:</span>
                 <span>{preferredDate === 'morning' ? 'الفترة الصباحية (9ص - 1م)' : 'الفترة المسائية (4م - 8م)'}</span>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <span>المدة المتوقعة للإنجاز:</span>
+                <strong style={{ color: '#4b8064' }}>~ {calculation.days} أيام عمل تقريباً</strong>
               </div>
             </div>
 
@@ -206,12 +177,12 @@ export default function RequestQuotePage() {
         ) : (
           <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '32px', alignItems: 'flex-start' }}>
             
-            {/* العمود الأيمن: نموذج طلب السعر والتفاصيل */}
+            {/* العمود الأيمن: نموذج طلب المعاينة والتفاصيل */}
             <form
               onSubmit={handleSubmit}
-              data-webmcp-tool="quote_calculator"
-              data-webmcp-description="حاسبة تكلفة وطلب مقايسة صباغة في الكويت"
-              aria-label="حاسبة تكلفة وطلب مقايسة صباغة"
+              data-webmcp-tool="inspection_request"
+              data-webmcp-description="طلب معاينة واستشارة فنية مجانية للأصباغ والديكورات في الكويت"
+              aria-label="نموذج طلب معاينة واستشارة فنية مجانية"
               style={{
                 background: '#fffdf8',
                 border: '1px solid #e8e1d3',
@@ -500,12 +471,12 @@ export default function RequestQuotePage() {
                 style={{ width: '100%', height: '48px', fontSize: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
               >
                 <Send size={16} />
-                <span>تأكيد طلب المعاينة وعرض السعر الميداني</span>
+                <span>تأكيد طلب المعاينة الفنية المجانية</span>
               </button>
               <p className="form-note">المعاينة بدون أي التزام ولا يتم فرض أي رسوم للزيارة الميدانية الأولى.</p>
             </form>
 
-            {/* العمود الأيسر: بطاقة الحاسبة الفورية الإرشادية */}
+            {/* العمود الأيسر: مميزات وضمانات المعاينة الفنية المجانية */}
             <aside
               style={{
                 position: 'sticky',
@@ -519,15 +490,15 @@ export default function RequestQuotePage() {
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
                 <div style={{ width: '38px', height: '38px', borderRadius: '10px', background: '#17483e', color: '#e9bd77', display: 'grid', placeItems: 'center' }}>
-                  <Calculator size={20} />
+                  <ShieldCheck size={20} />
                 </div>
                 <div>
-                  <h3 style={{ margin: 0, fontSize: '16px', color: '#17483e' }}>الحاسبة التقديرية الفورية</h3>
-                  <span style={{ fontSize: '11px', color: '#7a7d72' }}>وفق مؤشرات أسعار السوق الكويتي</span>
+                  <h3 style={{ margin: 0, fontSize: '16px', color: '#17483e' }}>معاينة فنية مجانية 100%</h3>
+                  <span style={{ fontSize: '11px', color: '#7a7d72' }}>بدون أي التزام مالي أو رسوم انتقال</span>
                 </div>
               </div>
 
-              {/* بطاقة السعر بالدينار الكويتي */}
+              {/* بطاقة تأكيد المعاينة الفورية */}
               <div
                 style={{
                   background: 'linear-gradient(135deg, #17483e 0%, #205c50 100%)',
@@ -539,42 +510,42 @@ export default function RequestQuotePage() {
                   boxShadow: '0 6px 18px rgba(23,72,62,0.25)',
                 }}
               >
-                <span style={{ fontSize: '12px', color: '#d9c597', display: 'block', marginBottom: '4px' }}>التكلفة المتوقعة الإجمالية</span>
-                <div style={{ fontSize: '34px', fontWeight: 800, letterSpacing: '-0.03em' }}>
-                  {calculation.minKWD} - {calculation.maxKWD} <span style={{ fontSize: '16px', fontWeight: 600 }}>د.ك</span>
+                <span style={{ fontSize: '12px', color: '#d9c597', display: 'block', marginBottom: '4px' }}>المدة التقديرية للإنجاز</span>
+                <div style={{ fontSize: '28px', fontWeight: 800, letterSpacing: '-0.02em' }}>
+                  {calculation.days} <span style={{ fontSize: '16px', fontWeight: 600 }}>أيام عمل تقريباً</span>
                 </div>
                 <span style={{ fontSize: '11px', color: '#b8d2c4', display: 'block', marginTop: '6px' }}>
-                  متوسط تقديري: <strong>{calculation.averageKWD} دينار كويتي</strong>
+                  وفق حجم الأعمال المحددة ({roomsCount} مساحات)
                 </span>
               </div>
 
-              {/* تفاصيل التكلفة */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '12px', color: '#555e53', marginBottom: '20px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '8px', borderBottom: '1px solid #eee8dc' }}>
-                  <span>تقدير المصنعية والعمالة:</span>
-                  <strong style={{ color: '#17483e' }}>~ {calculation.laborEstimate} د.ك</strong>
+              {/* مميزات المعاينة */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '12px', color: '#555e53', marginBottom: '20px' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                  <CheckCircle2 size={16} color="#4b8064" style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <span><strong>رفع المقاسات وفحص الجدران:</strong> كشف الرطوبة والشروخ والنش وتقديم حلول التأسيس والعزل الصحيحة.</span>
                 </div>
 
-                <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '8px', borderBottom: '1px solid #eee8dc' }}>
-                  <span>تكلفة المواد والصبغ:</span>
-                  <strong style={{ color: '#17483e' }}>{includeMaterials ? `~ ${calculation.materialsEstimate} د.ك` : 'على العميل'}</strong>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                  <CheckCircle2 size={16} color="#4b8064" style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <span><strong>كتالوجات الألوان في بيتك:</strong> إحضار أحدث كتالوجات درجات جوتن والجزيرة وعينات ورق الجدران وبديل الرخام.</span>
                 </div>
 
-                <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '8px', borderBottom: '1px solid #eee8dc' }}>
-                  <span>المدة الزمنية المتوقعة:</span>
-                  <strong style={{ color: '#17483e' }}>{calculation.days} أيام عمل تقريباً</strong>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                  <CheckCircle2 size={16} color="#4b8064" style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <span><strong>ضمان خطي معتمد:</strong> كفالة على جودة الالتصاق ونعومة المعجون وثبات الألوان لسنوات.</span>
                 </div>
 
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <span>الضمان الميداني:</span>
-                  <strong style={{ color: '#4b8064' }}>سنتان على جودة الالتصاق</strong>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                  <CheckCircle2 size={16} color="#4b8064" style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <span><strong>نظافة وحماية الأثاث:</strong> تغطية كاملة للأرضيات والأثاث بالنايلون قبل البدء وتنظيف الموقع بعد الانتهاء.</span>
                 </div>
               </div>
 
-              {/* نصائح توفير التكلفة */}
+              {/* نصيحة الفني */}
               <div style={{ background: '#f5efe1', borderRadius: '12px', padding: '14px', fontSize: '11px', color: '#687063', lineHeight: 1.8 }}>
-                <strong style={{ color: '#c7664f', display: 'block', marginBottom: '4px' }}>نصيحة خبير صباغ الكويت:</strong>
-                صبغ الشقة أو البيت بالكامل في زيارة واحدة يوفر لك ما يقارب <strong>20% إلى 25%</strong> مقارنة بصبغ كل غرفة بشكل منفصل، بسبب تقليل تكلفة تحريك السقالات والعمالة.
+                <strong style={{ color: '#17483e', display: 'block', marginBottom: '4px' }}>إرشاد مهم:</strong>
+                تحديد موعد المعاينة الميدانية يضمن لك تقديراً دقيقاً واختياراً صحيحاً لنوعية الدهانات المقاومة للرطوبة والحرارة وفق حالة جدران منزلك.
               </div>
             </aside>
           </div>

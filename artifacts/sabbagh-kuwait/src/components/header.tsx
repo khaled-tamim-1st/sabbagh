@@ -3,7 +3,7 @@ import { Link, useLocation } from '@/lib/nav';
 import {
   Menu,
   X,
-  Calculator,
+  CalendarCheck,
   Heart,
   Home as HomeIcon,
   MapPin,
@@ -70,7 +70,7 @@ export const Header: FC<HeaderProps> = ({
     { href: '/areas', label: 'مناطق الكويت', icon: MapPin },
     { href: '/services', label: 'دليل الخدمات', icon: Layers },
     { href: '/blog', label: 'المدونة والنصائح', icon: Newspaper },
-    { href: '/request-quote', label: 'احسب التكلفة', icon: Calculator },
+    { href: '/request-quote', label: 'طلب معاينة', icon: CalendarCheck },
     { href: '/faq', label: 'الأسئلة والضمان', icon: HelpCircle },
     { href: '/join-painter', label: 'انضم كصبّاغ', icon: UserPlus },
   ];
@@ -196,8 +196,8 @@ export const Header: FC<HeaderProps> = ({
               className="saved-nav"
               style={{ background: '#17483e', color: '#fff9ee', borderColor: '#17483e' }}
             >
-              <Calculator size={15} aria-hidden="true" />
-              <span>احسب التكلفة</span>
+              <CalendarCheck size={15} aria-hidden="true" />
+              <span>طلب معاينة</span>
             </Link>
 
             <button
@@ -426,8 +426,8 @@ export const Header: FC<HeaderProps> = ({
                   marginBottom: '10px',
                 }}
               >
-                <Calculator size={18} />
-                <span>احسب التكلفة واطلب معاينة</span>
+                <CalendarCheck size={18} />
+                <span>طلب معاينة مجانية</span>
               </Link>
 
               <button

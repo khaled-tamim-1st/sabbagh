@@ -4,7 +4,7 @@ import { useState } from 'react';
 import {
   BookOpen, Sparkles, Sun, ShieldAlert, CheckCircle2,
   Layers, Clock, HelpCircle, ArrowLeft, Paintbrush,
-  Flame, Droplets, Wind, Calculator, Phone
+  Flame, Droplets, Wind, CalendarCheck, Phone, ShieldCheck
 } from 'lucide-react';
 import { Layout } from '@/components/layout';
 import { Breadcrumbs } from '@/components/breadcrumbs';
@@ -50,7 +50,7 @@ export default function ServicesGuidePage() {
             دليل الأصباغ والديكورات في الكويت
           </h1>
           <p style={{ margin: 0, color: '#d2dfd7', fontSize: '15px', maxWidth: '640px', lineHeight: 1.9 }}>
-            تعرّف على أنواع الأصباغ الموصى بها لمناخ وطقس الكويت، ونطاقات الأسعار التقريبية بالدينار الكويتي، وأفضل الماركات المعتمدة (جوتن، همبل، كابارول).
+            تعرّف على أنواع الأصباغ الموصى بها لمناخ وطقس الكويت، ومواصفات ومعايير التنفيذ والتشطيب، وأفضل الماركات المعتمدة (جوتن، همبل، كابارول).
           </p>
         </div>
       </section>
@@ -171,19 +171,16 @@ export default function ServicesGuidePage() {
                 </ul>
               </div>
 
-              {/* بطاقة السعر بالدينار الكويتي وزر التفاصيل */}
+              {/* بطاقة المعاينة وزر التفاصيل */}
               <div style={{ borderTop: '1px solid #eee8dc', paddingTop: '16px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
-                  <div>
-                    <span style={{ fontSize: '10px', color: '#4a5649', display: 'block' }}>نطاق السعر الإرشادي</span>
-                    <strong style={{ fontSize: '17px', color: '#17483e' }}>
-                      {service.price.fromKWD} - {service.price.toKWD} د.ك
-                    </strong>
-                    <span style={{ fontSize: '11px', color: '#4a5649' }}> ({service.price.unit})</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#17483e' }}>
+                    <ShieldCheck size={18} color="#4b8064" />
+                    <span style={{ fontSize: '13px', fontWeight: 700 }}>معاينة واستشارة مجانية</span>
                   </div>
 
                   <span className="tag" style={{ background: '#eaf4ee', color: '#275347', fontWeight: 700 }}>
-                    {service.price.includesMaterials ? 'شامل المواد' : 'مصنعية فقط'}
+                    ضمان جودة معتمد
                   </span>
                 </div>
 
@@ -191,19 +188,19 @@ export default function ServicesGuidePage() {
                   <Link
                     href={`/services/${service.slug}`}
                     className="detail-button"
-                    aria-label={`صفحة أسعار وتفاصيل خدمة ${service.title}`}
+                    aria-label={`صفحة تفاصيل خدمة ${service.title}`}
                     style={{ flex: 1, textAlign: 'center', textDecoration: 'none', display: 'grid', placeItems: 'center' }}
                   >
-                    تفاصيل الخدمة والأسعار
+                    تفاصيل ومواصفات الخدمة
                   </Link>
 
                   <Link
                     href={`/request-quote?service=${encodeURIComponent(service.id)}`}
                     className="contact-button"
-                    aria-label={`طلب عرض سعر ومقايسة لخدمة ${service.title}`}
+                    aria-label={`طلب معاينة لخدمة ${service.title}`}
                     style={{ flex: 1, textAlign: 'center', textDecoration: 'none', display: 'grid', placeItems: 'center' }}
                   >
-                    طلب عرض سعر
+                    طلب معاينة مجانية
                   </Link>
                 </div>
               </div>
@@ -211,13 +208,13 @@ export default function ServicesGuidePage() {
           ))}
         </div>
 
-        {/* جدول مقارنة الأسعار الاسترشادي العام */}
+        {/* جدول معايير ومواصفات تنفيذ الخدمات */}
         <section style={{ marginTop: '50px', background: '#fffdf8', border: '1px solid #e8e1d3', borderRadius: '20px', padding: '28px' }}>
           <h2 style={{ fontSize: '20px', color: '#1d4038', margin: '0 0 8px' }}>
-            جدول متوسط أسعار الأصباغ والديكورات في الكويت (KWD)
+            جدول معايير ومواصفات تنفيذ أعمال الأصباغ والديكورات في الكويت
           </h2>
           <p style={{ fontSize: '13px', color: '#4a5649', margin: '0 0 20px' }}>
-            دليل إرشادي محدث لمتوسط التكاليف بالسوق الكويتي شامل الصبغ الأصلي والعمالة.
+            دليل إرشادي معتمد لمواصفات المواد الأصلية وطرق التنفيذ القياسية وضمانات العمل بالسوق الكويتي.
           </p>
 
           <div style={{ overflowX: 'auto' }}>
@@ -226,9 +223,9 @@ export default function ServicesGuidePage() {
                 <tr style={{ background: '#f5efe1', borderBottom: '2px solid #e1d7c5', color: '#17483e' }}>
                   <th style={{ padding: '12px 14px' }}>نوع الخدمة</th>
                   <th style={{ padding: '12px 14px' }}>وحدة القياس</th>
-                  <th style={{ padding: '12px 14px' }}>نطاق السعر</th>
-                  <th style={{ padding: '12px 14px' }}>المتوسط التقديري</th>
-                  <th style={{ padding: '12px 14px' }}>المواد المشمولة</th>
+                  <th style={{ padding: '12px 14px' }}>المواد والماركات</th>
+                  <th style={{ padding: '12px 14px' }}>مدة التنفيذ المتوقعة</th>
+                  <th style={{ padding: '12px 14px' }}>المعاينة والضمان</th>
                 </tr>
               </thead>
               <tbody>
@@ -236,13 +233,13 @@ export default function ServicesGuidePage() {
                   <tr key={srv.id} style={{ borderBottom: '1px solid #eee8dc', background: idx % 2 === 0 ? '#fff' : '#fcfaf6' }}>
                     <td style={{ padding: '12px 14px', fontWeight: 600, color: '#23483e' }}>{srv.shortName}</td>
                     <td style={{ padding: '12px 14px', color: '#687063' }}>{srv.price.unit}</td>
-                    <td style={{ padding: '12px 14px', color: '#17483e', fontWeight: 700 }}>
-                      {srv.price.fromKWD} - {srv.price.toKWD} د.ك
+                    <td style={{ padding: '12px 14px', color: '#17483e', fontWeight: 600 }}>
+                      جوتن / كابارول أصلية
                     </td>
-                    <td style={{ padding: '12px 14px', color: '#c7664f', fontWeight: 700 }}>~ {srv.price.averageKWD} د.ك</td>
+                    <td style={{ padding: '12px 14px', color: '#55665d' }}>{srv.executionTime.split('حسب')[0].trim()}</td>
                     <td style={{ padding: '12px 14px' }}>
-                      <span className="tag" style={{ background: srv.price.includesMaterials ? '#eaf4ee' : '#f2eee5', color: srv.price.includesMaterials ? '#215045' : '#687063' }}>
-                        {srv.price.includesMaterials ? 'شامل الصبغ والمعجون' : 'مصنعية فقط'}
+                      <span className="tag" style={{ background: '#eaf4ee', color: '#215045' }}>
+                        معاينة مجانية + كفالة
                       </span>
                     </td>
                   </tr>
@@ -302,12 +299,12 @@ export default function ServicesGuidePage() {
               <div style={{ display: 'flex', gap: '10px' }}>
                 <Link
                   href="/request-quote"
-                  aria-label={`احسب تكلفة ${activeServiceModal.title} الآن عبر حاسبة الأسعار`}
+                  aria-label={`طلب معاينة لخدمة ${activeServiceModal.title}`}
                   className="contact-button modal-action"
                   style={{ textAlign: 'center', textDecoration: 'none', display: 'grid', placeItems: 'center', margin: 0 }}
                   onClick={() => setActiveServiceModal(null)}
                 >
-                  احسب تكلفة بيتك الآن
+                  طلب معاينة فنية مجانية
                 </Link>
                 <button
                   type="button"

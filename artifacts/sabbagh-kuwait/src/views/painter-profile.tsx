@@ -125,7 +125,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
 
   const coverageGroups = getPainterCoverageDetails(safePainter);
 
-  const [activeTab, setActiveTab] = useState<'gallery' | 'pricing' | 'reviews' | 'coverage' | 'about'>('gallery');
+  const [activeTab, setActiveTab] = useState<'gallery' | 'reviews' | 'coverage' | 'about'>('gallery');
   const [selectedGalleryItem, setSelectedGalleryItem] = useState(safePainter.gallery?.[0] || null);
   const [viewMode, setViewMode] = useState<'after' | 'before'>('after');
 
@@ -443,13 +443,13 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
               </div>
             </div>
 
-            {/* بطاقة السعر وزر المعاينة السريع */}
+            {/* بطاقة المعاينة والاستشارة المجانية */}
             <div className="profile-price-card">
-              <span style={{ fontSize: '11px', color: '#7a7c72', display: 'block', marginBottom: '4px' }}>السعر الاسترشادي</span>
-              <div style={{ fontSize: '24px', fontWeight: 800, color: '#17483e' }}>
-                {painter.startingAt} <span style={{ fontSize: '13px', fontWeight: 500, color: '#6d746a' }}>/ للغرفة</span>
+              <span style={{ fontSize: '11px', color: '#17483e', fontWeight: 700, display: 'block', marginBottom: '4px' }}>معاينة واستشارة فنية</span>
+              <div style={{ fontSize: '20px', fontWeight: 800, color: '#17483e' }}>
+                معاينة مجانية 100%
               </div>
-              <p style={{ fontSize: '11px', color: '#888b7d', margin: '4px 0 14px' }}>يعتمد السعر النهائي على المعاينة ومساحة الحوائط</p>
+              <p style={{ fontSize: '11px', color: '#687165', margin: '4px 0 14px' }}>فحص الجدران وتحديد الاحتياجات والألوان بدون أي التزام</p>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 <a
@@ -556,13 +556,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
             معرض الأعمال (قبل وبعد)
           </button>
           
-          <button
-            type="button"
-            className={`filter-chip${activeTab === 'pricing' ? ' active' : ''}`}
-            onClick={() => setActiveTab('pricing')}
-          >
-            قائمة الأسعار التقديرية
-          </button>
+
 
           <button
             type="button"
@@ -1131,48 +1125,7 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
           </div>
         )}
 
-        {/* محتوى التبويب 2: قائمة الأسعار */}
-        {activeTab === 'pricing' && (
-          <div style={{ background: '#fffdf8', border: '1px solid #e8e1d3', borderRadius: '16px', padding: '24px' }}>
-            <div style={{ marginBottom: '20px' }}>
-              <h2 style={{ fontSize: '20px', color: '#1d4038', margin: '0 0 6px' }}>قائمة الأسعار التقديرية (دينار كويتي KWD)</h2>
-              <p style={{ fontSize: '13px', color: '#72776d', margin: 0 }}>
-                هذه الأسعار إرشادية وتخضع للمعاينة الميدانية المجانية وتفاصيل الجدران (هل تحتاج معجون تأسيسي أو معالجة نش ورطوبة).
-              </p>
-            </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              {painter.pricingList.map((price, idx) => (
-                <div
-                  key={idx}
-                  style={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    padding: '14px 18px',
-                    borderRadius: '12px',
-                    background: idx % 2 === 0 ? '#f9f6ef' : '#fff',
-                    border: '1px solid #eee8dc',
-                    gap: '10px',
-                  }}
-                >
-                  <div style={{ flex: '1 1 300px' }}>
-                    <strong style={{ fontSize: '14px', color: '#23483e', display: 'block', marginBottom: '4px' }}>{price.item}</strong>
-                    <span style={{ fontSize: '12px', color: '#7a7e74' }}>{price.note}</span>
-                  </div>
-                  <div style={{ textAlign: 'left', minWidth: '130px' }}>
-                    <span style={{ fontSize: '16px', fontWeight: 800, color: '#17483e' }}>{price.price}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div style={{ marginTop: '20px', padding: '14px', background: '#f5eee1', borderRadius: '10px', fontSize: '12px', color: '#686f63' }}>
-              <strong>ملاحظة من فريق صباغ الكويت:</strong> ينصح دائماً بطلب معاينة ميدانية مسبقة لتحديد كمية المعجون وأمتار الصبغ المطلوبة والتفاهم على نوعية الصبغ (مطفي، ربع لمعة، أو نص لمعة).
-            </div>
-          </div>
-        )}
 
         {/* محتوى التبويب 3: التقييمات */}
         {activeTab === 'reviews' && (
@@ -1500,8 +1453,8 @@ export default function PainterProfilePage({ id: propId }: { id?: number | strin
             />
             {painter.isAvailableToday ? 'متاح للمعاينة اليوم' : 'تواصل مباشر متاح'}
           </span>
-          <span style={{ fontSize: '15px', fontWeight: 800, color: '#e9bd77', whiteSpace: 'nowrap' }}>
-            {painter.startingAt} <span style={{ fontSize: '11px', fontWeight: 500, color: '#f2f7f4' }}>/ غرفة</span>
+          <span style={{ fontSize: '13px', fontWeight: 700, color: '#e9bd77', whiteSpace: 'nowrap' }}>
+            معاينة مجانية 100%
           </span>
         </div>
 

@@ -88,7 +88,7 @@
 
 ## 🔗 روابط هامة للمنصة
 - [الصفحة الرئيسية لدليل صباغ الكويت](https://sabbagh-kuwait.com/)
-- [حاسبة التكلفة الفورية وطلب عرض السعر](https://sabbagh-kuwait.com/request-quote)
+- [طلب معاينة فنية مجانية لمنزلك](https://sabbagh-kuwait.com/request-quote)
 - [دليل الأصباغ والمواد والمواصفات المناخية](https://sabbagh-kuwait.com/services-guide)
 - [مركز الأسئلة الشائعة والضمان](https://sabbagh-kuwait.com/faq)
 - [الملف الشامل والمفصل للذكاء الاصطناعي llms-full.txt](https://sabbagh-kuwait.com/llms-full.txt)

@@ -6,7 +6,7 @@ import {
   Paintbrush,
   ShieldCheck,
   Phone,
-  Calculator,
+  CalendarCheck,
   Compass,
   ArrowUpLeft,
   ArrowUpRight,
@@ -339,8 +339,8 @@ export const SiteFooter: FC<{ lang?: string }> = () => {
                     border: '1px solid rgba(233,189,119,0.3)',
                   }}
                 >
-                  <Calculator size={14} color="#e9bd77" />
-                  <span>احسب تكلفة صبغ بيتك فوراً</span>
+                  <CalendarCheck size={14} color="#e9bd77" />
+                  <span>طلب معاينة مجانية لمنزلك</span>
                   <ArrowIcon size={14} style={{ marginInlineStart: 'auto' }} />
                 </Link>
               </li>

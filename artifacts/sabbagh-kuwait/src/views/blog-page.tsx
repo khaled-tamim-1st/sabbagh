@@ -14,7 +14,7 @@ import {
   Tag,
   Eye,
   CheckCircle2,
-  Calculator,
+  CalendarCheck,
 } from 'lucide-react';
 import { Layout } from '@/components/layout';
 import { Breadcrumbs } from '@/components/breadcrumbs';
@@ -482,8 +482,8 @@ export default function BlogPage() {
                 fontSize: '13px',
               }}
             >
-              <Calculator size={15} style={{ display: 'inline', marginLeft: '6px' }} />
-              <span>احسب التكلفة الآن</span>
+              <CalendarCheck size={15} style={{ display: 'inline', marginLeft: '6px' }} />
+              <span>طلب معاينة مجانية</span>
             </Link>
           </div>
         </section>

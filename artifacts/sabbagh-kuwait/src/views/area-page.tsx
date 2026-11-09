@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { Link, useRoute } from '@/lib/nav';
 import {
   MapPin, ShieldCheck, Star, Phone, MessageCircle, CheckCircle2,
-  Calculator, Clock3, ChevronDown, ChevronUp, ChevronRight, ArrowRight,
+  CalendarCheck, Clock3, ChevronDown, ChevronUp, ChevronRight, ArrowRight,
   Search, Building2, Sparkles, Droplets, Flame, Wind, Home as HomeIcon,
   Layers, BadgeCheck, ExternalLink, HelpCircle, AlertCircle, Check, X,
   FileText, ArrowUpRight, Compass, Wrench, Share2
@@ -338,8 +338,8 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                   textDecoration: 'none',
                 }}
               >
-                <Calculator size={15} />
-                <span>حاسبة تكلفة الصبغ</span>
+                <CalendarCheck size={15} />
+                <span>طلب معاينة مجانية</span>
               </Link>
             </div>
           </div>
@@ -519,9 +519,9 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
 
                   {/* معلومات التواصل الفوري والأسعار */}
                   <div className="card-bottom">
-                    <div>
-                      <span className="price-label">يبدأ من</span>
-                      <span className="price-value">{painter.startingAt} <small>للغرفة</small></span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#17483e', fontWeight: 600, fontSize: '13px' }}>
+                      <ShieldCheck size={16} color="#4b8064" />
+                      <span>معاينة فنية مجانية</span>
                     </div>
                     <div className="card-actions">
                       <a
@@ -575,7 +575,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
             )}
           </section>
 
-          {/* جدول الأسعار الإرشادية لخدمات الصبغ في المنطقة */}
+          {/* خطوات ومواصفات تنفيذ أعمال الصبغ في المنطقة */}
           <section
             style={{
               background: '#fffdf8',
@@ -586,49 +586,32 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
             }}
           >
             <div style={{ marginBottom: '16px' }}>
-              <span style={{ fontSize: '11px', color: '#c7664f', fontWeight: 700 }}>دليل الأسعار المعتمدة</span>
+              <span style={{ fontSize: '11px', color: '#17483e', fontWeight: 700 }}>معايير التنفيذ المعتمدة</span>
               <h2 style={{ fontSize: '18px', color: '#17483e', margin: '4px 0' }}>
-                كم تكلفة خدمات الصباغ في {area.nameAr}؟ (أسعار تقريبية {new Date().getFullYear()})
+                مراحل وضمانات تنفيذ أعمال الصباغة في {area.nameAr}
               </h2>
             </div>
 
-            <div style={{ overflowX: 'auto' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '12px', textAlign: 'right' }}>
-                <thead>
-                  <tr style={{ background: '#f5efe1', borderBottom: '2px solid #e4dac7', color: '#17483e' }}>
-                    <th style={{ padding: '10px 14px', borderRadius: '0 8px 8px 0' }}>نوع العمل أو الغرفة</th>
-                    <th style={{ padding: '10px 14px' }}>متوسط السعر بالدينار الكويتي</th>
-                    <th style={{ padding: '10px 14px', borderRadius: '8px 0 0 8px' }}>ملاحظات وتفاصيل المواد</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr style={{ borderBottom: '1px solid #eee7d9' }}>
-                    <td style={{ padding: '10px 14px', fontWeight: 600, color: '#23483e' }}>صبغ غرفة نوم قياسية (4×4 م)</td>
-                    <td style={{ padding: '10px 14px', color: '#c7664f', fontWeight: 700 }}>18 - 25 د.ك</td>
-                    <td style={{ padding: '10px 14px', color: '#687063' }}>شامل حماية الأثاث، صنفرة، سكينة معجون، ووجهين صبغ جوتن</td>
-                  </tr>
-                  <tr style={{ borderBottom: '1px solid #eee7d9', background: '#fdfbf6' }}>
-                    <td style={{ padding: '10px 14px', fontWeight: 600, color: '#23483e' }}>صبغ غرفة ماستر كبيرة مع السقف</td>
-                    <td style={{ padding: '10px 14px', color: '#c7664f', fontWeight: 700 }}>28 - 38 د.ك</td>
-                    <td style={{ padding: '10px 14px', color: '#687063' }}>صبغ السقف مطفي ناصع البياض والجدران ربع لمعة أو مطفي مخملي</td>
-                  </tr>
-                  <tr style={{ borderBottom: '1px solid #eee7d9' }}>
-                    <td style={{ padding: '10px 14px', fontWeight: 600, color: '#23483e' }}>صبغ صالة استقبال أو ديوانية عائلية</td>
-                    <td style={{ padding: '10px 14px', color: '#c7664f', fontWeight: 700 }}>45 - 75 د.ك</td>
-                    <td style={{ padding: '10px 14px', color: '#687063' }}>يعتمد على المساحة وارتفاع الأسقف وإطارات الجبس الديكورية</td>
-                  </tr>
-                  <tr style={{ borderBottom: '1px solid #eee7d9', background: '#fdfbf6' }}>
-                    <td style={{ padding: '10px 14px', fontWeight: 600, color: '#23483e' }}>تركيب رول ورق جدران (كوري / إيطالي)</td>
-                    <td style={{ padding: '10px 14px', color: '#c7664f', fontWeight: 700 }}>4 - 6 د.ك</td>
-                    <td style={{ padding: '10px 14px', color: '#687063' }}>للرول الواحد (16 م² للكوري) شامل الغراء الأصلي ضد الرطوبة</td>
-                  </tr>
-                  <tr>
-                    <td style={{ padding: '10px 14px', fontWeight: 600, color: '#23483e' }}>معالجة نش الرطوبة والأملاح للجدار</td>
-                    <td style={{ padding: '10px 14px', color: '#c7664f', fontWeight: 700 }}>12 - 20 د.ك</td>
-                    <td style={{ padding: '10px 14px', color: '#687063' }}>كشط المعجون التالف، دهان برايمر عازل مائي، وإعادة التأسيس بالكامل</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px' }}>
+              <div style={{ background: '#f9f6ef', borderRadius: '12px', padding: '16px', border: '1px solid #eee5d5' }}>
+                <strong style={{ color: '#17483e', fontSize: '14px', display: 'block', marginBottom: '6px' }}>1. معاينة الموقع ورفع القياسات</strong>
+                <p style={{ margin: 0, fontSize: '12px', color: '#5f675c', lineHeight: 1.7 }}>زيارة مجانية لمعاينة حالة الطوفة، فحص الرطوبة والشروخ، وتحديد كميات المعجون ودرجات الألوان المطلوبة.</p>
+              </div>
+
+              <div style={{ background: '#f9f6ef', borderRadius: '12px', padding: '16px', border: '1px solid #eee5d5' }}>
+                <strong style={{ color: '#17483e', fontSize: '14px', display: 'block', marginBottom: '6px' }}>2. حماية وتغليف الأثاث بالكامل</strong>
+                <p style={{ margin: 0, fontSize: '12px', color: '#5f675c', lineHeight: 1.7 }}>تغطية الأرضيات والأبواب والأثاث بنايلون متين وتثبيته بالشريط اللاصق لضمان نظافة البيت بنسبة 100%.</p>
+              </div>
+
+              <div style={{ background: '#f9f6ef', borderRadius: '12px', padding: '16px', border: '1px solid #eee5d5' }}>
+                <strong style={{ color: '#17483e', fontSize: '14px', display: 'block', marginBottom: '6px' }}>3. التأسيس ومعالجة العيوب</strong>
+                <p style={{ margin: 0, fontSize: '12px', color: '#5f675c', lineHeight: 1.7 }}>صنفرة الجدران بماكينات شفط الغبار، معالجة التشققات بشاش فايبر، وتطبيق طبقات المعجون والبرايمر العازل.</p>
+              </div>
+
+              <div style={{ background: '#f9f6ef', borderRadius: '12px', padding: '16px', border: '1px solid #eee5d5' }}>
+                <strong style={{ color: '#17483e', fontSize: '14px', display: 'block', marginBottom: '6px' }}>4. دهان طبقات التشطيب الأصلي</strong>
+                <p style={{ margin: 0, fontSize: '12px', color: '#5f675c', lineHeight: 1.7 }}>طلاء وجهين من أصباغ جوتن أو كابارول الأصلية لضمان نعومة الملمس، ثبات اللون، وسهولة الغسيل والتنظيف.</p>
+              </div>
             </div>
           </section>
 
@@ -766,8 +749,8 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                     </p>
                   </div>
                   <div style={{ borderTop: '1px solid #eee7dc', paddingTop: '12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 700, color: '#c7664f' }}>
-                      {srv.price.fromKWD} - {srv.price.toKWD} د.ك
+                    <span style={{ fontSize: '12px', fontWeight: 700, color: '#17483e' }}>
+                      معاينة واستشارة مجانية
                     </span>
                     <Link
                       href={`/services/${srv.slug}`}
@@ -781,7 +764,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                         borderRadius: '6px',
                       }}
                     >
-                      التفاصيل والأسعار ←
+                      تفاصيل الخدمة ←
                     </Link>
                   </div>
                 </div>
@@ -999,8 +982,8 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                   gap: '8px',
                 }}
               >
-                <Calculator size={16} />
-                <span>حساب التكلفة الفورية</span>
+                <CalendarCheck size={16} />
+                <span>طلب معاينة مجانية</span>
               </Link>
             </div>
           </section>
@@ -1309,9 +1292,9 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                     {painter.services.map((s) => <span key={s} className="tag">{s}</span>)}
                   </div>
                   <div className="card-bottom">
-                    <div>
-                      <span className="price-label">يبدأ من</span>
-                      <span className="price-value">{painter.startingAt} <small>للغرفة</small></span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#17483e', fontWeight: 600, fontSize: '13px' }}>
+                      <ShieldCheck size={16} color="#4b8064" />
+                      <span>معاينة فنية مجانية</span>
                     </div>
                     <div className="card-actions">
                       <a href={`tel:${painter.phone.replace(/\s+/g, '')}`} className="contact-button" style={{ textDecoration: 'none' }}>
@@ -1538,8 +1521,8 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
             <strong>فنيون مفحوصون ومعتمدون</strong> مع كفالة
           </span>
           <span className="trust-note">
-            <Calculator aria-hidden="true" />
-            <strong>أسعار تبدأ من 15 د.ك</strong> للغرفة
+            <CalendarCheck aria-hidden="true" />
+            <strong>معاينة فنية مجانية</strong> لكافة المناطق
           </span>
         </div>
       </section>
@@ -1766,7 +1749,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                 س: كيف أحصل على معاينة فورية وعرض سعر دقيق؟
               </strong>
               <p style={{ margin: 0, color: '#5f675c', fontSize: '13px', lineHeight: 1.8 }}>
-                ج: يمكنك الضغط على منطقتك في هذا الدليل، واختيار أحد الفنيين والاتصال به مباشرة أو عبر الواتساب لتنسيق موعد مناسب لك، أو استخدام حاسبة تكلفة الصبغ التلقائية في الموقع.
+                ج: يمكنك الضغط على منطقتك في هذا الدليل، واختيار أحد الفنيين والاتصال به مباشرة أو عبر الواتساب لتنسيق موعد مناسب لك، أو تقديم طلب معاينة فنية مجانية عبر الموقع ليصلك الفني لمعاينة الموقع وتحديد كافة التفاصيل مجاناً.
               </p>
             </div>
           </div>
