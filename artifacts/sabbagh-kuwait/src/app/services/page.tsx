@@ -15,6 +15,15 @@ export const metadata: Metadata = {
       'تصفح دليل خدمات الأصباغ والدهانات والديكور في الكويت. أسعار معتمدة بالدينار، معاينة مجانية، وتواصل واتساب مباشر.',
     url: 'https://sabbaghelkuwait.online/services',
     siteName: 'صباغ الكويت',
+    type: 'website',
+    images: [
+      {
+        url: 'https://sabbaghelkuwait.online/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'خدمات صباغ الكويت',
+      },
+    ],
   },
 };
 

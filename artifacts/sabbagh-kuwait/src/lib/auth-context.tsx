@@ -46,7 +46,7 @@ export const DEMO_ADMIN: AuthUser = {
   id: 1,
   email: 'admin@sabbagh-kuwait.com',
   name: 'مدير منصة صباغ الكويت',
-  phone: '+201554637673',
+  phone: '+96590001122',
   role: 'admin',
 };
 

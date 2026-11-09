@@ -26,8 +26,8 @@ export async function generateMetadata({
   const govName = gov ? gov.nameAr : id;
   const areaName = areaMatch ? areaMatch.nameAr : areaId;
 
-  const title = `صباغ ${areaName} | أفضل فني دهانات وديكورات في ${govName} - صباغ الكويت`;
-  const desc = `خدمات أصباغ ودهانات وتشطيبات في ${areaName} بمحافظة ${govName}. أمهر الصباغين المعتمدين، دهانات جوتن الأصلية، بديل الرخام، معاينة مجانية وواتساب مباشر.`;
+  const title = `صباغ ${areaName} | فني دهانات ${govName} - صباغ الكويت`;
+  const desc = `خدمات أصباغ وتشطيبات في ${areaName} بمحافظة ${govName}. أمهر صباغي جوتن وبديل الرخام، معاينة مجانية وواتساب مباشر من صباغ الكويت.`.slice(0, 155);
 
   return {
     title,
@@ -41,6 +41,14 @@ export async function generateMetadata({
       url: `https://sabbaghelkuwait.online/areas/${id}/${areaId}`,
       siteName: 'صباغ الكويت',
       type: 'website',
+      images: [
+        {
+          url: 'https://sabbaghelkuwait.online/logo.png',
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
     },
   };
 }

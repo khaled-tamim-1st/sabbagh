@@ -290,7 +290,7 @@ export function generatePlatformSchema() {
     description: 'دليل صباغ الكويت الأول المعتمد: تواصل مباشر ومقارنة بين أمهر الصباغين وفنيي الدهانات الداخلية والخارجية والسيجما وبديل الرخام في كافة محافظات الكويت.',
     url: '/',
     image: '/logo.png',
-    telephone: '+201554637673',
+    telephone: '+96590001122',
     addressLocality: 'مدينة الكويت',
     addressRegion: 'العاصمة',
     addressCountry: 'KW',

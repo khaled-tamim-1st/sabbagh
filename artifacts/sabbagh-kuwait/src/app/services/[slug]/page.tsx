@@ -19,17 +19,28 @@ export async function generateMetadata({
   const { slug } = await params;
   const service = getServiceBySlug(slug) || KUWAIT_SERVICES_DATA[0];
 
+  const desc = `${service.tagline || service.description} - خدمات معتمدة من صباغ الكويت بأسعار تبدأ من ${service.price.fromKWD} د.ك مع معاينة مجانية وواتساب مباشر.`.slice(0, 155);
+
   return {
     title: `${service.title} في الكويت | صباغ الكويت`,
-    description: `${service.tagline || service.description} - خدمات معتمدة من صباغ الكويت بأسعار تبدأ من ${service.price.fromKWD} د.ك مع معاينة مجانية وواتساب مباشر.`,
+    description: desc,
     alternates: {
       canonical: `https://sabbaghelkuwait.online/services/${service.slug}`,
     },
     openGraph: {
       title: `${service.title} في الكويت | صباغ الكويت`,
-      description: service.tagline || service.description,
+      description: (service.tagline || service.description).slice(0, 155),
       url: `https://sabbaghelkuwait.online/services/${service.slug}`,
       siteName: 'صباغ الكويت',
+      type: 'website',
+      images: [
+        {
+          url: 'https://sabbaghelkuwait.online/logo.png',
+          width: 1200,
+          height: 630,
+          alt: service.title,
+        },
+      ],
     },
   };
 }

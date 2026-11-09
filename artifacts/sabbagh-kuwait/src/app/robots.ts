@@ -32,7 +32,6 @@ export default function robots(): MetadataRoute.Robots {
           '/blog/',
           '/blog/*',
           '/faq/',
-          '/services-guide/',
           '/ai-catalog.json',
           '/.well-known/*',
           '/llms.txt',

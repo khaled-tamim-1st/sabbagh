@@ -40,9 +40,8 @@ import {
 
 export default function ServiceDetailPage({ slug: propSlug }: { slug?: string }) {
   const [matchService, serviceParams] = useRoute('/services/:slug');
-  const [matchGuide, guideParams] = useRoute('/services-guide/:slug');
 
-  const slug = propSlug || serviceParams?.slug || guideParams?.slug || 'interior-painting';
+  const slug = propSlug || serviceParams?.slug || 'interior-painting';
   const service = getServiceBySlug(slug) || KUWAIT_SERVICES_DATA[0];
 
   // فلترة الصباغين المتخصصين في هذه الخدمة أو الفئة من الصباغين المعتمدين فقط

@@ -169,15 +169,25 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
           ],
         },
         {
-          '@type': 'LocalBusiness',
+          '@type': 'HomeAndConstructionBusiness',
           name: `خدمات صباغ الكويت في ${area.nameAr}`,
           description: seoMeta.metaDescription,
+          image: 'https://sabbaghelkuwait.online/logo.png',
+          url: `https://sabbaghelkuwait.online/areas/${governorate.id}/${area.id}`,
+          telephone: relevantPainters[0]?.phone || '+96590001122',
+          priceRange: '15 - 120 KWD',
+          currenciesAccepted: 'KWD',
+          paymentAccepted: 'Cash, KNET',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: area.nameAr,
+            addressRegion: `محافظة ${governorate.nameAr}`,
+            addressCountry: 'KW',
+          },
           areaServed: {
             '@type': 'AdministrativeArea',
             name: `${area.nameAr}، محافظة ${governorate.nameAr}، دولة الكويت`,
           },
-          priceRange: '$$',
-          telephone: relevantPainters[0]?.phone || '+201554637673',
         },
         {
           '@type': 'FAQPage',
@@ -282,7 +292,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
             {/* أزرار الإجراء السريع للمنطقة */}
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '26px' }}>
               <a
-                href={`tel:${(relevantPainters[0]?.phone || '+201554637673').replace(/\s+/g, '')}`}
+                href={`tel:${(relevantPainters[0]?.phone || '+96590001122').replace(/\s+/g, '')}`}
                 className="contact-button"
                 style={{
                   background: '#e9bd77',
@@ -302,7 +312,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
               </a>
 
               <a
-                href={`https://wa.me/${relevantPainters[0]?.whatsapp || '201554637673'}?text=${encodeURIComponent(`السلام عليكم، شفت إعلانكم في صباغ الكويت وأبي استفسر عن صبغ في منطقة ${area.nameAr}، هل متاح موعد للمعاينة؟`)}`}
+                href={`https://wa.me/${relevantPainters[0]?.whatsapp || '96590001122'}?text=${encodeURIComponent(`السلام عليكم، شفت إعلانكم في صباغ الكويت وأبي استفسر عن صبغ في منطقة ${area.nameAr}، هل متاح موعد للمعاينة؟`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="detail-button"
@@ -947,7 +957,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
 
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <a
-                href={`tel:${(relevantPainters[0]?.phone || '+201554637673').replace(/\s+/g, '')}`}
+                href={`tel:${(relevantPainters[0]?.phone || '+96590001122').replace(/\s+/g, '')}`}
                 className="contact-button"
                 style={{
                   background: '#e9bd77',
@@ -963,7 +973,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                 }}
               >
                 <Phone size={16} />
-                <span>اتصل الآن ({relevantPainters[0]?.phone || '+201554637673'})</span>
+                <span>اتصل الآن ({relevantPainters[0]?.phone || '+96590001122'})</span>
               </a>
 
               <Link

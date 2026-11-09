@@ -179,7 +179,7 @@ export function LeadQuoteSection({
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', maxWidth: '380px', margin: '0 auto' }}>
               <a
-                href={`https://wa.me/201554637673?text=${whatsappMessage}`}
+                href={`https://wa.me/96590001122?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
