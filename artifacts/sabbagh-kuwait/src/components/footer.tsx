@@ -423,8 +423,34 @@ export const SiteFooter: FC<{ lang?: string }> = () => {
             <Link href="/faq" aria-label="شروط الضمان والمصداقية" style={{ color: 'inherit', textDecoration: 'none' }}>
               الضمان والمصداقية
             </Link>
-            
           </div>
+        </div>
+
+        {/* شريط المطور / صنع بشغف بواسطة webinoo */}
+        <div
+          style={{
+            borderTop: '1px solid rgba(255, 255, 255, 0.05)',
+            marginTop: '16px',
+            paddingTop: '12px',
+            textAlign: 'center',
+            fontSize: '11px',
+            color: '#718779',
+          }}
+        >
+          <span>صنع بشغف بواسطة </span>
+          <a
+            href="https://webinoo.online"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+            style={{
+              color: '#d9c597',
+              textDecoration: 'none',
+              fontWeight: 600,
+              letterSpacing: '0.02em',
+            }}
+          >
+            webinoo
+          </a>
         </div>
       </div>
     </footer>
