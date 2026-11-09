@@ -574,7 +574,7 @@ export function HomeView() {
                     <h3>لا يوجد صباغين مسجلين حالياً</h3>
                     <p>كن أول المنضمين إلى منصة صباغ الكويت واستقبل طلبات المعاينة المباشرة مجاناً!</p>
                     <Link
-                      href="/join-painter"
+                      href="/join-painter/"
                       className="clear-button"
                       style={{
                         display: 'inline-block',

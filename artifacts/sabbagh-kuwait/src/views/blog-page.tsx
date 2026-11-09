@@ -470,7 +470,7 @@ export default function BlogPage() {
 
           <div style={{ display: 'flex', gap: '10px' }}>
             <Link
-              href="/request-quote"
+              href="/request-quote/"
               className="contact-button"
               style={{
                 background: '#e9bd77',

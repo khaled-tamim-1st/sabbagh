@@ -173,7 +173,7 @@ export const Header: FC<HeaderProps> = ({
               </div>
             ) : (
               <Link
-                href="/login"
+                href="/login/"
                 className="saved-nav"
                 style={{
                   background: '#fffdf9',
@@ -192,7 +192,7 @@ export const Header: FC<HeaderProps> = ({
             
 
             <Link
-              href='/request-quote'
+              href='/request-quote/'
               className="saved-nav"
               style={{ background: '#17483e', color: '#fff9ee', borderColor: '#17483e' }}
             >
@@ -382,7 +382,7 @@ export const Header: FC<HeaderProps> = ({
                 </div>
               ) : (
                 <Link
-                  href="/login"
+                  href="/login/"
                   onClick={() => setIsMenuOpen(false)}
                   style={{
                     display: 'flex',
@@ -407,7 +407,7 @@ export const Header: FC<HeaderProps> = ({
               )}
 
               <Link
-                href='/request-quote'
+                href='/request-quote/'
                 onClick={() => setIsMenuOpen(false)}
                 style={{
                   display: 'flex',

@@ -667,7 +667,7 @@ export default function ServiceDetailPage({ slug: propSlug }: { slug?: string })
               ))}
               </div>
             ) : (
-              <p style={{ fontSize: '13px', color: '#687266', margin: 0 }}>لا يوجد صباغين مسجلين لهذه الخدمة حالياً. <Link href="/join-painter" style={{ color: '#17483e', fontWeight: 700, textDecoration: 'underline' }}>سجل ورشتك أو خدماتك الآن</Link></p>
+              <p style={{ fontSize: '13px', color: '#687266', margin: 0 }}>لا يوجد صباغين مسجلين لهذه الخدمة حالياً. <Link href="/join-painter/" style={{ color: '#17483e', fontWeight: 700, textDecoration: 'underline' }}>سجل ورشتك أو خدماتك الآن</Link></p>
             )}
           </div>
 

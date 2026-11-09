@@ -78,7 +78,30 @@ export default {
       }
     }
 
-    // 2. Fetch static assets first (Fast path: 0ms for all pre-rendered static pages)
+    // 2. Canonical Host Enforcement: Redirect www to non-www (301 Moved Permanently)
+    if (url.hostname === 'www.sabbaghelkuwait.online') {
+      const canonicalTarget = new URL(url.pathname + url.search, 'https://sabbaghelkuwait.online');
+      return Response.redirect(canonicalTarget.toString(), 301);
+    }
+
+    // 3. Clean duplicate consecutive slashes (e.g. //services/ -> /services/)
+    if (url.pathname.includes('//')) {
+      const cleanPath = url.pathname.replace(/\/+/g, '/');
+      const targetUrl = new URL(cleanPath + url.search, url.origin);
+      return Response.redirect(targetUrl.toString(), 301);
+    }
+
+    // 4. Strict Trailing Slash Enforcement (301 Moved Permanently)
+    // Any web page requested without a trailing slash (e.g. /services, /blog/post, /areas/hawalli)
+    // is permanently redirected (301) to its canonical slash counterpart (/services/, etc.).
+    // Preserves query strings (?page=1) and excludes static files (.xml, .txt, .png, .js, .css, etc.).
+    const isFile = /\.[a-zA-Z0-9]{2,5}$/.test(url.pathname);
+    if (!isFile && !url.pathname.endsWith('/')) {
+      const targetUrl = new URL(url.pathname + '/' + url.search, url.origin);
+      return Response.redirect(targetUrl.toString(), 301);
+    }
+
+    // 5. Fetch static assets (Fast path: 0ms for all pre-rendered static pages)
     const assetResponse = await env.ASSETS.fetch(request);
     if (assetResponse.status !== 404) {
       return assetResponse;

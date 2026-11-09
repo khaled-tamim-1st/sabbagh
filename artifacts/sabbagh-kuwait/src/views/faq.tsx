@@ -329,7 +329,7 @@ export default function FaqPage() {
 
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <Link
-              href="/request-quote"
+              href="/request-quote/"
               aria-label="احسب التكلفة واطلب معاينة فنية مجانية لبيتك"
               className="saved-nav"
               style={{ background: '#e9bd77', color: '#17483e', border: 'none', padding: '12px 20px', textDecoration: 'none' }}

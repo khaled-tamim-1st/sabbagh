@@ -480,7 +480,7 @@ export default function BlogDetailPage({ slug: propSlug }: { slug?: string }) {
             </p>
 
             <Link
-              href="/request-quote"
+              href="/request-quote/"
               aria-label="طلب معاينة فنية مجانية لمنزلك"
               style={{
                 display: 'flex',

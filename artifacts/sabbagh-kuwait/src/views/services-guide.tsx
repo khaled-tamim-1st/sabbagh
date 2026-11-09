@@ -298,7 +298,7 @@ export default function ServicesGuidePage() {
 
               <div style={{ display: 'flex', gap: '10px' }}>
                 <Link
-                  href="/request-quote"
+                  href="/request-quote/"
                   aria-label={`طلب معاينة لخدمة ${activeServiceModal.title}`}
                   className="contact-button modal-action"
                   style={{ textAlign: 'center', textDecoration: 'none', display: 'grid', placeItems: 'center', margin: 0 }}

@@ -8,9 +8,31 @@ export interface CustomLinkProps extends Omit<React.AnchorHTMLAttributes<HTMLAnc
   children: React.ReactNode;
 }
 
+function normalizeTrailingSlash(href: any): any {
+  if (typeof href !== 'string') return href;
+  if (!href.startsWith('/') || href.startsWith('//')) return href;
+  
+  // Extract path vs hash/query
+  const match = href.match(/^([^?#]+)([?#].*)?$/);
+  if (!match) return href;
+  const path = match[1];
+  const rest = match[2] || '';
+
+  // Exclude root and static files with extensions (.png, .xml, .txt, etc.)
+  if (path === '/' || /\.[a-zA-Z0-9]{2,5}$/.test(path)) {
+    return href;
+  }
+
+  if (!path.endsWith('/')) {
+    return `${path}/${rest}`;
+  }
+  return href;
+}
+
 export const Link: React.FC<CustomLinkProps> = ({ href, children, ...props }) => {
+  const normalizedHref = normalizeTrailingSlash(href);
   return (
-    <NextLink href={href} {...props}>
+    <NextLink href={normalizedHref} {...props}>
       {children}
     </NextLink>
   );
@@ -27,7 +49,7 @@ export function useLocation(): [string, (to: string) => void] {
   try {
     const router = useRouter();
     if (router && typeof router.push === 'function') {
-      push = (to: string) => router.push(to);
+      push = (to: string) => router.push(normalizeTrailingSlash(to));
     }
   } catch {}
   return [pathname, push];

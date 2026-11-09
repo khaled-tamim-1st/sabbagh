@@ -430,7 +430,7 @@ export default function JoinPainterPage() {
 
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link
-                href="/painter"
+                href="/painter/"
                 style={{
                   background: '#17483e',
                   color: '#e9bd77',

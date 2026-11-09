@@ -207,7 +207,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
             <nav aria-label="مسار التنقل" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: '#6d746a', flexWrap: 'wrap' }}>
               <Link href="/" style={{ color: '#17483e', textDecoration: 'none', fontWeight: 600 }}>الرئيسية</Link>
               <ChevronRight size={14} />
-              <Link href="/areas" style={{ color: '#17483e', textDecoration: 'none', fontWeight: 600 }}>مناطق الكويت</Link>
+              <Link href="/areas/" style={{ color: '#17483e', textDecoration: 'none', fontWeight: 600 }}>مناطق الكويت</Link>
               <ChevronRight size={14} />
               <Link href={`/areas/${governorate.id}`} style={{ color: '#17483e', textDecoration: 'none', fontWeight: 600 }}>
                 محافظة {governorate.nameAr}
@@ -324,7 +324,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
               </a>
 
               <Link
-                href="/request-quote"
+                href="/request-quote/"
                 className="detail-button"
                 style={{
                   background: 'transparent',
@@ -570,7 +570,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
               <div className="empty-state" style={{ padding: "36px 20px", textAlign: "center", background: "#fffdfa", borderRadius: "16px", border: "1px solid #ebdcc6" }}>
                 <h3 style={{ fontSize: "18px", color: "#17483e", marginBottom: "8px" }}>لا يوجد فنيين مسجلين في {area.nameAr} حالياً</h3>
                 <p style={{ fontSize: "13px", color: "#6a7266", marginBottom: "16px" }}>هل تقدم خدمات الصبغ أو التشطيب في هذه المنطقة؟ انضم مجاناً واستقبل طلبات العملاء مباشرة.</p>
-                <Link href="/join-painter" style={{ display: "inline-block", background: "#17483e", color: "#e9bd77", padding: "10px 24px", borderRadius: "8px", textDecoration: "none", fontWeight: 700, fontSize: "13px" }}>سجل كصباغ معتمد الآن</Link>
+                <Link href="/join-painter/" style={{ display: "inline-block", background: "#17483e", color: "#e9bd77", padding: "10px 24px", borderRadius: "8px", textDecoration: "none", fontWeight: 700, fontSize: "13px" }}>سجل كصباغ معتمد الآن</Link>
               </div>
             )}
           </section>
@@ -707,7 +707,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                 </h2>
               </div>
               <Link
-                href="/services"
+                href="/services/"
                 style={{
                   color: '#17483e',
                   fontSize: '12px',
@@ -792,7 +792,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
                 </h2>
               </div>
               <Link
-                href="/blog"
+                href="/blog/"
                 style={{
                   color: '#17483e',
                   fontSize: '12px',
@@ -967,7 +967,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
               </a>
 
               <Link
-                href="/request-quote"
+                href="/request-quote/"
                 className="detail-button"
                 style={{
                   background: 'transparent',
@@ -1131,7 +1131,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
             <nav aria-label="مسار التنقل" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: '#6d746a' }}>
               <Link href="/" style={{ color: '#17483e', textDecoration: 'none', fontWeight: 600 }}>الرئيسية</Link>
               <ChevronRight size={14} />
-              <Link href="/areas" style={{ color: '#17483e', textDecoration: 'none', fontWeight: 600 }}>مناطق الكويت</Link>
+              <Link href="/areas/" style={{ color: '#17483e', textDecoration: 'none', fontWeight: 600 }}>مناطق الكويت</Link>
               <ChevronRight size={14} />
               <span style={{ color: '#23483e', fontWeight: 700 }}>محافظة {governorate.nameAr}</span>
             </nav>
@@ -1312,7 +1312,7 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
               <div className="empty-state" style={{ padding: "36px 20px", textAlign: "center", background: "#fffdfa", borderRadius: "16px", border: "1px solid #ebdcc6" }}>
                 <h3 style={{ fontSize: "18px", color: "#17483e", marginBottom: "8px" }}>لا يوجد فنيين مسجلين في محافظة {governorate.nameAr} حالياً</h3>
                 <p style={{ fontSize: "13px", color: "#6a7266", marginBottom: "16px" }}>هل تقدم خدمات الصبغ أو التشطيب في هذه المحافظة؟ انضم مجاناً واستقبل طلبات العملاء مباشرة.</p>
-                <Link href="/join-painter" style={{ display: "inline-block", background: "#17483e", color: "#e9bd77", padding: "10px 24px", borderRadius: "8px", textDecoration: "none", fontWeight: 700, fontSize: "13px" }}>سجل كصباغ معتمد الآن</Link>
+                <Link href="/join-painter/" style={{ display: "inline-block", background: "#17483e", color: "#e9bd77", padding: "10px 24px", borderRadius: "8px", textDecoration: "none", fontWeight: 700, fontSize: "13px" }}>سجل كصباغ معتمد الآن</Link>
               </div>
             )}
           </section>

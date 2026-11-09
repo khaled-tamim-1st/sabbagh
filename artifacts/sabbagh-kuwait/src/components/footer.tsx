@@ -324,7 +324,7 @@ export const SiteFooter: FC<{ lang?: string }> = () => {
               ))}
               <li style={{ paddingTop: '8px', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
                 <Link
-                  href="/request-quote"
+                  href="/request-quote/"
                   style={{
                     color: '#fff',
                     textDecoration: 'none',
@@ -420,7 +420,7 @@ export const SiteFooter: FC<{ lang?: string }> = () => {
               تواصل مباشر مع الصباغ بدون وسيط أو عمولة
             </span>
             <span>•</span>
-            <Link href="/faq" aria-label="شروط الضمان والمصداقية" style={{ color: 'inherit', textDecoration: 'none' }}>
+            <Link href="/faq/" aria-label="شروط الضمان والمصداقية" style={{ color: 'inherit', textDecoration: 'none' }}>
               الضمان والمصداقية
             </Link>
           </div>

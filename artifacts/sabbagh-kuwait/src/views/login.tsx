@@ -329,7 +329,7 @@ export default function LoginPage() {
                 fontSize: '12px',
               }}
             >
-              <Link href="/join-painter" style={{ color: '#9c3b24', fontWeight: 600, textDecoration: 'none' }}>
+              <Link href="/join-painter/" style={{ color: '#9c3b24', fontWeight: 600, textDecoration: 'none' }}>
                 لست مسجلاً؟ انضم كصباغ
               </Link>
               <Link href="/" style={{ color: '#4a5649', textDecoration: 'none' }}>
