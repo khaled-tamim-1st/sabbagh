@@ -18,7 +18,7 @@ import {
 import { Layout } from '@/components/layout';
 
 export default function LoginPage() {
-  const { user, login, quickDemoLogin, isLoading } = useAuth();
+  const { user, login, isLoading } = useAuth();
   const [, setLocation] = useLocation();
 
   const [email, setEmail] = useState('');
@@ -51,23 +51,6 @@ export default function LoginPage() {
       }
     } catch (err: any) {
       setError(err?.message || 'حدث خطأ أثناء تسجيل الدخول');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleQuickLogin = async (role: 'admin' | 'painter') => {
-    setError(null);
-    setIsSubmitting(true);
-    try {
-      const loggedUser = await quickDemoLogin(role);
-      if (loggedUser.role === 'admin') {
-        setLocation('/admin');
-      } else {
-        setLocation('/painter');
-      }
-    } catch (err: any) {
-      setError(err?.message || 'تعذر تسجيل الدخول التجريبي');
     } finally {
       setIsSubmitting(false);
     }
@@ -148,48 +131,6 @@ export default function LoginPage() {
           </div>
 
           <div style={{ padding: '28px 24px' }}>
-            {/* Admin Management Quick Access */}
-            <div
-              style={{
-                background: '#faf6ee',
-                border: '1px solid #e4d7c3',
-                borderRadius: '16px',
-                padding: '14px 16px',
-                marginBottom: '24px',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                gap: '12px',
-              }}
-            >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <ShieldCheck size={18} color="#17483e" />
-                <span style={{ fontSize: '13px', fontWeight: 700, color: '#17483e' }}>
-                  دخول لوحة تحكم الإدارة:
-                </span>
-              </div>
-              <button
-                type="button"
-                disabled={isSubmitting}
-                onClick={() => handleQuickLogin('admin')}
-                style={{
-                  background: '#17483e',
-                  color: '#e9bd77',
-                  border: '0',
-                  borderRadius: '10px',
-                  padding: '8px 16px',
-                  fontSize: '12px',
-                  fontWeight: 700,
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                }}
-              >
-                <span>دخول الإدارة</span>
-              </button>
-            </div>
-
             {/* Error Message */}
             {error && (
               <div
