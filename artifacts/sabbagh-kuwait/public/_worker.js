@@ -131,8 +131,8 @@ export default {
             ? painterData.governorates.join('، ')
             : 'كافة محافظات الكويت';
           const painterRating = painterData.rating || '5.0';
-          const ogImage = painterData.avatarUrl || 'https://sabbagh-kuwait.com/logo.png';
-          const canonicalUrl = `https://sabbagh-kuwait.com/painters/${encodeURIComponent(decodedIdentifier)}/`;
+          const ogImage = painterData.avatarUrl || 'https://sabbaghelkuwait.online/logo.png';
+          const canonicalUrl = `https://sabbaghelkuwait.online/painters/${encodeURIComponent(decodedIdentifier)}/`;
 
           const seoTitle = `${painterName} | صباغ معتمد في ${painterRegion} - صباغ الكويت`;
           const seoDesc = `تواصل مع ${painterName} - صباغ وفني معتمد بخبرة ${painterYears} سنوات في ${painterGovernorates}. تقييم ${painterRating} نجمة، معاينة مجانية وواتساب مباشر: ${painterPhone}`;

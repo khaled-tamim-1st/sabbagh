@@ -23,12 +23,12 @@ export async function generateMetadata({
     title: `${service.title} في الكويت | صباغ الكويت`,
     description: `${service.tagline || service.description} - خدمات معتمدة من صباغ الكويت بأسعار تبدأ من ${service.price.fromKWD} د.ك مع معاينة مجانية وواتساب مباشر.`,
     alternates: {
-      canonical: `https://sabbagh-kuwait.com/services/${service.slug}`,
+      canonical: `https://sabbaghelkuwait.online/services/${service.slug}`,
     },
     openGraph: {
       title: `${service.title} في الكويت | صباغ الكويت`,
       description: service.tagline || service.description,
-      url: `https://sabbagh-kuwait.com/services/${service.slug}`,
+      url: `https://sabbaghelkuwait.online/services/${service.slug}`,
       siteName: 'صباغ الكويت',
     },
   };

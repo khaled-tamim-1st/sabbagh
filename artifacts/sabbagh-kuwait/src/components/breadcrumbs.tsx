@@ -26,7 +26,7 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = ({
   className = '',
   includeHome = true,
   homeLabel = 'الرئيسية',
-  baseUrl = 'https://sabbagh-kuwait.com',
+  baseUrl = 'https://sabbaghelkuwait.online',
   showVisualContainer = true,
 }) => {
   // تجميع قائمة المسارات الكاملة مع الرئيسية

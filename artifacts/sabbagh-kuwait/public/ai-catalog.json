@@ -2,16 +2,16 @@
   "specVersion": "1.0",
   "host": {
     "displayName": "صباغ الكويت",
-    "identifier": "did:web:sabbagh-kuwait.pages.dev",
-    "documentationUrl": "https://sabbagh-kuwait.pages.dev/services-guide/",
-    "logoUrl": "https://sabbagh-kuwait.pages.dev/logo.png"
+    "identifier": "did:web:sabbaghelkuwait.online",
+    "documentationUrl": "https://sabbaghelkuwait.online/services-guide/",
+    "logoUrl": "https://sabbaghelkuwait.online/logo.png"
   },
   "entries": [
     {
-      "identifier": "urn:air:sabbagh-kuwait.pages.dev:webmcp:quote-request",
+      "identifier": "urn:air:sabbaghelkuwait.online:webmcp:quote-request",
       "displayName": "طلب مقايسة ومعاينة صباغ بالكويت",
       "type": "application/mcp-server-card+json",
-      "url": "https://sabbagh-kuwait.pages.dev/request-quote/",
+      "url": "https://sabbaghelkuwait.online/request-quote/",
       "description": "طلب معاينة ومقايسة فنية مجانية لأعمال الأصباغ والدهانات والديكورات في جميع محافظات ومناطق الكويت الست.",
       "tags": [
         "صباغ",
@@ -34,10 +34,10 @@
       "updatedAt": "2026-10-29T04:00:00Z"
     },
     {
-      "identifier": "urn:air:sabbagh-kuwait.pages.dev:webmcp:search-painters",
+      "identifier": "urn:air:sabbaghelkuwait.online:webmcp:search-painters",
       "displayName": "البحث عن صباغين معتمدين في الكويت",
       "type": "application/mcp-server-card+json",
-      "url": "https://sabbagh-kuwait.pages.dev/",
+      "url": "https://sabbaghelkuwait.online/",
       "description": "البحث في دليل صباغي الكويت المعتمدين والمصنفين حسب المحافظة والخدمة والتقييم الحقيقي وسابقة الأعمال.",
       "tags": [
         "صباغين",
@@ -59,10 +59,10 @@
       "updatedAt": "2026-10-29T04:00:00Z"
     },
     {
-      "identifier": "urn:air:sabbagh-kuwait.pages.dev:api:quotes",
+      "identifier": "urn:air:sabbaghelkuwait.online:api:quotes",
       "displayName": "واجهة برمجية لطلبات الأسعار والمقايسات",
       "type": "application/mcp-server-card+json",
-      "url": "https://sabbagh-kuwait.pages.dev/api/public/quotes",
+      "url": "https://sabbaghelkuwait.online/api/public/quotes",
       "description": "واجهة API برمجية لاستقبال طلبات المقايسة وحساب التكلفة التقديرية للأصباغ والتشطيبات بالدينار الكويتي.",
       "tags": [
         "API",
@@ -82,10 +82,10 @@
       "updatedAt": "2026-10-29T04:00:00Z"
     },
     {
-      "identifier": "urn:air:sabbagh-kuwait.pages.dev:webmcp:services-guide",
+      "identifier": "urn:air:sabbaghelkuwait.online:webmcp:services-guide",
       "displayName": "دليل خدمات الصباغة والتشطيبات بالكويت",
       "type": "application/mcp-server-card+json",
-      "url": "https://sabbagh-kuwait.pages.dev/services-guide/",
+      "url": "https://sabbaghelkuwait.online/services-guide/",
       "description": "دليل شامل لكافة خدمات الأصباغ والديكورات الداخلية والخارجية وورق الجدران وبديل الخشب والرخام في الكويت.",
       "tags": [
         "خدمات صباغة",
@@ -109,10 +109,10 @@
       "updatedAt": "2026-10-29T04:00:00Z"
     },
     {
-      "identifier": "urn:air:sabbagh-kuwait.pages.dev:webmcp:areas-directory",
+      "identifier": "urn:air:sabbaghelkuwait.online:webmcp:areas-directory",
       "displayName": "دليل مناطق ومحافظات صباغي الكويت",
       "type": "application/mcp-server-card+json",
-      "url": "https://sabbagh-kuwait.pages.dev/areas/",
+      "url": "https://sabbaghelkuwait.online/areas/",
       "description": "دليل تغطية خدمات الصباغة في كافة محافظات الكويت الست وجميع مناطقها مع أرقام الصباغين المعتمدين.",
       "tags": [
         "مناطق الكويت",

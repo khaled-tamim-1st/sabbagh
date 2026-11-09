@@ -75,7 +75,7 @@ export interface ServiceSchemaProps extends BaseSchemaProps {
  * مولد كائن Schema لـ LocalBusiness / HomeAndConstructionBusiness
  */
 export function generateLocalBusinessSchema(props: LocalBusinessSchemaProps) {
-  const domain = 'https://sabbagh-kuwait.com';
+  const domain = 'https://sabbaghelkuwait.online';
   const url = props.url?.startsWith('http') ? props.url : `${domain}${props.url || ''}`;
   const imageUrl = props.image?.startsWith('http') ? props.image : `${domain}${props.image || '/logo.png'}`;
 
@@ -214,7 +214,7 @@ export function generateFaqSchema(props: FaqSchemaProps) {
  * مولد كائن Schema لـ BreadcrumbList
  */
 export function generateBreadcrumbSchema(props: BreadcrumbSchemaProps) {
-  const domain = 'https://sabbagh-kuwait.com';
+  const domain = 'https://sabbaghelkuwait.online';
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -234,7 +234,7 @@ export function generateBreadcrumbSchema(props: BreadcrumbSchemaProps) {
  * مولد كائن Schema لـ Service
  */
 export function generateServiceSchema(props: ServiceSchemaProps) {
-  const domain = 'https://sabbagh-kuwait.com';
+  const domain = 'https://sabbaghelkuwait.online';
   const schema: Record<string, any> = {
     '@context': 'https://schema.org',
     '@type': 'Service',

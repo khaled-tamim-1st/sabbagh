@@ -42,7 +42,7 @@ export default function BlogDetailPage({ slug: propSlug }: { slug?: string }) {
     { label: article.title, isCurrent: true },
   ];
 
-  const currentUrl = `https://sabbagh-kuwait.com/blog/${article.slug}`;
+  const currentUrl = `https://sabbaghelkuwait.online/blog/${article.slug}`;
 
   // Article JSON-LD Schema
   const articleSchema = {
@@ -54,15 +54,15 @@ export default function BlogDetailPage({ slug: propSlug }: { slug?: string }) {
     author: {
       '@type': 'Organization',
       name: article.author.name,
-      url: 'https://sabbagh-kuwait.com',
+      url: 'https://sabbaghelkuwait.online',
     },
     publisher: {
       '@type': 'Organization',
       name: 'صباغ الكويت',
       alternateName: 'صباغ الكويت',
       brand: 'صباغ الكويت',
-      url: 'https://sabbagh-kuwait.com',
-      logo: 'https://sabbagh-kuwait.com/logo.png',
+      url: 'https://sabbaghelkuwait.online',
+      logo: 'https://sabbaghelkuwait.online/logo.png',
     },
     mainEntityOfPage: currentUrl,
   };

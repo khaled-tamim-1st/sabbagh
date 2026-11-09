@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description:
     'ابحث عن أمهر الصباغين والفنيين المعتمدين في منطقتك بجميع محافظات الكويت الست والمدن الجديدة (المطلاع، صباح الأحمد، الخيران). معاينة مجانية، أسعار حقيقية، وواتساب مباشر.',
   alternates: {
-    canonical: 'https://sabbagh-kuwait.com/areas',
+    canonical: 'https://sabbaghelkuwait.online/areas',
   },
   openGraph: {
     title: 'دليل مناطق ومحافظات الكويت لخدمات الأصباغ | صباغ الكويت',
     description: 'ابحث عن صباغ وفني معتمد في منطقتك بجميع محافظات الكويت.',
-    url: 'https://sabbagh-kuwait.com/areas',
+    url: 'https://sabbaghelkuwait.online/areas',
     siteName: 'صباغ الكويت',
   },
 };

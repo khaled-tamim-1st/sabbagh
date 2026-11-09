@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description:
     'دليل إرشادي شامل لكل ما يخص أصباغ وتشطيب المنازل والقسائم في الكويت في الكويت: مقارنات جوتن وهمبل، علاج الرطوبة، بديل الرخام، دهان الأبواب، وأحدث ألوان الديكور 2026.',
   alternates: {
-    canonical: 'https://sabbagh-kuwait.com/blog',
+    canonical: 'https://sabbaghelkuwait.online/blog',
   },
   openGraph: {
     title: 'مدونة صباغ الكويت للأصباغ والديكورات | أفكار وحلول تشطيب المنازل',
     description: 'دليل شامل لنصائح وتشطيب المنازل والقسائم في الكويت بالدينار.',
-    url: 'https://sabbagh-kuwait.com/blog',
+    url: 'https://sabbaghelkuwait.online/blog',
     siteName: 'صباغ الكويت',
   },
 };

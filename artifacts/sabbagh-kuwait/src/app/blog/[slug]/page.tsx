@@ -23,12 +23,12 @@ export async function generateMetadata({
     title: `${article.title} | صباغ الكويت`,
     description: article.excerpt,
     alternates: {
-      canonical: `https://sabbagh-kuwait.com/blog/${article.slug}`,
+      canonical: `https://sabbaghelkuwait.online/blog/${article.slug}`,
     },
     openGraph: {
       title: article.title,
       description: article.excerpt,
-      url: `https://sabbagh-kuwait.com/blog/${article.slug}`,
+      url: `https://sabbaghelkuwait.online/blog/${article.slug}`,
       siteName: 'صباغ الكويت',
       type: 'article',
       publishedTime: article.publishedAt,

@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description:
     'اطلب موعد معاينة فنية مجانية لمنزلك أو قسيمتك في الكويت: حدد نوع الخدمة وموقعك وسيتواصل معك أمهر فني صباغ معتمد لرفع المقاسات وتقديم الاستشارة مجاناً وبدون أي التزام.',
   alternates: {
-    canonical: 'https://sabbagh-kuwait.com/request-quote',
+    canonical: 'https://sabbaghelkuwait.online/request-quote',
   },
   openGraph: {
     title: 'طلب معاينة فنية مجانية للأصباغ والديكورات | صباغ الكويت',
     description: 'اطلب معاينة فنية مجانية لمنزلك أو قسيمتك من صباغ الكويت.',
-    url: 'https://sabbagh-kuwait.com/request-quote',
+    url: 'https://sabbaghelkuwait.online/request-quote',
     siteName: 'صباغ الكويت',
   },
 };

@@ -39,12 +39,12 @@ export async function generateMetadata({
     title,
     description: desc,
     alternates: {
-      canonical: `https://sabbagh-kuwait.com/areas/${id}`,
+      canonical: `https://sabbaghelkuwait.online/areas/${id}`,
     },
     openGraph: {
       title,
       description: desc,
-      url: `https://sabbagh-kuwait.com/areas/${id}`,
+      url: `https://sabbaghelkuwait.online/areas/${id}`,
       siteName: 'صباغ الكويت',
       type: 'website',
     },
@@ -63,9 +63,9 @@ export default async function AreaRoutePage({
 
   const breadcrumbSchema = generateBreadcrumbSchema({
     items: [
-      { name: 'الرئيسية', url: 'https://sabbagh-kuwait.com' },
-      { name: 'مناطق الكويت', url: 'https://sabbagh-kuwait.com/areas' },
-      { name: pageName, url: `https://sabbagh-kuwait.com/areas/${id}` },
+      { name: 'الرئيسية', url: 'https://sabbaghelkuwait.online' },
+      { name: 'مناطق الكويت', url: 'https://sabbaghelkuwait.online/areas' },
+      { name: pageName, url: `https://sabbaghelkuwait.online/areas/${id}` },
     ],
   });
 

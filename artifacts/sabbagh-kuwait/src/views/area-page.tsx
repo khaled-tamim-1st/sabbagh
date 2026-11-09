@@ -162,10 +162,10 @@ export default function AreaPage({ govId: propGovId, areaId: propAreaId }: { gov
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://sabbagh-kuwait.com/' },
-            { '@type': 'ListItem', position: 2, name: 'مناطق الكويت', item: 'https://sabbagh-kuwait.com/areas' },
-            { '@type': 'ListItem', position: 3, name: `محافظة ${governorate.nameAr}`, item: `https://sabbagh-kuwait.com/areas/${governorate.id}` },
-            { '@type': 'ListItem', position: 4, name: area.nameAr, item: `https://sabbagh-kuwait.com/areas/${governorate.id}/${area.id}` },
+            { '@type': 'ListItem', position: 1, name: 'الرئيسية', item: 'https://sabbaghelkuwait.online/' },
+            { '@type': 'ListItem', position: 2, name: 'مناطق الكويت', item: 'https://sabbaghelkuwait.online/areas' },
+            { '@type': 'ListItem', position: 3, name: `محافظة ${governorate.nameAr}`, item: `https://sabbaghelkuwait.online/areas/${governorate.id}` },
+            { '@type': 'ListItem', position: 4, name: area.nameAr, item: `https://sabbaghelkuwait.online/areas/${governorate.id}/${area.id}` },
           ],
         },
         {

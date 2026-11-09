@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     'دليل صباغ الكويت الأول: قارن وتواصل مباشرة مع أمهر صباغين وفنيين موثقين في كافة مناطق الكويت. أسعار حقيقية بالدينار، دهانات جوتن الأصلية، معاينة مجانية وواتساب فوري.',
   alternates: {
-    canonical: 'https://sabbagh-kuwait.com/',
+    canonical: 'https://sabbaghelkuwait.online/',
   },
 };
 
@@ -45,7 +45,7 @@ export default function HomePage() {
   });
   const breadcrumbSchema = generateBreadcrumbSchema({
     items: [
-      { name: 'الرئيسية', url: 'https://sabbagh-kuwait.com' },
+      { name: 'الرئيسية', url: 'https://sabbaghelkuwait.online' },
     ],
   });
 

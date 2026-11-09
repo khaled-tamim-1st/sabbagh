@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description:
     'دليل شامل ومحدث لمواصفات ومعايير خدمات الأصباغ في الكويت: صبغ الغرف والشقق، بستيل جوتن، سيجما الواجهات، بديل الرخام والخشب، وعوازل الأسطح مع كفالة معتمدة.',
   alternates: {
-    canonical: 'https://sabbagh-kuwait.com/services-guide',
+    canonical: 'https://sabbaghelkuwait.online/services-guide',
   },
   openGraph: {
     title: 'دليل خدمات ومواصفات الأصباغ والتشطيبات في الكويت | صباغ الكويت',
     description: 'الدليل المعتمد لمواصفات خدمات الأصباغ والتشطيب من صباغ الكويت.',
-    url: 'https://sabbagh-kuwait.com/services-guide',
+    url: 'https://sabbaghelkuwait.online/services-guide',
     siteName: 'صباغ الكويت',
   },
 };

@@ -41,6 +41,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/admin', '/painter', '/api'],
       },
     ],
-    sitemap: 'https://sabbagh-kuwait.com/sitemap.xml',
+    sitemap: 'https://sabbaghelkuwait.online/sitemap.xml',
   };
 }

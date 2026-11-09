@@ -62,7 +62,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${painter.name} - صباغ وفني معتمد في الكويت`,
       description: `خبرة ${painter.years} سنوات، تقييم ${painter.rating}/5. تواصل واتساب فوري: ${painter.phone}`,
-      url: `https://sabbagh-kuwait.com/painters/${encodeURIComponent(targetSlug)}`,
+      url: `https://sabbaghelkuwait.online/painters/${encodeURIComponent(targetSlug)}`,
       siteName: 'صباغ الكويت',
       type: 'profile',
       images: [
@@ -73,7 +73,7 @@ export async function generateMetadata({
       ],
     },
     alternates: {
-      canonical: `https://sabbagh-kuwait.com/painters/${encodeURIComponent(targetSlug)}`,
+      canonical: `https://sabbaghelkuwait.online/painters/${encodeURIComponent(targetSlug)}`,
     },
   };
 }
@@ -102,14 +102,14 @@ export default async function PainterDetailPage({
     ratingValue: painter.rating,
     reviewCount: painter.reviews,
     services: painter.services,
-    url: `https://sabbagh-kuwait.com/painters/${encodeURIComponent(targetSlug)}`,
+    url: `https://sabbaghelkuwait.online/painters/${encodeURIComponent(targetSlug)}`,
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema({
     items: [
-      { name: 'الرئيسية', url: 'https://sabbagh-kuwait.com' },
-      { name: 'دليل الصباغين', url: 'https://sabbagh-kuwait.com/#directory' },
-      { name: painter.name, url: `https://sabbagh-kuwait.com/painters/${encodeURIComponent(targetSlug)}` },
+      { name: 'الرئيسية', url: 'https://sabbaghelkuwait.online' },
+      { name: 'دليل الصباغين', url: 'https://sabbaghelkuwait.online/#directory' },
+      { name: painter.name, url: `https://sabbaghelkuwait.online/painters/${encodeURIComponent(targetSlug)}` },
     ],
   });
 

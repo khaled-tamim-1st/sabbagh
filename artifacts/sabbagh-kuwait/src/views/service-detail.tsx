@@ -74,7 +74,7 @@ export default function ServiceDetailPage({ slug: propSlug }: { slug?: string })
     { label: service.shortName, isCurrent: true },
   ];
 
-  const canonicalUrl = `https://sabbagh-kuwait.com/services/${service.slug}`;
+  const canonicalUrl = `https://sabbaghelkuwait.online/services/${service.slug}`;
 
   // Schemas
   const breadcrumbSchema = generateBreadcrumbSchema({

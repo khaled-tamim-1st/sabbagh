@@ -7,7 +7,7 @@ import { BLOG_ARTICLES } from '@/data/blog-posts';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://sabbagh-kuwait.com';
+  const baseUrl = 'https://sabbaghelkuwait.online';
   const now = new Date();
 
   const staticRoutes: MetadataRoute.Sitemap = [

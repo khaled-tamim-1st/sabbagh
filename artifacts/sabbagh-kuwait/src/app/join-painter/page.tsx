@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   description:
     'سجل ورشتك أو خدماتك كصباغ وفني معتمد في الكويت: استقبل طلبات المعاينات المباشرة في منطقتك، اعرض سابقة أعمالك، وتواصل مع العملاء عبر واتساب والاتصال الهاتفي مباشرة.',
   alternates: {
-    canonical: 'https://sabbagh-kuwait.com/join-painter',
+    canonical: 'https://sabbaghelkuwait.online/join-painter',
   },
   openGraph: {
     title: 'انضم كصباغ وفني معتمد في الكويت | صباغ الكويت',
     description: 'انضم لشبكة فنيي وصباغي الكويت واستقبل طلبات معاينة مباشرة.',
-    url: 'https://sabbagh-kuwait.com/join-painter',
+    url: 'https://sabbaghelkuwait.online/join-painter',
     siteName: 'صباغ الكويت',
   },
 };

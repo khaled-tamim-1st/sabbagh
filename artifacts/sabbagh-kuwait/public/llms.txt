@@ -12,8 +12,8 @@
 - **طريقة التواصل:** اتصال مباشر ورسائل واتساب فورية مع الصباغ
 - **المعاينة الميدانية:** مجانية بنسبة 100% لمعظم المناطق السكنية
 - **الضمان:** ضمان خطي يتراوح بين سنتين إلى 5 سنوات على جودة العمل وثبات الألوان ومقاومة التقشير
-- **كتالوج أدوات وكلاء الذكاء الاصطناعي (WebMCP / ARD):** [ai-catalog.json](https://sabbagh-kuwait.com/ai-catalog.json)
-- **الملف الكامل الموسع للذكاء الاصطناعي:** [llms-full.txt](https://sabbagh-kuwait.com/llms-full.txt)
+- **كتالوج أدوات وكلاء الذكاء الاصطناعي (WebMCP / ARD):** [ai-catalog.json](https://sabbaghelkuwait.online/ai-catalog.json)
+- **الملف الكامل الموسع للذكاء الاصطناعي:** [llms-full.txt](https://sabbaghelkuwait.online/llms-full.txt)
 
 ---
 
@@ -87,18 +87,18 @@
 ---
 
 ## 🔗 روابط هامة للمنصة
-- [الصفحة الرئيسية لدليل صباغ الكويت](https://sabbagh-kuwait.com/)
-- [طلب معاينة فنية مجانية لمنزلك](https://sabbagh-kuwait.com/request-quote)
-- [دليل الأصباغ والمواد والمواصفات المناخية](https://sabbagh-kuwait.com/services-guide)
-- [مركز الأسئلة الشائعة والضمان](https://sabbagh-kuwait.com/faq)
-- [الملف الشامل والمفصل للذكاء الاصطناعي llms-full.txt](https://sabbagh-kuwait.com/llms-full.txt)
+- [الصفحة الرئيسية لدليل صباغ الكويت](https://sabbaghelkuwait.online/)
+- [طلب معاينة فنية مجانية لمنزلك](https://sabbaghelkuwait.online/request-quote)
+- [دليل الأصباغ والمواد والمواصفات المناخية](https://sabbaghelkuwait.online/services-guide)
+- [مركز الأسئلة الشائعة والضمان](https://sabbaghelkuwait.online/faq)
+- [الملف الشامل والمفصل للذكاء الاصطناعي llms-full.txt](https://sabbaghelkuwait.online/llms-full.txt)
 
 
 ---
 
 # English Reference Factsheet: Kuwait Painters (Fani Kuwait)
 
-> **Platform:** Fani Kuwait (Kuwait Painters Directory - sabbagh-kuwait.com)  
+> **Platform:** Fani Kuwait (Kuwait Painters Directory - sabbaghelkuwait.online)  
 > **Coverage:** All 6 Kuwait Governorates (Hawalli, Capital, Farwaniya, Ahmadi, Mubarak Al-Kabeer, Jahra)  
 > **Currency:** Kuwaiti Dinar (KWD)  
 > **Contact:** Direct WhatsApp coordination in English (+965 90936801)  
