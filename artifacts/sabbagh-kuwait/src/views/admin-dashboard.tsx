@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from '@/lib/nav';
 import { useAuth } from '@/lib/auth-context';
 import { apiClient } from '@/lib/api-client';
@@ -67,11 +67,45 @@ export default function AdminDashboardPage() {
   // Reviews State backed by catalogStore
   const [reviews, setReviews] = useState<ReviewItem[]>(() => catalogStore.getAllReviews());
 
-  // Subscribe to live multi-tab & cross-component changes
+  // Live API Sync & State management
+  const [isRefreshing, setIsRefreshing] = useState(false);
+
+  const fetchLiveAdminData = useCallback(async () => {
+    setIsRefreshing(true);
+    try {
+      const [apiPainters, apiQuotes, apiReviews] = await Promise.all([
+        apiClient.get<Painter[]>('/admin/painters').catch(() => null),
+        apiClient.get<LeadQuote[]>('/admin/quotes').catch(() => null),
+        apiClient.get<ReviewItem[]>('/admin/reviews').catch(() => null),
+      ]);
+
+      if (Array.isArray(apiPainters)) {
+        catalogStore.syncPaintersFromApi(apiPainters);
+        setPainters(apiPainters);
+      }
+      if (Array.isArray(apiQuotes)) {
+        catalogStore.syncQuotesFromApi(apiQuotes);
+        setLeads(apiQuotes);
+      }
+      if (Array.isArray(apiReviews)) {
+        catalogStore.syncReviewsFromApi(apiReviews);
+        setReviews(apiReviews);
+      }
+    } catch (err) {
+      console.warn('Live admin data fetch note:', err);
+    } finally {
+      setIsRefreshing(false);
+    }
+  }, []);
+
   useEffect(() => {
+    // 1. Load initial cached state
     setPainters(catalogStore.getAllPainters());
     setLeads(catalogStore.getAllQuotes());
     setReviews(catalogStore.getAllReviews());
+
+    // 2. Fetch fresh live data directly from the server database
+    fetchLiveAdminData();
 
     const unsubscribe = catalogStore.subscribe(() => {
       setPainters(catalogStore.getAllPainters());
@@ -79,7 +113,7 @@ export default function AdminDashboardPage() {
       setReviews(catalogStore.getAllReviews());
     });
     return unsubscribe;
-  }, []);
+  }, [fetchLiveAdminData]);
 
   // Handlers for Painters Tab
   const togglePainterVerified = async (id: number) => {
@@ -238,7 +272,8 @@ export default function AdminDashboardPage() {
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                 <button
                   type="button"
-                  onClick={() => window.location.reload()}
+                  onClick={() => fetchLiveAdminData()}
+                  disabled={isRefreshing}
                   style={{
                     display: 'flex',
                     alignItems: 'center',

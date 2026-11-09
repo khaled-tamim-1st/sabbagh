@@ -621,6 +621,25 @@ class CatalogStore {
     return newQuote;
   }
 
+  // --- Live Server API Sync Mutators ---
+  public syncPaintersFromApi(apiPainters: Painter[]): void {
+    if (!Array.isArray(apiPainters)) return;
+    this.painters = [...apiPainters].sort((a, b) => (a.displayOrder ?? a.id) - (b.displayOrder ?? b.id));
+    this.savePainters();
+  }
+
+  public syncQuotesFromApi(apiQuotes: LeadQuote[]): void {
+    if (!Array.isArray(apiQuotes)) return;
+    this.quotes = [...apiQuotes];
+    this.saveQuotes();
+  }
+
+  public syncReviewsFromApi(apiReviews: ReviewItem[]): void {
+    if (!Array.isArray(apiReviews)) return;
+    this.reviews = [...apiReviews];
+    this.saveReviews();
+  }
+
   // --- Reset Function ---
   public resetCatalog(): void {
     if (!isBrowser()) return;
